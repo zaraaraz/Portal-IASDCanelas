@@ -1,6 +1,6 @@
 <div id="miniSidebar" >
   <div class="brand-logo">
-  <a class="d-none d-md-flex align-items-center gap-2" href="index.html.twig.twig">
+  <a class="d-none d-md-flex align-items-center gap-2" href="{{ path('dashboard_index') }}">
     <img src="{{ asset('images/brand/logo/logo-icon.svg') }}" alt="" />
     <span class="fw-bold fs-4  site-logo-text">Dasher</span>
   </a>
@@ -8,43 +8,43 @@
   <ul class="navbar-nav flex-column  ">
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="index.html.twig.twig"
+      <a class="nav-link" href="{{ path('dashboard_index') }}"
         ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-files"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 3v4a1 1 0 0 0 1 1h4" /><path d="M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2z" /><path d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" /></svg> <span class="text">Project</span></a
       >
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="dashboard/analytics.html.twig.twig">
+      <a class="nav-link" href="{{ path('dashboard_analytics') }}">
         <span class="nav-icon "><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chart-histogram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 3v18h18" /><path d="M20 18v3" /><path d="M16 16v5" /><path d="M12 13v8" /><path d="M8 16v5" /><path d="M3 11c6 0 5 -5 9 -5s3 5 9 5" /></svg></span> <span class="text">Analytics</span></a
       >
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="dashboard/ecommerce.html.twig.twig"
+      <a class="nav-link" href="{{ path('dashboard_ecommerce') }}"
         ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" /><path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg></span> <span class="text">Ecommerce</span></a
       >
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="dashboard/crm.html.twig.twig"
+      <a class="nav-link" href="{{ path('dashboard_crm') }}"
         ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg></span> <span class="text">CRM</span></a
       >
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="dashboard/finance.html.twig.twig"
+      <a class="nav-link" href="{{ path('dashboard_finance') }}"
         ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastercard"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M12 9.765a3 3 0 1 0 0 4.47" /><path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /></svg></span> <span class="text">Finance</span></a
       >
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="dashboard/blog.html.twig.twig"
+      <a class="nav-link" href="{{ path('dashboard_blog') }}"
         ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-news"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" /><path d="M8 8l4 0" /><path d="M8 12l4 0" /><path d="M8 16l4 0" /></svg></span> <span class="text">Blog</span></a
       >
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="dashboard/file.html.twig.twig"
+      <a class="nav-link" href="{{ path('dashboard_file_manager') }}"
         ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-text"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg></span> <span class="text">File</span></a
       >
     </li>
@@ -56,7 +56,7 @@
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="apps/calendar.html.twig">
+      <a class="nav-link" href="{{ path('apps_calendar') }}">
         <span class="nav-icon">
           <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M11 15h1" /><path d="M12 15v3" /></svg>
         </span>
@@ -65,7 +65,7 @@
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="apps/chat-app.html.twig">
+      <a class="nav-link" href="{{ path('apps_chat') }}">
         <span class="nav-icon">
           <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 11v.01" /><path d="M8 11v.01" /><path d="M16 11v.01" /><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3z" /></svg>
         </span>
@@ -74,7 +74,7 @@
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link" href="apps/kanban.html.twig">
+      <a class="nav-link" href="{{ path('apps_kanban') }}">
         <span class="nav-icon">
           <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-trello"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M7 7h3v10h-3z" /><path d="M14 7h3v6h-3z" /></svg>
         </span>
@@ -92,13 +92,13 @@
       </a>
       <ul class="dropdown-menu flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="apps/email/mail.html.twig">Inbox</a>
+          <a class="nav-link" href="{{ path('apps_email_inbox') }}">Inbox</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/email/mail-details.html.twig">Email Detail</a>
+          <a class="nav-link" href="{{ path('apps_email_details') }}">Email Detail</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/email/compose.html.twig">Compose</a>
+          <a class="nav-link" href="{{ path('apps_email_compose') }}">Compose</a>
         </li>
       </ul>
     </li>
@@ -112,26 +112,26 @@
       </a>
       <ul class="dropdown-menu flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="apps/e-commerce/ecommerce-products.html.twig">Products</a>
+          <a class="nav-link" href="{{ path('apps_ecommerce_products') }}">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/e-commerce/ecommerce-products-details.html.twig">Product Detail</a>
+          <a class="nav-link" href="{{ path('apps_ecommerce_product_details') }}">Product Detail</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/e-commerce/ecommerce-product-edit.html.twig">Add Product</a>
+          <a class="nav-link" href="{{ path('apps_ecommerce_product_edit') }}">Add Product</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="apps/e-commerce/ecommerce-cart.html.twig">Shopping cart</a>
+          <a class="nav-link" href="{{ path('apps_ecommerce_cart') }}">Shopping cart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/e-commerce/ecommerce-checkout.html.twig">Checkout</a>
+          <a class="nav-link" href="{{ path('apps_ecommerce_checkout') }}">Checkout</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/e-commerce/ecommerce-customer.html.twig">Customer</a>
+          <a class="nav-link" href="{{ path('apps_ecommerce_customer') }}">Customer</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/e-commerce/ecommerce-seller.html.twig">Seller</a>
+          <a class="nav-link" href="{{ path('apps_ecommerce_seller') }}">Seller</a>
         </li>
       </ul>
     </li>
@@ -145,10 +145,10 @@
       </a>
       <ul class="dropdown-menu flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="apps/order/order-list.html.twig">List</a>
+          <a class="nav-link" href="{{ path('apps_order_list') }}">List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/order/order-details.html.twig">Details</a>
+          <a class="nav-link" href="{{ path('apps_order_details') }}">Details</a>
         </li>
 
       </ul>
@@ -163,34 +163,34 @@
       </a>
       <ul class="dropdown-menu flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="apps/project/project-grid.html.twig">Grid</a>
+          <a class="nav-link" href="{{ path('apps_project_grid') }}">Grid</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/project/project-list.html.twig">List</a>
+          <a class="nav-link" href="{{ path('apps_project_list') }}">List</a>
         </li>
         <li class="dropdown-submenu">
           <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">Single</a>
           <ul class="dropdown-menu">
             <li class="nav-item">
-              <a class="nav-link" href="apps/project/project-overview.html.twig">Overview</a>
+              <a class="nav-link" href="{{ path('apps_project_overview') }}">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="apps/project/project-task.html.twig">Task</a>
+              <a class="nav-link" href="{{ path('apps_project_task') }}">Task</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="apps/project/project-budget.html.twig">Budget</a>
+              <a class="nav-link" href="{{ path('apps_project_budget') }}">Budget</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="apps/project/project-files.html.twig">Files</a>
+              <a class="nav-link" href="{{ path('apps_project_files') }}">Files</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="apps/project/project-team.html.twig">Team</a>
+              <a class="nav-link" href="{{ path('apps_project_team') }}">Team</a>
             </li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/project/add-project.html.twig">Create Project</a>
+          <a class="nav-link" href="{{ path('apps_project_add') }}">Create Project</a>
         </li>
       </ul>
     </li>
@@ -204,16 +204,16 @@
       </a>
       <ul class="dropdown-menu flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="apps/crm/crm-contacts.html.twig">Contacts</a>
+          <a class="nav-link" href="{{ path('apps_crm_contacts') }}">Contacts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/crm/crm-company.html.twig">Company</a>
+          <a class="nav-link" href="{{ path('apps_crm_company') }}">Company</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/crm/deals.html.twig">Deals</a>
+          <a class="nav-link" href="{{ path('apps_crm_deals') }}">Deals</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/crm/deals-single.html.twig">Deals Single</a>
+          <a class="nav-link" href="{{ path('apps_crm_deals_single') }}">Deals Single</a>
         </li>
       </ul>
     </li>
@@ -227,10 +227,10 @@
       </a>
       <ul class="dropdown-menu flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="apps/invoice/invoice-list.html.twig">List</a>
+          <a class="nav-link" href="{{ path('apps_invoice_list') }}">List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/invoice/invoice-detail.html.twig">Detail</a>
+          <a class="nav-link" href="{{ path('apps_invoice_detail') }}">Detail</a>
         </li>
 
       </ul>
@@ -245,23 +245,23 @@
       </a>
       <ul class="dropdown-menu flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="apps/profile/profile-overview.html.twig">Overview</a>
+          <a class="nav-link" href="{{ path('apps_profile_overview') }}">Overview</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/profile/profile-project.html.twig">Project</a>
+          <a class="nav-link" href="{{ path('apps_profile_project') }}">Project</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="apps/profile/profile-team.html.twig">Team</a>
+          <a class="nav-link" href="{{ path('apps_profile_team') }}">Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/profile/profile-followers.html.twig">Followers</a>
+          <a class="nav-link" href="{{ path('apps_profile_followers') }}">Followers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/profile/profile-activity.html.twig">Activity</a>
+          <a class="nav-link" href="{{ path('apps_profile_activity') }}">Activity</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/profile/profile-settings.html.twig">Settings</a>
+          <a class="nav-link" href="{{ path('apps_profile_settings') }}">Settings</a>
         </li>
       </ul>
     </li>
@@ -275,13 +275,13 @@
       </a>
       <ul class="dropdown-menu flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="apps/blog/blog-list.html.twig">List</a>
+          <a class="nav-link" href="{{ path('apps_blog_list') }}">List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/blog/blog-post-detail.html.twig">Details</a>
+          <a class="nav-link" href="{{ path('apps_blog_detail') }}">Details</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apps/blog/create-blog-post.html.twig">Create</a>
+          <a class="nav-link" href="{{ path('apps_blog_create') }}">Create</a>
         </li>
       </ul>
     </li>
@@ -303,10 +303,10 @@
 
 
         <li class="nav-item">
-          <a class="nav-link" href="pages/error/maintenance.html.twig">Maintenance</a>
+          <a class="nav-link" href="{{ path('pages_error_maintenance') }}">Maintenance</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/error/404-error.html.twig">404 Error</a>
+          <a class="nav-link" href="{{ path('pages_error_404') }}">404 Error</a>
         </li>
       </ul>
     </li>
@@ -320,19 +320,19 @@
       </a>
       <ul class="dropdown-menu flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="pages/authentication/sign-in.html.twig">Sign In</a>
+          <a class="nav-link" href="{{ path('pages_auth_sign_in') }}">Sign In</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/authentication/sign-up.html.twig">Sign Up</a>
+          <a class="nav-link" href="{{ path('pages_auth_sign_up') }}">Sign Up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/authentication/forget-password.html.twig">Forget Password</a>
+          <a class="nav-link" href="{{ path('pages_auth_forget_password') }}">Forget Password</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/authentication/reset-password.html.twig">Reset Password</a>
+          <a class="nav-link" href="{{ path('pages_auth_reset_password') }}">Reset Password</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/authentication/otp-varification.html.twig">Otp Varification </a>
+          <a class="nav-link" href="{{ path('pages_auth_otp_verification') }}">Otp Varification </a>
         </li>
       </ul>
     </li>
@@ -473,7 +473,7 @@
     </li>
     <!-- Nav item -->
     <li class="nav-item">
-      <a class="nav-link position-relative " href="pages/blank.html.twig" target="_blank" aria-label="External Link">
+      <a class="nav-link position-relative " href="{{ path('pages_blank') }}" target="_blank" aria-label="External Link">
         <span class="nav-icon">
           <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /></svg>
         </span>
@@ -522,37 +522,37 @@
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link" href="dashboard/analytics.html.twig">
+        <a class="nav-link" href="{{ path('dashboard_analytics') }}">
           <span class="nav-icon "><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chart-histogram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 3v18h18" /><path d="M20 18v3" /><path d="M16 16v5" /><path d="M12 13v8" /><path d="M8 16v5" /><path d="M3 11c6 0 5 -5 9 -5s3 5 9 5" /></svg></span> <span class="text">Analytics</span></a
         >
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link" href="dashboard/ecommerce.html.twig"
+        <a class="nav-link" href="{{ path('dashboard_ecommerce') }}"
           ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" /><path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg></span> <span class="text">Ecommerce</span></a
         >
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link" href="dashboard/crm.html.twig"
+        <a class="nav-link" href="{{ path('dashboard_crm') }}"
           ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg></span> <span class="text">CRM</span></a
         >
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link" href="dashboard/finance.html.twig"
+        <a class="nav-link" href="{{ path('dashboard_finance') }}"
           ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastercard"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M12 9.765a3 3 0 1 0 0 4.47" /><path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /></svg></span> <span class="text">Finance</span></a
         >
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link" href="dashboard/blog.html.twig"
+        <a class="nav-link" href="{{ path('dashboard_blog') }}"
           ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-news"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" /><path d="M8 8l4 0" /><path d="M8 12l4 0" /><path d="M8 16l4 0" /></svg></span> <span class="text">Blog</span></a
         >
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link" href="dashboard/file.html.twig"
+        <a class="nav-link" href="{{ path('dashboard_file_manager') }}"
           ><span class="nav-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-text"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg></span> <span class="text">File</span></a
         >
       </li>
@@ -564,7 +564,7 @@
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link" href="apps/calendar.html.twig">
+        <a class="nav-link" href="{{ path('apps_calendar') }}">
           <span class="nav-icon">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M11 15h1" /><path d="M12 15v3" /></svg>
           </span>
@@ -573,7 +573,7 @@
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link" href="apps/chat-app.html.twig">
+        <a class="nav-link" href="{{ path('apps_chat') }}">
           <span class="nav-icon">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 11v.01" /><path d="M8 11v.01" /><path d="M16 11v.01" /><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3z" /></svg>
           </span>
@@ -582,7 +582,7 @@
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link" href="apps/kanban.html.twig">
+        <a class="nav-link" href="{{ path('apps_kanban') }}">
           <span class="nav-icon">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-trello"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M7 7h3v10h-3z" /><path d="M14 7h3v6h-3z" /></svg>
           </span>
@@ -600,13 +600,13 @@
         </a>
         <ul class="dropdown-menu flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="apps/email/mail.html.twig">Inbox</a>
+            <a class="nav-link" href="{{ path('apps_email_inbox') }}">Inbox</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/email/mail-details.html.twig">Email Detail</a>
+            <a class="nav-link" href="{{ path('apps_email_details') }}">Email Detail</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/email/compose.html.twig">Compose</a>
+            <a class="nav-link" href="{{ path('apps_email_compose') }}">Compose</a>
           </li>
         </ul>
       </li>
@@ -620,26 +620,26 @@
         </a>
         <ul class="dropdown-menu flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="apps/e-commerce/ecommerce-products.html.twig">Products</a>
+            <a class="nav-link" href="{{ path('apps_ecommerce_products') }}">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/e-commerce/ecommerce-products-details.html.twig">Product Detail</a>
+            <a class="nav-link" href="{{ path('apps_ecommerce_product_details') }}">Product Detail</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/e-commerce/ecommerce-product-edit.html.twig">Add Product</a>
+            <a class="nav-link" href="{{ path('apps_ecommerce_product_edit') }}">Add Product</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="apps/e-commerce/ecommerce-cart.html.twig">Shopping cart</a>
+            <a class="nav-link" href="{{ path('apps_ecommerce_cart') }}">Shopping cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/e-commerce/ecommerce-checkout.html.twig">Checkout</a>
+            <a class="nav-link" href="{{ path('apps_ecommerce_checkout') }}">Checkout</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/e-commerce/ecommerce-customer.html.twig">Customer</a>
+            <a class="nav-link" href="{{ path('apps_ecommerce_customer') }}">Customer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/e-commerce/ecommerce-seller.html.twig">Seller</a>
+            <a class="nav-link" href="{{ path('apps_ecommerce_seller') }}">Seller</a>
           </li>
         </ul>
       </li>
@@ -653,10 +653,10 @@
         </a>
         <ul class="dropdown-menu flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="apps/order/order-list.html.twig">List</a>
+            <a class="nav-link" href="{{ path('apps_order_list') }}">List</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/order/order-details.html.twig">Details</a>
+            <a class="nav-link" href="{{ path('apps_order_details') }}">Details</a>
           </li>
 
         </ul>
@@ -671,34 +671,34 @@
         </a>
         <ul class="dropdown-menu flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="apps/project/project-grid.html.twig">Grid</a>
+            <a class="nav-link" href="{{ path('apps_project_grid') }}">Grid</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/project/project-list.html.twig">List</a>
+            <a class="nav-link" href="{{ path('apps_project_list') }}">List</a>
           </li>
           <li class="dropdown-submenu">
             <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">Single</a>
             <ul class="dropdown-menu">
               <li class="nav-item">
-                <a class="nav-link" href="apps/project/project-overview.html.twig">Overview</a>
+                <a class="nav-link" href="{{ path('apps_project_overview') }}">Overview</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="apps/project/project-task.html.twig">Task</a>
+                <a class="nav-link" href="{{ path('apps_project_task') }}">Task</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="apps/project/project-budget.html.twig">Budget</a>
+                <a class="nav-link" href="{{ path('apps_project_budget') }}">Budget</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="apps/project/project-files.html.twig">Files</a>
+                <a class="nav-link" href="{{ path('apps_project_files') }}">Files</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="apps/project/project-team.html.twig">Team</a>
+                <a class="nav-link" href="{{ path('apps_project_team') }}">Team</a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/project/add-project.html.twig">Create Project</a>
+            <a class="nav-link" href="{{ path('apps_project_add') }}">Create Project</a>
           </li>
         </ul>
       </li>
@@ -712,16 +712,16 @@
         </a>
         <ul class="dropdown-menu flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="apps/crm/crm-contacts.html.twig">Contacts</a>
+            <a class="nav-link" href="{{ path('apps_crm_contacts') }}">Contacts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/crm/crm-company.html.twig">Company</a>
+            <a class="nav-link" href="{{ path('apps_crm_company') }}">Company</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/crm/deals.html.twig">Deals</a>
+            <a class="nav-link" href="{{ path('apps_crm_deals') }}">Deals</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/crm/deals-single.html.twig">Deals Single</a>
+            <a class="nav-link" href="{{ path('apps_crm_deals_single') }}">Deals Single</a>
           </li>
         </ul>
       </li>
@@ -735,10 +735,10 @@
         </a>
         <ul class="dropdown-menu flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="apps/invoice/invoice-list.html.twig">List</a>
+            <a class="nav-link" href="{{ path('apps_invoice_list') }}">List</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/invoice/invoice-detail.html.twig">Detail</a>
+            <a class="nav-link" href="{{ path('apps_invoice_detail') }}">Detail</a>
           </li>
 
         </ul>
@@ -753,23 +753,23 @@
         </a>
         <ul class="dropdown-menu flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="apps/profile/profile-overview.html.twig">Overview</a>
+            <a class="nav-link" href="{{ path('apps_profile_overview') }}">Overview</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/profile/profile-project.html.twig">Project</a>
+            <a class="nav-link" href="{{ path('apps_profile_project') }}">Project</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="apps/profile/profile-team.html.twig">Team</a>
+            <a class="nav-link" href="{{ path('apps_profile_team') }}">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/profile/profile-followers.html.twig">Followers</a>
+            <a class="nav-link" href="{{ path('apps_profile_followers') }}">Followers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/profile/profile-activity.html.twig">Activity</a>
+            <a class="nav-link" href="{{ path('apps_profile_activity') }}">Activity</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/profile/profile-settings.html.twig">Settings</a>
+            <a class="nav-link" href="{{ path('apps_profile_settings') }}">Settings</a>
           </li>
         </ul>
       </li>
@@ -783,13 +783,13 @@
         </a>
         <ul class="dropdown-menu flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="apps/blog/blog-list.html.twig">List</a>
+            <a class="nav-link" href="{{ path('apps_blog_list') }}">List</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/blog/blog-post-detail.html.twig">Details</a>
+            <a class="nav-link" href="{{ path('apps_blog_detail') }}">Details</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="apps/blog/create-blog-post.html.twig">Create</a>
+            <a class="nav-link" href="{{ path('apps_blog_create') }}">Create</a>
           </li>
         </ul>
       </li>
@@ -811,10 +811,10 @@
 
 
           <li class="nav-item">
-            <a class="nav-link" href="pages/error/maintenance.html.twig">Maintenance</a>
+            <a class="nav-link" href="{{ path('pages_error_maintenance') }}">Maintenance</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/error/404-error.html.twig">404 Error</a>
+            <a class="nav-link" href="{{ path('pages_error_404') }}">404 Error</a>
           </li>
         </ul>
       </li>
@@ -828,19 +828,19 @@
         </a>
         <ul class="dropdown-menu flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="pages/authentication/sign-in.html.twig">Sign In</a>
+            <a class="nav-link" href="{{ path('pages_auth_sign_in') }}">Sign In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/authentication/sign-up.html.twig">Sign Up</a>
+            <a class="nav-link" href="{{ path('pages_auth_sign_up') }}">Sign Up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/authentication/forget-password.html.twig">Forget Password</a>
+            <a class="nav-link" href="{{ path('pages_auth_forget_password') }}">Forget Password</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/authentication/reset-password.html.twig">Reset Password</a>
+            <a class="nav-link" href="{{ path('pages_auth_reset_password') }}">Reset Password</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/authentication/otp-varification.html.twig">Otp Varification </a>
+            <a class="nav-link" href="{{ path('pages_auth_otp_verification') }}">Otp Varification </a>
           </li>
         </ul>
       </li>
@@ -981,7 +981,7 @@
       </li>
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link position-relative " href="pages/blank.html.twig" target="_blank" aria-label="External Link">
+        <a class="nav-link position-relative " href="{{ path('pages_blank') }}" target="_blank" aria-label="External Link">
           <span class="nav-icon">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /></svg>
           </span>
