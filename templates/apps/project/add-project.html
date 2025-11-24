@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html" %}
+
+    <!-- dropzone -->
+    <link href="node_modules/dropzone/dist/dropzone.css" rel="stylesheet" />
+
+    <title>Add Project | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+
+    {% include "partials/../partials/head/head-links.html" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8 d-md-flex justify-content-between align-items-center">
+                <div>
+                  <h1 class="mb-3 h2">Add Project</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Project</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Add Project</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- row -->
+            <div class="row mb-6">
+              <div class="col-xxl-9 col-xl-8 col-md-12 col-12">
+                <!-- card -->
+                <div class="card card-lg mb-6">
+                  <!-- card body -->
+                  <div class="card-body px-6 py-5">
+                    <!-- form -->
+                    <div class="row g-3">
+                      <!-- form group -->
+                      <div class="col-12">
+                        <label class="form-label">
+                          Name
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" placeholder="Enter project title" required />
+                      </div>
+                      <!-- form group -->
+                      <div class="col-12">
+                        <label class="form-label">Description</label>
+                        <div id="editor">
+                          <p>Type something here</p>
+                          <br />
+                          <br />
+                          <br />
+                        </div>
+                      </div>
+                      <!-- form group -->
+                      <div class="col-md-6 col-12">
+                        <label class="form-label">
+                          Start Date
+                          <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group me-3 flatpickr rounded">
+                          <input class="form-control" type="text" placeholder="Select Date" aria-describedby="basic-addon2" />
+
+                          <span class="input-group-text text-secondary" id="basic-addon2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-calendar"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+                              <path d="M16 3v4" />
+                              <path d="M8 3v4" />
+                              <path d="M4 11h16" />
+                              <path d="M11 15h1" />
+                              <path d="M12 15v3" />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- form group -->
+                      <div class="col-md-6 col-12">
+                        <label class="form-label">
+                          End Date
+                          <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group me-3 flatpickr rounded">
+                          <input class="form-control" type="text" placeholder="Select Date" aria-describedby="basic-addon3" />
+
+                          <span class="input-group-text text-secondary" id="basic-addon3">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-calendar"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+                              <path d="M16 3v4" />
+                              <path d="M8 3v4" />
+                              <path d="M4 11h16" />
+                              <path d="M11 15h1" />
+                              <path d="M12 15v3" />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- form group -->
+                      <!-- form group -->
+                      <div class="col-md-6 col-12">
+                        <label class="form-label">Priority</label>
+                        <select class="form-select" data-choices="">
+                          <option value="">Set Priority</option>
+                          <option value="High">High</option>
+                          <option value="Medium">Medium</option>
+                          <option value="Low">Low</option>
+                        </select>
+                      </div>
+                      <!-- form group -->
+                      <div class="col-md-6 col-12">
+                        <label class="form-label">Status</label>
+                        <select class="form-select" data-choices="">
+                          <option value="">In Progress</option>
+                          <option value="Based on Project Amount">Based on Project Amount</option>
+                          <option value="Based on Project Hours">Based on Project Hours</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-3 col-12">
+                        <div>
+                          <!-- logo -->
+                          <div class="mb-2">Project Logo</div>
+                          <div class="icon-shape icon-xxl border rounded position-relative">
+                            <span class="position-absolute">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-photo"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M15 8h.01" />
+                                <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" />
+                                <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" />
+                                <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" />
+                              </svg>
+                            </span>
+                            <input class="form-control border-0 opacity-0" type="file" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="mb-2">Cover Image</div>
+                        <!-- input -->
+                        <div id="my-dropzone" class="dropzone mt-4 border border-dashed rounded-3">
+                          <div class="fallback"><input type="file" name="file" /></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card-lg mb-6">
+                  <div class="card-body">
+                    <h5 class="mb-3">Attached files</h5>
+                    <div>
+                      <div>
+                        <div class="mb-4 bg-gray-100 rounded-3 border border-dashed px-10 py-8 h-auto w-auto" style="cursor: pointer" id="uploadCard">
+                          <div class="text-center">
+                            <div class="mb-4">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-upload"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                <path d="M7 9l5 -5l5 5" />
+                                <path d="M12 4l0 12" />
+                              </svg>
+                            </div>
+                            <h5>Drop or select file</h5>
+                            <div class="text-secondary">Drop files here or click to <a href="#!">browse</a> through your machine.</div>
+                          </div>
+                          <div></div>
+                        </div>
+                        <input type="file" id="fileInput" class="d-none" />
+                        <label id="fileLabel" class="visually-hidden">No file chosen</label>
+                      </div>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-3 mb-2">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-file-word text-secondary"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                            <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2"></path>
+                            <path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5"></path>
+                          </svg>
+                          <div>
+                            <div class="fw-semibold fs-6">word.docs</div>
+                            <div class="small text-secondary">2.3 GB 23 seconds left 44%</div>
+                          </div>
+                        </div>
+                        <div>
+                          <a href="#!" class="btn btn-ghost btn-icon rounded-circle">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-x"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+                              <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+                              <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+                              <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+                              <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+                              <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+                              <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+                              <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
+                              <path d="M14 14l-4 -4"></path>
+                              <path d="M10 14l4 -4"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="progress mt-3" role="progressbar" aria-label="Example 20px high" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="height: 6px">
+                        <div class="progress-bar" style="width: 65%"></div>
+                      </div>
+                    </div>
+                    <div class="border border-dashed p-4 rounded-3 mb-2">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf text-danger"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                            <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"></path>
+                            <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6"></path>
+                            <path d="M17 18h2"></path>
+                            <path d="M20 15h-3v6"></path>
+                            <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z"></path>
+                          </svg>
+                          <div>
+                            <div class="fw-semibold fs-6">WireframeUI.pdf</div>
+                            <div class="small text-secondary">2.3 GB</div>
+                          </div>
+                        </div>
+                        <div>
+                          <a href="#!" class="btn btn-ghost btn-icon rounded-circle">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 7l16 0"></path>
+                              <path d="M10 11l0 6"></path>
+                              <path d="M14 11l0 6"></path>
+                              <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+                              <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="border border-dashed p-4 rounded-3 mb-2">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-file-excel text-success"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                            <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2"></path>
+                            <path d="M10 12l4 5"></path>
+                            <path d="M10 17l4 -5"></path>
+                          </svg>
+                          <div>
+                            <div class="fw-semibold fs-6">Excel Report.excl</div>
+                            <div class="small text-secondary">2.3 GB</div>
+                          </div>
+                        </div>
+                        <div>
+                          <a href="#!" class="btn btn-ghost btn-icon rounded-circle">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 7l16 0"></path>
+                              <path d="M10 11l0 6"></path>
+                              <path d="M14 11l0 6"></path>
+                              <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+                              <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 d-flex justify-content-end">
+                  <a href="#!" class="btn btn-primary me-2">Create</a>
+                  <a href="#!" class="btn btn-dark">Save as Draft</a>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-xl-4">
+                <div class="card mb-5 card-lg">
+                  <div class="card-body px-6 py-5">
+                    <div class="mb-5">
+                      <h5 class="mb-0">Members</h5>
+                    </div>
+                    <div class="mb-2">Team Lead</div>
+                    <select class="form-select" data-choices="">
+                      <option selected>Select Team Lead</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <div class="mt-6">
+                      <div class="mb-2">Team Members</div>
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <span class="avatar avatar-sm">
+                            <!-- avatar  -->
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle imgtooltip" data-template="one" />
+                            <span id="one" class="d-none">
+                              <span>Paul Haney</span>
+                            </span>
+                          </span>
+                          <!-- avatar  -->
+                          <span class="avatar avatar-sm">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two" />
+                            <span id="two" class="d-none">
+                              <span>Gali Linear</span>
+                            </span>
+                          </span>
+                          <!-- avatar  -->
+                          <span class="avatar avatar-sm">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three" />
+                            <span id="three" class="d-none">
+                              <span>Mary Holler</span>
+                            </span>
+                          </span>
+                          <!-- avatar  -->
+                          <span class="avatar avatar-sm">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-4.jpg" class="rounded-circle imgtooltip" data-template="four" />
+                            <span id="four" class="d-none">
+                              <span>Lio Nordal</span>
+                            </span>
+                          </span>
+                          <!-- avatar  -->
+                          <span class="avatar avatar-sm">
+                            <span class="avatar-initials rounded-circle bg-gray-100">5+</span>
+                          </span>
+                        </div>
+                        <!-- icon  -->
+                        <a href="#!" class="btn btn-icon btn-white btn-sm border border-2 rounded-circle btn-dashed ms-2">+</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-lg">
+                  <div class="card-body px-6 py-5">
+                    <div class="mb-5">
+                      <h5 class="mb-0">Meta</h5>
+                    </div>
+                    <label class="form-label">Categories</label>
+                    <select class="form-select" data-choices="">
+                      <option selected>Select Categories</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <div class="mt-4">
+                      <label class="form-label">Tags</label>
+                      <input class="form-control" id="choices-text-input" data-choices data-choices-limit="Required Limit" placeholder="Enter Skills" type="text" value="Creative, Dasher " />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <!-- dropzone -->
+
+    {% include "partials/../partials/scripts.html" %}
+    <script src="/js/vendors/sidebarnav.js"></script>
+    <!-- flatpickr -->
+    <script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="/js/vendors/flatpickr.js"></script>
+    <!-- quill js -->
+    <script src="node_modules/quill/dist/quill.js"></script>
+    <script src="/js/vendors/editor.js"></script>
+    <!-- popper js -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!-- tippy js -->
+    <script src="node_modules/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+    <script src="/js/vendors/tippy.js"></script>
+
+    <!-- dropzone -->
+    <script src="node_modules/dropzone/dist/dropzone-min.js"></script>
+    <script src="/js/vendors/dropzone.js"></script>
+
+    <!-- choices -->
+
+    <script src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/js/vendors/choice.js"></script>
+
+    <script src="/js/vendors/upload.js"></script>
+  </body>
+</html>

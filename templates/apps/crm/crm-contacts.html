@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html" %}
+
+    <title>CRM Contacts | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+
+    {% include "partials/../partials/head/head-links.html" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8 d-md-flex justify-content-between align-items-center">
+                <div>
+                  <h1 class="mb-3 h2">Contacts</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">CRM</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Contacts</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- row -->
+            <div class="row">
+              <div class="col-12">
+                <!-- card -->
+                <div class="card card-lg" id="crmContact" data-list="contact_name,contact_email,contact_phone,contact_company,contact_last">
+                  <div class="card-header border-bottom-0">
+                    <div class="row gy-2">
+                      <div class="col-lg-4">
+                        <input type="search" class="form-control listjs-search" placeholder="Search" />
+                      </div>
+                      <div class="col-lg-8 d-flex justify-content-md-end">
+                        <div class="d-flex align-items-center gap-3">
+                          <a href="#!" class="btn btn-dark d-md-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#contact-modal">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="18"
+                              height="18"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M12 5l0 14" />
+                              <path d="M5 12l14 0" />
+                            </svg>
+                            Create New Contact</a
+                          >
+                          <button type="button" class="btn btn-white">Import</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table-responsive table-checkbox" data-simplebar style="height: 600px">
+                    <table class="table text-nowrap table-centered table-hover mb-0" data-check-container>
+                      <thead class="sticky-top">
+                        <tr>
+                          <th class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="checkAll" data-check-all />
+                              <label class="form-check-label" for="checkAll"></label>
+                            </div>
+                          </th>
+                          <th class="listjs-sorter ps-0" data-sort="contact_name">Name</th>
+                          <th class="listjs-sorter" data-sort="contact_email">Email</th>
+                          <th class="listjs-sorter" data-sort="contact_phone">Phone Number</th>
+                          <th class="listjs-sorter" data-sort="contact_company">Company</th>
+                          <th class="listjs-sorter" data-sort="contact_last">Last Contact</th>
+
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="list">
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox2" />
+                              <label class="form-check-label" for="contactCheckbox2"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-1.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Herbert Stokes</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">herbert@Dasherpro.com</td>
+                          <td class="contact_phone">740-320-9874</td>
+                          <td class="contact_company">Dasher</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon btn-md rounded-circle texttooltip" data-template="voiceOne">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-phone-call"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceOne" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageOne">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageOne" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox16" />
+                              <label class="form-check-label" for="contactCheckbox16"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-2.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Jan Harmon</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">janr.h@dayrep.com</td>
+                          <td class="contact_phone">910-352-3917</td>
+                          <td class="contact_company">Olympic Sports</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceTwo">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceTwo" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageTwo">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageTwo" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox34" />
+                              <label class="form-check-label" for="contactCheckbox34"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-3.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Douglas Guzman</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">douglas@teleworm.us</td>
+                          <td class="contact_phone">949-487-9248</td>
+                          <td class="contact_company">Realty Solution</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceThree">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceThree" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageThree">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageThree" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox4" />
+                              <label class="form-check-label" for="contactCheckbox4"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-4.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">George Torres</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">george@armyspy.com</td>
+                          <td class="contact_phone">623-297-8168</td>
+                          <td class="contact_company">Edge Garden Services</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceFour">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceFour" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageFour">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageFour" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox5" />
+                              <label class="form-check-label" for="contactCheckbox5"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-5.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit"> Lisa Morrison</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">george@armyspy.com</td>
+                          <td class="contact_phone">623-297-8168</td>
+                          <td class="contact_company">Edge Garden Services</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceFive">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceFive" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageFive">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageFive" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox6" />
+                              <label class="form-check-label" for="contactCheckbox6"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-6.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Crystal Tucker</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">crystal.t@teleworm.us</td>
+                          <td class="contact_phone">225-315-8318</td>
+                          <td class="contact_company">The Pink Pig Tavern</td>
+                          <td class="contact_last">August 8, 2022 12:24PM</td>
+
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceSix">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceSix" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageSix">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageSix" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox7" />
+                              <label class="form-check-label" for="contactCheckbox7"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-7.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Mayra Giorgi</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">mayra.g@jourrapide.com</td>
+                          <td class="contact_phone">660-635-7668</td>
+                          <td class="contact_company">McMahan's Furniture</td>
+                          <td class="contact_last">August 24, 2022 10:14AM</td>
+
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceSeven">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceSeven" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageSeven">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageSeven" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox8" />
+                              <label class="form-check-label" for="contactCheckbox8"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-8.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Florence Fossett</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">florence@teleworm.us</td>
+                          <td class="contact_phone">410-840-4476</td>
+                          <td class="contact_company">Signa Air</td>
+                          <td class="contact_last">August 28, 2022 1:54PM</td>
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceEight">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceEight" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageEight">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageEight" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox9" />
+                              <label class="form-check-label" for="contactCheckbox9"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-9.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Terry Enciso</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">terry.e@dayrep.com</td>
+                          <td class="contact_phone">804-283-3945</td>
+                          <td class="contact_company">Zantigo</td>
+                          <td class="contact_last">August 30, 2022 2:54PM</td>
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceNine">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceNine" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageNine">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageNine" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox10" />
+                              <label class="form-check-label" for="contactCheckbox10"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-10.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Dan Shutts</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">danshutts@teleworm.us</td>
+                          <td class="contact_phone">626-209-2472</td>
+                          <td class="contact_company">Olympic Sports</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceEleven">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceEleven" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageEleven">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageEleven" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox11" />
+                              <label class="form-check-label" for="contactCheckbox11"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-11.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Dan Shutts</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">danshutts@teleworm.us</td>
+                          <td class="contact_phone">626-209-2472</td>
+                          <td class="contact_company">Olympic Sports</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceThirteen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceThirteen" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageThirteen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageThirteen" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox12" />
+                              <label class="form-check-label" for="contactCheckbox12"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-12.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Herbert Stokes</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">herbert@Dasherpro.com</td>
+                          <td class="contact_phone">740-320-9874</td>
+                          <td class="contact_company">Dasher</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceFourteen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceFourteen" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageFourteen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageFourteen" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox13" />
+                              <label class="form-check-label" for="contactCheckbox13"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-13.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Jan Harmon</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">janr.h@dayrep.com</td>
+                          <td class="contact_phone">910-352-3917</td>
+                          <td class="contact_company">Olympic Sports</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceSixteen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceSixteen" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageSixteen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageSixteen" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox14" />
+                              <label class="form-check-label" for="contactCheckbox14"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-14.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Douglas Guzman</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">douglas@teleworm.us</td>
+                          <td class="contact_phone">949-487-9248</td>
+                          <td class="contact_company">Realty Solution</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceSeventeen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceSeventeen" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageSeventeen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageSeventeen" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox15" />
+                              <label class="form-check-label" for="contactCheckbox15"></label>
+                            </div>
+                          </td>
+                          <td class="contact_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-15.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">George Torres</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="contact_email">george@armyspy.com</td>
+                          <td class="contact_phone">623-297-8168</td>
+                          <td class="contact_company">Edge Garden Services</td>
+                          <td class="contact_last">July 23, 2022 12:24PM</td>
+                          <td>
+                            <div class="d-flex align-items-center justify-content-evenly">
+                              <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceEighteen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                  <path d="M15 7a2 2 0 0 1 2 2" />
+                                  <path d="M15 3a6 6 0 0 1 6 6" />
+                                </svg>
+                                <div id="voiceEighteen" class="d-none">
+                                  <span>Call</span>
+                                </div>
+                              </a>
+                              <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageEighteen">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M8 9h8" />
+                                  <path d="M8 13h6" />
+                                  <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                </svg>
+                                <div id="messageEighteen" class="d-none">
+                                  <span>Message</span>
+                                </div>
+                              </a>
+
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="btn-toolbar card-footer border-top border-dashed d-flex flex-md-row flex-column justify-content-md-between align-items-md-center">
+                    <p class="mb-0 listjs-showing-items-label"></p>
+                    <div class="d-flex flex-column flex-md-row gap-4">
+                      <div class="d-flex align-items-center gap-2">
+                        <label class="form-label text-nowrap mb-0">Rows per page:</label>
+                        <select class="form-select listjs-items-per-page" data-choices="">
+                          <option value="10" selected>10</option>
+                          <option value="15">15</option>
+                        </select>
+                      </div>
+                      <div>
+                        <div class="pagination-buttons d-flex">
+                          <button class="btn btn-white prev">Previous</button>
+                          <ul class="pagination mb-0 ms-1"></ul>
+                          <button class="btn btn-white next">Next</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="contact-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="contact-modal-label">Add New Contact</h4>
+            <button type="button" class="btn-close" id="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="d-flex align-items-center mb-4">
+                <div>
+                  <img class="image avatar avatar-lg rounded-circle" id="contact-image" src="../../assets/images/avatar/avatar-1.jpg" alt="Image" />
+                </div>
+
+                <div class="file-upload btn btn-outline-secondary ms-4">
+                  <input type="file" class="file-input opacity-0" />
+                  Upload Photo
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="contact-name-field">Name</label>
+                <input type="text" class="form-control" placeholder="Enter Name" name="contact-name-field" id="contact-name-field" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="email-field">Email</label>
+                <input type="email" class="form-control" placeholder="Enter Email" name="email-field" id="email-field" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="phone-number-field">Phone Number</label>
+                <input type="text" class="form-control" placeholder="Enter Phone" name="phone-number-field" id="phone-number-field" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="company-name-field">Company</label>
+                <input type="text" class="form-control" placeholder="Enter Company Name" name="company-name-field" id="company-name-field" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="designation-field">Designation</label>
+                <input type="text" class="form-control" placeholder="Enter Designation" name="designation-field" id="designation-field" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="lead-status-field">Lead Status</label>
+                <select class="form-select" id="lead-status-field"  data-choices="" required>
+                  <option value="">Select Lead Status</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Complete" selected>Complete</option>
+                  <option value="Rejected">Rejected</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="personal-information-field">Personal information</label>
+                <textarea class="form-control" placeholder="Enter Personal Information" id="personal-information-field" required rows="3"></textarea>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">+ Add Contact</button>
+
+                <button class="btn btn-secondary ms-2" data-bs-dismiss="modal" aria-label="Close">Close</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html" %}
+    <script src="/js/vendors/sidebarnav.js"></script>
+    <!-- popper js -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+    <script src="/js/vendors/tippy.js"></script>
+    <script src="node_modules/list.js/dist/list.min.js"></script>
+    <script src="/js/vendors/list.js"></script>
+    <script src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/js/vendors/choice.js"></script>
+    <script src="/js/vendors/checkbox.js"></script>
+  </body>
+</html>

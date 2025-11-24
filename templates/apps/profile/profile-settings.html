@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html" %}
+    <title>Settings| Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+
+    <link href="node_modules/dropzone/dist/dropzone.css" rel="stylesheet" />
+    {% include "partials/../partials/head/head-links.html" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html" %}
+        <div class="custom-container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                  <!-- Page header -->
+                  <div class="mb-8">
+                    <div>
+                      <h1 class="mb-3 h2">Settings</h1>
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item"><a href="#">Profile</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                        </ol>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <ul class="nav nav-lb-tab border-dashed border-bottom mb-6" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a href="#!" class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="true">
+                        <div class="d-flex align-items-center gap-2 lh-1">
+                          <span
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-user"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                            </svg>
+                          </span>
+                          <span>Profile</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a href="#!" class="nav-link" id="pills-security-tab" data-bs-toggle="pill" data-bs-target="#pills-security" role="tab" aria-controls="pills-security" aria-selected="false">
+                        <div class="d-flex align-items-center gap-2 lh-1">
+                          <span
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-lock"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" />
+                              <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+                              <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+                            </svg>
+                          </span>
+                          <span>Security</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a href="#!" class="nav-link" id="pills-billing-tab" data-bs-toggle="pill" data-bs-target="#pills-billing" role="tab" aria-controls="pills-billing" aria-selected="true">
+                        <div class="d-flex align-items-center gap-2 lh-1">
+                          <span
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-credit-card"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                              <path d="M3 10l18 0" />
+                              <path d="M7 15l.01 0" />
+                              <path d="M11 15l2 0" />
+                            </svg>
+                          </span>
+                          <span>Billing</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a href="#!" class="nav-link" id="pills-team-tab" data-bs-toggle="pill" data-bs-target="#pills-team" role="tab" aria-controls="pills-team" aria-selected="true">
+                        <div class="d-flex align-items-center gap-2 lh-1">
+                          <span
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-users"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                              <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                              <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                            </svg>
+                          </span>
+                          <span>Team</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        href="#!"
+                        class="nav-link"
+                        id="pills-notification-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-notification"
+                        role="tab"
+                        aria-controls="pills-notification"
+                        aria-selected="true"
+                      >
+                        <div class="d-flex align-items-center gap-2 lh-1">
+                          <span
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-bell"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                              <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                            </svg>
+                          </span>
+                          <span>Notification</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        href="#!"
+                        class="nav-link"
+                        id="pills-integration-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-integration"
+                        role="tab"
+                        aria-controls="pills-integration"
+                        aria-selected="true"
+                      >
+                        <div class="d-flex align-items-center gap-2 lh-1">
+                          <span
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-box"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" />
+                              <path d="M12 12l8 -4.5" />
+                              <path d="M12 12l0 9" />
+                              <path d="M12 12l-8 -4.5" />
+                            </svg>
+                          </span>
+                          <span>Integration</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a href="#!" class="nav-link" id="pills-social-tab" data-bs-toggle="pill" data-bs-target="#pills-social" role="tab" aria-controls="pills-social" aria-selected="true">
+                        <div class="d-flex align-items-center gap-2 lh-1">
+                          <span
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-share"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                              <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                              <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                              <path d="M8.7 10.7l6.6 -3.4" />
+                              <path d="M8.7 13.3l6.6 3.4" />
+                            </svg>
+                          </span>
+                          <span>Social</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                      <div class="card card-lg mb-6">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Profile Picture</h5>
+                            <p class="mb-0 text-secondary">Upload a picture to make your profile stand out and let people recognize your comments and contributions easily!</p>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <img src="../../assets/images/avatar/avatar-2.jpg" alt="avatar" class="avatar avatar-lg rounded-circle" />
+                            <div class="ms-4">
+                              <h5 class="mb-0">Your photo</h5>
+                              <small class="text-secondary">Allowed *.jpeg, *.jpg, *.png, *.gif max size of 4 MB</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card-lg">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Account Information</h5>
+                            <p class="mb-0 text-secondary">Edit your personal information and address.</p>
+                          </div>
+                          <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-lg-6 col-md-12">
+                              <label for="profileFirstNameInput" class="form-label">First Name</label>
+                              <input type="text" class="form-control" id="profileFirstNameInput" value="Jitu" required />
+                              <div class="invalid-feedback">Please enter firstname.</div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                              <label for="profileLastNameInput" class="form-label">Last Name</label>
+                              <input type="text" class="form-control" id="profileLastNameInput" value="Chauhan" required />
+                              <div class="invalid-feedback">Please enter lastname.</div>
+                            </div>
+                            <div class="col-lg-6">
+                              <label for="profilePhoneInput" class="form-label">Phone</label>
+                              <input type="number" class="form-control input-phone" id="profilePhoneInput" placeholder="+1 4XX XXX XXXX" required />
+                              <div class="invalid-feedback">Please enter phone.</div>
+                            </div>
+                            <div class="col-lg-6">
+                              <label for="profileBirthdayInput" class="form-label">Birthday</label>
+                              <input type="text" class="form-control flatpickr" id="profileBirthdayInput" placeholder="dd/mm/yyyy" required />
+                              <div class="invalid-feedback">Please enter birthday.</div>
+                            </div>
+                            <div class="col-lg-12">
+                              <label for="profileAddressInput" class="form-label">Address Line</label>
+                              <input type="text" class="form-control" id="profileAddressInput" required />
+                              <div class="invalid-feedback">Please enter addredss.</div>
+                            </div>
+                            <div class="col-lg-3">
+                              <label for="profileCountryInput" class="form-label">Country</label>
+                              <select class="form-select" id="profileCountryInput" required data-choices>
+                                <option selected disabled value="">Choose...</option>
+                                <option selected value="India">India</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Germany">Germany</option>
+                              </select>
+                              <div class="invalid-feedback">Please select state.</div>
+                            </div>
+                            <div class="col-lg-3">
+                              <label for="profileStateInput" class="form-label">State / Region</label>
+                              <select class="form-select" id="profileStateInput" data-choices>
+                                <option selected disabled value="">Choose...</option>
+                                <option selected value="Gujarat">Gujarat</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                              </select>
+                              <div class="invalid-feedback">Please select state / region.</div>
+                            </div>
+                            <div class="col-lg-3">
+                              <label for="profileCityInput" class="form-label">State</label>
+                              <select class="form-select" id="profileCityInput" data-choices>
+                                <option selected disabled value="">Choose...</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Surat">Surat</option>
+                                <option value="Vapi">Vapi</option>
+                                <option value="Rajkot">Rajkot</option>
+                              </select>
+                              <div class="invalid-feedback">Please select a valid city.</div>
+                            </div>
+                            <div class="col-lg-3">
+                              <label for="profilezipInput" class="form-label">Zip/Code</label>
+                              <input type="text" class="form-control" id="profilezipInput" required />
+                              <div class="invalid-feedback">Please provide a zip.</div>
+                            </div>
+                            <div class="col-12 mt-4">
+                              <button class="btn btn-primary me-2" type="submit">Save Changes</button>
+                              <button class="btn btn-white" type="submit">Cancel</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-security" role="tabpanel" aria-labelledby="pills-security-tab" tabindex="0">
+                      <div class="card card-lg mb-6">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Email Address</h5>
+                            <p class="mb-0 text-secondary">
+                              Change the email address for your account. Currently You account is
+                              <a href="#" class="text-primary">dasher@example.com</a>
+                            </p>
+                          </div>
+                          <form class="row needs-validation" novalidate>
+                            <div class="col-lg-7">
+                              <div class="mb-3">
+                                <label for="securityEmailInput" class="form-label">New Email Address</label>
+                                <input type="email" class="form-control" id="securityEmailInput" placeholder="dasher@example.cpm" required />
+                                <div class="invalid-feedback">Please enter email address.</div>
+                              </div>
+                              <div>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="card card-lg mb-6">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Change Password</h5>
+                            <p class="mb-0 text-secondary">We will email you a confirmation when changing your password, so please expect that email after submitting.</p>
+                          </div>
+                          <form class="row gy-3 needs-validation" novalidate>
+                            <div class="col-lg-7">
+                              <label for="securityOldPasswordInput" class="form-label">Old Password</label>
+                              <input type="password" class="form-control" id="securityOldPasswordInput" required />
+                              <div class="invalid-feedback">Please enter old password.</div>
+                            </div>
+
+                            <div class="col-lg-7">
+                              <label for="securityNewPasswordInput" class="form-label">New Password</label>
+                              <input type="password" class="form-control" id="securityNewPasswordInput" required />
+                              <div class="invalid-feedback">Please enter new password.</div>
+                              <div class="form-text">Make sure it's at least 15 characters OR at least 8 characters including a number and a lowercase letter. Learn more.</div>
+                            </div>
+
+                            <div class="col-lg-7">
+                              <label for="securityConfirmPasswordInput" class="form-label">Confirm New Password</label>
+                              <input type="password" class="form-control" id="securityConfirmPasswordInput" required />
+                              <div class="invalid-feedback">Please enter confirm password.</div>
+                              <div class="form-text">Make sure match with above new password</div>
+                            </div>
+                            <div class="col-12">
+                              <button class="btn btn-primary me-2" type="submit">Save Changes</button>
+                              <button class="btn btn-white" type="submit">Cancel</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="card card-lg bg-danger bg-opacity-10">
+                        <div class="card-body">
+                          <div class="mb-4">
+                            <h5 class="mb-0">Danger Zone</h5>
+                            <span class="text-secondary">Deleting your account will</span>
+                          </div>
+                          <ul class="list-unstyled mb-3">
+                            <li class="mb-2">1. Permanently delete your profile, along with your authentication associations.</li>
+                            <li class="mb-2">2. Permanently delete all your content, including your articles, bookmarks, comments, upvotes, etc.</li>
+                            <li class="mb-2">3. Allow your username to become available to anyone.</li>
+                          </ul>
+                          <p class="mb-0">
+                            Important: deleting your account is unrecoverable and cannot be undone. Feel free to contact
+                            <a href="#" class="text-danger">support@dasherexample.com</a>
+                            with any questions.
+                          </p>
+                          <div class="mt-3">
+                            <a href="#" class="btn btn-danger">Delete Account</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-billing" role="tabpanel" aria-labelledby="pills-billing-tab" tabindex="0">
+                      <div class="card card-lg mb-6">
+                        <div class="card-body">
+                          <div class="mb-6 d-lg-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Current plan</h5>
+                            <div class="mt-3 mt-lg-0 d-md-flex">
+                              <a href="#" class="btn btn-white me-2">Cancel plan</a>
+                              <a href="#" class="btn btn-outline-primary">
+                                Upgrade plan
+                                <span class="ms-2">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-up-right"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                    <path d="M15 9l-6 6" />
+                                    <path d="M15 15v-6h-6" />
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="row gx-4">
+                            <div class="col-lg-6">
+                              <div class="card border-0 mb-4 mb-lg-0 bg-gray-100-subtle">
+                                <div class="card-body">
+                                  <div class="mb-5">
+                                    <div class="fw-semibold">Current monthly bill</div>
+                                    <div class="fw-bold fs-5">$19.00</div>
+                                  </div>
+
+                                  <a href="#" class="text-primary">
+                                    Switch to yearly billing
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="14"
+                                      height="14"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M5 12l14 0" />
+                                      <path d="M13 18l6 -6" />
+                                      <path d="M13 6l6 6" />
+                                    </svg>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="card border-0 mb-4 mb-lg-0 bg-gray-100-subtle">
+                                <div class="card-body">
+                                  <div class="mb-5">
+                                    <div class="fw-semibold">Next payment due</div>
+                                    <div class="fw-bold fs-5">30 Jan, 2025</div>
+                                  </div>
+
+                                  <a href="#" class="text-primary">
+                                    View payment history
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="14"
+                                      height="14"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M5 12l14 0" />
+                                      <path d="M13 18l6 -6" />
+                                      <path d="M13 6l6 6" />
+                                    </svg>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card-lg mb-6">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Payment Methods</h5>
+                            <p class="text-secondary mb-0">The Dasher UI notification system notifies you of important events such as replies, mentions, updates, etc.</p>
+                          </div>
+                          <div class="border py-3 px-4 rounded-3 mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="d-flex">
+                                <img src="../../assets/images/svg/visa.svg" alt="card" class="me-3" />
+                                <div>
+                                  <h6 class="mb-0">Visa ending in 1234</h6>
+                                  <small class="text-secondary">Expires in 03/2025</small>
+                                </div>
+                              </div>
+                              <div>
+                                <span class="dropdown dropstart">
+                                  <a class="btn btn-icon btn-ghost rounded-circle" href="#" role="button" id="paymentDropdown1" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                      <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                      <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                    </svg>
+                                  </a>
+                                  <span class="dropdown-menu" aria-labelledby="paymentDropdown1">
+                                    <span class="dropdown-header">Setting</span>
+                                    <a class="dropdown-item" href="#">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-edit"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                        <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                        <path d="M16 5l3 3" />
+                                      </svg>
+                                      <span class="ms-2">Edit</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M4 7l16 0" />
+                                        <path d="M10 11l0 6" />
+                                        <path d="M14 11l0 6" />
+                                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                      </svg>
+                                      <span class="ms-2">Remove</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-credit-card"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                                        <path d="M3 10l18 0" />
+                                        <path d="M7 15l.01 0" />
+                                        <path d="M11 15l2 0" />
+                                      </svg>
+                                      <span class="ms-2">Make it Primary</span>
+                                    </a>
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="border py-3 px-4 rounded-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="d-flex">
+                                <img src="../../assets/images/svg/mastercard.svg" alt="card" class="me-3" />
+                                <div>
+                                  <h6 class="mb-0">Master ending in 1234</h6>
+                                  <small class="text-secondary">Expires in 03/2026</small>
+                                </div>
+                              </div>
+                              <div>
+                                <span class="dropdown dropstart">
+                                  <a class="btn btn-icon btn-ghost rounded-circle" href="#" role="button" id="paymentDropdown2" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                      <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                      <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                    </svg>
+                                  </a>
+                                  <span class="dropdown-menu" aria-labelledby="paymentDropdown2">
+                                    <span class="dropdown-header">Setting</span>
+                                    <a class="dropdown-item" href="#">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-edit"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                        <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                        <path d="M16 5l3 3" />
+                                      </svg>
+                                      <span class="ms-2">Edit</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M4 7l16 0" />
+                                        <path d="M10 11l0 6" />
+                                        <path d="M14 11l0 6" />
+                                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                      </svg>
+                                      <span class="ms-2">Remove</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-credit-card"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                                        <path d="M3 10l18 0" />
+                                        <path d="M7 15l.01 0" />
+                                        <path d="M11 15l2 0" />
+                                      </svg>
+                                      <span class="ms-2">Make it Primary</span>
+                                    </a>
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="btn btn-outline-primary mt-4" data-bs-toggle="modal" data-bs-target="#paymentModal">Add Payment Method</a>
+                        </div>
+                      </div>
+                      <div class="card card-lg mb-4">
+                        <div class="card-body p-lg-5">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Invoice History</h5>
+                            <p class="text-secondary mb-0">The Invoice History Report is needed to justify the balance for a given range of invoices.</p>
+                          </div>
+
+                          <ul class="list-group list-group-flush mb-0">
+                            <li class="list-group-item px-0 py-3 border-bottom border-dashed">
+                              <div class="d-flex justify-content-between fw-semibold">
+                                <span>01 Feb 2023</span>
+                                <span>$26.96</span>
+                                <a href="#">PDF</a>
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0 py-3 border-bottom border-dashed">
+                              <div class="d-flex justify-content-between fw-semibold">
+                                <span>31 Jan 2023</span>
+                                <span>$34.30</span>
+                                <a href="#">PDF</a>
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0 py-3 border-bottom border-dashed">
+                              <div class="d-flex justify-content-between fw-semibold">
+                                <span>30 Jan 2023</span>
+                                <span>$93.10</span>
+                                <a href="#">PDF</a>
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0 py-3 border-bottom border-dashed">
+                              <div class="d-flex justify-content-between fw-semibold">
+                                <span>29 Jan 2023</span>
+                                <span>$44.39</span>
+                                <a href="#">PDF</a>
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0 py-3 border-bottom border-dashed border-bottom">
+                              <div class="d-flex justify-content-between fw-semibold">
+                                <span>23 Jan 2023</span>
+                                <span>$26.96</span>
+                                <a href="#">PDF</a>
+                              </div>
+                            </li>
+                          </ul>
+
+                          <div class="mt-4">
+                            <a href="#">
+                              View All Invoices
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l14 0" />
+                                <path d="M13 18l6 -6" />
+                                <path d="M13 6l6 6" />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card-lg mb-4">
+                        <div class="card-header border-0 bg-primary bg-opacity-10 py-3">
+                          <h5 class="mb-1 text-primary-emphasis">Free Plan - 30 Days Trial</h5>
+                          <p class="mb-0 text-secondary text-primary-emphasis">For new web developers ready to create their first site.</p>
+                        </div>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <div class="mb-4 mb-lg-0">
+                                <h6 class="mb-3">Included:</h6>
+                                <ul class="list-unstyled mb-0">
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check text-primary"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M9 12l2 2l4 -4" />
+                                    </svg>
+                                    <span class="ms-2">Browse Website with ads</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check text-primary"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M9 12l2 2l4 -4" />
+                                    </svg>
+                                    <span class="ms-2">Build static sites</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check text-primary"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M9 12l2 2l4 -4" />
+                                    </svg>
+                                    <span class="ms-2">1 spaces</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check text-primary"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M9 12l2 2l4 -4" />
+                                    </svg>
+                                    <span class="ms-2">10 MB storage</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check text-primary"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M9 12l2 2l4 -4" />
+                                    </svg>
+                                    <span class="ms-2">75 MB data / month</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check text-primary"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M9 12l2 2l4 -4" />
+                                    </svg>
+                                    <span class="ms-2">500 requests / month</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check text-primary"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M9 12l2 2l4 -4" />
+                                    </svg>
+                                    <span class="ms-2">Subdomain</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check text-primary"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M9 12l2 2l4 -4" />
+                                    </svg>
+                                    <span class="ms-2">SSL certificate</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="mb-4 mb-lg-0">
+                                <h6 class="mb-3">Not included:</h6>
+                                <ul class="list-unstyled mb-0">
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x text-danger"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M10 10l4 4m0 -4l-4 4" />
+                                    </svg>
+                                    <span class="ms-2">Access to HTML video</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x text-danger"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M10 10l4 4m0 -4l-4 4" />
+                                    </svg>
+                                    <span class="ms-2">Priority support</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x text-danger"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M10 10l4 4m0 -4l-4 4" />
+                                    </svg>
+                                    <span class="ms-2">Advance static sites</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x text-danger"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M10 10l4 4m0 -4l-4 4" />
+                                    </svg>
+                                    <span class="ms-2">Analytics</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x text-danger"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M10 10l4 4m0 -4l-4 4" />
+                                    </svg>
+                                    <span class="ms-2">SEO</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x text-danger"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M10 10l4 4m0 -4l-4 4" />
+                                    </svg>
+                                    <span class="ms-2">Easy Integration Add ons</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x text-danger"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M10 10l4 4m0 -4l-4 4" />
+                                    </svg>
+                                    <span class="ms-2">Pages for static website hosting</span>
+                                  </li>
+                                  <li class="mb-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="18"
+                                      height="18"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x text-danger"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                      <path d="M10 10l4 4m0 -4l-4 4" />
+                                    </svg>
+                                    <span class="ms-2">Web-based support</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-lg-12">
+                              <div class="mt-4">
+                                <a href="#">
+                                  See all features and compare plans
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="14"
+                                    height="14"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 12l14 0" />
+                                    <path d="M13 18l6 -6" />
+                                    <path d="M13 6l6 6" />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-team" role="tabpanel" aria-labelledby="pills-team-tab" tabindex="0">
+                      <div class="card card-lg mb-6">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Add team members</h5>
+                            <p class="text-secondary mb-0">Invite as many team members as you need to help run this account. Learn More</p>
+                          </div>
+                          <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-lg-6 col-md-12">
+                              <label for="formGroupEmailInput" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="formGroupEmailInput" placeholder="Team member’s email" required />
+                              <div class="invalid-feedback">Please enter an email.</div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                              <label for="formGroupRoleInput" class="form-label">Role</label>
+                              <select class="form-select" id="formGroupRoleInput" data-choices>
+                                <option selected disabled value="">Role</option>
+                                <option value="Owner">Owner</option>
+                                <option value="Front End Developer">Front End Developer</option>
+                                <option value="Full Stack Developer">Full Stack Developer</option>
+                              </select>
+                            </div>
+                            <div class="col-12">
+                              <button class="btn btn-primary" type="submit">Send Invitation</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="card card-lg">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Team members</h5>
+                            <p class="mb-0 text-secondary">List of member are in your team with its roles.</p>
+                          </div>
+                          <div class="table-responsive">
+                            <table class="table table-centered td table-centered th table-lg text-nowrap mb-0">
+                              <thead>
+                                <tr>
+                                  <th scope="col">
+                                    <div class="fw-semibold">Member</div>
+                                  </th>
+                                  <th scope="col">
+                                    <div class="fw-semibold">Role</div>
+                                  </th>
+                                  <th scope="col"></th>
+                                  <th scope="col"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <img src="../../assets/images/avatar/avatar-1.jpg" alt="avatar" class="avatar avatar-lg rounded-circle" />
+                                      <div class="ms-3">
+                                        <div class="fs-5 fw-semibold">Jitu Chauhan</div>
+                                        <span class="text-secondary">jituexample@dasher.com</span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span>Owner</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <img src="../../assets/images/avatar/avatar-2.jpg" alt="avatar" class="avatar avatar-lg rounded-circle" />
+                                      <div class="ms-3">
+                                        <div class="fs-5 fw-semibold">Anita parmar</div>
+                                        <span class="text-secondary">anitaexample@dasher.com</span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span>Front End Developer</span></td>
+                                  <td></td>
+                                  <td>
+                                    <a href="#" class="btn btn-sm btn-dark me-2">Edit</a>
+                                    <a href="#" class="btn btn-sm btn-white">Remove</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <img src="../../assets/images/avatar/avatar-9.jpg" alt="avatar" class="avatar avatar-lg rounded-circle" />
+                                      <div class="ms-3">
+                                        <div class="fs-5 fw-semibold">Sandip Chauhan</div>
+                                        <span class="text-secondary">sandipexample@dasher.com</span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span>Full Stack Developer</span></td>
+                                  <td></td>
+                                  <td>
+                                    <a href="#" class="btn btn-sm btn-dark me-2">Edit</a>
+                                    <a href="#" class="btn btn-sm btn-white">Remove</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-notification" role="tabpanel" aria-labelledby="pills-notification-tab" tabindex="0">
+                      <div class="card card-lg mb-6">
+                        <div class="card-body">
+                          <div class="mb-4">
+                            <h5 class="mb-1">Default notifications email</h5>
+                            <p class="mb-0 text-secondary">Choose where you'd like emails to be sent. You can add more email addresses.</p>
+                          </div>
+                          <form class="row align-items-center g-lg-3 g-2">
+                            <div class="col-lg-6">
+                              <label for="chooseEmail" class="form-label visually-hidden">Choose Email</label>
+                              <select class="form-select" id="chooseEmail" data-choices>
+                                <option selected disabled value="">Choose...</option>
+                                <option value="dasher@example.com">dasher@example.com</option>
+                                <option value="dasher_theme@example.com">dasher_theme@example.com</option>
+                              </select>
+                            </div>
+                            <div class="col-lg-6">
+                              <a href="#" class="text-primary d-flex align-items-center gap-1">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M12 5l0 14" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                                <span>Add New Email</span>
+                              </a>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="card card-lg mb-6">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Email notifications</h5>
+                            <p class="text-secondary mb-0">Receive notifications via email so you never miss a mention, reply, upvote or comment on Dasher UI.</p>
+                          </div>
+
+                          <h6 class="mb-3">Send me emails for:</h6>
+                          <form>
+                            <div class="form-check form-switch mb-3">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchNewActivity" />
+                              <label class="form-check-label ms-2" for="flexSwitchNewActivity">New activity notifications (mentions, replies, etc.)</label>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckUpdates" checked />
+                              <label class="form-check-label ms-2" for="flexSwitchCheckUpdates">News and Updatest</label>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckMarket" />
+                              <label class="form-check-label ms-2" for="flexSwitchCheckMarket">Marketing updates</label>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckEmail" />
+                              <label class="form-check-label ms-2" for="flexSwitchCheckEmail">Email me System notifications (security related, always on)</label>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="card card-lg">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Push notifications</h5>
+                            <p class="text-secondary mb-0">The Dasher UI notification system notifies you of important events such as replies, mentions, updates, etc.</p>
+                          </div>
+
+                          <h6 class="mb-3">Send me emails for:</h6>
+                          <form>
+                            <div class="form-check form-switch mb-3">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckActivity" />
+                              <label class="form-check-label ms-2" for="flexSwitchCheckActivity">
+                                <span class="fw-semibold">Comments</span>
+                                <small class="text-secondary">The Dasher UI notification system notifies you of important events such as replies, mentions, updates, etc.</small>
+                              </label>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckNews" checked />
+                              <label class="form-check-label ms-2" for="flexSwitchCheckNews">
+                                <span class="fw-semibold">Reminders</span>
+                                <small class="text-secondary">The Dasher UI notification system notifies you of important events such as replies, mentions, updates, etc.</small>
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-integration" role="tabpanel" aria-labelledby="pills-integration-tab" tabindex="0">
+                      <div class="card card-lg">
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <h5 class="mb-1">Extend Dasher with apps</h5>
+                            <p class="text-secondary mb-0">Here's an ongoing list of integrations to help you earn more supporters and to better connect with them.</p>
+                          </div>
+
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item px-0 py-4">
+                              <div class="d-flex mb-3 mb-lg-0 align-items-lg-center">
+                                <div class="icon-shape bg-twitter rounded icon-lg flex-shrink-0 mt-1">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="icon icon-tabler icons-tabler-filled icon-tabler-brand-twitter text-white"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                      d="M14.058 3.41c-1.807 .767 -2.995 2.453 -3.056 4.38l-.002 .182l-.243 -.023c-2.392 -.269 -4.498 -1.512 -5.944 -3.531a1 1 0 0 0 -1.685 .092l-.097 .186l-.049 .099c-.719 1.485 -1.19 3.29 -1.017 5.203l.03 .273c.283 2.263 1.5 4.215 3.779 5.679l.173 .107l-.081 .043c-1.315 .663 -2.518 .952 -3.827 .9c-1.056 -.04 -1.446 1.372 -.518 1.878c3.598 1.961 7.461 2.566 10.792 1.6c4.06 -1.18 7.152 -4.223 8.335 -8.433l.127 -.495c.238 -.993 .372 -2.006 .401 -3.024l.003 -.332l.393 -.779l.44 -.862l.214 -.434l.118 -.247c.265 -.565 .456 -1.033 .574 -1.43l.014 -.056l.008 -.018c.22 -.593 -.166 -1.358 -.941 -1.358l-.122 .007a.997 .997 0 0 0 -.231 .057l-.086 .038a7.46 7.46 0 0 1 -.88 .36l-.356 .115l-.271 .08l-.772 .214c-1.336 -1.118 -3.144 -1.254 -5.012 -.554l-.211 .084z"
+                                    />
+                                  </svg>
+                                </div>
+                                <div class="d-lg-flex w-100 ms-3 align-items-center">
+                                  <div class>
+                                    <h5 class="mb-1">Twitter</h5>
+                                    <p class="text-secondary mb-0">Automatically tweet when you get a coffee with a message. Your fans would love it!</p>
+                                  </div>
+                                  <div class="ms-auto mt-3 mt-lg-0">
+                                    <a href="#" class="btn btn-sm btn-outline-danger">Disconnect</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0 py-4">
+                              <div class="d-flex mb-3 mb-lg-0 align-items-lg-center">
+                                <div class="icon-shape bg-linkedin rounded icon-lg flex-shrink-0 mt-1">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin text-white"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M8 11v5" />
+                                    <path d="M8 8v.01" />
+                                    <path d="M12 16v-5" />
+                                    <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                                    <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+                                  </svg>
+                                </div>
+                                <div class="d-lg-flex w-100 ms-3 align-items-center">
+                                  <div class>
+                                    <h5 class="mb-1">
+                                      Linked In
+                                      <span class="badge bg-gray-100-subtle border border-light-subtle text-light-emphasis rounded-pill ms-1">Recommend</span>
+                                    </h5>
+                                    <p class="text-secondary mb-0">Automatically tweet when you get a coffee with a message. Your fans would love it!</p>
+                                  </div>
+                                  <div class="ms-auto mt-3 mt-lg-0">
+                                    <a href="#" class="btn btn-sm btn-white">Connect</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0 py-4">
+                              <div class="d-flex mb-3 mb-lg-0 align-items-lg-center">
+                                <div class="icon-shape bg-instagram rounded icon-lg flex-shrink-0 mt-1">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram text-white"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                                    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                                    <path d="M16.5 7.5v.01" />
+                                  </svg>
+                                </div>
+                                <div class="d-lg-flex w-100 ms-3 align-items-center">
+                                  <div>
+                                    <h5 class="mb-1">Instagram</h5>
+                                    <p class="text-secondary mb-0">A simple, fun & creative way to capture.</p>
+                                  </div>
+                                  <div class="ms-auto mt-3 mt-lg-0">
+                                    <a href="#" class="btn btn-sm btn-white">Connect</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0 py-4">
+                              <div class="d-flex mb-3 mb-lg-0 align-items-lg-center">
+                                <div class="icon-shape bg-slack rounded icon-lg flex-shrink-0 mt-1">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-slack text-white"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6" />
+                                    <path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6" />
+                                    <path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6" />
+                                    <path d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6" />
+                                  </svg>
+                                </div>
+                                <div class="d-lg-flex w-100 ms-3 align-items-center">
+                                  <div>
+                                    <h5 class="mb-1">Slack</h5>
+                                    <p class="text-secondary mb-0">In Slack, you've got all the flexibility to work when, where and how it's best for you.</p>
+                                  </div>
+                                  <div class="ms-auto mt-3 mt-lg-0">
+                                    <a href="#" class="btn btn-sm btn-dark">Visit</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0 pt-4">
+                              <div class="d-flex mb-3 mb-lg-0 align-items-lg-center">
+                                <div class="icon-shape bg-youtube rounded icon-lg flex-shrink-0 mt-1">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube text-white"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+                                    <path d="M10 9l5 3l-5 3z" />
+                                  </svg>
+                                </div>
+                                <div class="d-lg-flex w-100 ms-3 align-items-center">
+                                  <div>
+                                    <h5 class="mb-1">Youtube</h5>
+                                    <p class="text-secondary mb-0">Automatically tweet when you get a coffee with a message. Your fans would love it!</p>
+                                  </div>
+                                  <div class="ms-auto mt-3 mt-lg-0">
+                                    <a href="#" class="btn btn-sm btn-white">Connect</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-social" role="tabpanel" aria-labelledby="pills-social-tab" tabindex="0">
+                      <div class="card card-lg mb-6">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Web sessions</h5>
+                            <p class="text-secondary mb-0">This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.</p>
+                          </div>
+
+                          <div class="accordion" id="accordionExampleOne">
+                            <div class="border mb-4 rounded-3 px-4 py-3">
+                              <div class="d-flex align-items-start">
+                                <div class="me-4">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="icon icon-tabler icons-tabler-filled icon-tabler-circle text-secondary"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
+                                  </svg>
+                                </div>
+                                <div class="d-lg-flex align-items-center justify-content-between w-100">
+                                  <div class="d-flex">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-device-desktop text-success"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z" />
+                                      <path d="M7 20h10" />
+                                      <path d="M9 16v4" />
+                                      <path d="M15 16v4" />
+                                    </svg>
+                                    <div class="ms-4">
+                                      <h6 class="mb-0">Ahmedabad 102.250.233.120</h6>
+                                      <span class="text-secondary">Your current session</span>
+                                    </div>
+                                  </div>
+                                  <div class="mt-4 mt-lg-0">
+                                    <a href="#" class="btn btn-white btn-sm" data-bs-toggle="collapse" data-bs-target="#collapseDeviceOne" aria-expanded="false" aria-controls="collapseDeviceOne">
+                                      See More
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="collapseDeviceOne" class="accordion-collapse collapse" data-bs-parent="#accordionExampleOne">
+                                <div class="pt-4">
+                                  <div class="mb-4">
+                                    <h6 class="mb-1">Device:</h6>
+                                    <small class="text-secondary">Chrome on macOS</small>
+                                  </div>
+                                  <div class="mb-4">
+                                    <h6 class="mb-1">Last Location:</h6>
+                                    <small class="text-secondary">Ahmedabad, Gujarat, India</small>
+                                  </div>
+                                  <div>
+                                    <h6 class="mb-1">Signed in:</h6>
+                                    <small class="text-secondary">February 28, 2022</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="border mb-4 rounded-3 px-4 py-3">
+                              <div class="d-flex align-items-start">
+                                <div class="me-4">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="icon icon-tabler icons-tabler-filled icon-tabler-circle text-secondary"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
+                                  </svg>
+                                </div>
+                                <div class="d-lg-flex align-items-center justify-content-between w-100">
+                                  <div class="d-flex">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-device-desktop text-success"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z" />
+                                      <path d="M7 20h10" />
+                                      <path d="M9 16v4" />
+                                      <path d="M15 16v4" />
+                                    </svg>
+                                    <div class="ms-4">
+                                      <h6 class="mb-0">Ahmedabad 102.250.233.120</h6>
+                                      <span class="text-secondary">Your current session</span>
+                                    </div>
+                                  </div>
+                                  <div class="mt-4 mt-lg-0">
+                                    <a href="#" class="btn btn-white btn-sm" data-bs-toggle="collapse" data-bs-target="#collapseDeviceTwo" aria-expanded="false" aria-controls="collapseDeviceTwo">
+                                      See More
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="collapseDeviceTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExampleOne">
+                                <div class="pt-4">
+                                  <div class="mb-4">
+                                    <h6 class="mb-0">Device:</h6>
+                                    <small class="text-secondary">Chrome on macOS</small>
+                                  </div>
+                                  <div class="mb-4">
+                                    <h6 class="mb-0">Last Location:</h6>
+                                    <small class="text-secondary">Ahmedabad, Gujarat, India</small>
+                                  </div>
+                                  <div>
+                                    <h6 class="mb-0">Signed in:</h6>
+                                    <small class="text-secondary">February 28, 2022</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card-lg">
+                        <div class="card-body">
+                          <div class="mb-5">
+                            <h5 class="mb-1">Mobile sessions</h5>
+                            <p class="text-secondary mb-0">Mobile can be used to verify your identity when signing in from a new device and as a two-factor authentication method.</p>
+                          </div>
+
+                          <div class="accordion" id="accordionExampleTwo">
+                            <div class="border mb-4 rounded-3 px-4 py-3">
+                              <div class="d-flex align-items-start">
+                                <div class="me-4">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="icon icon-tabler icons-tabler-filled icon-tabler-circle text-secondary"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
+                                  </svg>
+                                </div>
+                                <div class="d-lg-flex align-items-center justify-content-between w-100">
+                                  <div class="d-flex">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="icon icon-tabler icons-tabler-outline icon-tabler-device-desktop text-success"
+                                    >
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                      <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z" />
+                                      <path d="M7 20h10" />
+                                      <path d="M9 16v4" />
+                                      <path d="M15 16v4" />
+                                    </svg>
+                                    <div class="ms-4">
+                                      <h6 class="mb-0">Ahmedabad 102.250.233.120</h6>
+                                      <span class="text-secondary">Your current session</span>
+                                    </div>
+                                  </div>
+                                  <div class="mt-4 mt-lg-0">
+                                    <a href="#" class="btn btn-white btn-sm" data-bs-toggle="collapse" data-bs-target="#collapseMobileOne" aria-expanded="false" aria-controls="collapseMobileOne">
+                                      See More
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div id="collapseMobileOne" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
+                                <div class="pt-4">
+                                  <div class="mb-4">
+                                    <h6 class="mb-0">Device:</h6>
+                                    <small class="text-secondary">Chrome on macOS</small>
+                                  </div>
+                                  <div class="mb-4">
+                                    <h6 class="mb-0">Last Location:</h6>
+                                    <small class="text-secondary">Ahmedabad, Gujarat, India</small>
+                                  </div>
+                                  <div>
+                                    <h6 class="mb-0">Signed in:</h6>
+                                    <small class="text-secondary">February 28, 2022</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal start-->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header align-items-center d-flex">
+            <h5 class="modal-title" id="paymentModalLabel">Add New Payment Method</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <!-- Form -->
+            <form class="row mb-4 needs-validation" novalidate>
+              <div class="mb-3 col-12 col-md-12 mb-4">
+                <h5 class="mb-3">Credit / Debit card</h5>
+                <!-- Radio button -->
+                <div class="d-inline-flex">
+                  <div class="form-check me-2">
+                    <input type="radio" id="paymentRadioOne" name="paymentRadioOne" class="form-check-input" />
+                    <label class="form-check-label" for="paymentRadioOne"><img src="../../assets/images/svg/americanexpress.svg" alt="card" /></label>
+                  </div>
+                  <!-- Radio button -->
+                  <div class="form-check me-2">
+                    <input type="radio" id="paymentRadioTwo" name="paymentRadioTwo" class="form-check-input" />
+                    <label class="form-check-label" for="paymentRadioTwo"><img src="../../assets/images/svg/mastercard.svg" alt="card" /></label>
+                  </div>
+
+                  <!-- Radio button -->
+                  <div class="form-check">
+                    <input type="radio" id="paymentRadioFour" name="paymentRadioFour" class="form-check-input" />
+                    <label class="form-check-label" for="paymentRadioFour"><img src="../../assets/images/svg/visa.svg" alt="card" /></label>
+                  </div>
+                </div>
+              </div>
+              <!-- Name on card -->
+              <div class="mb-3 col-12 col-md-4">
+                <label for="nameoncard" class="form-label">Name on card</label>
+                <input id="nameoncard" type="text" class="form-control" name="nameoncard" placeholder="Name" required="" />
+              </div>
+              <!-- Month -->
+
+              <div class="mb-3 col-12 col-md-4">
+                <label class="form-label" for="month">Month</label>
+                <select class="form-select" id="month" data-choices>
+                  <option selected disabled value="">Choose...</option>
+                  <option value="Month">Month</option>
+                  <option value="Jan">Jan</option>
+                  <option value="Feb">Feb</option>
+                  <option value="Mar">Mar</option>
+                  <option value="Apr">Apr</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="Aug">Aug</option>
+                  <option value="Sep">Sep</option>
+                  <option value="Oct">Oct</option>
+                  <option value="Nov">Nov</option>
+                  <option value="Dec">Dec</option>
+                </select>
+              </div>
+
+              <!-- Year -->
+              <div class="mb-3 col-12 col-md-4">
+                <label class="form-label" for="year">Year</label>
+                <select class="form-select" id="year" data-choices>
+                  <option selected disabled value="">Choose...</option>
+                  <option value="Year">Year</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2025">2025</option>
+                </select>
+              </div>
+
+              <!-- Card number -->
+              <div class="mb-3 col-md-8 col-12">
+                <label for="card-mask" class="form-label">Card Number</label>
+                <input type="text" class="form-control" id="card-mask" placeholder="xxxx-xxxx-xxxx-xxxx" required="" />
+              </div>
+              <!-- CVV -->
+              <div class="mb-3 col-md-4 col-12">
+                <div class="mb-3">
+                  <label for="digit-mask" class="form-label">
+                    CVV Code
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-help"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                      <path d="M12 17l0 .01" />
+                      <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+                    </svg>
+                  </label>
+
+                  <input type="password" class="form-control" name="digit-mask" id="digit-mask" placeholder="xxx" maxlength="3" inputmode="numeric" required="" />
+                </div>
+              </div>
+              <!-- Button -->
+              <div class="col-md-6 col-12">
+                <button class="btn btn-primary" type="submit">Add New Card</button>
+                <button class="btn btn-white" type="button" data-bs-dismiss="modal">Close</button>
+              </div>
+            </form>
+            <span>
+              <span class="fw-bold">Note:</span>
+              that you can later remove your card at the account setting page.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal end-->
+    {% include "partials/../partials/scripts.html" %}
+    <script src="/js/vendors/sidebarnav.js"></script>
+    <script src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/js/vendors/choice.js"></script>
+    <script src="node_modules/imask/dist/imask.min.js"></script>
+    <script src="/js/vendors/inputmask.js"></script>
+    <!-- flatpickr -->
+    <script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="/js/vendors/flatpickr.js"></script>
+  </body>
+</html>

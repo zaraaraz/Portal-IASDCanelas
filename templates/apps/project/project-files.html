@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html" %}
+
+    <title>Files | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+
+    {% include "partials/../partials/head/head-links.html" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8">
+                <div>
+                  <h1 class="mb-3 h2">Files</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Project</a></li>
+                      <li class="breadcrumb-item"><a href="#">Single</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Files</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-lg mb-6">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-12">
+                <!-- Page header -->
+                <div class="d-lg-flex align-items-center justify-content-between px-6 border-bottom border-dashed p-6">
+                  <div class="mb-6 mb-lg-0">
+                    <div class="d-flex align-items-center">
+                      <div class="icon-shape icon-lg bg-primary-subtle rounded-2 d-none d-xl-block">
+                        <img src="../../assets/images/brand/logo/logo-icon.svg" alt="Image" />
+                      </div>
+                      <div class="ms-xl-4">
+                        <h1 class="mb-1 h2">Dasher UI - Design & Development</h1>
+                        <span class="text-secondary">
+                          <span class="small">
+                            <span class="me-1"> Codescandy </span>
+
+                            <span class="mx-1">
+                              Create Date:
+                              <span>1 Jan 2025</span>
+                            </span>
+
+                            <span class="mx-1">
+                              Due Date:
+                              <span>29 Jan 2025</span>
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <!-- avatar group -->
+                    <div class="avatar-group">
+                      <span class="avatar avatar-md">
+                        <!-- avatar  -->
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle imgtooltip" data-template="one" />
+                        <span id="one" class="d-none">
+                          <small>Paul Haney</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two" />
+                        <span id="two" class="d-none">
+                          <small>Gali Linear</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three" />
+                        <span id="three" class="d-none">
+                          <small>Mary Holler</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-4.jpg" class="rounded-circle imgtooltip" data-template="four" />
+                        <span id="four" class="d-none">
+                          <small>Lio Nordal</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <span class="avatar-initials rounded-circle bg-gray-100">5+</span>
+                      </span>
+                    </div>
+                    <!-- icon  -->
+                    <a href="#!" class="btn btn-icon btn-white border border-2 rounded-circle ms-2" data-template="inviteMember" data-bs-toggle="modal" data-bs-target="#inviteMemberModal"> + </a>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <!-- nav  -->
+                  <ul class="nav nav-lb-tab border-bottom-0 px-6">
+                    <li class="nav-item ms-0 me-3">
+                      <a class="nav-link" href="project-overview.html">Overview</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-task.html">Task</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-budget.html">Budget</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link active" href="project-files.html">Files</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-team.html">Team</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- row -->
+          <div class="row">
+            <!-- col -->
+            <div class="col-12">
+              <div class="card card-lg" id="fileList" data-list="file_name,file_size,file_modified,file_upload,">
+                <div class="card-header border-bottom-0">
+                  <div class="row justify-content-between">
+                    <div class="col-lg-4">
+                      <input type="search" class="form-control listjs-search" placeholder="Search" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive" data-simplebar style="height: 600px">
+                  <table class="table mb-0 text-nowrap table-centered">
+                    <thead class="sticky-top">
+                      <tr>
+                        <th class="listjs-sorter" data-sort="file_name">Name</th>
+                        <th class="listjs-sorter" data-sort="file_size">File size</th>
+                        <th class="listjs-sorter" data-sort="file_modified">Modified</th>
+                        <th class="listjs-sorter" data-sort="file_upload">Uploaded by</th>
+                        <th>Options</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody class="list">
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-primary-subtle text-primary-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-file-spreadsheet text-primary"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                <path d="M8 11h8v7h-8z" />
+                                <path d="M8 15h8" />
+                                <path d="M11 11v7" />
+                              </svg>
+                            </div>
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Admin-Dashboard-Design.excl</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">2.3MB</td>
+                        <td class="file_modified">27 Sept, 2025</td>
+                        <td class="file_upload">
+                          <img src="../../assets/images/avatar/avatar-11.jpg" alt="Image" class="rounded-circle avatar avatar-sm" />
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="five">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+
+                            <div id="five" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="six">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="six" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownOne" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownOne">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-info-subtle text-info-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-photo"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M15 8h.01" />
+                                <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" />
+                                <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" />
+                                <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" />
+                              </svg>
+                            </div>
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Admin-Dashboard-Design.jpeg</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">10MB</td>
+                        <td class="file_modified">29 Sept, 2025</td>
+                        <td class="file_upload">
+                          <img src="../../assets/images/avatar/avatar-2.jpg" alt="Image" class="rounded-circle avatar avatar-sm" />
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="seven">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+                            <div id="seven" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="eight">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="eight" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownTwo" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownTwo">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-success-subtle text-success-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-square-letter-w"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                                <path d="M9 8l1 8l2 -5l2 5l1 -8" />
+                              </svg>
+                            </div>
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Dasher Description.doc</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">45MB</td>
+                        <td class="file_modified">01 Oct, 2025</td>
+                        <td class="file_upload">
+                          <span class="avatar avatar-sm avatar-primary">
+                            <span class="avatar-initials rounded-circle">DU</span>
+                          </span>
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="nine">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+                            <div id="nine" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="ten">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="ten" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownThree" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownThree">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-danger-subtle text-danger-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-parking"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+                                <path d="M10 16v-8h2.667c.736 0 1.333 .895 1.333 2s-.597 2 -1.333 2h-2.667" />
+                              </svg>
+                            </div>
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Dash-UI-Marketing-Process.ppt</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">122MB</td>
+                        <td class="file_modified">04 Oct, 2025</td>
+                        <td class="file_upload">
+                          <img src="../../assets/images/avatar/avatar-4.jpg" alt="Image" class="rounded-circle avatar avatar-sm" />
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eleven">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+                            <div id="eleven" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="twelve">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="twelve" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownFive" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownFive">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-warning-subtle text-warning-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-file-text"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                <path d="M9 9l1 0" />
+                                <path d="M9 13l6 0" />
+                                <path d="M9 17l6 0" />
+                              </svg>
+                            </div>
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Dash-UI-Marketing-Process.txt</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">43.5MB</td>
+                        <td class="file_modified">06 Oct, 2025</td>
+                        <td class="file_upload">
+                          <span class="avatar avatar-sm avatar-success">
+                            <span class="avatar-initials rounded-circle">DU</span>
+                          </span>
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="thirteen">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+                            <div id="thirteen" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="fourteen">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="fourteen" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownFour" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownFour">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-danger-subtle text-danger-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-brand-youtube"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+                                <path d="M10 9l5 3l-5 3z" />
+                              </svg>
+                            </div>
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Dash-UI-promo-trailer-template.mov</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">115MB</td>
+                        <td class="file_modified">08 Oct, 2025</td>
+                        <td class="file_upload">
+                          <img src="../../assets/images/avatar/avatar-6.jpg" alt="Image" class="rounded-circle avatar avatar-sm" />
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="fifteen">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+                            <div id="fifteen" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="sixteen">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="sixteen" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownSix" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownSix">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-success-subtle text-success-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-square-letter-x"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                                <path d="M10 8l4 8" />
+                                <path d="M10 16l4 -8" />
+                              </svg>
+                            </div>
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Earning-from-Dashboard.xlsx</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">55MB</td>
+                        <td class="file_modified">12 Oct, 2025</td>
+                        <td class="file_upload">
+                          <span class="avatar avatar-sm avatar-danger">
+                            <span class="avatar-initials rounded-circle">DU</span>
+                          </span>
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="seventeen">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+                            <div id="seventeen" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="eighteen">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="eighteen" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownSeven" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownSeven">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-danger-subtle text-danger-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-parking"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z"></path>
+                                <path d="M10 16v-8h2.667c.736 0 1.333 .895 1.333 2s-.597 2 -1.333 2h-2.667"></path>
+                              </svg>
+                            </div>
+
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Dash-UI-Marketing-Process.ppt</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">122MB</td>
+                        <td class="file_modified">04 Oct, 2025</td>
+                        <td class="file_upload">
+                          <img src="../../assets/images/avatar/avatar-4.jpg" alt="Image" class="rounded-circle avatar avatar-sm" />
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="nineteen">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+                            <div id="nineteen" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="twenty">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="twenty" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownEight" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownEight">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-warning-subtle text-warning-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-file-text"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                                <path d="M9 9l1 0"></path>
+                                <path d="M9 13l6 0"></path>
+                                <path d="M9 17l6 0"></path>
+                              </svg>
+                            </div>
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Dash-UI-Marketing-Process.txt</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">43.5MB</td>
+                        <td class="file_modified">06 Oct, 2025</td>
+                        <td class="file_upload">
+                          <span class="avatar avatar-sm avatar-success">
+                            <span class="avatar-initials rounded-circle">DU</span>
+                          </span>
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="twentyOne">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+                            <div id="twentyOne" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="twentyTwo">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="twentyTwo" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownNine" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownNine">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="file_name">
+                          <div class="d-flex align-items-center">
+                            <div class="icon-shape icon-lg rounded-3 bg-danger-subtle text-danger-emphasis">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-brand-youtube"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z"></path>
+                                <path d="M10 9l5 3l-5 3z"></path>
+                              </svg>
+                            </div>
+                            <div class="ms-3">
+                              <a href="#!" class="text-inherit">Dash-UI-promo-trailer-template.mov</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="file_size">115MB</td>
+                        <td class="file_modified">08 Oct, 2025</td>
+                        <td class="file_upload">
+                          <img src="../../assets/images/avatar/avatar-6.jpg" alt="Image" class="rounded-circle avatar avatar-sm" />
+                        </td>
+                        <td>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="twentyThree">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-download"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                              <path d="M7 11l5 5l5 -5" />
+                              <path d="M12 4l0 12" />
+                            </svg>
+                            <div id="twentyThree" class="d-none">
+                              <span>Download</span>
+                            </div>
+                          </a>
+                          <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle ms-3 texttooltip" data-template="twentyFour">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-link"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 15l6 -6" />
+                              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                            </svg>
+                            <div id="twentyFour" class="d-none">
+                              <span>Link</span>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" id="DropdownTen" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownTen">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="btn-toolbar card-footer border-top border-dashed d-flex flex-md-row flex-column justify-content-md-between align-items-md-center">
+                  <p class="mb-0 listjs-showing-items-label"></p>
+                  <div class="d-flex flex-column flex-md-row gap-4">
+                    <div class="d-flex align-items-center gap-2">
+                      <label class="form-label text-nowrap mb-0">Rows per page:</label>
+                      <select class="form-select listjs-items-per-page" data-choices="">
+                        <option value="8" selected>8</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+                    <div>
+                      <div class="pagination-buttons d-flex">
+                        <button class="btn btn-white prev">Previous</button>
+                        <ul class="pagination mb-0 ms-1"></ul>
+                        <button class="btn btn-white next">Next</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="inviteMemberModal" tabindex="-1" role="dialog" aria-labelledby="inviteMemberModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="mb-0" id="inviteMemberModalLabel">Invite Member</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 mt-1">
+              <input type="search" class="form-control" placeholder="Search Here" />
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <div>Members:</div>
+              <div class="ms-2">
+                <!-- avatar group -->
+                <div class="avatar-group">
+                  <span class="avatar avatar-sm">
+                    <!-- avatar  -->
+                    <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle imgtooltip" data-template="one1" />
+                    <span id="one1" class="d-none">
+                      <span>Paul Haney</span>
+                    </span>
+                  </span>
+                  <!-- avatar  -->
+                  <span class="avatar avatar-sm">
+                    <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two2" />
+                    <span id="two2" class="d-none">
+                      <span>Gali Linear</span>
+                    </span>
+                  </span>
+                  <!-- avatar  -->
+                  <span class="avatar avatar-sm">
+                    <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three3" />
+                    <span id="three3" class="d-none">
+                      <span>Mary Holler</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- contact list -->
+              <ul class="list-unstyled contacts-list mb-0">
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-5.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Pete Martin</div>
+                          </a>
+                          <small class="mb-0">Designer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-9.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Olivia Cooper</div>
+                          </a>
+                          <small class="mb-0">Front End Develosmaller</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-19.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Jamarcus Streich</div>
+                          </a>
+                          <h5 class="mb-0"></h5>
+                          <small>UX Designer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-8.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">User Name</div>
+                          </a>
+                          <small>Content Writer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-3.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Rosalee Roberts</div>
+                          </a>
+                          <small>SEO Specialist</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-12.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Lauren Wilson</div>
+                          </a>
+                          <small>Front End Developer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-14.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">User Name</div>
+                          </a>
+                          <small>Content Writer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-15.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Rosalee Roberts</div>
+                          </a>
+                          <small>SEO Specialist</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="text-end mt-4 mb-2">
+                <a href="#!" class="btn btn-primary">+ Invite</a>
+                <a href="#!" class="btn btn-light bg-gray-400 ms-2">Close</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html" %}
+    <script src="/js/vendors/sidebarnav.js"></script>
+    <!-- popper js -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!-- tippy js -->
+    <script src="node_modules/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+    <script src="/js/vendors/tippy.js"></script>
+    <script src="node_modules/list.js/dist/list.min.js"></script>
+    <script src="/js/vendors/list.js"></script>
+    <script src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/js/vendors/choice.js"></script>
+  </body>
+</html>

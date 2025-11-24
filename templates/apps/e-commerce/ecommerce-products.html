@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html" %}
+
+    <title>Products | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    {% include "partials/../partials/head/head-links.html" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html" %}
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8 d-md-flex justify-content-between align-items-center">
+                <div>
+                  <h1 class="mb-3 h2">Products</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Ecommerce</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Product List</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div>
+                  <a href="ecommerce-product-edit.html" class="btn btn-dark d-md-flex align-items-center gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 5l0 14" />
+                      <path d="M5 12l14 0" />
+                    </svg>
+                    New Product</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-lg" id="productList" data-list="product_name,product_category,product_date,product_price,product_quantity,product_status">
+                  <div class="card-header border-bottom-0">
+                    <div class="row g-4">
+                      <div class="col-lg-4">
+                        <input type="search" class="form-control listjs-search" placeholder="Search" />
+                      </div>
+                      <div class="col-lg-8 d-flex justify-content-end">
+                        <div class="d-flex align-items-center gap-2">
+                          <div>
+                            <button type="button" class="btn btn-white">More Filter</button>
+                          </div>
+                          <div class="dropdown">
+                            <a class="btn btn-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Category </a>
+
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Accessories</a></li>
+                              <li><a class="dropdown-item" href="#">Bags</a></li>
+                              <li><a class="dropdown-item" href="#">Men's Fashion</a></li>
+                              <li><a class="dropdown-item" href="#">Accessories</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown">
+                            <a class="btn btn-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Export </a>
+
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Download as CSV</a></li>
+                              <li><a class="dropdown-item" href="#">Print</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table-responsive table-checkbox" data-simplebar style="height: 600px">
+                    <table class="table text-nowrap table-centered table-hover mb-0" data-check-container>
+                      <thead class="sticky-top">
+                        <tr>
+                          <th class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="checkAll" data-check-all />
+                              <label class="form-check-label" for="checkAll"></label>
+                            </div>
+                          </th>
+                          <th class="listjs-sorter ps-0" data-sort="product_name">Product</th>
+                          <th class="listjs-sorter" data-sort="product_category">Category</th>
+                          <th class="listjs-sorter" data-sort="product_date">Added Date</th>
+                          <th class="listjs-sorter" data-sort="product_price">Price</th>
+                          <th class="listjs-sorter" data-sort="product_quantity">Quantity</th>
+                          <th class="listjs-sorter" data-sort="product_status">Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="list">
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox2" />
+                              <label class="form-check-label" for="contactCheckbox2"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-1.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Transparent Sunglasses</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Accessories</td>
+                          <td class="product_date">19 July, 2025</td>
+                          <td class="product_price">$65.29</td>
+                          <td class="product_quantity">235</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeOne" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editOne" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashOne" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox3" />
+                              <label class="form-check-label" for="contactCheckbox3"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-2.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Frames Still Life Glasses</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Bags</td>
+                          <td class="product_date">19 July, 2025</td>
+                          <td class="product_price">$15.99</td>
+                          <td class="product_quantity">56</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeTwo" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="edit">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="edit" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashTwo" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox4" />
+                              <label class="form-check-label" for="contactCheckbox4"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-3.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Slightly Rounded Frame</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Men's Fashion</td>
+                          <td class="product_date">19 July, 2025</td>
+                          <td class="product_price">$12.39</td>
+                          <td class="product_quantity">67</td>
+                          <td class="product_status">
+                            <span class="badge text-danger-emphasis bg-danger-subtle rounded-pill">Deactive</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeThree" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editTwo" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashThree" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox5" />
+                              <label class="form-check-label" for="contactCheckbox5"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-4.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Colored-Transparent Sunglasses</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Women's Fashion</td>
+                          <td class="product_date">18 July, 2025</td>
+                          <td class="product_price">$35.99</td>
+                          <td class="product_quantity">24</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeFour">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeFour" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editThree" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashFour">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashFour" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox6" />
+                              <label class="form-check-label" for="contactCheckbox6"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-5.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Sun Glasses Table</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Accessories</td>
+                          <td class="product_date">17 July, 2025</td>
+                          <td class="product_price">$65.29</td>
+                          <td class="product_quantity">32</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeFive">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeFive" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editFour">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editFour" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashFive">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashFive" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox16" />
+                              <label class="form-check-label" for="contactCheckbox16"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-6.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Rounded Frames Glasses</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Bags</td>
+                          <td class="product_date">20 July, 2025</td>
+                          <td class="product_price">$45.29</td>
+                          <td class="product_quantity">45</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeSix">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeSix" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editFive">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editFive" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashSix">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashSix" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox7" />
+                              <label class="form-check-label" for="contactCheckbox7"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-7.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Green Glasses Rounded Frame</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Men's Fashion</td>
+                          <td class="product_date">20 July, 2025</td>
+                          <td class="product_price">$65.29</td>
+                          <td class="product_quantity">45</td>
+                          <td class="product_status">
+                            <span class="badge text-danger-emphasis bg-danger-subtle rounded-pill">Deactive</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeSeven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeSeven" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editSix">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editSix" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashSeven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashSeven" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox8" />
+                              <label class="form-check-label" for="contactCheckbox8"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-8.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Transparent Sunglasses Life</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Women's Fashion</td>
+                          <td class="product_date">18 July, 2025</td>
+                          <td class="product_price">$35.29</td>
+                          <td class="product_quantity">34</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeNine">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeNine" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editSeven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editSeven" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashEight">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashEight" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox9" />
+                              <label class="form-check-label" for="contactCheckbox9"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-9.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Glasses Slightly Rounded</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Bags</td>
+                          <td class="product_date">19 July, 2025</td>
+                          <td class="product_price">$15.99</td>
+                          <td class="product_quantity">56</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeEleven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeEleven" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editEight">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editEight" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashNine">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashNine" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox10" />
+                              <label class="form-check-label" for="contactCheckbox10"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-10.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Colored Transparent Sunglasses</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Men's Fashion</td>
+                          <td class="product_date">19 July, 2025</td>
+                          <td class="product_price">$12.39</td>
+                          <td class="product_quantity">67</td>
+                          <td class="product_status">
+                            <span class="badge text-danger-emphasis bg-danger-subtle rounded-pill">Deactive</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeTweleve">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeTweleve" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editNine">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editNine" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashTen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashTen" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox11" />
+                              <label class="form-check-label" for="contactCheckbox11"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-1.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Transparent Sunglasses</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Women's Fashion</td>
+                          <td class="product_date">18 July, 2025</td>
+                          <td class="product_price">$35.99</td>
+                          <td class="product_quantity">24</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeThirteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeThirteen" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editTen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editTen" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashEleven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashEleven" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox12" />
+                              <label class="form-check-label" for="contactCheckbox12"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-2.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Frames Still Life Glasses</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Accessories</td>
+                          <td class="product_date">17 July, 2025</td>
+                          <td class="product_price">$65.29</td>
+                          <td class="product_quantity">32</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeFourteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeFourteen" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editEleven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editEleven" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashTwelve">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashTwelve" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox13" />
+                              <label class="form-check-label" for="contactCheckbox13"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-3.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Slightly Rounded Frame</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Bags</td>
+                          <td class="product_date">20 July, 2025</td>
+                          <td class="product_price">$45.29</td>
+                          <td class="product_quantity">45</td>
+                          <td class="product_status">
+                            <span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeFifteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeFifteen" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editThirteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editThirteen" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashThirteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashThirteen" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pe-0">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox14" />
+                              <label class="form-check-label" for="contactCheckbox14"></label>
+                            </div>
+                          </td>
+                          <td class="product_name ps-0">
+                            <div class="d-flex align-items-center">
+                              <img src="../../assets/images/ecommerce/product-4.jpg" alt="" class="rounded-3" width="56" />
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit fw-semibold">Colored-Transparent Sunglasses</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="product_category">Men's Fashion</td>
+                          <td class="product_date">20 July, 2025</td>
+                          <td class="product_price">$65.29</td>
+                          <td class="product_quantity">45</td>
+                          <td class="product_status">
+                            <span class="badge text-danger-emphasis bg-danger-subtle rounded-pill">Deactive</span>
+                          </td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeSixteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-eye"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                              <div id="eyeSixteen" class="d-none">
+                                <span>View</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editFourteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editFourteen" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashFourteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashFourteen" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="btn-toolbar card-footer border-top border-dashed d-flex flex-md-row flex-column justify-content-md-between align-items-md-center">
+                    <p class="mb-0 listjs-showing-items-label"></p>
+                    <div class="d-flex flex-column flex-md-row gap-4">
+                      <div class="d-flex align-items-center gap-2">
+                        <label class="form-label text-nowrap mb-0">Rows per page:</label>
+                        <select class="form-select listjs-items-per-page" data-choices="">
+                          <option value="10" selected>10</option>
+                          <option value="14">14</option>
+                        </select>
+                      </div>
+                      <div>
+                        <div class="pagination-buttons d-flex">
+                          <button class="btn btn-white prev">Previous</button>
+                          <ul class="pagination mb-0 ms-1"></ul>
+                          <button class="btn btn-white next">Next</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html" %}
+    <script src="/js/vendors/sidebarnav.js"></script>
+    <script src="node_modules/list.js/dist/list.min.js"></script>
+    <script src="/js/vendors/list.js"></script>
+    <!-- popper js -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!-- tippy js -->
+    <script src="node_modules/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+    <script src="/js/vendors/tippy.js"></script>
+    <script src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/js/vendors/choice.js"></script>
+    <script src="/js/vendors/checkbox.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html" %}
+    <title>Teams| Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    {% include "partials/../partials/head/head-links.html" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8">
+                <div>
+                  <h1 class="mb-3 h2">Team</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Profile</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Team</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center mb-4">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+              <!-- Bg -->
+
+              <div class="card card-lg overflow-hidden">
+                <div class="pt-16 rounded-top position-relative" style="background: url(../../assets/images/background/profile-cover.jpg) no-repeat; background-size: cover">
+                  <div class="position-absolute top-0 end-0 m-4">
+                    <a href="#!" class="icon-shape icon-md bg-white rounded-circle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-edit text-secondary"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                        <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                        <path d="M16 5l3 3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-column flex-lg-row gap-4">
+                    <div>
+                      <img src="../../assets/images/avatar/avatar-1.jpg" alt="" class="rounded-circle avatar avatar-xl" />
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row justify-content-between w-100 gap-2">
+                      <div class="d-lg-flex flex-lg-column">
+                        <h3 class="mb-0">Jitu Chauhan</h3>
+                        <div class="d-lg-flex align-items-center gap-2">
+                          <span>@imjituchauhan</span>
+                          <span class="text-secondary">12,500 subscribers</span>
+                          <span class="text-secondary">1200 Posts</span>
+                        </div>
+                        <div class="mt-4">
+                          <a href="#!" class="btn btn-white d-inline-flex align-items-center gap-2"
+                            >View Site<svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                              <path d="M11 13l9 -9" />
+                              <path d="M15 4h5v5" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-10">
+                        <div class="d-flex flex-column">
+                          <span class="fw-semibold fs-5">12,500</span>
+                          <span class="text-secondary">Followers</span>
+                        </div>
+                        <div class="d-flex flex-column">
+                          <span class="fw-semibold fs-5">350</span>
+                          <span class="text-secondary">Following</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- content -->
+          <div class="row">
+            <div class="col-12 mb-8">
+              <ul class="nav nav-lb-tab border-bottom">
+                <li class="nav-item">
+                  <a href="profile-overview.html" class="nav-link">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                          <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                          <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                        </svg>
+                      </span>
+                      <span>Profile</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile-project.html" class="nav-link">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                          <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+                          <path d="M12 12l0 .01" />
+                          <path d="M3 13a20 20 0 0 0 18 0" />
+                        </svg>
+                      </span>
+                      <span>Project</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile-team.html" class="nav-link active">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-users-group"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                          <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+                          <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                          <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+                          <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                          <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
+                        </svg>
+                      </span>
+                      <span>Teams</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile-followers.html" class="nav-link">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-users"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                          <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                          <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                        </svg>
+                      </span>
+                      <span>Followers</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile-activity.html" class="nav-link">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-activity"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M3 12h4l3 8l4 -16l3 8h4" />
+                        </svg>
+                      </span>
+                      <span>Activity</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Section Heading -->
+          </div>
+          <div class="row g-6">
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <!-- card body -->
+                <div class="card-body py-8">
+                  <!-- icon -->
+                  <div class="d-flex flex-column align-items-center gap-5">
+                    <div class="icon-shape icon-xxl bg-primary-subtle text-primary-emphasis rounded-3 text-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M7 8l-4 4l4 4" />
+                        <path d="M17 8l4 4l-4 4" />
+                        <path d="M14 4l-4 16" />
+                      </svg>
+                    </div>
+                    <!-- Title -->
+                    <div class="text-center">
+                      <h5 class="mb-1">Front End Developer</h5>
+                      <span class="text-secondary small">12+ Team members</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="card-footer border-top border-dashed d-flex align-items-center w-100 justify-content-between">
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+                    </span>
+                  </div>
+                  <div class="dropdown dropstart">
+                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-dots-vertical"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-eye-off"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                            <path
+                              d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                            />
+                            <path d="M3 3l18 18" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Hide</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-settings"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                            />
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Manage team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-layers-subtract"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add channel</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-plus"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add member</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-logout"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M9 12h12l-3 -3" />
+                            <path d="M18 15l3 -3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Leave the team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-edit"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                            <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                            <path d="M16 5l3 3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Edit team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-link"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 15l6 -6" />
+                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Get link to team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-trash"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7l16 0" />
+                            <path d="M10 11l0 6" />
+                            <path d="M14 11l0 6" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Delete team</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <!-- card body -->
+                <div class="card-body py-8">
+                  <!-- icon -->
+                  <div class="d-flex flex-column align-items-center gap-5">
+                    <div class="icon-shape icon-xxl bg-info-subtle text-info-emphasis rounded-3 text-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-components"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 12l3 3l3 -3l-3 -3z" />
+                        <path d="M15 12l3 3l3 -3l-3 -3z" />
+                        <path d="M9 6l3 3l3 -3l-3 -3z" />
+                        <path d="M9 18l3 3l3 -3l-3 -3z" />
+                      </svg>
+                    </div>
+                    <div class="text-center">
+                      <!-- Title -->
+                      <h5 class="mb-1">UX / UI Designer</h5>
+                      <span class="text-secondary small">8 Team members</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="card-footer border-top border-dashed d-flex align-items-center w-100 justify-content-between">
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+                    </span>
+                  </div>
+                  <div class="dropdown dropstart">
+                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-dots-vertical"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-eye-off"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                            <path
+                              d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                            />
+                            <path d="M3 3l18 18" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Hide</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-settings"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                            />
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Manage team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-layers-subtract"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add channel</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-plus"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add member</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-logout"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M9 12h12l-3 -3" />
+                            <path d="M18 15l3 -3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Leave the team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-edit"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                            <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                            <path d="M16 5l3 3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Edit team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-link"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 15l6 -6" />
+                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Get link to team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-trash"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7l16 0" />
+                            <path d="M10 11l0 6" />
+                            <path d="M14 11l0 6" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Delete team</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <!-- card body -->
+                <div class="card-body py-8">
+                  <div class="d-flex flex-column align-items-center gap-5">
+                    <!-- icon -->
+                    <div class="icon-shape icon-xxl bg-danger-subtle text-danger-emphasis rounded-3 text-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-stack-2"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 4l-8 4l8 4l8 -4l-8 -4" />
+                        <path d="M4 12l8 4l8 -4" />
+                        <path d="M4 16l8 4l8 -4" />
+                      </svg>
+                    </div>
+                    <div class="text-center">
+                      <!-- Title -->
+                      <h5 class="mb-1">Full Stack Developer</h5>
+                      <span class="text-secondary small">6 Team members</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="card-footer border-top border-dashed d-flex align-items-center w-100 justify-content-between">
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+                    </span>
+                  </div>
+                  <div class="dropdown dropstart">
+                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-dots-vertical"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-eye-off"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                            <path
+                              d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                            />
+                            <path d="M3 3l18 18" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Hide</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-settings"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                            />
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Manage team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-layers-subtract"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add channel</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-plus"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add member</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-logout"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M9 12h12l-3 -3" />
+                            <path d="M18 15l3 -3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Leave the team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-edit"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                            <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                            <path d="M16 5l3 3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Edit team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-link"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 15l6 -6" />
+                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Get link to team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-trash"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7l16 0" />
+                            <path d="M10 11l0 6" />
+                            <path d="M14 11l0 6" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Delete team</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <!-- card body -->
+                <div class="card-body py-8">
+                  <div class="d-flex flex-column align-items-center gap-5">
+                    <!-- icon -->
+                    <div class="icon-shape icon-xxl bg-success-subtle text-success-emphasis rounded-3 text-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-codesandbox"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M20 7.5v9l-4 2.25l-4 2.25l-4 -2.25l-4 -2.25v-9l4 -2.25l4 -2.25l4 2.25z" />
+                        <path d="M12 12l4 -2.25l4 -2.25" />
+                        <path d="M12 12l0 9" />
+                        <path d="M12 12l-4 -2.25l-4 -2.25" />
+                        <path d="M20 12l-4 2v4.75" />
+                        <path d="M4 12l4 2l0 4.75" />
+                        <path d="M8 5.25l4 2.25l4 -2.25" />
+                      </svg>
+                    </div>
+                    <div class="text-center">
+                      <!-- Title -->
+                      <h5 class="mb-1">Software Engineer</h5>
+                      <span class="text-secondary small">4 Team members</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="card-footer border-top border-dashed d-flex align-items-center w-100 justify-content-between">
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+                    </span>
+                  </div>
+                  <div class="dropdown dropstart">
+                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-dots-vertical"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-eye-off"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                            <path
+                              d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                            />
+                            <path d="M3 3l18 18" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Hide</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-settings"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                            />
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Manage team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-layers-subtract"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add channel</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-plus"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add member</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-logout"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M9 12h12l-3 -3" />
+                            <path d="M18 15l3 -3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Leave the team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-edit"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                            <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                            <path d="M16 5l3 3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Edit team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-link"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 15l6 -6" />
+                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Get link to team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-trash"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7l16 0" />
+                            <path d="M10 11l0 6" />
+                            <path d="M14 11l0 6" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Delete team</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <!-- card body -->
+                <div class="card-body py-8">
+                  <div class="d-flex flex-column align-items-center gap-5">
+                    <!-- icon -->
+                    <div class="icon-shape icon-xxl bg-warning-subtle text-warning-emphasis rounded-3 text-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-users-group"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                        <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+                        <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                        <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+                        <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                        <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
+                      </svg>
+                    </div>
+                    <div class="text-center">
+                      <!-- Title -->
+                      <h5 class="mb-1">HR Management</h5>
+                      <span class="text-secondary small">2 Team members</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="card-footer border-top border-dashed d-flex align-items-center w-100 justify-content-between">
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+                    </span>
+                  </div>
+                  <div class="dropdown dropstart">
+                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-dots-vertical"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-eye-off"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                            <path
+                              d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                            />
+                            <path d="M3 3l18 18" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Hide</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-settings"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                            />
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Manage team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-layers-subtract"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add channel</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-plus"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add member</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-logout"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M9 12h12l-3 -3" />
+                            <path d="M18 15l3 -3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Leave the team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-edit"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                            <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                            <path d="M16 5l3 3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Edit team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-link"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 15l6 -6" />
+                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Get link to team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-trash"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7l16 0" />
+                            <path d="M10 11l0 6" />
+                            <path d="M14 11l0 6" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Delete team</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <!-- card body -->
+                <div class="card-body py-8">
+                  <div class="d-flex flex-column align-items-center gap-5">
+                    <!-- icon -->
+                    <div class="icon-shape icon-xxl bg-secondary-subtle text-secondary-emphasis rounded-3 text-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-code text-secondary"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M7 8l-4 4l4 4" />
+                        <path d="M17 8l4 4l-4 4" />
+                        <path d="M14 4l-4 16" />
+                      </svg>
+                    </div>
+                    <div class="text-center">
+                      <!-- Title -->
+                      <h5 class="mb-1">Accounting Member</h5>
+                      <span class="text-secondary small">5 Team members</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="card-footer border-top border-dashed d-flex align-items-center w-100 justify-content-between">
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+                    </span>
+                  </div>
+                  <div class="dropdown dropstart">
+                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-dots-vertical"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-eye-off"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                            <path
+                              d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                            />
+                            <path d="M3 3l18 18" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Hide</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-settings"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                            />
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Manage team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-layers-subtract"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add channel</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-plus"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add member</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-logout"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M9 12h12l-3 -3" />
+                            <path d="M18 15l3 -3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Leave the team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-edit"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                            <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                            <path d="M16 5l3 3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Edit team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-link"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 15l6 -6" />
+                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Get link to team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-trash"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7l16 0" />
+                            <path d="M10 11l0 6" />
+                            <path d="M14 11l0 6" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Delete team</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <!-- card body -->
+                <div class="card-body py-8">
+                  <div class="d-flex flex-column align-items-center gap-5">
+                    <!-- icon -->
+                    <div class="icon-shape icon-xxl bg-primary-subtle text-primary-emphasis rounded-3 text-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-compass"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M8 16l2 -6l6 -2l-2 6l-6 2" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 3l0 2" />
+                        <path d="M12 19l0 2" />
+                        <path d="M3 12l2 0" />
+                        <path d="M19 12l2 0" />
+                      </svg>
+                    </div>
+                    <div class="text-center">
+                      <!-- Title -->
+                      <h5 class="mb-1">UX / UI Designer</h5>
+                      <span class="text-secondary small">6 Team members</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="card-footer border-top border-dashed d-flex align-items-center w-100 justify-content-between">
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+                    </span>
+                  </div>
+                  <div class="dropdown dropstart">
+                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-dots-vertical"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-eye-off"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                            <path
+                              d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                            />
+                            <path d="M3 3l18 18" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Hide</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-settings"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                            />
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Manage team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-layers-subtract"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add channel</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-plus"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add member</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-logout"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M9 12h12l-3 -3" />
+                            <path d="M18 15l3 -3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Leave the team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-edit"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                            <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                            <path d="M16 5l3 3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Edit team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-link"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 15l6 -6" />
+                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Get link to team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-trash"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7l16 0" />
+                            <path d="M10 11l0 6" />
+                            <path d="M14 11l0 6" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Delete team</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <!-- card body -->
+                <div class="card-body py-8">
+                  <div class="d-flex flex-column align-items-center gap-5">
+                    <!-- icon -->
+                    <div class="icon-shape icon-xxl bg-info-subtle text-info-emphasis rounded-3 text-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-crosshair"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 8v-2a2 2 0 0 1 2 -2h2" />
+                        <path d="M4 16v2a2 2 0 0 0 2 2h2" />
+                        <path d="M16 4h2a2 2 0 0 1 2 2v2" />
+                        <path d="M16 20h2a2 2 0 0 0 2 -2v-2" />
+                        <path d="M9 12l6 0" />
+                        <path d="M12 9l0 6" />
+                      </svg>
+                    </div>
+                    <div class="text-center">
+                      <!-- Title -->
+                      <h5 class="mb-1">Front End Developer</h5>
+                      <span class="text-secondary small">4 Team members</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="card-footer border-top border-dashed d-flex align-items-center w-100 justify-content-between">
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+                    </span>
+                  </div>
+                  <div class="dropdown dropstart">
+                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-dots-vertical"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-eye-off"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                            <path
+                              d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                            />
+                            <path d="M3 3l18 18" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Hide</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-settings"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                            />
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Manage team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-layers-subtract"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                            <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add channel</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-plus"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Add member</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-logout"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M9 12h12l-3 -3" />
+                            <path d="M18 15l3 -3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Leave the team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-edit"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                            <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                            <path d="M16 5l3 3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Edit team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-link"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 15l6 -6" />
+                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Get link to team</span>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" href="#!">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-trash"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7l16 0" />
+                            <path d="M10 11l0 6" />
+                            <path d="M14 11l0 6" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                          </svg>
+                        </span>
+                        <span class="ms-2">Delete team</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html" %}
+    <script src="/js/vendors/sidebarnav.js"></script>
+  </body>
+</html>

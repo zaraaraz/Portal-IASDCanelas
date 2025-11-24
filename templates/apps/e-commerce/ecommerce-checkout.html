@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html" %}
+    <title>Checkout | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    {% include "partials/../partials/head/head-links.html" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8">
+                <div>
+                  <h1 class="mb-3 h2">Checkout</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Ecommerce</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- row -->
+
+            <div class="row g-6">
+              <div class="col-xxl-8 col-12">
+                <div>
+                  <!-- stepper -->
+                  <div id="stepperForm" class="bs-stepper">
+                    <!-- Stepper Button -->
+                    <div class="bs-stepper-header p-0 bg-transparent mb-4" role="tablist">
+                      <div class="step" data-target="#test-l-1">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormtrigger1" aria-controls="test-l-1">
+                          <span class="bs-stepper-circle me-2 d-flex align-items-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-users"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                              <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                              <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                            </svg>
+                          </span>
+                          <span class="bs-stepper-label">Billing Info</span>
+                        </button>
+                      </div>
+                      <div class="bs-stepper-line"></div>
+                      <!-- Stepper Button -->
+                      <div class="step" data-target="#test-l-2">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormtrigger2" aria-controls="test-l-2">
+                          <span class="bs-stepper-circle me-2 d-flex align-items-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-shopping-bag"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+                              <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+                            </svg>
+                          </span>
+                          <span class="bs-stepper-label">Shipping Details</span>
+                        </button>
+                      </div>
+                      <div class="bs-stepper-line"></div>
+                      <!-- Stepper Button -->
+                      <div class="step" data-target="#test-l-3">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormtrigger3" aria-controls="test-l-3">
+                          <span class="bs-stepper-circle me-2 d-flex align-items-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-credit-card"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"></path>
+                              <path d="M3 10l18 0"></path>
+                              <path d="M7 15l.01 0"></path>
+                              <path d="M11 15l2 0"></path>
+                            </svg>
+                          </span>
+                          <span class="bs-stepper-label">Payment Info</span>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- card -->
+                    <div class="card card-lg">
+                      <div class="card-body px-6 py-5">
+                        <!-- Stepper content -->
+                        <div class="bs-stepper-content">
+                          <form onSubmit="return false">
+                            <!-- Content one -->
+                            <div id="test-l-1" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormtrigger1">
+                              <!-- heading -->
+                              <div class="mb-5">
+                                <h5 class="mb-1">Billing Information</h5>
+                                <p class="mb-0 text-secondary">Please fill all information below</p>
+                              </div>
+                              <!-- row -->
+                              <div class="row g-4">
+                                <!-- input -->
+                                <div class="col-md-6">
+                                  <label class="form-label" for="firstName">First Name</label>
+                                  <input type="text" class="form-control" placeholder="Enter first name" id="firstName" />
+                                </div>
+                                <!-- input -->
+                                <div class="col-md-6">
+                                  <label class="form-label" for="lastName">Last Name</label>
+                                  <input type="text" class="form-control" placeholder="Enter last name" id="lastName" />
+                                </div>
+                                <!-- input -->
+                                <div class="col-md-6">
+                                  <label class="form-label" for="email">Email (Optional)</label>
+                                  <input type="email" class="form-control" placeholder="Enter email address" id="email" />
+                                </div>
+                                <!-- input -->
+                                <div class="col-md-6">
+                                  <label class="form-label" for="phone">Phone</label>
+                                  <input type="text" class="form-control" placeholder="Enter phone number" id="phone" />
+                                </div>
+                                <!-- input -->
+                                <div class="col-12">
+                                  <label class="form-label" for="address">Address</label>
+                                  <input type="text" class="form-control" placeholder="Enter address" id="address" />
+                                </div>
+                                <!-- input -->
+                                <div class="col-12">
+                                  <label class="form-label" for="town">Town / City</label>
+                                  <input type="text" class="form-control" placeholder="Enter City" id="town" />
+                                </div>
+                                <!-- input -->
+                                <div class="col-12">
+                                  <label class="form-label" for="state">State</label>
+                                  <input type="text" class="form-control" placeholder="Enter State" id="state" />
+                                </div>
+                                <!-- input -->
+                                <div class="col-12">
+                                  <label class="form-label" for="zip">Zip / Postal Code</label>
+                                  <input type="text" class="form-control" placeholder="Zip / Postal Code" id="zip" />
+                                </div>
+                                <!-- select -->
+                                <div class="col-12">
+                                  <label class="form-label">Country</label>
+                                  <select class="form-select" data-choices="">
+                                    <option selected>Select Country</option>
+                                    <option value="1">India</option>
+                                    <option value="2">UK</option>
+                                    <option value="3">US</option>
+                                  </select>
+                                </div>
+                                <!-- checkbox -->
+                                <div class="col-12">
+                                  <div class="form-check mb-0">
+                                    <input class="form-check-input" type="checkbox" value="" id="shipAddress" />
+                                    <label class="form-check-label" for="shipAddress">Ship to different address ?</label>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Button -->
+                              <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary" onclick="stepperForm.next()">
+                                  Proceed to Shipping
+                                  <i class="fe fe-shopping-bag ms-1"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <!-- Content two -->
+                            <div id="test-l-2" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormtrigger2">
+                              <!-- text -->
+                              <div class="mb-5">
+                                <h5 class="mb-1">Shipping Information</h5>
+                                <p class="mb-0 text-secondary">Fill the form below in order to send you the orders invoice.</p>
+                              </div>
+                              <!-- text -->
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">Saved Address</h5>
+                                <a href="#!" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#addNewAddress">Add new address</a>
+                              </div>
+                              <!-- row -->
+                              <div class="row g-6 mb-6">
+                                <div class="col-lg-6 col-12">
+                                  <!-- form -->
+                                  <div class="border p-4 rounded-3">
+                                    <div class="form-check mb-2">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="homeRadio" />
+                                      <label class="form-check-label" for="homeRadio">Home</label>
+                                    </div>
+                                    <!-- address -->
+                                    <p class="mb-0">
+                                      3812 Orchard Street
+                                      <br />
+
+                                      Bloomington,
+                                      <br />
+
+                                      Minnesota 55431,
+                                      <br />
+
+                                      United States
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                  <!-- input -->
+                                  <div class="border p-4 rounded-3">
+                                    <div class="form-check mb-2">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="officeRadio" />
+                                      <label class="form-check-label" for="officeRadio">Office</label>
+                                    </div>
+                                    <!-- address -->
+                                    <p class="mb-0">
+                                      3853 Coal Road
+                                      <br />
+
+                                      Tannersville,
+                                      <br />
+
+                                      Pennsylvania, 18372
+                                      <br />
+
+                                      United States
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <!-- heading -->
+                                <h5 class="mb-4">Shipping Method</h5>
+                                <!-- card -->
+                                <div class="card card-bordered shadow-none mb-2">
+                                  <!-- card body -->
+                                  <div class="card-body">
+                                    <!-- form check -->
+                                    <div class="d-flex">
+                                      <div class="form-check mt-1">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="freeDelivery" />
+                                        <label class="form-check-label ms-2" for="freeDelivery"></label>
+                                      </div>
+                                      <div>
+                                        <div class="fw-semibold">Free Delivery</div>
+                                        <span class="text-secondary">Expected Delivery 3 to 5 Days</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- card -->
+                                <div class="card card-bordered shadow-none mb-2">
+                                  <!-- card body -->
+                                  <div class="card-body">
+                                    <!-- form check -->
+                                    <div class="d-md-flex">
+                                      <div class="form-check mt-1">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="nextDelivery" />
+                                        <label class="form-check-label ms-2 w-100" for="nextDelivery"></label>
+                                      </div>
+                                      <div class="d-flex justify-content-between align-items-center w-100">
+                                        <div class="d-flex align-items-start">
+                                          <!-- img -->
+                                          <img src="../../assets/images/svg/payment-logo-fedex.svg" alt="Image" />
+                                          <!-- text -->
+                                          <div class="ms-2">
+                                            <div class="fw-semibold">FedEx Next Day Delivery</div>
+                                            <span class="text-secondary">No Delivery on Public Holidays</span>
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <!-- heading -->
+                                          <div class="fs-5 fw-bold">$19.99</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- card -->
+                                <div class="card card-bordered shadow-none">
+                                  <!-- card body -->
+                                  <div class="card-body">
+                                    <div class="d-md-flex">
+                                      <div class="form-check mt-1">
+                                        <!-- input -->
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="DHLExpress" />
+                                        <label class="form-check-label ms-2 w-100" for="DHLExpress"></label>
+                                      </div>
+                                      <div class="d-flex justify-content-between align-items-center w-100">
+                                        <!-- img -->
+                                        <div class="d-flex align-items-start">
+                                          <img src="../../assets/images/svg/payment-logo-dhl.svg" alt="Image" />
+                                          <!-- text -->
+                                          <div class="ms-2">
+                                            <div class="fw-semibold">DHL Express</div>
+                                            <span class="text-secondary">1 Day Delivery</span>
+                                          </div>
+                                        </div>
+                                        <!-- text -->
+                                        <div>
+                                          <div class="fs-5 fw-bold">$8.99</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Button -->
+                              <div class="d-md-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-primary mb-2 mb-md-0" onclick="stepperForm.previous()">Back to Info</button>
+                                <!-- Button -->
+                                <button class="btn btn-primary" onclick="stepperForm.next()">
+                                  Continue to Payment
+                                  <i class="fe fe-credit-card ms-2"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <!-- Content three -->
+                            <div id="test-l-3" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormtrigger3">
+                              <!-- Card -->
+                              <div class="mb-5">
+                                <h5 class="mb-1">Payment selection</h5>
+                                <p class="mb-0 text-secondary">Please select and enter your billing information.</p>
+                              </div>
+                              <!-- Card -->
+                              <div class="card card-bordered shadow-none mb-2">
+                                <!-- card body -->
+                                <div class="card-body">
+                                  <div class="d-flex">
+                                    <div class="form-check mt-1">
+                                      <!-- checkbox -->
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="paypal" />
+                                      <label class="form-check-label ms-2" for="paypal"></label>
+                                    </div>
+                                    <div>
+                                      <div class="fw-semibold">Payment with Paypal</div>
+                                      <p class="mb-0 text-secondary">You will be redirected to PayPal website to complete your purchase securely.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- card -->
+                              <div class="card card-bordered shadow-none mb-2">
+                                <!-- card body -->
+                                <div class="card-body">
+                                  <div class="d-flex mb-4">
+                                    <div class="form-check mt-1">
+                                      <!-- input -->
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="creditdebitcard" />
+                                      <label class="form-check-label ms-2" for="creditdebitcard"></label>
+                                    </div>
+                                    <div>
+                                      <div class="fw-semibold">Credit / Debit Card</div>
+                                      <p class="text-secondary">Safe money transfer using your bank accou k account. We support Mastercard tercard, Visa, Discover and Stripe.</p>
+                                    </div>
+                                  </div>
+                                  <div class="row g-2 mt-4 mb-5">
+                                    <div class="col-12">
+                                      <!-- input -->
+                                      <div class="mb-3">
+                                        <label for="card-mask" class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" id="card-mask" placeholder="xxxx-xxxx-xxxx-xxxx" required="" />
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                      <!-- input -->
+                                      <div class="mb-3 mb-lg-0">
+                                        <label class="form-label" for="nameoncard">Name on card</label>
+                                        <input type="text" class="form-control" placeholder="Enter name" id="nameoncard" required="" />
+                                      </div>
+                                    </div>
+                                    <div class="col-md-3 col-12">
+                                      <!-- input -->
+                                      <div class="mb-3 mb-lg-0 position-relative">
+                                        <label class="form-label" for="dy-mask">Expiry date</label>
+                                        <input type="text" class="form-control" id="dy-mask" placeholder="MM/YY" required="" />
+                                      </div>
+                                    </div>
+                                    <div class="col-md-3 col-12">
+                                      <!-- input -->
+                                      <div class="mb-3 mb-lg-0">
+                                        <label for="digit-mask" class="form-label">
+                                          CVV Code
+                                          <i
+                                            class="ti ti-progress-help ms-1"
+                                            data-bs-toggle="tooltip"
+                                            data-placement="top"
+                                            aria-label="A 3 - digit number, typically printed on the back of a card."
+                                            data-bs-original-title="A 3 - digit number, typically printed on the back of a card."
+                                          ></i>
+                                        </label>
+                                        <input type="password" class="form-control" name="digit-mask" id="digit-mask" placeholder="xxx" maxlength="3" inputmode="numeric" required="" />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- card -->
+                              <div class="card card-bordered shadow-none mb-2">
+                                <!-- card body -->
+                                <div class="card-body">
+                                  <!-- check input -->
+                                  <div class="d-flex">
+                                    <div class="form-check mt-1">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="payoneer" />
+                                      <label class="form-check-label ms-2" for="payoneer"></label>
+                                    </div>
+                                    <div>
+                                      <div class="fw-semibold">Pay with Payoneer</div>
+                                      <p class="mb-0 text-secondary">You will be redirected to Payoneer website to complete your purchase securely.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- card -->
+                              <div class="card card-bordered shadow-none">
+                                <div class="card-body">
+                                  <!-- check input -->
+                                  <div class="d-flex">
+                                    <div class="form-check mt-1">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="cashonDelivery" />
+                                      <label class="form-check-label ms-2" for="cashonDelivery"></label>
+                                    </div>
+                                    <div>
+                                      <div class="fw-semibold">Cash on Delivery</div>
+                                      <p class="mb-0 text-secondary">Pay with cash when your order is delivered.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Button -->
+                              <div class="d-flex justify-content-between">
+                                <!-- Button -->
+                                <button class="btn btn-outline-primary mt-3" onclick="stepperForm.previous()">Back to shipping</button>
+                                <!-- Button -->
+                                <button type="submit" class="btn btn-primary mt-3" onclick=" location.href='order-summary.html' ">Complete Order</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-4 col-12">
+                <div class="card card-lg">
+                  <div class="card-body px-6 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-6">
+                      <h5 class="mb-0">Order Summary</h5>
+                      <a href="#!" class="btn btn-primary btn-sm">Edit Cart</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <div>
+                        <img src="../../assets/images/ecommerce/product-1.jpg" alt="Image" class="rounded-2" width="56" height="56" />
+                      </div>
+                      <div class="d-flex flex-column">
+                        <a href="#!" class="text-inherit">Women Shoes</a>
+                        <span class="fw-bold">$49.00</span>
+                      </div>
+                    </div>
+                    <hr class="my-3 border-dashed border-top" />
+                    <div class="d-flex align-items-center gap-3">
+                      <div>
+                        <img src="../../assets/images/ecommerce/product-2.jpg" alt="Image" class="rounded-2" width="56" height="56" />
+                      </div>
+                      <div class="d-flex flex-column">
+                        <a href="#!" class="text-inherit">Black Round Sunglasses</a>
+
+                        <span class="fw-bold">$79.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-6 py-5 border-dashed border-top pt-2">
+                    <ul class="mb-0 list-unstyled">
+                      <li class="d-flex justify-content-between py-2">
+                        <span class="text-secondary">Subtotal</span>
+                        <span class="fw-semibold">$128.00</span>
+                      </li>
+                      <li class="d-flex justify-content-between py-2">
+                        <span class="text-secondary">Shipping</span>
+                        <span class="fw-semibold">$0.00</span>
+                      </li>
+                      <li class="d-flex justify-content-between py-2">
+                        <span class="text-secondary">Discount</span>
+                        <span class="fw-semibold text-danger">$0.00</span>
+                      </li>
+                      <li class="d-flex justify-content-between pt-2">
+                        <span class="text-secondary">Tax</span>
+                        <span class="fw-semibold">$0.00</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer px-6 py-5 border-top border-dashed">
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-bold">Grand Total</span>
+                      <span class="fw-bold">$128.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html" %}
+    <script src="/js/vendors/sidebarnav.js"></script>
+    <script src="node_modules/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script src="/js/vendors/beStepper.js"></script>
+
+    <!-- popper js -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!-- tippy js -->
+    <script src="node_modules/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+    <script src="/js/vendors/tippy.js"></script>
+
+    <script src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/js/vendors/choice.js"></script>
+    <script src="node_modules/imask/dist/imask.min.js"></script>
+    <script src="/js/vendors/inputmask.js"></script>
+  </body>
+</html>
