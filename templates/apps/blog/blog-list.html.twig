@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html.twig" %}
+    <title>Post List | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    {% include "partials/../partials/head/head-links.html.twig" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html.twig" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html.twig" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8 d-md-flex justify-content-between align-items-center">
+                <div>
+                  <h1 class="mb-3 h2">List</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Blog</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">List</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div>
+                  <a href="create-blog-post.html" class="btn btn-primary d-md-flex align-items-center gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 5l0 14" />
+                      <path d="M5 12l14 0" />
+                    </svg>
+                    New Post</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="nav nav-lb-tab border-dashed border-bottom mb-6" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a href="#!" class="nav-link active" id="pills-published-tab" data-bs-toggle="pill" data-bs-target="#pills-published" role="tab" aria-controls="pills-published" aria-selected="true">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span>Published <span class="badge bg-gray-200 text-gray-600 rounded-circle">12</span></span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a href="#!" class="nav-link" id="pills-drafts-tab" data-bs-toggle="pill" data-bs-target="#pills-drafts" role="tab" aria-controls="pills-drafts" aria-selected="false">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span>Drafts <span class="badge bg-gray-200 text-gray-600 rounded-circle">3</span></span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a href="#!" class="nav-link" id="pills-secheduled-tab" data-bs-toggle="pill" data-bs-target="#pills-secheduled" role="tab" aria-controls="pills-secheduled" aria-selected="true">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span>Scheduled <span class="badge bg-gray-200 text-gray-600 rounded-circle">2</span></span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-published" role="tabpanel" aria-labelledby="pills-published-tab" tabindex="0">
+                  <!-- card -->
+                  <div class="card card-lg" id="publishedList" data-list="post_title,post_views,post_subscriber,post_likes,post_comments,post_status">
+                    <div class="card-header border-bottom-0">
+                      <div class="row justify-content-between gy-2">
+                        <div class="col-lg-4">
+                          <input type="search" class="form-control listjs-search" placeholder="Search" />
+                        </div>
+                        <div class="col-lg-2">
+                          <select class="form-select" data-choices="">
+                            <option selected="">Status</option>
+                            <option value="Latest">Latest</option>
+                            <option value="Popular">Popular</option>
+                            <option value="Oldest">Oldest</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-responsive" data-simplebar style="height: 600px">
+                      <table class="table text-nowrap table-centered table-hover mb-0" data-check-container>
+                        <thead class="sticky-top">
+                          <tr>
+                            <th class="listjs-sorter" data-sort="post_title">Blog Title</th>
+                            <th class="listjs-sorter" data-sort="post_views">Post views</th>
+                            <th class="listjs-sorter" data-sort="post_subscriber">Subscriber</th>
+                            <th class="listjs-sorter" data-sort="post_likes">Likes</th>
+                            <th class="listjs-sorter" data-sort="post_comments">Comments</th>
+                            <th class="listjs-sorter" data-sort="post_status">Status</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody class="list">
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-6.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Youtube Growth Marketing Strategy 2025</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 2, 2025</span>
+                                    <span>John Doe</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">0</td>
+                            <td class="post_subscriber">0</td>
+                            <td class="post_likes">0</td>
+                            <td class="post_comments">0</td>
+                            <td class="post_status">
+                              <span class="badge bg-info-subtle text-info-emphasis">Scheduled</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-1.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Monetization Tips for Blogs</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 20, 2025</span>
+                                    <span>Alice Brown</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">1,345</td>
+                            <td class="post_subscriber">21</td>
+                            <td class="post_likes">32</td>
+                            <td class="post_comments">120</td>
+                            <td class="post_status">
+                              <span class="badge bg-primary-subtle text-primary-emphasis">Published</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-2.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Best Blogging Practices</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 14, 2025</span>
+                                    <span>Robert Green</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">0</td>
+                            <td class="post_subscriber">0</td>
+                            <td class="post_likes">0</td>
+                            <td class="post_comments">0</td>
+                            <td class="post_status">
+                              <span class="badge bg-warning-subtle text-warning-emphasis">Draft</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-3.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Email Marketing for Bloggers</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 12, 2025</span>
+                                    <span>John Doe</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">2,345</td>
+                            <td class="post_subscriber">21</td>
+                            <td class="post_likes">42</td>
+                            <td class="post_comments">314</td>
+                            <td class="post_status">
+                              <span class="badge bg-primary-subtle text-primary-emphasis">Published</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-4.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">SEO Best Practices in 2025</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 2, 2025</span>
+                                    <span>Emily White</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">12,345</td>
+                            <td class="post_subscriber">21</td>
+                            <td class="post_likes">3.4k</td>
+                            <td class="post_comments">314</td>
+                            <td class="post_status">
+                              <span class="badge bg-primary-subtle text-primary-emphasis">Published</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-5.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">The Future of Blogging: Trends You Can’t Ignore</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 3, 2025</span>
+                                    <span>Emily White</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">10,345</td>
+                            <td class="post_subscriber">24</td>
+                            <td class="post_likes">2.4k</td>
+                            <td class="post_comments">1245</td>
+                            <td class="post_status">
+                              <span class="badge bg-primary-subtle text-primary-emphasis">Published</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-6.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Top 10 Content Strategies to Boost Engagement in 2025</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 1, 2025</span>
+                                    <span>Smmion Ditaa</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">8,345</td>
+                            <td class="post_subscriber">14</td>
+                            <td class="post_likes">1.2k</td>
+                            <td class="post_comments">845</td>
+                            <td class="post_status">
+                              <span class="badge bg-primary-subtle text-primary-emphasis">Published</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-7.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Best Blogging Practices</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 14, 2025</span>
+                                    <span>Robert Green</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">0</td>
+                            <td class="post_subscriber">0</td>
+                            <td class="post_likes">0</td>
+                            <td class="post_comments">0</td>
+                            <td class="post_status">
+                              <span class="badge bg-warning-subtle text-warning-emphasis">Draft</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-6.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Youtube Growth Marketing Strategy 2025</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 2, 2025</span>
+                                    <span>John Doe</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">0</td>
+                            <td class="post_subscriber">0</td>
+                            <td class="post_likes">0</td>
+                            <td class="post_comments">0</td>
+                            <td class="post_status">
+                              <span class="badge bg-info-subtle text-info-emphasis">Scheduled</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="btn-toolbar card-footer border-top border-dashed d-flex flex-md-row flex-column justify-content-md-between align-items-md-center">
+                      <p class="mb-0 listjs-showing-items-label"></p>
+                      <div class="d-flex flex-column flex-md-row gap-4">
+                        <div class="d-flex align-items-center gap-2">
+                          <label class="form-label text-nowrap mb-0">Rows per page:</label>
+                          <select class="form-select listjs-items-per-page" data-choices="">
+                            <option value="7" selected>7</option>
+                            <option value="11">11</option>
+                          </select>
+                        </div>
+                        <div>
+                          <div class="pagination-buttons d-flex">
+                            <button class="btn btn-white prev">Previous</button>
+                            <ul class="pagination mb-0 ms-1"></ul>
+                            <button class="btn btn-white next">Next</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="pills-drafts" role="tabpanel" aria-labelledby="pills-drafts-tab" tabindex="0">
+                  <!-- card -->
+                  <div class="card card-lg" id="draftList" data-list="post_title,post_views,post_subscriber,post_likes,post_comments,post_status">
+                    <div class="card-header border-bottom-0">
+                      <div class="row justify-content-between">
+                        <div class="col-lg-4">
+                          <input type="search" class="form-control listjs-search" placeholder="Search" />
+                        </div>
+                        <div class="col-lg-2">
+                          <select class="form-select" data-choices="">
+                            <option selected="">Status</option>
+                            <option value="Latest">Latest</option>
+                            <option value="Popular">Popular</option>
+                            <option value="Oldest">Oldest</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-responsive" data-simplebar style="height: 300px">
+                      <table class="table text-nowrap table-centered table-hover mb-0" data-check-container>
+                        <thead class="sticky-top">
+                          <tr>
+                            <th class="listjs-sorter" data-sort="post_title">Blog Title</th>
+                            <th class="listjs-sorter" data-sort="post_views">Post views</th>
+                            <th class="listjs-sorter" data-sort="post_subscriber">Subscriber</th>
+                            <th class="listjs-sorter" data-sort="post_likes">Likes</th>
+                            <th class="listjs-sorter" data-sort="post_comments">Comments</th>
+                            <th class="listjs-sorter" data-sort="post_status">Status</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody class="list">
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-1.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Monetization Tips for Blogs</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 20, 2025</span>
+                                    <span>Alice Brown</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">0</td>
+                            <td class="post_subscriber">0</td>
+                            <td class="post_likes">0</td>
+                            <td class="post_comments">0</td>
+                            <td class="post_status">
+                              <span class="badge bg-warning-subtle text-warning-emphasis">Drafts</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-2.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Best Blogging Practices</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 14, 2025</span>
+                                    <span>Robert Green</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">0</td>
+                            <td class="post_subscriber">0</td>
+                            <td class="post_likes">0</td>
+                            <td class="post_comments">0</td>
+                            <td class="post_status">
+                              <span class="badge bg-warning-subtle text-warning-emphasis">Draft</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-7.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Best Blogging Practices</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 14, 2025</span>
+                                    <span>Robert Green</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">0</td>
+                            <td class="post_subscriber">0</td>
+                            <td class="post_likes">0</td>
+                            <td class="post_comments">0</td>
+                            <td class="post_status">
+                              <span class="badge bg-warning-subtle text-warning-emphasis">Draft</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="btn-toolbar card-footer border-top border-dashed d-flex flex-md-row flex-column justify-content-md-between align-items-md-center">
+                      <p class="mb-0 listjs-showing-items-label"></p>
+                      <div class="d-flex gap-4">
+                        <div class="d-flex align-items-center gap-2">
+                          <label class="form-label text-nowrap mb-0">Rows per page:</label>
+                          <select class="form-select listjs-items-per-page" data-choices="">
+                            <option value="3" selected>3</option>
+                          </select>
+                        </div>
+                        <div>
+                          <div class="pagination-buttons d-flex">
+                            <button class="btn btn-white prev">Previous</button>
+                            <ul class="pagination mb-0 ms-1"></ul>
+                            <button class="btn btn-white next">Next</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="pills-secheduled" role="tabpanel" aria-labelledby="pills-secheduled-tab" tabindex="0">
+                  <!-- card -->
+                  <div class="card card-lg" id="secheduledList" data-list="post_title,post_views,post_subscriber,post_likes,post_comments,post_status">
+                    <div class="card-header border-bottom-0">
+                      <div class="row justify-content-between">
+                        <div class="col-lg-4">
+                          <input type="search" class="form-control listjs-search" placeholder="Search" />
+                        </div>
+                        <div class="col-lg-2">
+                          <select class="form-select" data-choices="">
+                            <option selected="">Status</option>
+                            <option value="Latest">Latest</option>
+                            <option value="Popular">Popular</option>
+                            <option value="Oldest">Oldest</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-responsive" data-simplebar style="height: 200px">
+                      <table class="table text-nowrap table-centered table-hover mb-0" data-check-container>
+                        <thead class="sticky-top">
+                          <tr>
+                            <th class="listjs-sorter" data-sort="post_title">Blog Title</th>
+                            <th class="listjs-sorter" data-sort="post_views">Post views</th>
+                            <th class="listjs-sorter" data-sort="post_subscriber">Subscriber</th>
+                            <th class="listjs-sorter" data-sort="post_likes">Likes</th>
+                            <th class="listjs-sorter" data-sort="post_comments">Comments</th>
+                            <th class="listjs-sorter" data-sort="post_status">Status</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody class="list">
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-6.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Youtube Growth Marketing Strategy 2025</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 2, 2025</span>
+                                    <span>John Doe</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">0</td>
+                            <td class="post_subscriber">0</td>
+                            <td class="post_likes">0</td>
+                            <td class="post_comments">0</td>
+                            <td class="post_status">
+                              <span class="badge bg-info-subtle text-info-emphasis">Scheduled</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td class="post_title">
+                              <div class="d-flex align-items-center gap-4">
+                                <div>
+                                  <a href="#!"><img src="../../assets/images/blog/blog-img-6.jpg" alt="" class="rounded-3" width="56" height="56" /></a>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1 fs-6"><a href="#!" class="text-inherit">Youtube Growth Marketing Strategy 2025</a></h5>
+                                  <div class="d-flex gap-3 text-secondary">
+                                    <span>Feb 2, 2025</span>
+                                    <span>John Doe</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="post_views">0</td>
+                            <td class="post_subscriber">0</td>
+                            <td class="post_likes">0</td>
+                            <td class="post_comments">0</td>
+                            <td class="post_status">
+                              <span class="badge bg-info-subtle text-info-emphasis">Scheduled</span>
+                            </td>
+                            <td>
+                              <div class="dropdown dropstart">
+                                <a class="btn btn-icon btn-ghost rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-dots-vertical"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                  <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="btn-toolbar card-footer border-top border-dashed d-flex flex-md-row flex-column justify-content-md-between align-items-md-center">
+                      <p class="mb-0 listjs-showing-items-label"></p>
+                      <div class="d-flex gap-4">
+                        <div class="d-flex align-items-center gap-2">
+                          <label class="form-label text-nowrap mb-0">Rows per page:</label>
+                          <select class="form-select listjs-items-per-page" data-choices="">
+                            <option value="2" selected>2</option>
+                          </select>
+                        </div>
+                        <div>
+                          <div class="pagination-buttons d-flex">
+                            <button class="btn btn-white prev">Previous</button>
+                            <ul class="pagination mb-0 ms-1"></ul>
+                            <button class="btn btn-white next">Next</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include "partials/../partials/scripts.html.twig" %}
+    <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <!-- tippy js -->
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <script src="{{ asset('js/vendors/tippy.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="{{ asset('js/vendors/choice.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/list.js"></script>
+    <script src="{{ asset('js/vendors/list.js') }}"></script>
+  </body>
+</html>

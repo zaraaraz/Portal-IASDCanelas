@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html.twig" %}
+    <title>Cart | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    {% include "partials/../partials/head/head-links.html.twig" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html.twig" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html.twig" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8">
+                <div>
+                  <h1 class="mb-3 h2">Cart</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Ecommerce</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- row -->
+
+            <div class="row g-6">
+              <div class="col-xxl-9 col-12">
+                <div class="card card-lg">
+                  <div class="card-header border-bottom-0">
+                    <h5 class="mb-0">My Cart</h5>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-centered text-nowrap mb-0">
+                      <thead>
+                        <tr>
+                          <th>Products</th>
+                          <th>Price</th>
+                          <th>Quantity</th>
+                          <th>Amounts</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/ecommerce/product-1.jpg" alt="Image" class="rounded-3" width="56" height="56" /></a>
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit">Transparent Sunglasses</a>
+                              </div>
+                            </div>
+                          </td>
+
+                          <td>$65.29</td>
+                          <td>
+                            <div class="d-inline-flex border rounded-2 overflow-hidden">
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn minus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-minus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                              <input type="number" class="form-control quantity-input text-center p-0 border-0 bg-gray-200 rounded-0" value="1" min="1" style="width: 40px" />
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn plus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M12 5l0 14" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                          <td>$65.29</td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashOne" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/ecommerce/product-2.jpg" alt="Image" class="rounded-3" width="56" height="56" /></a>
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit">Frames Still Life Glasses</a>
+                              </div>
+                            </div>
+                          </td>
+
+                          <td>$15.99</td>
+                          <td>
+                            <div class="d-inline-flex border rounded-2 overflow-hidden">
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn minus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-minus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                              <input type="number" class="form-control quantity-input text-center p-0 border-0 bg-gray-200 rounded-0" value="1" min="1" style="width: 40px" />
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn plus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M12 5l0 14" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                          <td>$15.99</td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashTwo" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/ecommerce/product-3.jpg" alt="Image" class="rounded-3" width="56" height="56" /></a>
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit">Slightly Rounded Frame</a>
+                              </div>
+                            </div>
+                          </td>
+
+                          <td>$65.29</td>
+                          <td>
+                            <div class="d-inline-flex border rounded-2 overflow-hidden">
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn minus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-minus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                              <input type="number" class="form-control quantity-input text-center p-0 border-0 bg-gray-200 rounded-0" value="1" min="1" style="width: 40px" />
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn plus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M12 5l0 14" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                          <td>$65.29</td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashFive">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashFive" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/ecommerce/product-4.jpg" alt="Image" class="rounded-3" width="56" height="56" /></a>
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit">Colored-Transparent Sunglasses</a>
+                              </div>
+                            </div>
+                          </td>
+
+                          <td>$45.29</td>
+                          <td>
+                            <div class="d-inline-flex border rounded-2 overflow-hidden">
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn minus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-minus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                              <input type="number" class="form-control quantity-input text-center p-0 border-0 bg-gray-200 rounded-0" value="1" min="1" style="width: 40px" />
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn plus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M12 5l0 14" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                          <td>$45.29</td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashThree" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/ecommerce/product-5.jpg" alt="Image" class="rounded-3" width="56" height="56" /></a>
+                              <div class="ms-3 d-flex flex-column">
+                                <a href="#!" class="text-inherit">Sun Glasses Table</a>
+                              </div>
+                            </div>
+                          </td>
+
+                          <td>$65.29</td>
+                          <td>
+                            <div class="d-inline-flex border rounded-2 overflow-hidden">
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn minus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-minus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                              <input type="number" class="form-control quantity-input text-center p-0 border-0 bg-gray-200 rounded-0" value="1" min="1" style="width: 40px" />
+                              <button class="btn btn-icon btn-xs btn-focus-none quantity-btn plus">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M12 5l0 14" />
+                                  <path d="M5 12l14 0" />
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                          <td>$65.29</td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashFour">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashFour" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-footer px-6 py-5 border-top border-dashed">
+                    <a href="#!" class="btn btn-outline-primary">Continue Shopping</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-12">
+                <div class="card card-lg">
+                  <div class="card-body px-6 py-5">
+                    <div class="mb-6">
+                      <h5 class="mb-3">Order Summary</h5>
+                    </div>
+                    <ul class="list-unstyled mb-4 d-flex flex-column gap-3">
+                      <li class="d-flex justify-content-between">
+                        <span>Sub Total :</span>
+                        <span>$340.00</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <span>Discount (DIS15%) :</span>
+                        <span class="text-danger">-$51.00</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <span>Shipping Charge :</span>
+                        <span>Free</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <span>Tax Vat 19% (included) :</span>
+                        <span>$64.00</span>
+                      </li>
+                    </ul>
+                    <form class="row g-2">
+                      <div class="col">
+                        <input type="number" class="form-control" placeholder="xxxxxxxxx" />
+                      </div>
+                      <div class="col-auto">
+                        <button type="submit" class="btn btn-dark">Apply</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="card-footer px-6 py-4 border-top border-dashed">
+                    <ul class="list-unstyled mb-0">
+                      <li class="d-flex justify-content-between fw-bold">
+                        <span>Order Total</span>
+                        <span>$368.00</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="px-6 py-5 border-top border-dashed d-grid">
+                    <a href="#!" class="btn btn-primary">Proceed to checkout</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html.twig" %}
+    <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <!-- tippy js -->
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <script src="{{ asset('js/vendors/tippy.js') }}"></script>
+    <script src="{{ asset('js/vendors/increment-value.js') }}"></script>
+  </body>
+</html>

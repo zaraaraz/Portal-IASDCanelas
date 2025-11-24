@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html.twig" %}
+    <!-- tns slider -->
+    <link href="https://cdn.jsdelivr.net/npm/tiny-slider/dist/tiny-slider.css" rel="stylesheet" />
+    <title>Product Details | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    {% include "partials/../partials/head/head-links.html.twig" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html.twig" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html.twig" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="offset-lg-1 col-lg-10 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8">
+                <div>
+                  <h1 class="mb-3 h2">Details</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Product</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Details</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- row -->
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-10">
+                <div class="row mb-8">
+                  <div class="col-xl-6">
+                    <div class="product" id="product">
+                      <div>
+                        <div>
+                          <!-- img -->
+                          <img src="../../assets/images/ecommerce/product-1.jpg" alt="" class="img-fluid" />
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <!-- img -->
+                          <img src="../../assets/images/ecommerce/product-2.jpg" alt="" class="img-fluid" />
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <!-- img -->
+                          <img src="../../assets/images/ecommerce/product-3.jpg" alt="Image" class="img-fluid" />
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <!-- img -->
+                          <img src="../../assets/images/ecommerce/product-4.jpg" alt="Image" class="img-fluid" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- product tools -->
+                    <div class="product-tools">
+                      <div class="thumbnails row g-3 justify-content-center" id="product-thumbnails">
+                        <div class="col-2">
+                          <div class="thumbnails-img">
+                            <!-- img -->
+                            <img src="../../assets/images/ecommerce/product-1.jpg" alt="Image" />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="thumbnails-img">
+                            <!-- img -->
+                            <img src="../../assets/images/ecommerce/product-2.jpg" alt="Image" />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="thumbnails-img">
+                            <!-- img -->
+                            <img src="../../assets/images/ecommerce/product-3.jpg" alt="Image" />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="thumbnails-img">
+                            <!-- img -->
+                            <img src="../../assets/images/ecommerce/product-4.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-12">
+                    <div class="my-5 mx-xl-10">
+                      <div>
+                        <!-- heading -->
+                        <h2 class="mb-0">Transparent Sunglasses</h2>
+                        <div class="my-4">
+                          <!-- review -->
+                          <div class="d-flex align-items-center gap-4 border-bottom border-dashed pb-5">
+                            <span class="d-flex gap-1 align-items-center"
+                              >4.4<svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-success"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg> </span
+                            ><span class="text-secondary">592 Customer Reviews</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mb-5 border-bottom border-dashed pb-5">
+                        <!-- heading -->
+                        <div class="mb-1 fs-4 fw-semibold">$49.00 <span class="text-secondary text-decoration-line-through">$ 69.00</span> <span class="text-warning">(45% OFF)</span></div>
+                        <span>inclusive of all taxes</span>
+                      </div>
+                      <div class="mb-6">
+                        <div class="mb-3 fw-semibold">Frame Color</div>
+                        <div>
+                          <!-- btn group -->
+                          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradioPrimary" />
+                            <!-- form check radio -->
+                            <label class="btn btn-primary rounded-circle me-2 btn-icon btn-xs shadow" for="btnradioPrimary"><i class="icon-checked icon-xs ti ti-check"></i></label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradioSuccess" checked />
+                            <label class="btn btn-success rounded-circle me-2 btn-icon btn-xs shadow active" for="btnradioSuccess"><i class="icon-checked icon-xs ti ti-check"></i></label>
+                            <!-- form check radio -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradioDanger" />
+                            <label class="btn btn-danger rounded-circle me-2 btn-icon btn-xs shadow" for="btnradioDanger"><i class="icon-checked icon-xs ti ti-check"></i></label>
+                            <!-- form check radio -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradioInfo" />
+                            <label class="btn btn-info rounded-circle me-2 btn-icon btn-xs shadow" for="btnradioInfo"><i class="icon-checked icon-xs ti ti-check"></i></label>
+                            <!-- form check radio -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradioWarning" />
+                            <label class="btn btn-warning rounded-circle me-2 btn-icon btn-xs shadow" for="btnradioWarning"><i class="icon-checked icon-xs ti ti-check"></i></label>
+                            <!-- form check radio -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradioDark" />
+                            <label class="btn btn-dark rounded-circle me-2 btn-icon btn-xs shadow" for="btnradioDark"><i class="icon-checked icon-xs ti ti-check"></i></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-6 pb-3">
+                        <!-- heading -->
+                        <div class="mb-3 fw-semibold">Size</div>
+                        <div>
+                          <!-- button group -->
+                          <div role="group" aria-label="Basic radio toggle button group">
+                            <!-- form check radio -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio6" />
+                            <label class="btn btn-white btn-sm" for="btnradio6"> Extra Narrow </label>
+                            <!-- form check radio -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio7" />
+                            <label class="btn btn-white btn-sm" for="btnradio7"> Narrow </label>
+                            <!-- form check radio -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio8" checked />
+                            <label class="btn btn-white btn-sm" for="btnradio8">Medium </label>
+                            <!-- form check radio -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio9" />
+                            <label class="btn btn-white btn-sm" for="btnradio9"> Wide </label>
+                            <!-- form check radio -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio10" />
+                            <label class="btn btn-white btn-sm" for="btnradio10">Extra Wide</label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- row -->
+                      <div class="row g-2">
+                        <!-- col -->
+                        <div class="col-md-6">
+                          <div class="d-grid mb-2 mb-md-0">
+                            <!-- btn -->
+                            <a href="#!" class="btn btn-primary"><i class="ti ti-shopping-cart me-2"></i>Add To Cart</a>
+                          </div>
+                        </div>
+                        <!-- col -->
+                        <div class="col-md-6">
+                          <div class="d-grid">
+                            <!-- btn -->
+                            <a href="#!" class="btn btn-white"><i class="ti ti-heart me-2"></i>Wishlist</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card card-lg">
+                      <div class="card-body px-8 pt-3">
+                        <ul class="nav nav-pills nav-lb-tab" id="pills-tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button
+                              class="nav-link active"
+                              id="pills-desc-tab"
+                              data-bs-toggle="pill"
+                              data-bs-target="#pills-desc"
+                              type="button"
+                              role="tab"
+                              aria-controls="pills-desc"
+                              aria-selected="true"
+                            >
+                              Description
+                            </button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button
+                              class="nav-link"
+                              id="pills-information-tab"
+                              data-bs-toggle="pill"
+                              data-bs-target="#pills-information"
+                              type="button"
+                              role="tab"
+                              aria-controls="pills-information"
+                              aria-selected="false"
+                            >
+                              Technical Information
+                            </button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button
+                              class="nav-link"
+                              id="pills-rating-tab"
+                              data-bs-toggle="pill"
+                              data-bs-target="#pills-rating"
+                              type="button"
+                              role="tab"
+                              aria-controls="pills-rating"
+                              aria-selected="false"
+                            >
+                              Ratings & Reviews
+                            </button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button
+                              class="nav-link"
+                              id="pills-policy-tab"
+                              data-bs-toggle="pill"
+                              data-bs-target="#pills-policy"
+                              type="button"
+                              role="tab"
+                              aria-controls="pills-policy"
+                              aria-selected="false"
+                            >
+                              Terms & Policies
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent" style="max-width: 850px">
+                          <div class="tab-pane fade show active" id="pills-desc" role="tabpanel" aria-labelledby="pills-desc-tab" tabindex="0">
+                            <div class="py-5">
+                              <p class="mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi magna, rhoncus in diam vel, aliquet volutpat nisl. Proin nisl dolor, sagittis vitae pulvinar eu,
+                                pharetra ultrices felis.
+                              </p>
+
+                              <!-- heading -->
+                              <div class="fs-5 mb-2 fw-semibold">Features:</div>
+                              <!-- list -->
+                              <ul class="lh-lg mb-0">
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Integer ut justo quis diam finibus lobortis vel at dui.</li>
+                                <li>Morbi ultricies leo sit amet nisl suscipit, et vulputate orci fringilla.</li>
+                                <li>Nullam sit amet lacus ut nibh pharetra rutrum venenatis ac purus.</li>
+                                <li>Nullam feugiat turpis ullamcorper augue fringilla, at facilisis magna dignissim.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="pills-information" role="tabpanel" aria-labelledby="pills-information-tab" tabindex="0">
+                            <div class="py-5 table-responsive">
+                              <table class="table table-striped" style="width: 400px">
+                                <tbody>
+                                  <tr>
+                                    <td>Product id</td>
+                                    <td>#500574</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Model No.</td>
+                                    <td>UK E360</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Frame Size</td>
+                                    <td>Medium ?</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Frame Width</td>
+                                    <td>136 mm</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Frame Dimensions</td>
+                                    <td>52-16-145</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Frame colour</td>
+                                    <td>Sky Blue</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div>
+                                <a href="#!" class="text-decoration-underline">Show All Information</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="pills-rating" role="tabpanel" aria-labelledby="pills-rating-tab" tabindex="0">
+                            <div class="row align-items-center mb-4 py-5">
+                              <div class="col-lg-3 mb-4 mb-md-0 px-lg-8 text-center">
+                                <!-- rating -->
+                                <div class="display-2">4.5</div>
+                                <i class="ti ti-star-filled text-success"></i>
+                                <i class="ti ti-star-filled text-success"></i>
+                                <i class="ti ti-star-filled text-success"></i>
+                                <i class="ti ti-star-filled text-success"></i>
+                                <i class="ti ti-star-filled text-success"></i>
+                                <p class="mb-0">595 Verified Buyers</p>
+                              </div>
+                              <div class="col-lg-5 col-md-8">
+                                <!-- progress -->
+                                <div class="d-flex align-items-center mb-2">
+                                  <div class="text-nowrap me-3 text-secondary"><span>5</span><i class="ti ti-star-filled ms-1 fs-6"></i></div>
+                                  <div class="w-100">
+                                    <div class="progress" style="height: 6px">
+                                      <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                  </div>
+                                  <span class="text-secondary ms-3">420</span>
+                                </div>
+                                <!-- progress -->
+                                <div class="d-flex align-items-center mb-2">
+                                  <div class="text-nowrap me-3 text-secondary"><span>4</span><i class="ti ti-star-filled ms-1 fs-6"></i></div>
+                                  <div class="w-100">
+                                    <div class="progress" style="height: 6px">
+                                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="50"></div>
+                                    </div>
+                                  </div>
+                                  <span class="text-secondary ms-3">90</span>
+                                </div>
+                                <!-- progress -->
+                                <div class="d-flex align-items-center mb-2">
+                                  <div class="text-nowrap me-3 text-secondary"><span>3</span><i class="ti ti-star-filled ms-1 fs-6"></i></div>
+                                  <div class="w-100">
+                                    <div class="progress" style="height: 6px">
+                                      <div class="progress-bar bg-success" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="35"></div>
+                                    </div>
+                                  </div>
+                                  <span class="text-secondary ms-3">33</span>
+                                </div>
+                                <!-- progress -->
+                                <div class="d-flex align-items-center mb-2">
+                                  <div class="text-nowrap me-3 text-secondary"><span>2</span><i class="ti ti-star-filled ms-1 fs-6"></i></div>
+                                  <div class="w-100">
+                                    <div class="progress" style="height: 6px">
+                                      <div class="progress-bar bg-warning" role="progressbar" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="22"></div>
+                                    </div>
+                                  </div>
+                                  <span class="text-secondary ms-3">12</span>
+                                </div>
+                                <!-- progress -->
+                                <div class="d-flex align-items-center mb-2">
+                                  <div class="text-nowrap me-3 text-secondary"><span>1</span><i class="ti ti-star-filled ms-1 fs-6"></i></div>
+                                  <div class="w-100">
+                                    <div class="progress" style="height: 6px">
+                                      <div class="progress-bar bg-danger" role="progressbar" style="width: 14%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="14"></div>
+                                    </div>
+                                  </div>
+                                  <span class="text-secondary ms-3">40</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="border-top border-dashed py-4 mt-4">
+                              <div class="border d-inline-block px-2 py-1 rounded-pill mb-3">
+                                <!-- rating -->
+                                <span class="  ">4.4 <i class="ti ti-star-filled text-success fs-6"></i></span>
+                              </div>
+                              <!-- text -->
+                              <p class="mb-0">It's awesome , I never thought about Dasher UI that awesome Glass Frame.very pretty.</p>
+                              <div>
+                                <span>James Ennis</span>
+                                <span class="ms-4 text-secondary">28 Nov 2025</span>
+                              </div>
+                            </div>
+                            <div class="border-top border-dashed py-4">
+                              <div class="border d-inline-block px-2 py-1 rounded-pill mb-3">
+                                <!-- rating -->
+                                <span class="  ">5.0 <i class="ti ti-star-filled text-success fs-6"></i></span>
+                              </div>
+                              <!-- text -->
+                              <p class="mb-0">
+                                Quality is more than good that I was expected for buying. I first time purchase Dasher UI Glass Frame & this brand is good. Thanks to Dasher UI delivery was faster than
+                                fast ...Love Dasher UI
+                              </p>
+                              <div>
+                                <span>Bradley Mouton</span>
+                                <span class="ms-4 text-secondary">21 Apr 2025 </span>
+                              </div>
+                            </div>
+                            <div class="border-top border-dashed py-4 border-bottom">
+                              <div class="border d-inline-block px-2 py-1 rounded-pill mb-3">
+                                <!-- rating -->
+                                <span class="  ">4.4 <i class="ti ti-star-filled text-success fs-6"></i></span>
+                              </div>
+                              <!-- text -->
+                              <p class="mb-0">Excellent Glass Frame with original logo , Thanks Dasher UI , Buy these Glass Frame without any tension</p>
+                              <div class="mb-5">
+                                <!-- img -->
+                                <img src="../../assets/images/ecommerce/product-1.jpg" alt="Image" class="avatar-md rounded-2" />
+                                <img src="../../assets/images/ecommerce/product-2.jpg" alt="Image" class="avatar-md rounded-2" />
+                                <img src="../../assets/images/ecommerce/product-3.jpg" alt="Image" class="avatar-md rounded-2" />
+                              </div>
+                              <div>
+                                <!-- text -->
+                                <span>Kieth J. Watson </span>
+                                <span class="ms-4 text-secondary">21 May 2025</span>
+                              </div>
+                            </div>
+                            <div class="my-3">
+                              <!-- btn-link -->
+                              <a href="#!" class="btn-link fw-semi-bold">View all 89 reviews</a>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="pills-policy" role="tabpanel" aria-labelledby="pills-policy-tab" tabindex="0">
+                            <div class="py-5">
+                              <div>
+                                <!-- heading -->
+                                <div class="fs-5 mb-2 fw-semibold">Free Shipping Policy</div>
+                                <p class="mb-0">
+                                  The single most important criteria for a lot of first time customers. Lorem ipsum dolor sit amet consectetur adipiscing elit enean nisi magna rhoncus in diam vel,
+                                  aliquet volutpat nisl.
+                                </p>
+                              </div>
+                              <div class="pt-3">
+                                <!-- heading -->
+                                <div class="fs-5 mb-2 fw-semibold">Refund Policy</div>
+                                <p class="mb-0">
+                                  A Return & Refund Policy is a policy that dictates under what conditions customers can return products they've purchased from your eCommerce store and whether you'll
+                                  reimburse them or not.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="addNewContactModal" tabindex="-1" aria-labelledby="addNewContactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="addNewContactModalLabel">Add New Contact</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="d-flex align-items-center">
+                <img src="../../../assets/images/avatar/avatar-11.jpg" alt="Image" class="avatar avatar-lg rounded-circle" />
+                <div class="ms-3">
+                  <a href="javascript:void(0);" class="btn btn-outline-white">Upload Photo</a>
+                </div>
+              </div>
+              <div class="mt-5">
+                <form>
+                  <div class="mb-3">
+                    <label class="form-label" for="fname">Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Name" id="fname" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter Email" id="email" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input type="text" class="form-control" placeholder="Enter Phone" id="phone" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="companyName">Company</label>
+                    <input type="text" class="form-control" placeholder="Enter Company Name" id="companyName" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="designation">Designation</label>
+                    <input type="text" class="form-control" placeholder="Enter Designation" id="designation" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="status">Lead Status</label>
+                    <input type="text" class="form-control" placeholder="Status" id="status" />
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <a href="#!" class="btn btn-primary">+ Add Customer</a>
+                    <a href="#!" class="btn btn-light ms-2">Close</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="{{ asset('js/vendors/tns.js') }}"></script>
+    {% include "partials/../partials/scripts.html.twig" %}
+    <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+  </body>
+</html>

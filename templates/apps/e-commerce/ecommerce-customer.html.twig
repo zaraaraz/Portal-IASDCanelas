@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html.twig" %}
+    <title>Ecommerce Customers | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    {% include "partials/../partials/head/head-links.html.twig" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html.twig" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html.twig" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8 d-md-flex justify-content-between align-items-center">
+                <div>
+                  <h1 class="mb-3 h2">Customer</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Ecommerce</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Customer</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div>
+                  <a href="ecommerce-product-edit.html" class="btn btn-dark d-md-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 5l0 14" />
+                      <path d="M5 12l14 0" />
+                    </svg>
+                    Add Customer</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- row -->
+            <div class="row">
+              <div class="col-12">
+                <!-- card -->
+                <div class="card card-lg" id="customerList" data-list="customer_name,customer_phone,customer_email,customer_location,customer_date,customer_status">
+                  <div class="card-header border-bottom-0">
+                    <div class="row w-100 gx-md-0 gy-4 align-items-center">
+                      <div class="col-lg-3 col-md-6">
+                        <input type="search" class="form-control listjs-search" placeholder="Search for customer, email, phone, status or something" />
+                      </div>
+
+                      <div class="col-md-3 ps-md-2">
+                        <select class="form-select" data-choices="">
+                          <option selected>Status</option>
+                          <option value="1">Active</option>
+                          <option value="2">Blocked</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 d-flex justify-content-md-end gap-2">
+                        <a href="#!" class="btn btn-white">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-trash"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7l16 0" />
+                            <path d="M10 11l0 6" />
+                            <path d="M14 11l0 6" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                          </svg>
+                        </a>
+                        <a href="#!" class="btn btn-white">Import</a>
+                        <a href="#!" class="btn btn-white">Export</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table-responsive table-checkbox" data-simplebar style="height: 500px">
+                    <table class="table text-nowrap mb-0 table-centered table-hover" data-check-container>
+                      <thead class="sticky-top">
+                        <tr>
+                          <th>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="checkAll" data-check-all />
+                              <label class="form-check-label" for="checkAll"></label>
+                            </div>
+                          </th>
+                          <th class="listjs-sorter" data-sort="customer_name">Customer</th>
+                          <th class="listjs-sorter" data-sort="customer_phone">Phone</th>
+                          <th class="listjs-sorter" data-sort="customer_email">Email</th>
+                          <th class="listjs-sorter" data-sort="customer_location">Location</th>
+                          <th class="listjs-sorter" data-sort="customer_date">Create Date</th>
+                          <th class="listjs-sorter" data-sort="customer_status">Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="list">
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox2" />
+                              <label class="form-check-label" for="contactCheckbox2"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-11.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Harold Gonzalez</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">937-330-1634</td>
+                          <td class="customer_email">harold1985@einrot.com</td>
+                          <td class="customer_location">Florida, United States</td>
+                          <td class="customer_date">03/24/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editOne" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashOne" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox3" />
+                              <label class="form-check-label" for="contactCheckbox3"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-2.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Anthony Anderson</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">828-216-2190</td>
+                          <td class="customer_email">anthony54@cuvox.de</td>
+                          <td class="customer_location">California, United States</td>
+                          <td class="customer_date">04/09/2025</td>
+                          <td class="customer_status"><span class="badge text-danger-emphasis bg-danger-subtle rounded-pill">Blocked</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editTwo" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashTwo" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox4" />
+                              <label class="form-check-label" for="contactCheckbox4"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-3.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Gary Faulkner</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">215-302-3376</td>
+                          <td class="customer_email">haryfaulkner45@cuvox.de</td>
+                          <td class="customer_location">Willmering, Germany</td>
+                          <td class="customer_date">03/24/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editThree" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashThree" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox5" />
+                              <label class="form-check-label" for="contactCheckbox5"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-4.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Steve Nelson</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">937-330-1634</td>
+                          <td class="customer_email">stevenelson@cuvox.de</td>
+                          <td class="customer_location">Rotorua, New Zealand</td>
+                          <td class="customer_date">05/06/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editFour">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editFour" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashFive">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashFive" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox6" />
+                              <label class="form-check-label" for="contactCheckbox6"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-5.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Kimberly Sullivan</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">(02) 75 150 655</td>
+                          <td class="customer_email">sprid1932@armyspy.com</td>
+                          <td class="customer_location">Gundamulda, Australia</td>
+                          <td class="customer_date">06/19/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editSix">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editSix" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashSix">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashSix" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox7" />
+                              <label class="form-check-label" for="contactCheckbox7"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-6.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Susan Pugh</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">937-330-1634</td>
+                          <td class="customer_email">tolde1984@einrot.com</td>
+                          <td class="customer_location">Gradignan, France</td>
+                          <td class="customer_date">06/30/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editSeven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editSeven" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashSeven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashSeven" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox8" />
+                              <label class="form-check-label" for="contactCheckbox8"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-7.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Elliott Potts</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">(+15) 73 483 758</td>
+                          <td class="customer_email">fulta1976@rhyta.com</td>
+                          <td class="customer_location">Regina, Canada</td>
+                          <td class="customer_date">07/07/2025</td>
+                          <td class="customer_status"><span class="badge text-danger-emphasis bg-danger-subtle rounded-pill">Blocked</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editEight">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editEight" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashEight">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashEight" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox9" />
+                              <label class="form-check-label" for="contactCheckbox9"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-8.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Richard Beaudry</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">937-330-1634</td>
+                          <td class="customer_email">wourry57@cuvox.de</td>
+                          <td class="customer_location">Toronto, Canada</td>
+                          <td class="customer_date">07/15/2025</td>
+                          <td class="customer_status"><span class="badge text-danger-emphasis bg-danger-subtle rounded-pill">Blocked</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editNine">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editNine" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashNine">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashNine" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox10" />
+                              <label class="form-check-label" for="contactCheckbox10"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-9.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Henry Saxton</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_date">078 6013 3854</td>
+                          <td class="customer_email">wourry57@cuvox.de</td>
+                          <td class="customer_location">Vancouver, Canada</td>
+                          <td class="customer_date">08/02/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editTen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editTen" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashTen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashTen" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox11" />
+                              <label class="form-check-label" for="contactCheckbox11"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-10.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Juanita Diener</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">(216) 76 298 896</td>
+                          <td class="customer_email">comed1931@einrot.com</td>
+                          <td class="customer_location">Idaho, United States</td>
+                          <td class="customer_date">08/23/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editEleven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editEleven" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashEleven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashEleven" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox2" />
+                              <label class="form-check-label" for="contactCheckbox2"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-11.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Harold Gonzalez</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">937-330-1634</td>
+                          <td class="customer_email">harold1985@einrot.com</td>
+                          <td class="customer_location">Florida, United States</td>
+                          <td class="customer_date">03/24/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div id="editOne" class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div id="trashOne" class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox31" />
+                              <label class="form-check-label" for="contactCheckbox31"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-2.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Anthony Anderson</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">828-216-2190</td>
+                          <td class="customer_email">anthony54@cuvox.de</td>
+                          <td class="customer_location">California, United States</td>
+                          <td class="customer_date">04/09/2025</td>
+                          <td class="customer_status"><span class="badge text-danger-emphasis bg-danger-subtle rounded-pill">Blocked</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox41" />
+                              <label class="form-check-label" for="contactCheckbox41"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-3.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Gary Faulkner</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">215-302-3376</td>
+                          <td class="customer_email">haryfaulkner45@cuvox.de</td>
+                          <td class="customer_location">Willmering, Germany</td>
+                          <td class="customer_date">03/24/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox51" />
+                              <label class="form-check-label" for="contactCheckbox51"></label>
+                            </div>
+                          </td>
+                          <td class="customer_name">
+                            <div class="d-flex align-items-center">
+                              <a href="#!"><img src="../../assets/images/avatar/avatar-4.jpg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                              <div class="ms-2">
+                                <a href="#!" class="text-inherit">Steve Nelson</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="customer_phone">937-330-1634</td>
+                          <td class="customer_email">stevenelson@cuvox.de</td>
+                          <td class="customer_location">Rotorua, New Zealand</td>
+                          <td class="customer_date">05/06/2025</td>
+                          <td class="customer_status"><span class="badge text-success-emphasis bg-success-subtle rounded-pill">Active</span></td>
+                          <td>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="editFour">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                              <div class="d-none">
+                                <span>Edit</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashFive">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                              <div class="d-none">
+                                <span>Delete</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="btn-toolbar card-footer border-top border-dashed d-flex flex-md-row flex-column justify-content-md-between align-items-md-center">
+                    <p class="mb-0 listjs-showing-items-label"></p>
+                    <div class="d-flex flex-column flex-md-row gap-4">
+                      <div class="d-flex align-items-center gap-2">
+                        <label class="form-label text-nowrap mb-0">Rows per page:</label>
+                        <select class="form-select listjs-items-per-page" data-choices="">
+                          <option value="10" selected>10</option>
+                          <option value="14">14</option>
+                        </select>
+                      </div>
+                      <div>
+                        <div class="pagination-buttons d-flex">
+                          <button class="btn btn-white prev">Previous</button>
+                          <ul class="pagination mb-0 ms-1"></ul>
+                          <button class="btn btn-white next">Next</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="addCustomerModal" tabindex="-1" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addCustomerModalLabel">Add Customer</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="needs-validation" novalidate>
+              <div>
+                <div class="mb-3">
+                  <label for="customerName" class="form-label">Customer name</label>
+                  <input type="text" class="form-control" placeholder="Enter name" id="customerName" required />
+                  <div class="invalid-feedback">Please enter name.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="customerEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="Enter Email" id="customerEmail" required />
+                  <div class="invalid-feedback">Please enter email.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="customerPhone" class="form-label">Phone</label>
+                  <input type="text" class="form-control" placeholder="Enter Phone" id="customerPhone" required />
+                  <div class="invalid-feedback">Please enter phone.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="customerDate" class="form-label">Joining Date</label>
+                  <input type="text" class="form-control flatpickr" placeholder="Select date" id="customerDate" required />
+                  <div class="invalid-feedback">Please enter Date.</div>
+                </div>
+                <div class="text-end">
+                  <button type="submit" class="btn btn-primary me-1">+ Add Customer</button>
+                  <button type="button" class="btn btn-white" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include "partials/../partials/scripts.html.twig" %}
+    <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+    <!-- flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="{{ asset('js/vendors/flatpickr.js') }}"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <!-- tippy js -->
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <script src="{{ asset('js/vendors/tippy.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/list.js"></script>
+    <script src="{{ asset('js/vendors/list.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="{{ asset('js/vendors/choice.js') }}"></script>
+    <script src="{{ asset('js/vendors/checkbox.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/head/head-meta.html.twig" %}
+    <title>Toasts | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-okaidia.min.css" rel="stylesheet" />
+
+    {% include "partials/head/head-links.html.twig" %}
+  </head>
+  <body class>
+    <!-- main -->
+    <div>
+      {% include "partials/header.html.twig" %} {% include "partials/breadcrumb.html.twig"with { "heading" : "Toasts", "pageFolder": "Components", "pageName": "Toasts", }%}
+      <div class="pt-lg-10 mt-10 position-relative">
+        <div class="container">
+          <div class="row">
+            <aside class="col-xl-2 col-lg-3 col-md-4 mb-6 mb-md-0 d-none d-lg-block">{% include "partials/nav-sidebar.html.twig" %}</aside>
+            <div class="col-xl-7 col-lg-9 col-md-12 mb-6 mb-md-0 mx-auto">
+              <div class="mb-12 product-content d-flex flex-column gap-8">
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="example">Example</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-ToastExample-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-ToastExample-preview"
+                            role="tab"
+                            aria-controls="pills-ToastExample-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-ToastExample-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-ToastExample-code"
+                            role="tab"
+                            aria-controls="pills-ToastExample-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-ToastExample-preview" role="tabpanel" aria-labelledby="pills-ToastExample-preview-tab">
+                          <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#007aff"></rect>
+                              </svg>
+                              <strong class="me-auto">Bootstrap</strong>
+                              <small class="text-body-secondary">11 mins ago</small>
+                              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">Hello, world! This is a toast message.</div>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-ToastExample-code" role="tabpanel" aria-labelledby="pills-ToastExample-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast fade show<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assertive<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bd-placeholder-img me-2<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span>
+		<span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2000/svg<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+		<span class="token attr-name">preserveAspectRatio</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xMidYMid slice<span class="token punctuation">"</span></span> <span class="token attr-name">focusable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#007aff<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rect</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-auto<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bootstrap<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-body-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>11 mins ago<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-close<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-dismiss</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast<span class="token punctuation">"</span></span>
+		<span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Hello, world! This is a toast message.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="translucent">Translucent</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-ToastTranslucent-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-ToastTranslucent-preview"
+                            role="tab"
+                            aria-controls="pills-ToastTranslucent-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-ToastTranslucent-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-ToastTranslucent-code"
+                            role="tab"
+                            aria-controls="pills-ToastTranslucent-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div
+                          class="tab-pane tab-example-preview fade show active p-5 bg-gray-100"
+                          id="pills-ToastTranslucent-preview"
+                          role="tabpanel"
+                          aria-labelledby="pills-ToastTranslucent-preview-tab"
+                        >
+                          <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <svg class="bd-placeholder-img me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#007aff"></rect>
+                              </svg>
+                              <strong class="me-auto">Bootstrap</strong>
+                              <small class="text-body-secondary">11 mins ago</small>
+                              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">Hello, world! This is a toast message.</div>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-ToastTranslucent-code" role="tabpanel" aria-labelledby="pills-ToastTranslucent-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast fade show<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assertive<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bd-placeholder-img me-2<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span>
+	<span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2000/svg<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+	<span class="token attr-name">preserveAspectRatio</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xMidYMid slice<span class="token punctuation">"</span></span> <span class="token attr-name">focusable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#007aff<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rect</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-auto<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bootstrap<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-body-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>11 mins ago<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-close<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-dismiss</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Hello, world! This is a toast message.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="stacking">Stacking</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-TaostStacking-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-TaostStacking-preview"
+                            role="tab"
+                            aria-controls="pills-TaostStacking-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-TaostStacking-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-TaostStacking-code"
+                            role="tab"
+                            aria-controls="pills-TaostStacking-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-TaostStacking-preview" role="tabpanel" aria-labelledby="pills-TaostStacking-preview-tab">
+                          <div class="toast-container position-static">
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                              <div class="toast-header">
+                                <svg
+                                  class="bd-placeholder-img me-2"
+                                  width="20"
+                                  height="20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  aria-hidden="true"
+                                  preserveAspectRatio="xMidYMid slice"
+                                  focusable="false"
+                                >
+                                  <rect width="100%" height="100%" fill="#007aff"></rect>
+                                </svg>
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small class="text-body-secondary">just now</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                              </div>
+                              <div class="toast-body">See? Just like this.</div>
+                            </div>
+
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                              <div class="toast-header">
+                                <svg
+                                  class="bd-placeholder-img me-2"
+                                  width="20"
+                                  height="20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  aria-hidden="true"
+                                  preserveAspectRatio="xMidYMid slice"
+                                  focusable="false"
+                                >
+                                  <rect width="100%" height="100%" fill="#007aff"></rect>
+                                </svg>
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small class="text-body-secondary">2 seconds ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                              </div>
+                              <div class="toast-body">Heads up, toasts will stack automatically</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-TaostStacking-code" role="tabpanel" aria-labelledby="pills-TaostStacking-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-container position-static<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast fade show<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assertive<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bd-placeholder-img me-2<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span>
+	<span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2000/svg<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+	<span class="token attr-name">preserveAspectRatio</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xMidYMid slice<span class="token punctuation">"</span></span> <span class="token attr-name">focusable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#007aff<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rect</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-auto<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bootstrap<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-body-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>just now<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-close<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-dismiss</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	See? Just like this.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast fade show<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assertive<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bd-placeholder-img me-2<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span>
+	<span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2000/svg<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+	<span class="token attr-name">preserveAspectRatio</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xMidYMid slice<span class="token punctuation">"</span></span> <span class="token attr-name">focusable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#007aff<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rect</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-auto<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bootstrap<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-body-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>2 seconds ago<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-close<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-dismiss</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	Heads up, toasts will stack automatically
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="customcontent">Custom content</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-ToastCustom-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-ToastCustom-preview"
+                            role="tab"
+                            aria-controls="pills-ToastCustom-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-ToastCustom-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-ToastCustom-code"
+                            role="tab"
+                            aria-controls="pills-ToastCustom-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-ToastCustom-preview" role="tabpanel" aria-labelledby="pills-ToastCustom-preview-tab">
+                          <div class="toast align-items-center fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="d-flex">
+                              <div class="toast-body">Hello, world! This is a toast message.</div>
+                              <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-ToastCustom-code" role="tabpanel" aria-labelledby="pills-ToastCustom-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast align-items-center fade show<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assertive<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-flex<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	Hello, world! This is a toast message.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-close me-2 m-auto<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-dismiss</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="colorschemes">Color Schemes</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-ToastSchemes-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-ToastSchemes-preview"
+                            role="tab"
+                            aria-controls="pills-ToastSchemes-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-ToastSchemes-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-ToastSchemes-code"
+                            role="tab"
+                            aria-controls="pills-ToastSchemes-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-ToastSchemes-preview" role="tabpanel" aria-labelledby="pills-ToastSchemes-preview-tab">
+                          <div class="toast align-items-center text-bg-primary border-0 fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="d-flex">
+                              <div class="toast-body">Hello, world! This is a toast message.</div>
+                              <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-ToastSchemes-code" role="tabpanel" aria-labelledby="pills-ToastSchemes-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast align-items-center text-bg-primary border-0 fade show<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assertive<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-flex<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	Hello, world! This is a toast message.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-close btn-close-white me-2 m-auto<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-dismiss</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="placement">Placement</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-PlacementRight-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-PlacementRight-preview"
+                            role="tab"
+                            aria-controls="pills-PlacementRight-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-PlacementRight-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-PlacementRight-code"
+                            role="tab"
+                            aria-controls="pills-PlacementRight-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-PlacementRight-preview" role="tabpanel" aria-labelledby="pills-PlacementRight-preview-tab">
+                          <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 100px">
+                            <!-- Position it -->
+                            <div style="position: absolute; top: 0; right: 0">
+                              <!-- Then put toasts within -->
+                              <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header">
+                                  <svg
+                                    class="bd-placeholder-img me-2"
+                                    width="20"
+                                    height="20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true"
+                                    preserveAspectRatio="xMidYMid slice"
+                                    focusable="false"
+                                  >
+                                    <rect width="100%" height="100%" fill="#007aff"></rect>
+                                  </svg>
+                                  <strong class="me-auto">Bootstrap</strong>
+                                  <small class="text-secondary">just now</small>
+                                  <button type="button" class="ms-2 mb-1 btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                                <div class="toast-body">See? Just like this.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-PlacementRight-code" role="tabpanel" aria-labelledby="pills-PlacementRight-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>polite<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>position: relative; min-height: 100px;<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- Position it --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>position: absolute; top: 0; right: 0;<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- Then put toasts within --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast show<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assertive<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bd-placeholder-img me-2<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2000/svg<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">preserveAspectRatio</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xMidYMid slice<span class="token punctuation">"</span></span> <span class="token attr-name">focusable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#007aff<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rect</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">&gt;</span></span>
+	  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-auto<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bootstrap<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+	  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>just now<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span>
+	  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ms-2 mb-1 btn-close<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-dismiss</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	  See? Just like this.
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="placements">Placement</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-PlacementsCenter-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-PlacementsCenter-preview"
+                            role="tab"
+                            aria-controls="pills-PlacementsCenter-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-PlacementsCenter-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-PlacementsCenter-code"
+                            role="tab"
+                            aria-controls="pills-PlacementsCenter-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div
+                          class="tab-pane tab-example-preview fade show active p-5 bg-gray-100"
+                          id="pills-PlacementsCenter-preview"
+                          role="tabpanel"
+                          aria-labelledby="pills-PlacementsCenter-preview-tab"
+                        >
+                          <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+                            <!-- Then put toasts within -->
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                              <div class="toast-header">
+                                <svg
+                                  class="bd-placeholder-img me-2"
+                                  width="20"
+                                  height="20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  aria-hidden="true"
+                                  preserveAspectRatio="xMidYMid slice"
+                                  focusable="false"
+                                >
+                                  <rect width="100%" height="100%" fill="#007aff"></rect>
+                                </svg>
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                              </div>
+                              <div class="toast-body">Hello, world! This is a toast message.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-PlacementsCenter-code" role="tabpanel" aria-labelledby="pills-PlacementsCenter-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>polite<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-flex justify-content-center align-items-center w-100<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- Then put toasts within --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast fade show<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">aria-live</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assertive<span class="token punctuation">"</span></span> <span class="token attr-name">aria-atomic</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bd-placeholder-img me-2<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2000/svg<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">preserveAspectRatio</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xMidYMid slice<span class="token punctuation">"</span></span> <span class="token attr-name">focusable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#007aff<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rect</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-auto<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bootstrap<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span><span class="token punctuation">&gt;</span></span>11 mins ago<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-close<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-dismiss</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toast-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	Hello, world! This is a toast message.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-flex">
+              <!-- sidebar nav fixed -->
+              <div class="sidebar-nav-fixed">
+                <span class="d-block h2 fs-6"> On this page </span>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#example" class="active">1. Example</a>
+                  </li>
+                  <li>
+                    <a href="#translucent">2. Translucent</a>
+                  </li>
+                  <li>
+                    <a href="#stacking">3. Stacking</a>
+                  </li>
+                  <li>
+                    <a href="#customcontent">4. Custom content</a>
+                  </li>
+                  <li>
+                    <a href="#colorschemes">5. Color schemes</a>
+                  </li>
+                  <li>
+                    <a href="#placement">6. Placements</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="container-fluid py-3 border-top bg-gray-100 text-center position-relative z-1">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="small">
+                Copyright © 2025
+                <span class="text-primary">
+                  <a href="#">Dasher Admin Bootstrap 5 Theme</a>
+                </span>
+                | Designed by
+                <span class="text-primary">
+                  <a href="#">CodesCandy</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    {% include "partials/scripts.html.twig" %}
+    <script src="https://cdn.jsdelivr.net/npm/sticky-sidebar@3/dist/sticky-sidebar.min.js"></script>
+    <script src="{{ asset('js/vendors/sticky.js') }}"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-scss.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="{{ asset('js/vendors/sidebar-menu.js') }}"></script>
+  </body>
+</html>

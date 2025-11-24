@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html.twig" %}
+
+    <title>Team | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+
+    {% include "partials/../partials/head/head-links.html.twig" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html.twig" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html.twig" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8">
+                <div>
+                  <h1 class="mb-3 h2">Team</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Project</a></li>
+                      <li class="breadcrumb-item"><a href="#">Single</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Team</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-lg mb-6">
+            <div class="row">
+              <div class="col-lg-22 col-md-12 col-12">
+                <!-- Page header -->
+                <div class="d-lg-flex align-items-center justify-content-between px-6 border-bottom border-dashed p-6">
+                  <div class="mb-6 mb-lg-0">
+                    <div class="d-flex align-items-center">
+                      <div class="icon-shape icon-lg bg-primary-subtle rounded-2 d-none d-xl-block">
+                        <img src="../../assets/images/brand/logo/logo-icon.svg" alt="Image" />
+                      </div>
+                      <div class="ms-xl-4">
+                        <h1 class="mb-1 h2">Dasher UI - Design & Development</h1>
+                        <span class="text-secondary">
+                          <span class="small">
+                            <span class="me-1"> Codescandy </span>
+
+                            <span class="mx-1">
+                              Create Date:
+                              <span>1 Jan 2025</span>
+                            </span>
+
+                            <span class="mx-1">
+                              Due Date:
+                              <span>29 Jan 2025</span>
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <!-- avatar group -->
+                    <div class="avatar-group">
+                      <span class="avatar avatar-md">
+                        <!-- avatar  -->
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle imgtooltip" data-template="one" />
+                        <span id="one" class="d-none">
+                          <small>Paul Haney</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two" />
+                        <span id="two" class="d-none">
+                          <small>Gali Linear</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three" />
+                        <span id="three" class="d-none">
+                          <small>Mary Holler</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-4.jpg" class="rounded-circle imgtooltip" data-template="four" />
+                        <span id="four" class="d-none">
+                          <small>Lio Nordal</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <span class="avatar-initials rounded-circle bg-gray-100">5+</span>
+                      </span>
+                    </div>
+                    <!-- icon  -->
+                    <a href="#!" class="btn btn-icon btn-white border border-2 rounded-circle ms-2" data-template="inviteMember" data-bs-toggle="modal" data-bs-target="#inviteMemberModal"> + </a>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <!-- nav  -->
+                  <ul class="nav nav-lb-tab border-bottom-0 px-6">
+                    <li class="nav-item ms-0 me-3">
+                      <a class="nav-link" href="project-overview.html">Overview</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-task.html">Task</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-budget.html">Budget</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-files.html">Files</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link active" href="project-team.html">Team</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- search  -->
+            <div class="col-xxl-4 col-lg-3 col-md-12 col-12 mb-5">
+              <form>
+                <input type="search" class="form-control" placeholder="Search member" />
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <!-- card  -->
+              <div class="card mb-2 card-lg">
+                <!-- card body  -->
+                <div class="card-body px-6 py-5 px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <div class="avatar avatar-md">
+                        <img src="../../assets/images/avatar/avatar-11.jpg" alt="Image" class="rounded-circle" />
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5 fs-5">Jitu Chauhan</a>
+                        <div class="text-secondary">Product Manager</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>85</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>67</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                        <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-phone-call"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                            <path d="M15 7a2 2 0 0 1 2 2" />
+                            <path d="M15 3a6 6 0 0 1 6 6" />
+                          </svg>
+                          <!-- text -->
+                          <div id="phone" class="d-none">
+                            <span>Voice Call</span>
+                          </div>
+                        </a>
+                        <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-video"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                            <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                          </svg>
+                          <!-- text -->
+                          <div id="video" class="d-none">
+                            <span>Video Call</span>
+                          </div>
+                        </a>
+                        <span class="dropdown">
+                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownOne" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-dots"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            </svg>
+                          </a>
+                          <span class="dropdown-menu" aria-labelledby="DropdownOne">
+                            <a class="dropdown-item" href="#!">
+                              <span>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-trash"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M4 7l16 0" />
+                                  <path d="M10 11l0 6" />
+                                  <path d="M14 11l0 6" />
+                                  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                </svg>
+                              </span>
+                              <span class="ms-1">Remove</span>
+                            </a>
+                            <a class="dropdown-item" href="#!">
+                              <span>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-edit"
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                  <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                  <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                  <path d="M16 5l3 3" />
+                                </svg>
+                              </span>
+                              <span class="ms-1">Edit</span>
+                            </a>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <!-- card  -->
+              <div class="card mb-2 card-lg">
+                <!-- card body  -->
+                <div class="card-body px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <!-- avatar  -->
+                      <div class="avatar avatar-md">
+                        <img src="../../assets/images/avatar/avatar-2.jpg" alt="Image" class="rounded-circle" />
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5">Anita Parmar</a>
+                        <div class="text-secondary">UX Designer</div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>85</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>67</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-phone-call"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                          <path d="M15 7a2 2 0 0 1 2 2" />
+                          <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <!-- text -->
+                        <div id="phone1" class="d-none">
+                          <span>Voice Call</span>
+                        </div>
+                      </a>
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-video"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                          <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                        <!-- text -->
+                        <div id="video1" class="d-none">
+                          <span>Video Call</span>
+                        </div>
+                      </a>
+                      <!-- dropdown  -->
+                      <span class="dropdown">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownTwo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                          </svg>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownTwo">
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Remove</span>
+                          </a>
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Edit</span>
+                          </a>
+                        </span>
+                      </span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <!-- card  -->
+              <div class="card mb-2 card-lg">
+                <!-- card body  -->
+                <div class="card-body px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <div class="avatar avatar-md avatar-warning">
+                        <span class="avatar-initials rounded-circle">FC</span>
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5">Felicia Cordell</a>
+                        <div class="text-secondary">Front End Developer</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>123</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>98</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-phone-call"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                          <path d="M15 7a2 2 0 0 1 2 2" />
+                          <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <!-- text -->
+                        <div id="phone2" class="d-none">
+                          <span>Voice Call</span>
+                        </div>
+                      </a>
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-video"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                          <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                        <!-- text -->
+                        <div id="video2" class="d-none">
+                          <span>Video Call</span>
+                        </div>
+                      </a>
+                      <!-- dropdown  -->
+                      <span class="dropdown">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownThree" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                          </svg>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownThree">
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Remove</span>
+                          </a>
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Edit</span>
+                          </a>
+                        </span>
+                      </span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <!-- card  -->
+              <div class="card mb-2 card-lg">
+                <div class="card-body px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <div class="avatar avatar-md">
+                        <img src="../../assets/images/avatar/avatar-4.jpg" alt="Image" class="rounded-circle" />
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5">Carl Britton</a>
+                        <div class="text-secondary">Full Stack Developer</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>47</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>44</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-phone-call"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                          <path d="M15 7a2 2 0 0 1 2 2" />
+                          <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <!-- text -->
+                        <div id="phone3" class="d-none">
+                          <span>Voice Call</span>
+                        </div>
+                      </a>
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-video"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                          <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                        <!-- text -->
+                        <div id="video3" class="d-none">
+                          <span>Video Call</span>
+                        </div>
+                      </a>
+                      <span class="dropdown">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownFour" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                          </svg>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownFour">
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Remove</span>
+                          </a>
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Edit</span>
+                          </a>
+                        </span>
+                      </span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card mb-2 card-lg">
+                <div class="card-body px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <div class="avatar avatar-md">
+                        <img src="../../assets/images/avatar/avatar-5.jpg" alt="Image" class="rounded-circle" />
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5">Katherine Wadley</a>
+                        <div class="text-secondary">HR Manager</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>23</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>20</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-phone-call"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                          <path d="M15 7a2 2 0 0 1 2 2" />
+                          <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <!-- text -->
+                        <div id="phone4" class="d-none">
+                          <span>Voice Call</span>
+                        </div>
+                      </a>
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-video"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                          <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                        <!-- text -->
+                        <div id="video4" class="d-none">
+                          <span>Video Call</span>
+                        </div>
+                      </a>
+                      <span class="dropdown">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownFive" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                          </svg>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownFive">
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Remove</span>
+                          </a>
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Edit</span>
+                          </a>
+                        </span>
+                      </span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card mb-2 card-lg">
+                <div class="card-body px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <div class="avatar avatar-md">
+                        <img src="../../assets/images/avatar/avatar-6.jpg" alt="Image" class="rounded-circle" />
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5">Kbrian Dobbins</a>
+                        <div class="text-secondary">UI Designer</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>21</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>20</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone5">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-phone-call"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                          <path d="M15 7a2 2 0 0 1 2 2" />
+                          <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <!-- text -->
+                        <div id="phone5" class="d-none">
+                          <span>Voice Call</span>
+                        </div>
+                      </a>
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video5">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-video"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                          <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                        <!-- text -->
+                        <div id="video5" class="d-none">
+                          <span>Video Call</span>
+                        </div>
+                      </a>
+                      <span class="dropdown">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownSix" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                          </svg>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownSix">
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Remove</span>
+                          </a>
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Edit</span>
+                          </a>
+                        </span>
+                      </span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card mb-2 card-lg">
+                <div class="card-body px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <div class="avatar avatar-md">
+                        <img src="../../assets/images/avatar/avatar-7.jpg" alt="Image" class="rounded-circle" />
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5">Felicia Cordell</a>
+                        <div class="text-secondary">UI Designer</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>34</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>30</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-phone-call"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                          <path d="M15 7a2 2 0 0 1 2 2" />
+                          <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <!-- text -->
+                        <div id="phone6" class="d-none">
+                          <span>Voice Call</span>
+                        </div>
+                      </a>
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-video"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                          <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                        <!-- text -->
+                        <div id="video6" class="d-none">
+                          <span>Video Call</span>
+                        </div>
+                      </a>
+                      <span class="dropdown">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownSeven" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                          </svg>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownSeven">
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Remove</span>
+                          </a>
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Edit</span>
+                          </a>
+                        </span>
+                      </span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card mb-2 card-lg">
+                <div class="card-body px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <div class="avatar avatar-md">
+                        <img src="../../assets/images/avatar/avatar-8.jpg" alt="Image" class="rounded-circle" />
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5">Rosalie Hutton</a>
+                        <div class="text-secondary">Full Stack Developer</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>56</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>45</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 text-end col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone7">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-phone-call"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                          <path d="M15 7a2 2 0 0 1 2 2" />
+                          <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <!-- text -->
+                        <div id="phone7" class="d-none">
+                          <span>Voice Call</span>
+                        </div>
+                      </a>
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video7">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-video"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                          <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                        <!-- text -->
+                        <div id="video7" class="d-none">
+                          <span>Video Call</span>
+                        </div>
+                      </a>
+                      <span class="dropdown">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownEight" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                          </svg>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownEight">
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Remove</span>
+                          </a>
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Edit</span>
+                          </a>
+                        </span>
+                      </span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card mb-2 card-lg">
+                <div class="card-body px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <div class="avatar avatar-md">
+                        <img src="../../assets/images/avatar/avatar-9.jpg" alt="Image" class="rounded-circle" />
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5">Rmichael Marshall</a>
+                        <div class="text-secondary">Product Manager</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>67</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>8</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 text-end col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone8">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-phone-call"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                          <path d="M15 7a2 2 0 0 1 2 2" />
+                          <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <!-- text -->
+                        <div id="phone8" class="d-none">
+                          <span>Voice Call</span>
+                        </div>
+                      </a>
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video8">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-video"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                          <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                        <!-- text -->
+                        <div id="video8" class="d-none">
+                          <span>Video Call</span>
+                        </div>
+                      </a>
+                      <span class="dropdown">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownNine" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                          </svg>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownNine">
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Remove</span>
+                          </a>
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Edit</span>
+                          </a>
+                        </span>
+                      </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card mb-2 card-lg">
+                <div class="card-body px-6 py-5">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center col-lg-5 col-md-5 col-12 mb-4 mb-md-0">
+                      <div class="avatar avatar-md avatar-info">
+                        <span class="avatar-initials rounded-circle">CN</span>
+                      </div>
+                      <div class="ms-3">
+                        <a href="#!" class="text-inherit fs-5">Claire Nonnors</a>
+                        <div class="text-secondary">Digital Marketing</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-3">
+                      <div>85</div>
+                      <span class="text-secondary">Task</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-4">
+                      <div>67</div>
+                      <span class="text-secondary">Complete</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 text-end col-5">
+                      <div class="d-flex flex-row justify-content-end gap-1 align-items-center">
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="phone9">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-phone-call"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                          <path d="M15 7a2 2 0 0 1 2 2" />
+                          <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <!-- text -->
+                        <div id="phone9" class="d-none">
+                          <span>Voice Call</span>
+                        </div>
+                      </a>
+                      <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="video9">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-video"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                          <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                        </svg>
+                        <!-- text -->
+                        <div id="video9" class="d-none">
+                          <span>Video Call</span>
+                        </div>
+                      </a>
+                      <span class="dropdown">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" role="button" id="DropdownTen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                          </svg>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownTen">
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-trash"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 7l16 0" />
+                                <path d="M10 11l0 6" />
+                                <path d="M14 11l0 6" />
+                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Remove</span>
+                          </a>
+                          <a class="dropdown-item" href="#!">
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-edit"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                <path d="M16 5l3 3" />
+                              </svg>
+                            </span>
+                            <span class="ms-1">Edit</span>
+                          </a>
+                        </span>
+                      </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="inviteMemberModal" tabindex="-1" role="dialog" aria-labelledby="inviteMemberModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="mb-0" id="inviteMemberModalLabel">Invite Member</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 mt-1">
+              <input type="search" class="form-control" placeholder="Search Here" />
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <div>Members:</div>
+              <div class="ms-2">
+                <!-- avatar group -->
+                <div class="avatar-group">
+                  <span class="avatar avatar-sm">
+                    <!-- avatar  -->
+                    <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle imgtooltip" data-template="one1" />
+                    <span id="one1" class="d-none">
+                      <span>Paul Haney</span>
+                    </span>
+                  </span>
+                  <!-- avatar  -->
+                  <span class="avatar avatar-sm">
+                    <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two2" />
+                    <span id="two2" class="d-none">
+                      <span>Gali Linear</span>
+                    </span>
+                  </span>
+                  <!-- avatar  -->
+                  <span class="avatar avatar-sm">
+                    <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three3" />
+                    <span id="three3" class="d-none">
+                      <span>Mary Holler</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- contact list -->
+              <ul class="list-unstyled contacts-list mb-0">
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-5.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Pete Martin</div>
+                          </a>
+                          <small class="mb-0">Designer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-9.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Olivia Cooper</div>
+                          </a>
+                          <small class="mb-0">Front End Develosmaller</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-19.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Jamarcus Streich</div>
+                          </a>
+                          <h5 class="mb-0"></h5>
+                          <small>UX Designer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-8.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">User Name</div>
+                          </a>
+                          <small>Content Writer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-3.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Rosalee Roberts</div>
+                          </a>
+                          <small>SEO Specialist</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-12.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Lauren Wilson</div>
+                          </a>
+                          <small>Front End Developer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-14.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">User Name</div>
+                          </a>
+                          <small>Content Writer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-15.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Rosalee Roberts</div>
+                          </a>
+                          <small>SEO Specialist</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="text-end mt-4 mb-2">
+                <a href="#!" class="btn btn-primary">+ Invite</a>
+                <a href="#!" class="btn btn-light bg-gray-400 ms-2">Close</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include "partials/../partials/scripts.html.twig" %}
+    <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <!-- tippy js -->
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <script src="{{ asset('js/vendors/tippy.js') }}"></script>
+  </body>
+</html>

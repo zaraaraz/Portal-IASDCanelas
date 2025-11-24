@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/head/head-meta.html.twig" %}
+    <title>List Group | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-okaidia.min.css" rel="stylesheet" />
+    {% include "partials/head/head-links.html.twig" %}
+  </head>
+  <body class>
+    <!-- main -->
+    <div>
+      {% include "partials/header.html.twig" %} {% include "partials/breadcrumb.html.twig", { "heading" : "List Group", "pageFolder": "Components", "pageName":"List&nbsp;Group", }%}
+      <div class="pt-lg-10 mt-10 position-relative">
+        <div class="container">
+          <div class="row">
+            <aside class="col-xl-2 col-lg-3 col-md-4 mb-6 mb-md-0 d-none d-lg-block">{% include "partials/nav-sidebar.html.twig" %}</aside>
+            <div class="col-xl-7 col-lg-9 col-md-12 mb-6 mb-md-0 mx-auto">
+              <div class="mb-12 product-content d-flex flex-column gap-8">
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="basicExample">Example</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-basicExample-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-basicExample-preview"
+                            role="tab"
+                            aria-controls="pills-basicExample-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-basicExample-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-basicExample-code"
+                            role="tab"
+                            aria-controls="pills-basicExample-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-basicExample-preview" role="tabpanel" aria-labelledby="pills-basicExample-preview-tab">
+                          <ul class="list-group">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                            <li class="list-group-item">And a fifth one</li>
+                          </ul>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-basicExample-code" role="tabpanel" aria-labelledby="pills-basicExample-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>An item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A second item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A third item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A fourth item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>And a fifth one<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="activeItem">Active Item</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-activeItem-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-activeItem-preview"
+                            role="tab"
+                            aria-controls="pills-activeItem-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-activeItem-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-activeItem-code"
+                            role="tab"
+                            aria-controls="pills-activeItem-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-activeItem-preview" role="tabpanel" aria-labelledby="pills-activeItem-preview-tab">
+                          <ul class="list-group">
+                            <li class="list-group-item active" aria-current="true">An active item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                            <li class="list-group-item">And a fifth one</li>
+                          </ul>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-activeItem-code" role="tabpanel" aria-labelledby="pills-activeItem-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item active<span class="token punctuation">"</span></span> <span class="token attr-name">aria-current</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>An active item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A second item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A third item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A fourth item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>And a fifth one<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="listFlush">List Flush</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-listFlush-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-listFlush-preview"
+                            role="tab"
+                            aria-controls="pills-listFlush-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-listFlush-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-listFlush-code"
+                            role="tab"
+                            aria-controls="pills-listFlush-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-listFlush-preview" role="tabpanel" aria-labelledby="pills-listFlush-preview-tab">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent">An item</li>
+                            <li class="list-group-item bg-transparent">A second item</li>
+                            <li class="list-group-item bg-transparent">A third item</li>
+                            <li class="list-group-item bg-transparent">A fourth item</li>
+                            <li class="list-group-item bg-transparent">And a fifth one</li>
+                          </ul>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-listFlush-code" role="tabpanel" aria-labelledby="pills-listFlush-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group list-group-flush<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>An item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A second item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A third item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A fourth item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>And a fifth one<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="withBackground">With Background</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-withBackground-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-withBackground-preview"
+                            role="tab"
+                            aria-controls="pills-withBackground-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-withBackground-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-withBackground-code"
+                            role="tab"
+                            aria-controls="pills-withBackground-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-withBackground-preview" role="tabpanel" aria-labelledby="pills-withBackground-preview-tab">
+                          <ul class="list-group">
+                            <li class="list-group-item">A simple default list group item</li>
+
+                            <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+                            <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                            <li class="list-group-item list-group-item-success">A simple success list group item</li>
+                            <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                            <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                            <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                            <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                            <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+                          </ul>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-withBackground-code" role="tabpanel" aria-labelledby="pills-withBackground-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A simple default list group item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A simple primary list group item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A simple secondary list group item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-success<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A simple success list group item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A simple danger list group item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-warning<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A simple warning list group item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-info<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A simple info list group item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-light<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A simple light list group item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A simple dark list group item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border rounded-3 overflow-hidden">
+                  <div class="row align-items-center py-2 px-5">
+                    <div class="col-lg-8 col-xl-8 col-7">
+                      <div>
+                        <h3 class="text-truncate h5 mb-0" id="withLink">With Link</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-5 d-flex justify-content-end">
+                      <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link active"
+                            id="pills-withLink-preview-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-withLink-preview"
+                            role="tab"
+                            aria-controls="pills-withLink-preview"
+                            aria-selected="true"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Preview</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link"
+                            id="pills-withLink-code-tab"
+                            data-bs-toggle="pill"
+                            href="#pills-withLink-code"
+                            role="tab"
+                            aria-controls="pills-withLink-code"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span class="lh-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 8l-4 4l4 4" />
+                                <path d="M17 8l4 4l-4 4" />
+                                <path d="M14 4l-4 16" />
+                              </svg>
+                            </span>
+                            <span class="ms-1 d-none d-lg-block">Code</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="tab-content border-top" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-preview fade show active p-5 bg-gray-100" id="pills-withLink-preview" role="tabpanel" aria-labelledby="pills-withLink-preview-tab">
+                          <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true"> The current link item </a>
+                            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                            <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                            <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                            <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-code fade" id="pills-withLink-code" role="tabpanel" aria-labelledby="pills-withLink-code-tab">
+                          <pre
+                            class="language-markup"
+                            tabindex="0"
+                          ><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-action active<span class="token punctuation">"</span></span> <span class="token attr-name">aria-current</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	The current link item
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-action<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A second link item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-action<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A third link item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-action<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A fourth link item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-action disabled<span class="token punctuation">"</span></span> <span class="token attr-name">aria-disabled</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A disabled link item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-flex">
+              <!-- sidebar nav fixed -->
+              <div class="sidebar-nav-fixed">
+                <span class="d-block h2 fs-6"> On this page </span>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#basicExample" class="active">1. Example</a>
+                  </li>
+                  <li>
+                    <a href="#activeItem">2. Active item</a>
+                  </li>
+                  <li>
+                    <a href="#listFlush">3. Flush</a>
+                  </li>
+                  <li>
+                    <a href="#withBackground">4. With background</a>
+                  </li>
+                  <li>
+                    <a href="#withLink">5. With link</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="container-fluid py-3 border-top bg-gray-100 text-center position-relative z-1">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="small">
+                Copyright © 2025
+                <span class="text-primary">
+                  <a href="#">Dasher Admin Bootstrap 5 Theme</a>
+                </span>
+                | Designed by
+                <span class="text-primary">
+                  <a href="#">CodesCandy</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    {% include "partials/scripts.html.twig" %}
+    <script src="https://cdn.jsdelivr.net/npm/sticky-sidebar@3/dist/sticky-sidebar.min.js"></script>
+    <script src="{{ asset('js/vendors/sticky.js') }}"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-scss.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="{{ asset('js/vendors/sidebar-menu.js') }}"></script>
+  </body>
+</html>

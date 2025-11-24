@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html.twig" %}
+    <title>Followers | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    {% include "partials/../partials/head/head-links.html.twig" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html.twig" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html.twig" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8">
+                <div>
+                  <h1 class="mb-3 h2">Followers</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Profile</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Followers</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center mb-4">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+              <!-- Bg -->
+
+              <div class="card card-lg overflow-hidden">
+                <div class="pt-16 rounded-top position-relative" style="background: url(../../assets/images/background/profile-cover.jpg) no-repeat; background-size: cover">
+                  <div class="position-absolute top-0 end-0 m-4">
+                    <a href="#!" class="icon-shape icon-md bg-white rounded-circle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-edit text-secondary"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                        <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                        <path d="M16 5l3 3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-column flex-lg-row gap-4">
+                    <div>
+                      <img src="../../assets/images/avatar/avatar-1.jpg" alt="" class="rounded-circle avatar avatar-xl" />
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row justify-content-between w-100 gap-2">
+                      <div class="d-lg-flex flex-lg-column">
+                        <h3 class="mb-0">Jitu Chauhan</h3>
+                        <div class="d-lg-flex align-items-center gap-2">
+                          <span>@imjituchauhan</span>
+                          <span class="text-secondary">12,500 subscribers</span>
+                          <span class="text-secondary">1200 Posts</span>
+                        </div>
+                        <div class="mt-4">
+                          <a href="#!" class="btn btn-white d-inline-flex align-items-center gap-2"
+                            >View Site<svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                              <path d="M11 13l9 -9" />
+                              <path d="M15 4h5v5" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-10">
+                        <div class="d-flex flex-column">
+                          <span class="fw-semibold fs-5">12,500</span>
+                          <span class="text-secondary">Followers</span>
+                        </div>
+                        <div class="d-flex flex-column">
+                          <span class="fw-semibold fs-5">350</span>
+                          <span class="text-secondary">Following</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- content -->
+          <div class="row">
+            <div class="col-12 mb-8">
+              <ul class="nav nav-lb-tab border-bottom">
+                <li class="nav-item">
+                  <a href="profile-overview.html" class="nav-link">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                          <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                          <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                        </svg>
+                      </span>
+                      <span>Profile</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile-project.html" class="nav-link">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                          <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+                          <path d="M12 12l0 .01" />
+                          <path d="M3 13a20 20 0 0 0 18 0" />
+                        </svg>
+                      </span>
+                      <span>Project</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile-team.html" class="nav-link">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-users-group"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                          <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+                          <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                          <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+                          <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                          <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
+                        </svg>
+                      </span>
+                      <span>Teams</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile-followers.html" class="nav-link active">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-users"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                          <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                          <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                        </svg>
+                      </span>
+                      <span>Followers</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile-activity.html" class="nav-link">
+                    <div class="d-flex align-items-center gap-2 lh-1">
+                      <span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-activity"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M3 12h4l3 8l4 -16l3 8h4" />
+                        </svg>
+                      </span>
+                      <span>Activity</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row g-6">
+            <div class="col-xxl-4 col-xl-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <div class="card-body p-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../../assets/images/avatar/avatar-14.jpg" alt="" class="avatar avatar-lg rounded-circle" />
+                      <div>
+                        <h5 class="mb-1">Sandip Chauhan</h5>
+                        <span class="text-secondary">UX Designer</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-white">Follow</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <div class="card-body p-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../../assets/images/avatar/avatar-5.jpg" alt="" class="avatar avatar-lg rounded-circle" />
+                      <div>
+                        <h5 class="mb-1">Anita Parmar</h5>
+                        <span class="text-secondary"> Full Stack Developer</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-white">Follow</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <div class="card-body p-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../../assets/images/avatar/avatar-9.jpg" alt="" class="avatar avatar-lg rounded-circle" />
+                      <div>
+                        <h5 class="mb-1">Manasvi Suthar</h5>
+                        <span class="text-secondary">Content Marketing</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-white">Follow</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <div class="card-body p-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../../assets/images/avatar/avatar-6.jpg" alt="" class="avatar avatar-lg rounded-circle" />
+                      <div>
+                        <h5 class="mb-1">Vallabh Sompura</h5>
+                        <span class="text-secondary">UX Designer</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-outline-primary">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-check d-none d-md-block"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l5 5l10 -10" />
+                      </svg>
+                      Followed
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <div class="card-body p-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../../assets/images/avatar/avatar-8.jpg" alt="" class="avatar avatar-lg rounded-circle" />
+                      <div>
+                        <h5 class="mb-1">Anne Brewer</h5>
+                        <span class="text-secondary">Full Stack Developer</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-white">Follow</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <div class="card-body p-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../../assets/images/avatar/avatar-2.jpg" alt="" class="avatar avatar-lg rounded-circle" />
+                      <div>
+                        <h5 class="mb-1">Joshua George</h5>
+                        <span class="text-secondary">Content Marketing</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-white">Follow</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <div class="card-body p-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../../assets/images/avatar/avatar-10.jpg" alt="" class="avatar avatar-lg rounded-circle" />
+                      <div>
+                        <h5 class="mb-1">Diane Baughman</h5>
+                        <span class="text-secondary">Content Marketing</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-outline-primary">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-check d-none d-md-block"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l5 5l10 -10" />
+                      </svg>
+                      Followed
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <div class="card-body p-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../../assets/images/avatar/avatar-3.jpg" alt="" class="avatar avatar-lg rounded-circle" />
+                      <div>
+                        <h5 class="mb-1">Karina Clark</h5>
+                        <span class="text-secondary">Full Stack Developer</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-white">Follow</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-6 col-12">
+              <!-- card -->
+              <div class="card card-lg">
+                <div class="card-body p-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="../../assets/images/avatar/avatar-4.jpg" alt="" class="avatar avatar-lg rounded-circle" />
+                      <div>
+                        <h5 class="mb-1">Roland Thomas</h5>
+                        <span class="text-secondary">Content Marketing</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-white">Follow</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html.twig" %}
+    <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+  </body>
+</html>

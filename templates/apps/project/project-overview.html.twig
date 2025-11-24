@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html.twig" %}
+
+    <title>Overview | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+
+    {% include "partials/../partials/head/head-links.html.twig" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html.twig" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html.twig" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8">
+                <div>
+                  <h1 class="mb-3 h2">Overview</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Project</a></li>
+                      <li class="breadcrumb-item"><a href="#">Single</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Overview</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-lg mb-6">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-12">
+                <!-- Page header -->
+                <div class="d-lg-flex align-items-center justify-content-between px-6 border-bottom border-dashed p-6">
+                  <div class="mb-6 mb-lg-0">
+                    <div class="d-flex align-items-center">
+                      <div class="icon-shape icon-lg bg-primary-subtle rounded-2 d-none d-xl-block">
+                        <img src="../../assets/images/brand/logo/logo-icon.svg" alt="Image" />
+                      </div>
+                      <div class="ms-xl-4">
+                        <h1 class="mb-1 h2">Dasher UI - Design & Development</h1>
+                        <span class="text-secondary">
+                          <span class="small">
+                            <span class="me-1"> Codescandy </span>
+
+                            <span class="mx-1">
+                              Create Date:
+                              <span>1 Jan 2025</span>
+                            </span>
+
+                            <span class="mx-1">
+                              Due Date:
+                              <span>29 Jan 2025</span>
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <!-- avatar group -->
+                    <div class="avatar-group">
+                      <span class="avatar avatar-md">
+                        <!-- avatar  -->
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle imgtooltip" data-template="one" />
+                        <span id="one" class="d-none">
+                          <small class="mb-0">Paul Haney</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two" />
+                        <span id="two" class="d-none">
+                          <small class="mb-0">Gali Linear</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three" />
+                        <span id="three" class="d-none">
+                          <small class="mb-0">Mary Holler</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <img alt="avatar" src="../../assets/images/avatar/avatar-4.jpg" class="rounded-circle imgtooltip" data-template="four" />
+                        <span id="four" class="d-none">
+                          <small class="mb-0">Lio Nordal</small>
+                        </span>
+                      </span>
+                      <!-- avatar  -->
+                      <span class="avatar avatar-md">
+                        <span class="avatar-initials rounded-circle bg-gray-100">5+</span>
+                      </span>
+                    </div>
+                    <!-- icon  -->
+                    <a href="#!" class="btn btn-icon btn-white border border-2 rounded-circle ms-2" data-template="inviteMember" data-bs-toggle="modal" data-bs-target="#inviteMemberModal"> + </a>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <!-- nav  -->
+                  <ul class="nav nav-lb-tab border-bottom-0 px-6">
+                    <li class="nav-item ms-0 me-3">
+                      <a class="nav-link active" href="project-overview.html">Overview</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-task.html">Task</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-budget.html">Budget</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-files.html">Files</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" href="project-team.html">Team</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-xl-8 col-12">
+              <div class="row g-6">
+                <div class="col-12">
+                  <div class="card card-lg">
+                    <div class="card-body px-6 py-5">
+                      <div class="d-flex justify-content-between align-items-center mb-5">
+                        <div>
+                          <h5 class="mb-0 fs-4">Summary</h5>
+                        </div>
+                        <!-- dropdown  -->
+                        <div>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-dots-vertical"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                              </svg>
+                            </a>
+                            <span class="dropdown-menu">
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                              <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                      <p>
+                        Give a high-level overview of the product / project you re working on, its goals, etc..Elaborate on the target audience of your project/product, link out to additional
+                        resources.
+                      </p>
+                      <p>
+                        Vivamus pretium laoreet massa eu euismod. Nunc accumsan id odio sed luctus. Suspendisse a lacus sed ex consequat interdum quis non eros. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Debitis labore nam fuga sapiente vel iste animiicta ab at placeat sint.
+                      </p>
+
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item px-0 border-dashed border-bottom">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                              <div>
+                                <span> Start Date</span>
+                              </div>
+                            </div>
+                            <div>
+                              <span class="mb-0">3 Oct, 2025</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item px-0 border-dashed border-bottom">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                              <div>Due Date</div>
+                            </div>
+                            <div>15 Jan, 2025</div>
+                          </div>
+                        </li>
+                        <li class="list-group-item px-0 border-dashed border-bottom">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                              <div>Estimate Time</div>
+                            </div>
+                            <div>
+                              <div>12</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item px-0 pb-0">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                              <div>Cost</div>
+                            </div>
+                            <div>
+                              <div>$18,000</div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <!-- card -->
+                  <div class="card card-lg">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center border-bottom border-dashed px-6 py-4">
+                        <h5 class="mb-0">Budget</h5>
+                        <a href="#!" class="btn btn-primary">View Details</a>
+                      </div>
+                      <!-- card body -->
+
+                      <!-- row -->
+                      <div class="row">
+                        <!-- col -->
+                        <div class="col-md-4 col-12">
+                          <div class="d-flex align-items-center justify-content-between px-6 py-4">
+                            <div>
+                              <div class="fs-3 fw-semibold">$52,000</div>
+                              <div class="mb-0 text-secondary">Total</div>
+                            </div>
+                            <div class="ms-3">
+                              <div class="icon-shape icon-lg bg-primary-subtle text-primary-emphasis rounded-circle text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-currency-dollar" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2"></path>
+                                  <path d="M12 3v3m0 12v3"></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- col -->
+                        <div class="col-md-4 col-12 border-start-md border-dashed">
+                          <div class="d-flex align-items-center justify-content-between px-6 py-4">
+                            <div>
+                              <div class="fs-3 fw-semibold">$43,230</div>
+                              <div class="mb-0 text-secondary">Remaining</div>
+                            </div>
+                            <div class="ms-3">
+                              <div class="icon-shape icon-lg bg-danger-subtle text-danger-emphasis rounded-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                  <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                  <path d="M17 17h-11v-14h-2"></path>
+                                  <path d="M6 5l14 1l-1 7h-13"></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- col -->
+                        <div class="col-md-4 col-12 border-start-md border-dashed">
+                          <div class="d-flex align-items-center justify-content-between px-6 py-4">
+                            <div>
+                              <div class="fs-3 fw-semibold">$8,770</div>
+                              <div class="text-secondary">Over Target</div>
+                            </div>
+                            <div class="ms-3">
+                              <div class="icon-shape icon-lg bg-success-subtle text-success-emphasis rounded-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-pie" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M10 3.2a9 9 0 1 0 10.8 10.8a1 1 0 0 0 -1 -1h-6.8a2 2 0 0 1 -2 -2v-7a.9 .9 0 0 0 -1 -.8"></path>
+                                  <path d="M15 3.5a9 9 0 0 1 5.5 5.5h-4.5a1 1 0 0 1 -1 -1v-4.5"></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <!-- card -->
+                  <div class="card card-lg mb-6">
+                    <!-- card body -->
+
+                    <!-- table -->
+                    <div class="card-body px-6 py-5">
+                      <div>
+                        <h5 class="mb-0">Upcoming Deadlines</h5>
+                      </div>
+                    </div>
+                    <div class="table-responsive overflow-y-hidden">
+                      <table class="table mb-0 text-nowrap table-centered">
+                        <thead>
+                          <tr>
+                            <th>Member</th>
+                            <th>Task</th>
+                            <th>Deadline</th>
+                            <th>Workload</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="avatar avatar-sm">
+                                  <a href="#!"><img src="../../assets/images/avatar/avatar-2.jpg" alt="Image" class="rounded-circle" /></a>
+                                </div>
+                                <div class="ms-2">
+                                  <a href="#!" class="text-inherit">Eleanor Pena</a>
+                                </div>
+                              </div>
+                            </td>
+                            <td>Design a Dasher Figma</td>
+                            <td>30 Aug, 2025</td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="progress flex-auto" style="height: 6px">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="ms-2"><span>62%</span></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="avatar avatar-sm">
+                                  <a href="#!"><img src="../../assets/images/avatar/avatar-3.jpg" alt="Image" class="rounded-circle" /></a>
+                                </div>
+                                <div class="ms-2">
+                                  <a href="#!" class="text-inherit">Marvin McKinney</a>
+                                </div>
+                              </div>
+                            </td>
+                            <td>Dasher Webpack Workflow</td>
+                            <td>24 Sept, 2025</td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="progress flex-auto" style="height: 6px">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="ms-2"><span>45%</span></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="avatar avatar-sm">
+                                  <a href="#!"><img src="../../assets/images/avatar/avatar-4.jpg" alt="Image" class="rounded-circle" /></a>
+                                </div>
+                                <div class="ms-2">
+                                  <a href="#!" class="text-inherit">Wade Warren</a>
+                                </div>
+                              </div>
+                            </td>
+                            <td>Dasher React version</td>
+                            <td>30 Sept, 2025</td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="progress flex-auto" style="height: 6px">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="ms-2"><span>80%</span></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="avatar avatar-sm">
+                                  <a href="#!"><img src="../../assets/images/avatar/avatar-5.jpg" alt="Image" class="rounded-circle" /></a>
+                                </div>
+                                <div class="ms-2">
+                                  <a href="#!" class="text-inherit">Courtney Henry</a>
+                                </div>
+                              </div>
+                            </td>
+                            <td>Dasher Documents Improve</td>
+                            <td>20 Dec, 2025</td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="progress flex-auto" style="height: 6px">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="ms-2"><span>10%</span></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="avatar avatar-sm">
+                                  <a href="#!"><img src="../../assets/images/avatar/avatar-6.jpg" alt="Image" class="rounded-circle" /></a>
+                                </div>
+                                <div class="ms-2">
+                                  <a href="#!" class="text-inherit">Brooklyn Simmons</a>
+                                </div>
+                              </div>
+                            </td>
+                            <td>Ecommerce Design Dasher</td>
+                            <td>25 Jan, 2025</td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="progress flex-auto" style="height: 6px">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 8%" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="ms-2"><span>8%</span></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-xl-4 col-12">
+              <!-- card  -->
+              <div class="card bg-primary card-lg mb-6" data-bs-theme="dark">
+                <!-- card body  -->
+                <div class="card-body px-6 py-5">
+                  <h5 class="mb-0">Launch Date</h5>
+
+                  <!-- dropdown  -->
+                  <div class="d-flex justify-content-between align-items-center mt-8 text-white">
+                    <div>
+                      <div class="display-5 fw-semibold mb-1">121 Days</div>
+                      <div class="mb-0">15 December, Friday</div>
+                    </div>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-flag"
+                        width="56"
+                        height="56"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 5a5 5 0 0 1 7 0a5 5 0 0 0 7 0v9a5 5 0 0 1 -7 0a5 5 0 0 0 -7 0v-9z" />
+                        <path d="M5 21v-7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card  -->
+              <div class="card card-lg mb-6">
+                <!-- card body  -->
+
+                <div class="card-body px-6 py-5">
+                  <div>
+                    <h5 class="mb-0">Overall Progress</h5>
+                  </div>
+                  <div id="progressChart"></div>
+                </div>
+              </div>
+              <div class="card card-lg mb-6">
+                <!-- Card header -->
+
+                <!-- Card body -->
+                <div class="card-body px-6 py-5">
+                  <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div>
+                      <h5 class="mb-0">Recent Activity</h5>
+                    </div>
+                    <div><a href="#!" class="btn btn-primary btn-sm">View All</a></div>
+                  </div>
+                  <!-- List group -->
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-0 pt-0 border-0 pb-6">
+                      <div class="row position-relative">
+                        <div class="col-auto">
+                          <div class="icon-shape icon-md bg-primary-subtle text-primary-emphasis rounded-circle">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-check"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M5 12l5 5l10 -10" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="col ms-n3">
+                          <div class="fw-semibold">Task Finished</div>
+                          <div class="small text-secondary">Paula finished figma task</div>
+                        </div>
+                        <div class="col-auto">
+                          <span>2 mins ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item px-0 pt-0 border-0 pb-6">
+                      <div class="row position-relative">
+                        <div class="col-auto">
+                          <div class="icon-shape icon-md bg-primary-subtle text-primary-emphasis rounded-circle">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-message"
+                              width="18"
+                              height="18"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M8 9h8" />
+                              <path d="M8 13h6" />
+                              <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="col ms-n3">
+                          <div class="fw-semibold">New Comment</div>
+                          <div class="text-secondary small">Georg commented on task.</div>
+                        </div>
+                        <div class="col-auto">
+                          <span>1 hour ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item px-0 pt-0 border-0 pb-6">
+                      <div class="row position-relative">
+                        <div class="col-auto">
+                          <div class="icon-shape icon-md bg-primary-subtle text-primary-emphasis rounded-circle">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-alert-triangle"
+                              width="18"
+                              height="18"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M12 9v4" />
+                              <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+                              <path d="M12 16h.01" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="col ms-n3">
+                          <div class="fw-semibold">Task Overdue</div>
+                          <div class="text-secondary small">
+                            Task
+                            <a href="#!"><u>status updatd for board</u></a>
+                            is overdue.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <span>1 day</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item px-0 pt-0 border-0">
+                      <div class="row position-relative">
+                        <div class="col-auto">
+                          <div class="icon-shape icon-md bg-primary-subtle text-primary-emphasis rounded-circle">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-mail"
+                              width="18"
+                              height="18"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                              <path d="M3 7l9 6l9 -6" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="col ms-n3">
+                          <div class="fw-semibold">Update Send to Client</div>
+                          <div class="text-secondary small">Jitu send email to update design for client Dasher .</div>
+                        </div>
+                        <div class="col-auto">
+                          <span>1 day</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="inviteMemberModal" tabindex="-1" role="dialog" aria-labelledby="inviteMemberModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="mb-0" id="inviteMemberModalLabel">Invite Member</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 mt-1">
+              <input type="search" class="form-control" placeholder="Search Here" />
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <div>Members:</div>
+              <div class="ms-2">
+                <!-- avatar group -->
+                <div class="avatar-group">
+                  <span class="avatar avatar-sm">
+                    <!-- avatar  -->
+                    <img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle imgtooltip" data-template="one1" />
+                    <span id="one1" class="d-none">
+                      <span>Paul Haney</span>
+                    </span>
+                  </span>
+                  <!-- avatar  -->
+                  <span class="avatar avatar-sm">
+                    <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two2" />
+                    <span id="two2" class="d-none">
+                      <span>Gali Linear</span>
+                    </span>
+                  </span>
+                  <!-- avatar  -->
+                  <span class="avatar avatar-sm">
+                    <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three3" />
+                    <span id="three3" class="d-none">
+                      <span>Mary Holler</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- contact list -->
+              <ul class="list-unstyled contacts-list mb-0">
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-5.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Pete Martin</div>
+                          </a>
+                          <small class="mb-0">Designer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-9.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Olivia Cooper</div>
+                          </a>
+                          <small class="mb-0">Front End Develosmaller</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-19.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Jamarcus Streich</div>
+                          </a>
+                          <h5 class="mb-0"></h5>
+                          <small>UX Designer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-8.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">User Name</div>
+                          </a>
+                          <small>Content Writer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-3.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Rosalee Roberts</div>
+                          </a>
+                          <small>SEO Specialist</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-12.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Lauren Wilson</div>
+                          </a>
+                          <small>Front End Developer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-14.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">User Name</div>
+                          </a>
+                          <small>Content Writer</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- chat item -->
+                <li class="py-lg-4 py-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="text-link contacts-link">
+                      <!-- media -->
+                      <div class="d-flex">
+                        <div class="avatar avatar-sm">
+                          <img src="../../assets/images/avatar/avatar-15.jpg" alt="Image" class="rounded-circle" />
+                        </div>
+                        <!-- media body -->
+                        <div class="ms-2 lh-1">
+                          <a href="#!" class="text-inherit">
+                            <div class="mb-1">Rosalee Roberts</div>
+                          </a>
+                          <small>SEO Specialist</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#!" class="btn btn-secondary btn-sm">Add</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="text-end mt-4 mb-2">
+                <a href="#!" class="btn btn-primary">+ Invite</a>
+                <a href="#!" class="btn btn-light bg-gray-400 ms-2">Close</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html.twig" %}
+    <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="{{ asset('js/vendors/chart.js') }}"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <!-- tippy js -->
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <script src="{{ asset('js/vendors/tippy.js') }}"></script>
+  </body>
+</html>

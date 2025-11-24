@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html.twig" %}
+    <link href="https://cdn.jsdelivr.net/npm/dropzone@6/dist/dropzone.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" />
+    <title>Add Product | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    {% include "partials/../partials/head/head-links.html.twig" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html.twig" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html.twig" %}
+        <div class="custom-container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8 d-md-flex justify-content-between align-items-center">
+                <div>
+                  <h1 class="mb-3 h2">Add Product</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Ecommerce</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Add Product</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div>
+                  <a href="ecommerce-products.html" class="btn btn-dark"> Back to Product</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- row -->
+
+            <form class="row g-6 justify-content-center needs-validation" novalidate>
+              <div class="col-xl-8 col-12">
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                  <div class="card-header border-bottom border-dashed">
+                    <h5>Details</h5>
+                    <p class="mb-0 text-secondary">Title, short description, image...</p>
+                  </div>
+                  <!-- card body -->
+                  <div class="card-body px-6 py-5">
+                    <div>
+                      <!-- input -->
+                      <div class="mb-4">
+                        <label for="productTitle" class="visually-hidden">Product Title</label>
+                        <input type="text" class="form-control" id="productTitle" placeholder="Name" required />
+                        <div class="invalid-feedback">Please enter title.</div>
+                      </div>
+
+                      <!-- input -->
+                      <div class="mb-4">
+                        <div class="pb-8" id="editor"></div>
+                      </div>
+                      <div>
+                        <!-- heading -->
+                        <h4 class="mb-1 fs-6">Images</h4>
+
+                        <!-- input -->
+                        <div id="my-dropzone" class="dropzone mt-4 border border-dashed rounded-3">
+                          <div class="fallback"><input type="file" name="file" required /></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                  <div class="card-header border-bottom border-dashed">
+                    <h5>Properties</h5>
+                    <p class="mb-0 text-secondary">Additional functions and attributes...</p>
+                  </div>
+                  <!-- card body -->
+                  <div class="card-body px-6 py-5">
+                    <!-- input -->
+                    <div class="form-check form-switch mb-5">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchStock" checked />
+                      <label class="form-check-label" for="flexSwitchStock">In Stock</label>
+                    </div>
+                    <!-- input -->
+                    <div class="row g-4">
+                      <div class="col-lg-6">
+                        <label class="form-label visually-hidden" for="productCode">Product Code</label>
+                        <input type="text" id="productCode" class="form-control" placeholder="Product Code" required />
+                        <div class="invalid-feedback">Please enter code.</div>
+                      </div>
+                      <!-- input -->
+                      <div class="col-lg-6">
+                        <label class="form-label visually-hidden" for="productSKU">Product SKU</label>
+                        <input type="text" id="productSKU" class="form-control" placeholder="Product SKU" required />
+                        <div class="invalid-feedback">Please enter SKU.</div>
+                      </div>
+                      <!-- input -->
+                      <div>
+                        <h4 class="mb-3 fs-6">Gender</h4>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="inlineCheckboxOptions" id="inlineCheckbox1" value="option1" />
+                          <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                        </div>
+                        <!-- input -->
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="inlineCheckboxOptions" id="inlineCheckbox2" value="option2" />
+                          <label class="form-check-label" for="inlineCheckbox2">Female</label>
+                        </div>
+                        <!-- input -->
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="inlineCheckboxOptions" id="inlineCheckbox3" value="option2" />
+                          <label class="form-check-label" for="inlineCheckbox3">Kids</label>
+                        </div>
+                      </div>
+                      <!-- input -->
+
+                      <!-- select menu -->
+                      <div>
+                        <label class="form-label visually-hidden" for="categorySelect">Category</label>
+                        <select class="form-select" id="categorySelect" data-choices="">
+                          <option selected>Shoe</option>
+                          <option value="Sunglasses">Sunglasses</option>
+                          <option value="Handbag">Handbag</option>
+                          <option value="Slingbag">Slingbag</option>
+                        </select>
+                      </div>
+
+                      <!-- tag -->
+
+                      <div>
+                        <label class="form-label visually-hidden">Status</label>
+                        <select class="form-select" data-choices="">
+                          <option selected>Published</option>
+                          <option value="Unpublished">Unpublished</option>
+                          <option value="Draft">Draft</option>
+                        </select>
+                      </div>
+                      <!-- date -->
+                      <div>
+                        <div class="input-group me-3 rounded">
+                          <input class="form-control flatpickr" type="text" value="Select Date" placeholder="Select Date" aria-describedby="basic-addon2" />
+
+                          <span class="input-group-text text-secondary" id="basic-addon2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="icon icon-tabler icon-tabler-calendar"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+                              <path d="M16 3v4" />
+                              <path d="M8 3v4" />
+                              <path d="M4 11h16" />
+                              <path d="M11 15h1" />
+                              <path d="M12 15v3" />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label class="form-label visually-hidden" for="tagsInput"></label>
+                        <input type="text" id="tagsInput" class="form-control" value="" placeholder="Add Tags" data-choices="" data-choices-removeitembutton="true" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                  <div class="card-header border-bottom border-dashed">
+                    <h5>Pricing</h5>
+                    <p class="mb-0 text-secondary">Price related inputs</p>
+                  </div>
+                  <!-- card body -->
+                  <div class="card-body px-6 py-5">
+                    <!-- input -->
+                    <div class="mb-4 position-relative">
+                      <label class="form-label visually-hidden" for="regularPrice">Regular Price</label>
+                      <input type="number" id="regularPrice" class="form-control ps-7" placeholder="0.00" />
+                      <span class="position-absolute text-gray-500 ps-4 lh-1" style="top: 13px">$</span>
+                    </div>
+                    <!-- input -->
+                    <div class="mb-4 position-relative">
+                      <label class="form-label visually-hidden" for="salePrice">Sale Price</label>
+                      <input type="number" id="salePrice" class="form-control ps-7" placeholder="0.00" />
+                      <span class="position-absolute text-gray-500 ps-4 lh-1" style="top: 13px">$</span>
+                    </div>
+                    <!-- input -->
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="priceIncluded" checked />
+                      <label class="form-check-label" for="priceIncluded">Price includes taxes</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- button -->
+                <div>
+                  <button type="submit" class="btn btn-primary">Create Product</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html.twig" %}
+    <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+    <!-- dropzone -->
+    <script src="https://cdn.jsdelivr.net/npm/dropzone@6/dist/dropzone-min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- quill js -->
+    <script src="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.js"></script>
+
+    <script src="{{ asset('js/vendors/editor.js') }}"></script>
+    <script src="{{ asset('js/vendors/flatpickr.js') }}"></script>
+    <script src="{{ asset('js/vendors/dropzone.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="{{ asset('js/vendors/choice.js') }}"></script>
+  </body>
+</html>

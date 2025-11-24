@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      {% include "partials/head/head-meta.html.twig" %}
+      <title>File | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      {% include "partials/head/head-links.html.twig" %}
+
+   </head>
+   <body>
+      <!-- Vertical Sidebar -->
+      <div >
+         {% include "partials/sidebar-collapse.html.twig" %}
+         <!-- Main Content -->
+         <div id="content" class="position-relative h-100">
+            {% include "partials/topbar-second.html.twig" %}
+            <!-- container -->
+            <div class="custom-container">
+               <!-- row -->
+               <div class="row">
+                  <div class="col-xl-8 col-lg-12">
+                     <div class="row mb-8 g-6">
+                        <div class=" col-xl-4">
+                           <!-- card -->
+                           <div class="card card-lg">
+                               <!-- card body -->
+                              <div class="card-body d-flex flex-column gap-9">
+                                 <div class="d-flex align-items-center gap-3">
+                                    <div>
+                                       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <g clip-path="url(#clip0_1772_1856)">
+                                             <path d="M25.8715 25.4877H14.164L9.15063 34.2447C9.75375 34.5514 10.4386 34.748 10.8816 34.748C15.4871 34.748 24.886 34.6798 29.5518 34.6798C30.0316 34.6798 30.4807 34.5163 30.8834 34.26L25.8715 25.4877Z" fill="#4185F3"/>
+                                             <path d="M9.15065 34.245L14.164 25.488H4.00512C4.00001 26.0966 4.21638 26.6533 4.55542 27.2885C5.49995 29.0555 7.09803 31.8803 8.03677 33.3557C8.26813 33.7193 9.18677 34.2634 9.15065 34.245Z" fill="#1767D1"/>
+                                             <path d="M25.8715 25.4877L30.8852 34.2587C31.5349 33.8457 32.0645 33.1915 32.4083 32.589C33.1845 31.2305 34.497 28.9683 35.4024 27.4367C35.8232 26.7245 35.9867 26.085 35.9765 25.487L25.8715 25.4877Z" fill="#E94235"/>
+                                             <path d="M14.165 25.4883L20.0128 15.322L14.7865 6.60857C14.2212 6.98031 13.7377 7.48495 13.5183 7.86931C11.237 11.8703 6.64142 20.0702 4.33051 24.123C4.09372 24.5377 3.98034 25.0114 4.00374 25.4883H14.165Z" fill="#30A753"/>
+                                             <path d="M25.8711 25.4883L20.0128 15.322L25.0956 6.61844C25.6609 6.99053 26.2814 7.48494 26.5008 7.86964C28.7821 11.8703 33.3777 20.0702 35.6896 24.123C35.9281 24.5397 36 25.0113 35.9768 25.4883H25.8711Z" fill="#F9BC00"/>
+                                             <path d="M14.7858 6.60993L20.0128 15.322L25.0956 6.61844C24.5709 6.31178 23.8277 6.13016 23.1081 6.10733C21.1059 6.04055 17.86 6.01363 16.113 6.08961C15.6823 6.10836 14.7912 6.60618 14.7858 6.60993Z" fill="#0F8038"/>
+                                          </g>
+                                          <defs>
+                                             <clipPath id="clip0_1772_1856">
+                                                <rect width="32" height="28.7616" fill="white" transform="translate(4 6)"/>
+                                             </clipPath>
+                                          </defs>
+                                       </svg>
+                                    </div>
+                                    <div>
+                                       Google Drive
+                                    </div>
+                                 </div>
+                                 <div class="d-flex flex-column gap-2 mt-auto" >
+                                    <div class="text-secondary">Storage (71% full)</div>
+                                    <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 6px">
+                                       <div class="progress-bar bg-dark" style="width: 75%"></div>
+                                    </div>
+                                    <div class="text-secondary">10.68 GB of <span class=" fw-semibold">15 GB</span> used</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class=" col-xl-4">
+                            <!-- card -->
+                            <div class="card card-lg">
+                              <!-- card body -->
+                              <div class="card-body d-flex flex-column gap-9">
+                                 <div class="d-flex align-items-center gap-3">
+                                    <div>
+                                       <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <g clip-path="url(#clip0_1772_1872)">
+                                             <path d="M12.5475 7.34166L4.84375 12.2409L12.5475 17.1401L20.2525 12.2409L27.9563 17.1401L35.6599 12.2409L27.9563 7.34166L20.2525 12.2409L12.5475 7.34166Z" fill="#0061FE"/>
+                                             <path d="M12.5475 26.9387L4.84375 22.0394L12.5475 17.1401L20.2525 22.0394L12.5475 26.9387Z" fill="#0061FE"/>
+                                             <path d="M20.2524 22.0394L27.9562 17.1401L35.6599 22.0394L27.9562 26.9387L20.2524 22.0394Z" fill="#0061FE"/>
+                                             <path d="M20.2525 33.4708L12.5475 28.5716L20.2525 23.6724L27.9563 28.5716L20.2525 33.4708Z" fill="#0061FE"/>
+                                          </g>
+                                          <defs>
+                                             <clipPath id="clip0_1772_1872">
+                                                <rect width="32" height="26.6667" fill="white" transform="translate(4.33331 7)"/>
+                                             </clipPath>
+                                          </defs>
+                                       </svg>
+                                    </div>
+                                    <div>
+                                       Dropbox
+                                    </div>
+                                 </div>
+                                 <div class="d-flex flex-column gap-2 mt-auto" >
+                                    <div class="text-secondary">Storage (55% full)</div>
+                                    <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="height: 6px">
+                                       <div class="progress-bar bg-dark" style="width: 55%"></div>
+                                    </div>
+                                    <div class="text-secondary">2.88 GB of <span class=" fw-semibold">5 GB</span> used</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class=" col-xl-4">
+                             <!-- card -->
+                             <div class="card card-lg">
+                              <!-- card body -->
+                              <div class="card-body d-flex flex-column gap-9">
+                                 <div class="d-flex align-items-center gap-3">
+                                    <div>
+                                       <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <g clip-path="url(#clip0_1772_1865)">
+                                             <path d="M21 9.33333C19.7306 9.33333 18.4736 9.58336 17.3008 10.0692C16.128 10.555 15.0623 11.267 14.1647 12.1646C13.267 13.0623 12.555 14.1279 12.0692 15.3007C11.5834 16.4735 11.3334 17.7305 11.3334 19C11.3334 20.2694 11.5834 21.5265 12.0692 22.6993C12.555 23.8721 13.267 24.9377 14.1647 25.8354C15.0623 26.733 16.128 27.445 17.3008 27.9308C18.4736 28.4166 19.7306 28.6667 21 28.6667C22.2695 28.6667 23.5265 28.4166 24.6993 27.9308C25.8721 27.445 26.9378 26.733 27.8354 25.8354C28.733 24.9377 29.4451 23.8721 29.9309 22.6993C30.4167 21.5265 30.6667 20.2694 30.6667 19C30.6667 17.7305 30.4167 16.4735 29.9309 15.3007C29.4451 14.1279 28.733 13.0623 27.8354 12.1646C26.9378 11.267 25.8721 10.555 24.6993 10.0692C23.5265 9.58336 22.2695 9.33333 21 9.33333Z" fill="#084593"/>
+                                             <path d="M15.4367 14.648C14.5567 14.3113 13.6014 14.1273 12.6034 14.1273C8.22002 14.1273 4.66669 17.6807 4.66669 22.064C4.66669 23.7147 5.17135 25.2467 6.03335 26.516C6.07402 26.4987 16.9967 21.9233 23.6374 19.2573C19.968 17.0453 16.602 15.094 15.4367 14.648Z" fill="#0556AB"/>
+                                             <path d="M36.6667 23.582C36.6667 20.0373 33.7933 17.164 30.2487 17.164C29.584 17.164 28.9433 17.2653 28.34 17.4527C27.676 17.6593 25.9053 18.3473 23.6373 19.258C29.222 22.6247 35.4973 26.5887 35.8053 26.7833C36.35 25.84 36.6667 24.7487 36.6667 23.582Z" fill="#18B0FF"/>
+                                             <path d="M35.806 26.7833C35.4973 26.5887 29.2227 22.6247 23.638 19.258C16.9967 21.9233 6.07399 26.4987 6.03333 26.516C6.31133 26.9253 8.41799 30 12.6027 30C15.956 30 23.3867 30 30.172 30C33.7793 30 35.432 27.4307 35.806 26.7833Z" fill="#2CCEFF"/>
+                                          </g>
+                                          <defs>
+                                             <clipPath id="clip0_1772_1865">
+                                                <rect width="32" height="32" fill="white" transform="translate(4.66669 4)"/>
+                                             </clipPath>
+                                          </defs>
+                                       </svg>
+                                    </div>
+                                    <div>
+                                       One Drive
+                                    </div>
+                                 </div>
+                                 <div class="d-flex flex-column gap-2 mt-auto" >
+                                    <div class="text-secondary">Storage (15% full)</div>
+                                    <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="height: 6px">
+                                       <div class="progress-bar bg-dark" style="width: 15%"></div>
+                                    </div>
+                                    <div class="text-secondary">1.38 GB of <span class=" fw-semibold">5 GB</span> used</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- row -->
+                     <div class="row mb-8">
+                        <div class="col-lg-12">
+                           <div class="d-flex align-items-center justify-content-between mb-4">
+                              <!-- heading -->
+                              <div>
+                                 <h5 class="mb-0">Folder</h5>
+                              </div>
+                              <div>
+                                 <a href="#!" class="btn btn-white btn-icon btn-sm rounded-circle">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                       <path d="M12 5l0 14" />
+                                       <path d="M5 12l14 0" />
+                                    </svg>
+                                 </a>
+                              </div>
+                           </div>
+                           <!-- table -->
+                           <div class="table-responsive">
+                              <div class="row flex-nowrap pb-5 g-5">
+                                 <div class="col-xl-4 col-md-6 ">
+                                    <!-- card -->
+                                    <div class="card card-lg cursor-pointer">
+                                       <!-- card body -->
+                                       <div class="card-body">
+                                          <div class="d-flex justify-content-between mb-6">
+                                             <div>
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-folders text-warning">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                   <path d="M12 2a1 1 0 0 1 .707 .293l1.708 1.707h4.585a3 3 0 0 1 2.995 2.824l.005 .176v7a3 3 0 0 1 -3 3h-1v1a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3h1v-1a3 3 0 0 1 3 -3zm-6 6h-1a1 1 0 0 0 -1 1v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1 -1v-1h-7a3 3 0 0 1 -3 -3z" />
+                                                </svg>
+                                             </div>
+                                             <div class="dropdown dropstart">
+                                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   </svg>
+                                                </a>
+                                                <div class="dropdown-menu"  >
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                             <div class="d-flex flex-column lh-1 gap-2 ">
+                                                <div class="fw-semibold"> Report</div>
+                                                <div class="text-secondary small">2 Mb 120 Files</div>
+                                             </div>
+                                             <div>
+                                                <div class="avatar-group">
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-1.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-3.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-4.jpg" class="rounded-circle">
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 ">
+                                  <!-- card -->
+                                  <div class="card card-lg cursor-pointer">
+                                    <!-- card body -->
+                                       <div class="card-body">
+                                          <div class="d-flex justify-content-between mb-6">
+                                             <div>
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-folders text-warning">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                   <path d="M12 2a1 1 0 0 1 .707 .293l1.708 1.707h4.585a3 3 0 0 1 2.995 2.824l.005 .176v7a3 3 0 0 1 -3 3h-1v1a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3h1v-1a3 3 0 0 1 3 -3zm-6 6h-1a1 1 0 0 0 -1 1v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1 -1v-1h-7a3 3 0 0 1 -3 -3z" />
+                                                </svg>
+                                             </div>
+                                             <div class="dropdown dropstart">
+                                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   </svg>
+                                                </a>
+                                                <div class="dropdown-menu"  >
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                             <div class="d-flex flex-column lh-1 gap-2 ">
+                                                <div class="fw-semibold"> Figma Design</div>
+                                                <div class="text-secondary small">4 GB 5 Files</div>
+                                             </div>
+                                             <div>
+                                                <div class="avatar-group">
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-4.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-5.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-6.jpg" class="rounded-circle">
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 ">
+                                   <!-- card -->
+                                   <div class="card card-lg cursor-pointer">
+                                    <!-- card body -->
+                                       <div class="card-body">
+                                          <div class="d-flex justify-content-between mb-6">
+                                             <div>
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-folders text-warning">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                   <path d="M12 2a1 1 0 0 1 .707 .293l1.708 1.707h4.585a3 3 0 0 1 2.995 2.824l.005 .176v7a3 3 0 0 1 -3 3h-1v1a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3h1v-1a3 3 0 0 1 3 -3zm-6 6h-1a1 1 0 0 0 -1 1v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1 -1v-1h-7a3 3 0 0 1 -3 -3z" />
+                                                </svg>
+                                             </div>
+                                             <div class="dropdown dropstart">
+                                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   </svg>
+                                                </a>
+                                                <div class="dropdown-menu"  >
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                             <div class="d-flex flex-column lh-1 gap-2 ">
+                                                <div class="fw-semibold"> Accountant</div>
+                                                <div class="text-secondary small">1 kb
+                                                   10 Files
+                                                </div>
+                                             </div>
+                                             <div>
+                                                <div class="avatar-group">
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-1.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-2.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-3.jpg" class="rounded-circle">
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 ">
+                                  <!-- card -->
+                                  <div class="card card-lg cursor-pointer">
+                                    <!-- card body -->
+                                       <div class="card-body">
+                                          <div class="d-flex justify-content-between mb-6">
+                                             <div>
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-folders text-warning">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                   <path d="M12 2a1 1 0 0 1 .707 .293l1.708 1.707h4.585a3 3 0 0 1 2.995 2.824l.005 .176v7a3 3 0 0 1 -3 3h-1v1a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3h1v-1a3 3 0 0 1 3 -3zm-6 6h-1a1 1 0 0 0 -1 1v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1 -1v-1h-7a3 3 0 0 1 -3 -3z" />
+                                                </svg>
+                                             </div>
+                                             <div class="dropdown dropstart">
+                                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   </svg>
+                                                </a>
+                                                <div class="dropdown-menu"  >
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                             <div class="d-flex flex-column lh-1 gap-2 ">
+                                                <div class="fw-semibold"> Report</div>
+                                                <div class="text-secondary small">2 Mb 120 Files</div>
+                                             </div>
+                                             <div>
+                                                <div class="avatar-group">
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-1.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-3.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-4.jpg" class="rounded-circle">
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 ">
+                                   <!-- card -->
+                                   <div class="card card-lg cursor-pointer">
+                                    <!-- card body -->
+                                       <div class="card-body">
+                                          <div class="d-flex justify-content-between mb-6">
+                                             <div>
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-folders text-warning">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                   <path d="M12 2a1 1 0 0 1 .707 .293l1.708 1.707h4.585a3 3 0 0 1 2.995 2.824l.005 .176v7a3 3 0 0 1 -3 3h-1v1a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3h1v-1a3 3 0 0 1 3 -3zm-6 6h-1a1 1 0 0 0 -1 1v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1 -1v-1h-7a3 3 0 0 1 -3 -3z" />
+                                                </svg>
+                                             </div>
+                                             <div class="dropdown dropstart">
+                                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   </svg>
+                                                </a>
+                                                <div class="dropdown-menu"  >
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                             <div class="d-flex flex-column lh-1 gap-2 ">
+                                                <div class="fw-semibold"> Figma Design</div>
+                                                <div class="text-secondary small">4 GB 5 Files</div>
+                                             </div>
+                                             <div>
+                                                <div class="avatar-group">
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-4.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-5.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-6.jpg" class="rounded-circle">
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 ">
+                                  <!-- card -->
+                                  <div class="card card-lg cursor-pointer">
+                                    <!-- card body -->
+                                       <div class="card-body">
+                                          <div class="d-flex justify-content-between mb-6">
+                                             <div>
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-folders text-warning">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                   <path d="M12 2a1 1 0 0 1 .707 .293l1.708 1.707h4.585a3 3 0 0 1 2.995 2.824l.005 .176v7a3 3 0 0 1 -3 3h-1v1a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3h1v-1a3 3 0 0 1 3 -3zm-6 6h-1a1 1 0 0 0 -1 1v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1 -1v-1h-7a3 3 0 0 1 -3 -3z" />
+                                                </svg>
+                                             </div>
+                                             <div class="dropdown dropstart">
+                                                <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                      <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   </svg>
+                                                </a>
+                                                <div class="dropdown-menu"  >
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                   <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                             <div class="d-flex flex-column lh-1 gap-2 ">
+                                                <div class="fw-semibold"> Accountant</div>
+                                                <div class="text-secondary small">1 kb
+                                                   10 Files
+                                                </div>
+                                             </div>
+                                             <div>
+                                                <div class="avatar-group">
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-1.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-2.jpg" class="rounded-circle">
+                                                   </span>
+                                                   <span class="avatar avatar-sm">
+                                                   <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-3.jpg" class="rounded-circle">
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- row -->
+                     <div class="row mb-8">
+                        <div class="col-lg-12">
+                           <div class="d-flex align-items-center justify-content-between mb-4">
+                              <div>
+                                 <h5 class="mb-0">Recent Files</h5>
+                              </div>
+                              <div>
+                                 <a href="#!" class="btn btn-white btn-icon btn-sm rounded-circle">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                       <path d="M12 5l0 14" />
+                                       <path d="M5 12l14 0" />
+                                    </svg>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="d-flex flex-column gap-3">
+                              <!-- card -->
+                              <div class="card card-lift border cursor-pointer">
+                                 <!-- card body -->
+                                 <div class="card-body">
+                                    <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-center gap-3">
+                                       <div class="d-flex align-items-center gap-3">
+                                          <div>
+                                             <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-jpg text-info">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                <path d="M11 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                <path d="M20 15h-1a2 2 0 0 0 -2 2v2a2 2 0 0 0 2 2h1v-3" />
+                                                <path d="M5 15h3v4.5a1.5 1.5 0 0 1 -3 0" />
+                                             </svg>
+                                          </div>
+                                          <div >
+                                             <div class=" fw-semibold d-flex flex-column gap-2 ">
+                                                dasher-ui-dashboard.jpg
+                                             </div>
+                                             <div class="text-secondary small">5.7 Mb
+                                                07 Feb 2025 12:10 pm
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="d-flex align-items-center gap-4">
+                                          <div class="avatar-group">
+                                             <span class="avatar avatar-sm">
+                                             <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-1.jpg" class="rounded-circle">
+                                             </span>
+                                             <span class="avatar avatar-sm">
+                                             <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-3.jpg" class="rounded-circle">
+                                             </span>
+                                             <span class="avatar avatar-sm">
+                                             <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-4.jpg" class="rounded-circle">
+                                             </span>
+                                          </div>
+                                          <div class="dropdown dropstart">
+                                             <button type="button" class="btn btn-icon btn-ghost btn-sm rounded-circle"   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                   <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                </svg>
+                                              </button>
+                                             <div class="dropdown-menu"  >
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- card -->
+                              <div class="card card-lift border cursor-pointer">
+                                 <!-- card body -->
+                                 <div class="card-body">
+                                     <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-center gap-3">
+                                       <div class="d-flex align-items-center gap-3">
+                                          <div>
+                                             <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-ppt text-success">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                <path d="M11 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                <path d="M16.5 15h3" />
+                                                <path d="M18 15v6" />
+                                                <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                             </svg>
+                                          </div>
+                                          <div >
+                                            <div class=" fw-semibold d-flex flex-column gap-2 ">
+                                                company-presentation.ppt
+                                            </div>
+                                             <div class="text-secondary small">5.7 Mb
+                                                70.5 Mb
+                                                7 Feb 2025 2:10 am
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="d-flex align-items-center gap-4">
+                                          <div class="avatar-group">
+                                             <span class="avatar avatar-sm">
+                                             <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-4.jpg" class="rounded-circle">
+                                             </span>
+                                             <span class="avatar avatar-sm">
+                                             <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-6.jpg" class="rounded-circle">
+                                             </span>
+                                             <span class="avatar avatar-sm">
+                                             <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-7.jpg" class="rounded-circle">
+                                             </span>
+                                          </div>
+                                          <div class="dropdown dropstart">
+                                             <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                   <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                </svg>
+                                             </a>
+                                             <div class="dropdown-menu"  >
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- card -->
+                              <div class="card card-lift border cursor-pointer">
+                                 <!-- card body -->
+                                 <div class="card-body">
+                                     <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-center gap-3">
+                                       <div class="d-flex align-items-center gap-3">
+                                          <div>
+                                             <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-zip text-warning-darker">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 20.735a2 2 0 0 1 -1 -1.735v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-1" />
+                                                <path d="M11 17a2 2 0 0 1 2 2v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-2a2 2 0 0 1 2 -2z" />
+                                                <path d="M11 5l-1 0" />
+                                                <path d="M13 7l-1 0" />
+                                                <path d="M11 9l-1 0" />
+                                                <path d="M13 11l-1 0" />
+                                                <path d="M11 13l-1 0" />
+                                                <path d="M13 15l-1 0" />
+                                             </svg>
+                                          </div>
+                                          <div >
+                                            <div class=" fw-semibold d-flex flex-column gap-2 ">
+                                                figma-files.zip
+                                            </div>
+                                             <div class="text-secondary small">2.2 Gb
+                                                3 Feb 2025 12:56 pm
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="d-flex align-items-center gap-4">
+                                          <div class="avatar-group">
+                                             <span class="avatar avatar-sm">
+                                             <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-5.jpg" class="rounded-circle">
+                                             </span>
+                                             <span class="avatar avatar-sm">
+                                             <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-8.jpg" class="rounded-circle">
+                                             </span>
+                                             <span class="avatar avatar-sm">
+                                             <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-2.jpg" class="rounded-circle">
+                                             </span>
+                                          </div>
+                                          <div class="dropdown dropstart">
+                                             <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                   <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                </svg>
+                                             </a>
+                                             <div class="dropdown-menu"  >
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- card -->
+                              <div class="card card-lift border cursor-pointer">
+                                 <!-- card body -->
+                                 <div class="card-body">
+                                     <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-center gap-3">
+                                       <div class="d-flex align-items-center gap-3">
+                                          <div>
+                                             <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf text-danger">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                <path d="M17 18h2" />
+                                                <path d="M20 15h-3v6" />
+                                                <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                             </svg>
+                                          </div>
+                                          <div >
+                                            <div class=" fw-semibold d-flex flex-column gap-2 ">
+                                                resume-figma-designer.pdf
+                                            </div>
+                                             <div class="text-secondary small">1.7 Kb
+                                                4 Feb 2025 12:25 pm
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="d-flex align-items-center gap-4">
+                                          <div class="avatar-group">
+                                             <span class="avatar avatar-sm">
+                                             <img alt="avatar bootstrap 5" src="../assets/images/avatar/avatar-5.jpg" class="rounded-circle">
+                                             </span>
+                                             <span class="avatar avatar-sm">
+                                             <img alt="bootstrap 5 avatar" src="../assets/images/avatar/avatar-8.jpg" class="rounded-circle">
+                                             </span>
+                                             <span class="avatar avatar-sm">
+                                             <img alt="bootstrap 5 avatar in circle" src="../assets/images/avatar/avatar-2.jpg" class="rounded-circle">
+                                             </span>
+                                          </div>
+                                          <div class="dropdown dropstart">
+                                             <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                   <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                   <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                                </svg>
+                                             </a>
+                                             <div class="dropdown-menu"  >
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-12">
+                     <!-- card -->
+                     <div class="card card-lg mb-6">
+                        <!-- card body -->
+                        <div class="card-body">
+                           <h5 class="mb-3">Upload files</h5>
+                           <div>
+                              <div class="mb-4 bg-gray-100 rounded-3 border border-dashed px-10 py-8 h-auto w-auto" style="cursor: pointer;" id="uploadCard">
+                                 <div class="text-center">
+                                    <div class="mb-4">
+                                       <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-upload">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                          <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                          <path d="M7 9l5 -5l5 5" />
+                                          <path d="M12 4l0 12" />
+                                       </svg>
+                                    </div>
+                                    <h5>Drop or select file</h5>
+                                    <div class="text-secondary">Drop files here or click to <a href="#!">browse</a> through your machine.</div>
+                                 </div>
+                                 <div>
+                                 </div>
+                              </div>
+                              <input type="file" id="fileInput" class="d-none">
+                              <label id="fileLabel" class="visually-hidden">No file chosen</label>
+                           </div>
+                           <div class="bg-gray-100 p-4 rounded-3 mb-2">
+                              <div class="d-flex justify-content-between align-items-center">
+                                 <div class="d-flex align-items-center gap-3">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word text-secondary">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                       <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                       <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+                                       <path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" />
+                                    </svg>
+                                    <div>
+                                       <div class="fw-semibold fs-6"> word.docs</div>
+                                       <div class="small text-secondary">2.3 GB
+                                          23 seconds left
+                                          44%
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div>
+                                  <a href="#!" class="btn btn-ghost btn-icon rounded-circle">
+                                       <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-x">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                          <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95" />
+                                          <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44" />
+                                          <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92" />
+                                          <path d="M8.56 20.31a9 9 0 0 0 3.44 .69" />
+                                          <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95" />
+                                          <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44" />
+                                          <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92" />
+                                          <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69" />
+                                          <path d="M14 14l-4 -4" />
+                                          <path d="M10 14l4 -4" />
+                                       </svg>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="progress mt-3" role="progressbar" aria-label="Example 20px high" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="height: 6px">
+                                 <div class="progress-bar" style="width: 65%"></div>
+                              </div>
+                           </div>
+                           <div class="border border-dashed p-4 rounded-3 mb-2">
+                              <div class="d-flex justify-content-between align-items-center">
+                                 <div class="d-flex align-items-center gap-3">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf text-danger">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                       <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                       <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                       <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                       <path d="M17 18h2" />
+                                       <path d="M20 15h-3v6" />
+                                       <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                    </svg>
+                                    <div>
+                                       <div class="fw-semibold fs-6">WireframeUI.pdf</div>
+                                       <div class="small text-secondary">2.3 GB
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div>
+                                  <a href="#!" class="btn btn-ghost btn-icon rounded-circle">
+                                       <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                          <path d="M4 7l16 0" />
+                                          <path d="M10 11l0 6" />
+                                          <path d="M14 11l0 6" />
+                                          <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                          <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                       </svg>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="border border-dashed p-4 rounded-3 mb-2">
+                              <div class="d-flex justify-content-between align-items-center">
+                                 <div class="d-flex align-items-center gap-3">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-excel text-success">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                       <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                       <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+                                       <path d="M10 12l4 5" />
+                                       <path d="M10 17l4 -5" />
+                                    </svg>
+                                    <div>
+                                       <div class="fw-semibold fs-6">Excel Report.excl
+                                       </div>
+                                       <div class="small text-secondary">2.3 GB
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div>
+                                    <a href="#!" class="btn btn-ghost btn-icon rounded-circle">
+                                       <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                          <path d="M4 7l16 0" />
+                                          <path d="M10 11l0 6" />
+                                          <path d="M14 11l0 6" />
+                                          <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                          <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                       </svg>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- card -->
+                     <div class="card card-lg mb-6">
+                        <!-- card body -->
+                        <div class="card-body">
+                           <div class="d-flex justify-content-between mb-4">
+                              <h5 class="mb-0">Using Storage
+                              </h5>
+                              <span> <span class="fw-semibold">55.64GB</span>  of 64 GB</span>
+                           </div>
+                           <div class="mb-5">
+                              <div class="progress-stacked " style="height: 8px;">
+                                 <div class="progress me-1" role="progressbar" aria-label="Segment one" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                                    <div class="progress-bar bg-info-darker"></div>
+                                 </div>
+                                 <div class="progress me-1" role="progressbar" aria-label="Segment two" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                    <div class="progress-bar bg-info"></div>
+                                 </div>
+                                 <div class="progress me-1" role="progressbar" aria-label="Segment three" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                                    <div class="progress-bar bg-danger"></div>
+                                 </div>
+                                 <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                                    <div class="progress-bar bg-gray-300"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex flex-column  gap-2">
+                              <div class="d-flex justify-content-between">
+                                 <div>
+                                    <span>
+                                       <svg  xmlns="http://www.w3.org/2000/svg"  width="12"  height="12"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-square text-info-darker">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                          <path d="M19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3z" />
+                                       </svg>
+                                    </span>
+                                    <span>Image</span>
+                                    <span class="text-secondary">153 files</span>
+                                 </div>
+                                 15.32 Gb
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                 <div>
+                                    <span>
+                                       <svg  xmlns="http://www.w3.org/2000/svg"  width="12"  height="12"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-square text-info">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                          <path d="M19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3z" />
+                                       </svg>
+                                    </span>
+                                    <span>Docs</span>
+                                    <span class="text-secondary">23 files</span>
+                                 </div>
+                                 27.09 Gb
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                 <div>
+                                    <span>
+                                       <svg  xmlns="http://www.w3.org/2000/svg"  width="12"  height="12"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-square text-danger">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                          <path d="M19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3z" />
+                                       </svg>
+                                    </span>
+                                    <span>Video</span>
+                                    <span class="text-secondary">45 videos</span>
+                                 </div>
+                                 17.25 Gb
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                 <div>
+                                    <span>
+                                       <svg  xmlns="http://www.w3.org/2000/svg"  width="12"  height="12"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-square text-gray-300">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                          <path d="M19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3z" />
+                                       </svg>
+                                    </span>
+                                    <span>Other Files</span>
+                                    <span class="text-secondary"> 83 files</span>
+                                 </div>
+                                 7.2 Gb
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="px-8 py-8 rounded-3 d-flex justify-content-between align-items-center " style="background: linear-gradient(78.01deg, #004B50 1.2%, #007867 99.04%);" data-bs-theme="dark">
+                        <div >
+                           <h4 class="lh-base mb-3"> Upgrade Your Plan <br>
+                              Get more storage
+                           </h4>
+                           <a href="#!" class="btn btn-warning">Upgrade Plan</a>
+                        </div>
+                        <div class="d-none d-md-block">
+                           <img src="../assets/images/svg/file-cta.svg" alt="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% include "partials/scripts.html.twig" %}
+      <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <script src="{{ asset('js/vendors/chart.js') }}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="{{ asset('js/vendors/swiper.js') }}"></script>
+      <script src="{{ asset('js/vendors/upload.js') }}">
+
+      </script>
+   </body>
+   </html

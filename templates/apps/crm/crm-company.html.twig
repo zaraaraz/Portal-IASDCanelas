@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/../partials/head/head-meta.html.twig" %}
+
+    <title>CRM Company | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+
+    {% include "partials/../partials/head/head-links.html.twig" %}
+  </head>
+
+  <body>
+    <!-- Vertical Sidebar -->
+    <div>
+      {% include "partials/../partials/sidebar-collapse.html.twig" %}
+
+      <!-- Main Content -->
+      <div id="content" class="position-relative h-100">
+        {% include "partials/../partials/topbar-second.html.twig" %}
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="mb-8 d-md-flex justify-content-between align-items-center">
+                <div>
+                  <h1 class="mb-3 h2">Company</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">CRM</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Company</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row">
+            <div class="col-12">
+              <!-- card -->
+              <div class="card card-lg" id="crmCompany" data-list="company_name,company_owner,company_category,company_rating,company_location">
+                <div class="card-header border-bottom-0">
+                  <div class="row gy-2">
+                    <div class="col-lg-4">
+                      <input type="search" class="form-control listjs-search" placeholder="Search" />
+                    </div>
+                    <div class="col-lg-8 d-flex justify-content-md-end">
+                      <div class="d-flex align-items-center gap-3">
+                        <a href="#!" class="btn btn-dark d-md-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#contact-modal">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 5l0 14" />
+                            <path d="M5 12l14 0" />
+                          </svg>
+                          Add Company</a
+                        >
+                        <button type="button" class="btn btn-white">Import</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive table-checkbox" data-simplebar style="height: 600px">
+                  <table class="table text-nowrap table-centered table-hover mb-0" data-check-container>
+                    <thead class="sticky-top">
+                      <tr>
+                        <th class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkAll" data-check-all />
+                            <label class="form-check-label" for="checkAll"></label>
+                          </div>
+                        </th>
+                        <th class="listjs-sorter ps-0" data-sort="company_name">Name</th>
+                        <th class="listjs-sorter" data-sort="company_owner">Owner</th>
+                        <th class="listjs-sorter" data-sort="company_category">Category</th>
+                        <th class="listjs-sorter" data-sort="company_rating">Rating</th>
+                        <th class="listjs-sorter" data-sort="company_location">Location</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="list">
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox2" />
+                            <label class="form-check-label" for="contactCheckbox2"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-1.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Godrej Properties Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Mohit Malhotra</td>
+                        <td class="company_category">Real Estate</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>3.9</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Ahmedabad, India</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceOne" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageOne">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageOne" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox26" />
+                            <label class="form-check-label" for="contactCheckbox26"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-2.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Bajaj Finance Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Dan Shutts</td>
+                        <td class="company_category">Financials</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>4.9</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Barcelona, Spain</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceTwo" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageTwo">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageTwo" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox21" />
+                            <label class="form-check-label" for="contactCheckbox21"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-3.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Larsen & Toubro Infotech Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Douglas Guzman</td>
+                        <td class="company_category">Information Technology</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>2.8</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Los Angeles, California</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceThree" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageThree">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageThree" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox43" />
+                            <label class="form-check-label" for="contactCheckbox43"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-4.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Adani Wilmar Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">George Torres</td>
+                        <td class="company_category">Consumer Staples</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>3.9</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">London, England</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceFour">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceFour" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageFour">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageFour" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox23" />
+                            <label class="form-check-label" for="contactCheckbox23"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-5.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Asian Paints Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Lisa Morrison</td>
+                        <td class="company_category">Materials</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>2.5</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Tengah, Singapore</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceFive">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceFive" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageFive">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageFive" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox6" />
+                            <label class="form-check-label" for="contactCheckbox6"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-6.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit">The Pink Pig Tavern</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Jan Harmon</td>
+                        <td class="company_category">Materials</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>4.8</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">USA</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceSix">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceSix" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageSix">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageSix" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox7" />
+                            <label class="form-check-label" for="contactCheckbox7"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-4.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit">Infosys Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Crystal Tucker</td>
+                        <td class="company_category">Information Technology</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>5.0</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Tokyo, Japan</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceSeven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceSeven" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageSeven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageSeven" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox8" />
+                            <label class="form-check-label" for="contactCheckbox8"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-3.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit">Divi's Laboratories Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Mayra Giorgi</td>
+                        <td class="company_category">Health Care</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>4.8</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Dubai, United Arab Emirates</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceEight">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceEight" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageEight">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageEight" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox9" />
+                            <label class="form-check-label" for="contactCheckbox9"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-2.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit">HDFC Bank Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Florence Fossett</td>
+                        <td class="company_category">Financials</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>3.5</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Moscow, Russia</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceNine">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceNine" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageNine">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageNine" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox10" />
+                            <label class="form-check-label" for="contactCheckbox10"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-1.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit">Hindustan Unilever Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Terry Enciso</td>
+                        <td class="company_category">Consumer Staples</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>4.9</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Paris, France</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceTen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceTen" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageTen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageTen" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox11" />
+                            <label class="form-check-label" for="contactCheckbox11"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-5.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit">Godrej Properties Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Mohit Malhotra</td>
+                        <td class="company_category">Real Estate</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>3.9</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Ahmedabad, India</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceEleven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceEleven" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageEleven">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageEleven" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox23" />
+                            <label class="form-check-label" for="contactCheckbox23"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-1.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Godrej Properties Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Mohit Malhotra</td>
+                        <td class="company_category">Real Estate</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>3.9</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Ahmedabad, India</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceTwelve">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceTwelve" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageTwelve">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageTwelve" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox34" />
+                            <label class="form-check-label" for="contactCheckbox34"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-2.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Bajaj Finance Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Dan Shutts</td>
+                        <td class="company_category">Financials</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>4.9</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Barcelona, Spain</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceThirteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceThirteen" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageThirteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageThirteen" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox44" />
+                            <label class="form-check-label" for="contactCheckbox44"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-3.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Larsen & Toubro Infotech Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Douglas Guzman</td>
+                        <td class="company_category">Information Technology</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>2.8</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Los Angeles, California</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceFourteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceFourteen" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageFourteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageFourteen" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox45" />
+                            <label class="form-check-label" for="contactCheckbox45"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-4.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Adani Wilmar Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">George Torres</td>
+                        <td class="company_category">Consumer Staples</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>3.9</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">London, England</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceFifteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceFifteen" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageFifteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageFifteen" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pe-0">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="contactCheckbox56" />
+                            <label class="form-check-label" for="contactCheckbox56"></label>
+                          </div>
+                        </td>
+                        <td class="company_name ps-0">
+                          <div class="d-flex align-items-center">
+                            <a href="#!"><img src="../../assets/images/svg/brand-logo-5.svg" alt="Image" class="avatar avatar-sm rounded-circle" /></a>
+                            <div class="ms-2">
+                              <a href="#!" class="text-inherit"> Asian Paints Ltd</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="company_owner">Lisa Morrison</td>
+                        <td class="company_category">Materials</td>
+                        <td class="company_rating">
+                          <span class="d-flex align-items-center gap-2 lh-1">
+                            <span>2.5</span>
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                  d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </td>
+                        <td class="company_location">Tengah, Singapore</td>
+
+                        <td>
+                          <div class="d-flex align-items-center justify-content-evenly">
+                            <a href="#!" class="btn btn-ghost btn-icon rounded-circle texttooltip" data-template="voiceSixteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                <path d="M15 7a2 2 0 0 1 2 2" />
+                                <path d="M15 3a6 6 0 0 1 6 6" />
+                              </svg>
+                              <div id="voiceSixteen" class="d-none">
+                                <span>Call</span>
+                              </div>
+                            </a>
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="messageSixteen">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-message"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 9h8" />
+                                <path d="M8 13h6" />
+                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                              </svg>
+                              <div id="messageSixteen" class="d-none">
+                                <span>Message</span>
+                              </div>
+                            </a>
+
+                            <div class="dropdown dropstart">
+                              <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon icon-tabler icon-tabler-dots-vertical"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                  <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="btn-toolbar card-footer border-top border-dashed d-flex flex-md-row flex-column justify-content-md-between align-items-md-center">
+                  <p class="mb-0 listjs-showing-items-label"></p>
+                  <div class="d-flex flex-column flex-md-row gap-4">
+                    <div class="d-flex align-items-center gap-2">
+                      <label class="form-label text-nowrap mb-0">Rows per page:</label>
+                      <select class="form-select listjs-items-per-page" data-choices="">
+                        <option value="8" selected>8</option>
+                        <option value="11">11</option>
+                      </select>
+                    </div>
+                    <div>
+                      <div class="pagination-buttons d-flex">
+                        <button class="btn btn-white prev">Previous</button>
+                        <ul class="pagination mb-0 ms-1"></ul>
+                        <button class="btn btn-white next">Next</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/../partials/scripts.html.twig" %}
+    <script src="{{ asset('js/vendors/sidebarnav.js') }}"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
+
+    <!-- tippy js -->
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <script src="{{ asset('js/vendors/tippy.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/list.js"></script>
+    <script src="{{ asset('js/vendors/list.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="{{ asset('js/vendors/choice.js') }}"></script>
+    <script src="{{ asset('js/vendors/checkbox.js') }}"></script>
+  </body>
+</html>
