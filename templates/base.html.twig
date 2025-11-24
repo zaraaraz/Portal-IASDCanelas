@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt">
     <head>
+        {% block stylesheets_before %}{% endblock %}
+
         {% include 'partials/head/head-meta.html.twig' %}
-        
+
         <title>{% block title %}Portal IASDCanelas{% endblock %}</title>
-        
-        {% include 'partials/head/head-links.html.twig' %}
-        
+
         {% block stylesheets %}{% endblock %}
+
+        {% include 'partials/head/head-links.html.twig' %}
+
+        {% block stylesheets_after %}{% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
-        
+
+        {% block javascripts_before %}{% endblock %}
+
         {% include 'partials/scripts.html.twig' %}
-        
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
