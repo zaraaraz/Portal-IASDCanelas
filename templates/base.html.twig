@@ -7,31 +7,6 @@
         
         {% include 'partials/head/head-links.html.twig' %}
         
-        <script>
-          // Initialize sidebar state if not set
-          if (localStorage.getItem('sidebarExpanded') === null) {
-            localStorage.setItem('sidebarExpanded', 'true');
-          }
-          
-          if (localStorage.getItem('sidebarExpanded') === 'false') {
-            document.documentElement.classList.add('collapsed');
-            document.documentElement.classList.remove('expanded');
-          } else {
-            document.documentElement.classList.remove('collapsed');
-            document.documentElement.classList.add('expanded');
-          }
-        </script>
-        
-        <!-- Libs CSS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-
-        <!-- Theme CSS -->
-        <link rel="stylesheet" href="{{ asset('css/theme.css') }}" />
-        
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
