@@ -22,7 +22,7 @@
                   <!-- heading -->
                   <div class="d-flex justify-content-between align-items-center">
                     <div>
-                      <div class="fw-semibold">{{ 'stats.total_projects'|trans }}</div>
+                      <div class="fw-semibold">{{ 'stats.total_projects'|trans({}, 'dashboard') }}</div>
                     </div>
                     <div class="text-success-emphasis">
                       <svg
@@ -50,7 +50,7 @@
                     <div class="fs-1 fw-bold">6</div>
                     <p class="mb-0">
                       <span class="text-success-emphasis">2</span>
-                      <span class="text-secondary">{{ 'stats.completed'|trans }}</span>
+                      <span class="text-secondary">{{ 'stats.completed'|trans({}, 'dashboard') }}</span>
                     </p>
                   </div>
                 </div>
@@ -64,7 +64,7 @@
                   <!-- heading -->
                   <div class="d-flex justify-content-between align-items-center">
                     <div>
-                      <div>{{ 'stats.task'|trans }}</div>
+                      <div>{{ 'stats.task'|trans({}, 'dashboard') }}</div>
                     </div>
                     <div class="text-info-emphasis">
                       <svg
@@ -94,7 +94,7 @@
                     <div class="fs-1 fw-bold">132</div>
                     <p class="mb-0">
                       <span class="me-1 text-info-emphasis">28</span>
-                      <span class="text-secondary">{{ 'stats.completed'|trans }}</span>
+                      <span class="text-secondary">{{ 'stats.completed'|trans({}, 'dashboard') }}</span>
                     </p>
                   </div>
                 </div>
@@ -108,7 +108,7 @@
                   <!-- heading -->
                   <div class="d-flex justify-content-between align-items-center">
                     <div>
-                      <div>{{ 'stats.members'|trans }}</div>
+                      <div>{{ 'stats.members'|trans({}, 'dashboard') }}</div>
                     </div>
                     <div class="text-danger-emphasis">
                       <svg
@@ -136,7 +136,7 @@
                     <div class="fs-1 fw-bold">8</div>
                     <p class="mb-0">
                       <span class="me-1 text-danger-emphasis">2</span>
-                      <span class="text-secondary">{{ 'stats.completed'|trans }}</span>
+                      <span class="text-secondary">{{ 'stats.completed'|trans({}, 'dashboard') }}</span>
                     </p>
                   </div>
                 </div>
@@ -150,7 +150,7 @@
                   <!-- heading -->
                   <div class="d-flex justify-content-between align-items-center">
                     <div>
-                      <div>{{ 'stats.productivity'|trans }}</div>
+                      <div>{{ 'stats.productivity'|trans({}, 'dashboard') }}</div>
                     </div>
                     <div class="text-warning-emphasis">
                       <svg
@@ -179,7 +179,7 @@
                     <div class="fs-1 fw-bold">76%</div>
                     <p class="mb-0">
                       <span class="text-warning-emphasis me-1">26%</span>
-                      <span class="text-secondary">{{ 'stats.increased'|trans }}</span>
+                      <span class="text-secondary">{{ 'stats.increased'|trans({}, 'dashboard') }}</span>
                     </p>
                   </div>
                 </div>
@@ -193,18 +193,18 @@
               <div class="card card-lg mb-6">
                 <!-- card header  -->
                 <div class="card-header border-bottom-0">
-                  <h5 class="mb-0">{{ 'projects.active_projects'|trans }}</h5>
+                  <h5 class="mb-0">{{ 'projects.active_projects'|trans({}, 'dashboard') }}</h5>
                 </div>
                 <!-- table -->
                 <div class="table-responsive">
                   <table class="table text-nowrap mb-0 table-centered table-hover">
                     <thead>
                       <tr>
-                        <th>{{ 'projects.name'|trans }}</th>
-                        <th>{{ 'projects.progress'|trans }}</th>
-                        <th>{{ 'projects.status'|trans }}</th>
-                        <th>{{ 'projects.assigned'|trans }}</th>
-                        <th>{{ 'projects.action'|trans }}</th>
+                        <th>{{ 'projects.name'|trans({}, 'dashboard') }}</th>
+                        <th>{{ 'projects.progress'|trans({}, 'dashboard') }}</th>
+                        <th>{{ 'projects.status'|trans({}, 'dashboard') }}</th>
+                        <th>{{ 'projects.assigned'|trans({}, 'dashboard') }}</th>
+                        <th>{{ 'projects.action'|trans({}, 'dashboard') }}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -528,7 +528,7 @@
                 </div>
                 <!-- card footer -->
                 <div class="card-footer border-dashed border-top text-center">
-                  <a href="#!" class="btn btn-link">{{ 'projects.view_all'|trans }}</a>
+                  <a href="#!" class="btn btn-link">{{ 'projects.view_all'|trans({}, 'dashboard') }}</a>
                 </div>
               </div>
               <!-- row -->
@@ -787,7 +787,7 @@
                 <!-- card body -->
                 <div class="card-body">
                   <div class="mb-4">
-                    <h5 class="mb-0">{{ 'tasks.my_task'|trans }}</h5>
+                    <h5 class="mb-0">{{ 'tasks.my_task'|trans({}, 'dashboard') }}</h5>
                   </div>
                   <div style="height: 320px" data-simplebar>
                     <div class="d-flex justify-content-between align-items-center border-bottom border-dashed py-3 px-2">
@@ -1034,23 +1034,23 @@
                 <!-- card body -->
                 <div class="card-body">
                   <div class="mb-4">
-                    <h5 class="mb-0">{{ 'tasks.task_progress'|trans }}</h5>
+                    <h5 class="mb-0">{{ 'tasks.task_progress'|trans({}, 'dashboard') }}</h5>
                   </div>
                   <div class="fs-1 fw-bold mb-3">64%</div>
                   <div class="d-flex align-items-center gap-1 w-100 mb-4">
-                    <div class="w-25" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ 'tasks.completed'|trans }}">
+                    <div class="w-25" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ 'tasks.completed'|trans({}, 'dashboard') }}">
                       <div class="progress mb-2" style="height: 3px">
                         <div class="progress-bar bg-info-light" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       24%
                     </div>
-                    <div class="w-50" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ 'tasks.in_progress'|trans }}">
+                    <div class="w-50" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ 'tasks.in_progress'|trans({}, 'dashboard') }}">
                       <div class="progress mb-2" style="height: 3px">
                         <div class="progress-bar bg-success-light" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       35%
                     </div>
-                    <div class="w-75" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ 'tasks.upcoming'|trans }}">
+                    <div class="w-75" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ 'tasks.upcoming'|trans({}, 'dashboard') }}">
                       <div class="progress mb-2" style="height: 3px">
                         <div class="progress-bar bg-danger-light" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
@@ -1168,9 +1168,9 @@
                   <div class="d-flex align-items-center justify-content-between">
                     <div>
                       <div class="fs-3 fw-bold text-white mb-3">
-                        {{ 'ai.welcome'|trans }}
+                        {{ 'ai.welcome'|trans({}, 'dashboard') }}
                       </div>
-                      <a href="#!" class="btn btn-dark">{{ 'ai.start'|trans }}</a>
+                      <a href="#!" class="btn btn-dark">{{ 'ai.start'|trans({}, 'dashboard') }}</a>
                     </div>
                     <div>
                       <img src="{{ asset('images/png/dasher-ai.png') }}" alt="" />
@@ -1183,21 +1183,21 @@
                 <!-- card body -->
                 <div class="card-body">
                   <div class="mb-4">
-                    <h5 class="mb-1">{{ 'budget.project_budget'|trans }}</h5>
-                    <span class="text-secondary">{{ 'budget.budget_allocation'|trans }}</span>
+                    <h5 class="mb-1">{{ 'budget.project_budget'|trans({}, 'dashboard') }}</h5>
+                    <span class="text-secondary">{{ 'budget.budget_allocation'|trans({}, 'dashboard') }}</span>
                   </div>
                   <div class="fs-2 fw-bold mb-3">$50,000</div>
                   <div class="d-flex justify-content-between align-items-center gap-1 w-100 mb-2">
-                    <div>{{ 'budget.spent'|trans }}</div>
+                    <div>{{ 'budget.spent'|trans({}, 'dashboard') }}</div>
                     <div>$35,000</div>
                   </div>
                   <div class="d-flex justify-content-between align-items-center gap-1 w-100 mb-4">
-                    <div>{{ 'budget.remaining'|trans }}</div>
+                    <div>{{ 'budget.remaining'|trans({}, 'dashboard') }}</div>
                     <div>$15,000</div>
                   </div>
                   <div class="d-flex justify-content-between gap-3">
-                    <a href="#!" class="btn btn-primary w-100">{{ 'budget.add_budget'|trans }}</a>
-                    <a href="#!" class="btn btn-white w-100">{{ 'budget.view_details'|trans }}</a>
+                    <a href="#!" class="btn btn-primary w-100">{{ 'budget.add_budget'|trans({}, 'dashboard') }}</a>
+                    <a href="#!" class="btn btn-white w-100">{{ 'budget.view_details'|trans({}, 'dashboard') }}</a>
                   </div>
                     <a href="#!" class="btn btn-white w-100">View Details</a>
                   </div>
@@ -1209,7 +1209,7 @@
                 <div class="card-body">
                   <div class="mb-4 position-relative py-2">
                     <div>
-                      <h5 class="mb-1">{{ 'meetings.upcoming_meetings'|trans }}</h5>
+                      <h5 class="mb-1">{{ 'meetings.upcoming_meetings'|trans({}, 'dashboard') }}</h5>
                     </div>
                     <div class="swiper-navigation position-absolute top-50 end-10 me-4">
                       <div class="swiper-button-prev ms-n3"></div>

@@ -1,0 +1,51 @@
+# Dashboard
+dashboard:
+  title: 'Dashboard'
+  
+# Statistics Cards
+stats:
+  total_projects: 'Total Projects'
+  completed: 'Completed'
+  task: 'Task'
+  tasks: 'Tasks'
+  members: 'Members'
+  productivity: 'Productivity'
+  increased: 'Increased'
+
+# Projects
+projects:
+  active_projects: 'Active Projects'
+  name: 'Name'
+  progress: 'Progress'
+  status: 'Status'
+  assigned: 'Assigned'
+  action: 'Action'
+  view_all: 'View All Projects'
+  edit: 'Edit'
+  delete: 'Delete'
+
+# Tasks
+tasks:
+  my_task: 'My Task'
+  task_progress: 'Task Progress'
+  completed: 'Completed'
+  in_progress: 'In Progress'
+  upcoming: 'Up Coming'
+
+# Budget
+budget:
+  project_budget: 'Project Budget'
+  budget_allocation: 'Budget Allocation Overview:'
+  spent: 'Spent:'
+  remaining: 'Remaining:'
+  add_budget: 'Add Budget'
+  view_details: 'View Details'
+
+# Meetings
+meetings:
+  upcoming_meetings: 'Upcoming Meetings'
+
+# AI Assistant
+ai:
+  start: 'Start AI'
+  welcome: 'Hello! I\'m your AI assistant. How can I help you today?'

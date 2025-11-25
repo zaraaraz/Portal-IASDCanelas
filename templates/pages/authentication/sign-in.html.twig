@@ -13,10 +13,10 @@
                 <a href="{{ path('app_home') }}" class="fs-2 fw-bold d-flex align-items-center gap-2 justify-content-center mb-6">
                   <img class="mw-100" src="{{ asset('images/brand/logo/portal_logo_white.png') }}" alt="Logo Portal IASDCanelas" />
                 </a>
-                <h1 class="mb-1">Welcome Back</h1>
+                <h1 class="mb-1">{{ 'auth.sign_in.title'|trans({}, 'auth') }}</h1>
                 <p class="mb-0">
-                  Don’t have an account yet?
-                  <a href="sign-up.html" class="text-primary">Register here</a>
+                  {{ 'auth.sign_in.no_account'|trans({}, 'auth') }}
+                  <a href="sign-up.html" class="text-primary">{{ 'auth.sign_in.register_here'|trans({}, 'auth') }}</a>
                 </p>
               </div>
             </div>
@@ -28,32 +28,32 @@
                   <form class="needs-validation mb-6" novalidate>
                     <div class="mb-3">
                       <label for="signinEmailInput" class="form-label">
-                        Email
-                        <span class="text-danger">*</span>
+                        {{ 'auth.sign_in.email'|trans({}, 'auth') }}
+                        <span class="text-danger">{{ 'auth.sign_in.required'|trans({}, 'auth') }}</span>
                       </label>
                       <input type="email" class="form-control" id="signinEmailInput" required />
-                      <div class="invalid-feedback">Please enter email.</div>
+                      <div class="invalid-feedback">{{ 'auth.sign_in.error.email_required'|trans({}, 'auth') }}</div>
                     </div>
                     <div class="mb-3">
-                      <label for="formSignUpPassword" class="form-label">Password</label>
+                      <label for="formSignUpPassword" class="form-label">{{ 'auth.sign_in.password'|trans({}, 'auth') }}</label>
                       <div class="password-field position-relative">
                         <input type="password" class="form-control fakePassword" id="formSignUpPassword" required />
                         <span><i class="ti ti-eye-off passwordToggler"></i></span>
-                        <div class="invalid-feedback">Please enter password.</div>
+                        <div class="invalid-feedback">{{ 'auth.sign_in.error.password_required'|trans({}, 'auth') }}</div>
                       </div>
                     </div>
 
                     <div class="mb-4 d-flex align-items-center justify-content-between">
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="rememberMeCheckbox" />
-                        <label class="form-check-label" for="rememberMeCheckbox">Remember me</label>
+                        <label class="form-check-label" for="rememberMeCheckbox">{{ 'auth.sign_in.remember_me'|trans({}, 'auth') }}</label>
                       </div>
 
-                      <div><a href="forget-password.html" class="text-primary">Forgot Password</a></div>
+                      <div><a href="forget-password.html" class="text-primary">{{ 'auth.sign_in.forgot_password'|trans({}, 'auth') }}</a></div>
                     </div>
 
                     <div class="d-grid">
-                      <button class="btn btn-primary" type="submit">Sign In</button>
+                      <button class="btn btn-primary" type="submit">{{ 'auth.sign_in.submit'|trans({}, 'auth') }}</button>
                     </div>
                   </form>
 

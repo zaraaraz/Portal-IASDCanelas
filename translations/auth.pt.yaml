@@ -1,0 +1,15 @@
+# Authentication
+auth:
+  sign_in:
+    title: 'Bem-vindo de Volta'
+    no_account: 'Ainda não tem conta?'
+    register_here: 'Registe-se aqui'
+    email: 'Email'
+    password: 'Palavra-passe'
+    remember_me: 'Lembrar-me'
+    forgot_password: 'Esqueceu a Palavra-passe'
+    submit: 'Entrar'
+    required: '*'
+    error:
+      email_required: 'Por favor, insira o email.'
+      password_required: 'Por favor, insira a palavra-passe.'
