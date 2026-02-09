@@ -9,3 +9,19 @@ common:
   close: 'Close'
   confirm: 'Confirm'
   back: 'Back'
+
+# Changelog
+changelog:
+  title: 'Changelog'
+  subtitle: 'History of all changes, features and fixes of the portal.'
+  latest_version: 'Latest version: v%version%'
+  version_label: 'Version %version%'
+  changes_count: 'changes'
+  empty: 'No changelog entries yet.'
+  table:
+    type: 'Type'
+    category: 'Category'
+    title: 'Title'
+    description: 'Description'
+    date: 'Date'
+    author: 'Author'

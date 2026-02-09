@@ -13,3 +13,59 @@ auth:
     error:
       email_required: 'Please enter email.'
       password_required: 'Please enter password.'
+
+  register:
+    title: 'Create Account'
+    subtitle: 'Sign up now and get a free account.'
+    full_name: 'Full Name'
+    email: 'Email'
+    password: 'Password'
+    confirm_password: 'Confirm Password'
+    terms_of_use: 'Terms of Use'
+    privacy_policy: 'Privacy Policy'
+    submit: 'Sign Up'
+    already_have_account: 'Already have an account?'
+    sign_in_here: 'Sign in here.'
+    success: 'Account created successfully! You can now sign in.'
+    error:
+      fullname_required: 'Please enter full name.'
+      email_required: 'Please enter email.'
+      email_exists: 'This email is already registered.'
+      password_required: 'Please enter password.'
+      password_min_length: 'Password must be at least 8 characters.'
+      passwords_mismatch: 'Passwords do not match.'
+      agree_terms: 'You must agree to the terms of use.'
+
+  forgot_password:
+    title: 'Forgot Password'
+    subtitle: 'No worries, we will send you reset instructions.'
+    email: 'Email'
+    email_placeholder: 'Enter your email'
+    submit: 'Reset Password'
+    back_to_login: 'Back to Login'
+    email_sent: 'If the email exists in our system, you will receive reset instructions.'
+    error:
+      email_required: 'Please enter email.'
+      email_invalid: 'Please enter a valid email.'
+
+  reset_password:
+    title: 'Set New Password'
+    subtitle: 'Enter your new password below.'
+    password: 'Password'
+    confirm_password: 'Confirm Password'
+    submit: 'Reset Password'
+    back_to_login: 'Back to Login'
+    success: 'Password reset successfully! You can now sign in.'
+    error:
+      invalid_token: 'The reset link is invalid or has expired.'
+      password_required: 'Please enter password.'
+      password_min_length: 'Password must be at least 8 characters.'
+      passwords_mismatch: 'Passwords do not match.'
+
+  otp:
+    title: 'OTP Verification'
+    subtitle: 'We sent a code to your email.'
+    submit: 'Continue'
+    didnt_receive: "Didn't receive the email? Click"
+    resend: 'send it again.'
+    back_to_login: 'Back to Login'

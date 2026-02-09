@@ -1,10 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Dashboard | Portal IASDCanelas{% endblock %}
+{% block title %}{{ 'auth.sign_in.title'|trans({}, 'auth') }} | Portal IASDCanelas{% endblock %}
 
 {% block body %}
     <main class="d-flex flex-column justify-content-center vh-100">
-      <!--Sign up start-->
       <section>
         <div class="container">
           <div class="row mb-8">
@@ -16,7 +15,7 @@
                 <h1 class="mb-1">{{ 'auth.sign_in.title'|trans({}, 'auth') }}</h1>
                 <p class="mb-0">
                   {{ 'auth.sign_in.no_account'|trans({}, 'auth') }}
-                  <a href="sign-up.html" class="text-primary">{{ 'auth.sign_in.register_here'|trans({}, 'auth') }}</a>
+                  <a href="{{ path('auth_register') }}" class="text-primary">{{ 'auth.sign_in.register_here'|trans({}, 'auth') }}</a>
                 </p>
               </div>
             </div>
@@ -25,31 +24,46 @@
             <div class="col-xl-5 col-lg-6 col-md-8 col-12">
               <div class="card card-lg mb-6">
                 <div class="card-body p-6">
-                  <form class="needs-validation mb-6" novalidate>
+
+                  {% if error %}
+                    <div class="alert alert-danger mb-4">
+                      {{ error.messageKey|trans(error.messageData, 'security') }}
+                    </div>
+                  {% endif %}
+
+                  {% for label, messages in app.flashes %}
+                    {% for message in messages %}
+                      <div class="alert alert-{{ label }} mb-4">
+                        {{ message|trans({}, 'auth') }}
+                      </div>
+                    {% endfor %}
+                  {% endfor %}
+
+                  <form method="post" action="{{ path('auth_login') }}" class="mb-6">
                     <div class="mb-3">
                       <label for="signinEmailInput" class="form-label">
                         {{ 'auth.sign_in.email'|trans({}, 'auth') }}
                         <span class="text-danger">{{ 'auth.sign_in.required'|trans({}, 'auth') }}</span>
                       </label>
-                      <input type="email" class="form-control" id="signinEmailInput" required />
-                      <div class="invalid-feedback">{{ 'auth.sign_in.error.email_required'|trans({}, 'auth') }}</div>
+                      <input type="email" class="form-control" id="signinEmailInput" name="_username" value="{{ last_username }}" required autofocus />
                     </div>
                     <div class="mb-3">
                       <label for="formSignUpPassword" class="form-label">{{ 'auth.sign_in.password'|trans({}, 'auth') }}</label>
                       <div class="password-field position-relative">
-                        <input type="password" class="form-control fakePassword" id="formSignUpPassword" required />
+                        <input type="password" class="form-control fakePassword" id="formSignUpPassword" name="_password" required />
                         <span><i class="ti ti-eye-off passwordToggler"></i></span>
-                        <div class="invalid-feedback">{{ 'auth.sign_in.error.password_required'|trans({}, 'auth') }}</div>
                       </div>
                     </div>
 
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" />
+
                     <div class="mb-4 d-flex align-items-center justify-content-between">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="rememberMeCheckbox" />
+                        <input class="form-check-input" type="checkbox" id="rememberMeCheckbox" name="_remember_me" />
                         <label class="form-check-label" for="rememberMeCheckbox">{{ 'auth.sign_in.remember_me'|trans({}, 'auth') }}</label>
                       </div>
 
-                      <div><a href="forget-password.html" class="text-primary">{{ 'auth.sign_in.forgot_password'|trans({}, 'auth') }}</a></div>
+                      <div><a href="{{ path('auth_forgot_password') }}" class="text-primary">{{ 'auth.sign_in.forgot_password'|trans({}, 'auth') }}</a></div>
                     </div>
 
                     <div class="d-grid">
@@ -63,7 +77,6 @@
           </div>
         </div>
       </section>
-      <!--Sign up end-->
       <div class="position-absolute end-0 bottom-0 m-4">
         <div class="dropdown">
           <button class="btn btn-light btn-icon rounded-circle d-flex align-items-center" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
