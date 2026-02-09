@@ -1,53 +1,202 @@
-# Dashboard
-dashboard:
-  title: 'Dashboard'
-  
-# Statistics Cards
-stats:
-  total_projects: 'Total Projects'
-  completed: 'Completed'
-  task: 'Task'
-  tasks: 'Tasks'
-  members: 'Members'
-  productivity: 'Productivity'
-  increased: 'Increased'
-
-# Projects
-projects:
-  active_projects: 'Active Projects'
-  name: 'Name'
-  progress: 'Progress'
-  status: 'Status'
-  assigned: 'Assigned'
-  action: 'Action'
-  view_all: 'View All Projects'
-  edit: 'Edit'
-  delete: 'Delete'
-
-# Tasks
-tasks:
-  my_task: 'My Task'
-  task_progress: 'Task Progress'
-  completed: 'Completed'
-  in_progress: 'In Progress'
-  upcoming: 'Up Coming'
-
-# Budget
-budget:
-  project_budget: 'Project Budget'
-  budget_allocation: 'Budget Allocation Overview:'
-  spent: 'Spent:'
-  remaining: 'Remaining:'
-  add_budget: 'Add Budget'
-  view_details: 'View Details'
-
-# Meetings
-meetings:
-  upcoming_meetings: 'Upcoming Meetings'
-
-# AI Assistant
-ai:
-  start: 'Start AI'
-  welcome: "Hello! I'm your AI assistant. How can I help you today?"
+# ─────────────────────────────────────────────────
+# Portal IASDCanelas — Translations EN (dashboard domain)
+# ─────────────────────────────────────────────────
 
 home: 'Home'
+
+# ── Sidebar ──
+sidebar:
+  dashboard: 'Dashboard'
+  schedules: 'My Schedules'
+  broadcast: 'Broadcast'
+  documents: 'Documents'
+  help: 'Help'
+
+# ── Dashboard ──
+dashboard:
+  title: 'Dashboard'
+  welcome: 'Welcome, %name%!'
+  welcome_subtitle: 'Here is an overview of the church activity.'
+  next_services: 'Upcoming Services'
+  this_week: 'this week'
+  my_schedules: 'My Schedules'
+  pending: 'pending'
+  broadcasts_month: 'Broadcasts'
+  completed: 'completed'
+  notices: 'Notices'
+  active: 'active'
+  upcoming_services: 'Upcoming Services'
+  table:
+    date: 'Date'
+    service_type: 'Service Type'
+    theme: 'Theme'
+    preacher: 'Preacher'
+    status: 'Status'
+  sample:
+    saturday: 'Saturday'
+    wednesday: 'Wednesday'
+    next_saturday: 'Next Saturday'
+    theme_1: 'Sabbath School Lesson'
+    theme_2: 'Redeeming Grace'
+    theme_3: 'Prayer and Faith'
+    theme_4: 'Hope for the Future'
+  service_types:
+    sabbath_school: 'Sabbath School'
+    divine_worship: 'Divine Worship'
+    prayer_meeting: 'Prayer Meeting'
+  status:
+    scheduled: 'Scheduled'
+    confirmed: 'Confirmed'
+    pending: 'Pending'
+  saturday_checklist: 'Saturday Checklist'
+  checklist:
+    sound_team: 'Sound team confirmed'
+    broadcast_team: 'Broadcast team confirmed'
+    reception_team: 'Reception team pending'
+    music_team: 'Music team not confirmed'
+  latest_notices: 'Latest Notices'
+  notice:
+    board_meeting: 'Board Meeting'
+    board_meeting_desc: 'Next meeting on the 20th at 7:30 PM.'
+    schedule_change: 'Schedule Change'
+    schedule_change_desc: 'Swap approved for Feb 22 — Sound.'
+
+# ── Schedules (Escalas) ──
+escalas:
+  title: 'My Schedules'
+  subtitle: 'View your service schedules and manage swaps.'
+  total: 'Total Schedules'
+  this_month: 'this month'
+  confirmed: 'Confirmed'
+  pending_status: 'Pending'
+  swap_requests: 'Swap Requests'
+  my_schedules: 'My Schedules'
+  filter:
+    all_months: 'All Months'
+    january: 'January'
+    february: 'February'
+    march: 'March'
+    all_departments: 'All Departments'
+    sound: 'Sound'
+    broadcast: 'Broadcast'
+    reception: 'Reception'
+    music: 'Music'
+  table:
+    date: 'Date'
+    service: 'Service'
+    department: 'Department'
+    role: 'Role'
+    status: 'Status'
+    actions: 'Actions'
+  dept:
+    sound: 'Sound'
+    broadcast: 'Broadcast'
+    reception: 'Reception'
+    music: 'Music'
+  role:
+    sound_operator: 'Sound Operator'
+    camera_operator: 'Camera Operator'
+    pianist: 'Pianist'
+    receptionist: 'Receptionist'
+  status:
+    confirmed: 'Confirmed'
+    pending: 'Pending'
+    swap_requested: 'Swap Requested'
+  action:
+    request_swap: 'Request Swap'
+    confirm: 'Confirm'
+    decline: 'Decline'
+    waiting_approval: 'Waiting approval'
+
+# ── Broadcast (Transmissão) ──
+transmissao:
+  title: 'Broadcast'
+  subtitle: 'Broadcast team dashboard and technical status.'
+  monthly_broadcasts: 'Monthly Broadcasts'
+  done: 'done'
+  saturday_team: 'Saturday Team'
+  members_assigned: 'members assigned'
+  tech_setup: 'Tech Setup'
+  operational: 'Operational'
+  stability: 'Stability'
+  uptime: 'uptime'
+  upcoming: 'Upcoming Broadcasts'
+  table:
+    date: 'Date'
+    service: 'Service'
+    platform: 'Platform'
+    team: 'Team'
+    status: 'Status'
+  not_assigned: 'Not assigned'
+  status:
+    ready: 'Ready'
+    pending: 'Pending'
+    no_team: 'No Team'
+  tech_checklist: 'Technical Checklist'
+  check:
+    cameras: 'Cameras'
+    encoder: 'Encoder/Broadcast PC'
+    internet: 'Internet Connection'
+    audio_mixer: 'Audio Mixer'
+    overlays: 'Overlays & Graphics'
+    update_needed: 'Update needed'
+    streaming_keys: 'Streaming Keys'
+
+# ── Documents ──
+documentos:
+  title: 'Documents & Resources'
+  subtitle: 'Shared documents, manuals and useful files.'
+  search: 'Search'
+  search_placeholder: 'Search documents...'
+  filter_department: 'Department'
+  all_departments: 'All Departments'
+  dept:
+    pastoral: 'Pastoral'
+    deacons: 'Deacons'
+    music: 'Music'
+    broadcast: 'Broadcast'
+    sabbath_school: 'Sabbath School'
+  filter_type: 'File Type'
+  all_types: 'All Types'
+  type:
+    image: 'Image'
+  available_documents: 'Available Documents'
+  documents_count: 'documents'
+  table:
+    name: 'Name'
+    department: 'Department'
+    type: 'Type'
+    date: 'Date'
+    size: 'Size'
+    action: 'Action'
+  sample:
+    schedule_q1: 'Service Schedule — Q1 2025'
+    deacons_manual: 'Deacons Manual'
+    music_list: 'Hymn List — February 2025'
+    broadcast_guide: 'Broadcast Guide (OBS Studio)'
+    sabbath_lesson: 'Sabbath School Lesson — Q1 2025'
+  download: 'Download'
+
+# ── Help ──
+ajuda:
+  title: 'Help & Contacts'
+  subtitle: 'Find contact information and quick answers.'
+  contact:
+    pastoral: 'Pastoral'
+    pastoral_desc: 'Questions about services, baptisms or counselling.'
+    broadcast_team: 'Broadcast Team'
+    broadcast_desc: 'Technical questions about online broadcasts.'
+    tech_support: 'Technical Support'
+    tech_support_desc: 'Issues with the portal or credentials.'
+  faq:
+    title: 'Frequently Asked Questions'
+    q1: 'How do I confirm my schedule?'
+    a1: 'Go to "My Schedules", find the pending schedule and click "Confirm".'
+    q2: 'Can I swap my schedule with another member?'
+    a2: 'Yes. On "My Schedules", click "Request Swap" on the desired schedule. The request will be reviewed by the department leader.'
+    q3: 'Where can I find Sabbath School documents?'
+    a3: 'On "Documents & Resources", filter by "Sabbath School" department to find the available lessons and materials.'
+    q4: 'How do I know when I have a broadcast?'
+    a4: 'Check the "Broadcast" page to see upcoming broadcasts and the team assigned to each one.'
+    q5: 'Who should I contact about a portal issue?'
+    a5: 'Send an email to suporte@iasdcanelas.pt describing the issue. You will get a response within 24–48 hours.'

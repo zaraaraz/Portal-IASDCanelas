@@ -970,47 +970,16 @@
         <div class="mb-4">
           <div class="d-flex flex-column border-bottom border-dashed py-4">
             <div class="mb-2">
-              <span class="fw-semibold text-secondary small">Dashboard</span>
+              <span class="fw-semibold text-secondary small">{{ 'sidebar.dashboard'|trans({}, 'dashboard') }}</span>
             </div>
             <div>
               <ul class="list-unstyled lh-lg mb-0">
-                <li><a href="{{ path('dashboard_analytics') }}" class="text-inherit">Analytics</a></li>
-                <li><a href="{{ path('dashboard_index') }}" class="text-inherit">Project</a></li>
-                <li><a href="{{ path('dashboard_ecommerce') }}" class="text-inherit">Ecommerce</a></li>
-                <li><a href="{{ path('dashboard_crm') }}" class="text-inherit">CRM</a></li>
-                <li><a href="{{ path('dashboard_finance') }}" class="text-inherit">Finance</a></li>
-                <li><a href="{{ path('dashboard_blog') }}" class="text-inherit">Blog</a></li>
+                <li><a href="{{ path('dashboard_index') }}" class="text-inherit">{{ 'sidebar.dashboard'|trans({}, 'dashboard') }}</a></li>
+                <li><a href="{{ path('escalas_index') }}" class="text-inherit">{{ 'sidebar.schedules'|trans({}, 'dashboard') }}</a></li>
+                <li><a href="{{ path('transmissao_index') }}" class="text-inherit">{{ 'sidebar.broadcast'|trans({}, 'dashboard') }}</a></li>
+                <li><a href="{{ path('documentos_index') }}" class="text-inherit">{{ 'sidebar.documents'|trans({}, 'dashboard') }}</a></li>
+                <li><a href="{{ path('ajuda_index') }}" class="text-inherit">{{ 'sidebar.help'|trans({}, 'dashboard') }}</a></li>
               </ul>
-            </div>
-          </div>
-          <div class="d-flex flex-column border-bottom border-dashed py-4">
-            <div class="mb-2">
-              <span class="fw-semibold text-secondary small">Apps</span>
-            </div>
-            <div>
-              <ul class="list-unstyled lh-lg mb-0">
-                <li><a href="{{ path('apps_calendar') }}" class="text-inherit"> Calendar</a></li>
-                <li><a href="{{ path('apps_chat') }}" class="text-inherit"> Chat</a></li>
-                <li><a href="{{ path('apps_email_inbox') }}" class="text-inherit">Email</a></li>
-                <li><a href="{{ path('apps_ecommerce_products') }}" class="text-inherit">Ecommerce</a></li>
-                <li><a href="{{ path('apps_kanban') }}" class="text-inherit"> Kanban</a></li>
-                <li><a href="{{ path('apps_project_grid') }}" class="text-inherit">Project</a></li>
-                <li><a href="{{ path('dashboard_file_manager') }}" class="text-inherit"> File Manager</a></li>
-                <li><a href="{{ path('apps_crm_contacts') }}" class="text-inherit"> CRM</a></li>
-                <li><a href="{{ path('apps_invoice_list') }}" class="text-inherit"> Invoice</a></li>
-                <li><a href="{{ path('apps_profile_overview') }}" class="text-inherit"> Profile</a></li>
-                <li><a href="{{ path('apps_blog_list') }}" class="text-inherit"> Blog</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="d-flex flex-column border-bottom border-dashed py-4">
-            <div>
-              <span class="fw-semibold text-secondary small">Pages</span>
-            </div>
-          </div>
-          <div class="d-flex flex-column border-bottom border-dashed py-4">
-            <div>
-              <span class="fw-semibold text-secondary small">Quick Links</span>
             </div>
           </div>
         </div>

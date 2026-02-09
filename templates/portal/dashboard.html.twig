@@ -1,0 +1,278 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'dashboard.title'|trans({}, 'dashboard') }} | Portal IASDCanelas{% endblock %}
+
+{% block body %}
+    <div>
+      {% include 'partials/sidebar-collapse.html.twig' %}
+      <div id="content" class="position-relative h-100">
+        {% include 'partials/topbar-second.html.twig' %}
+        <div class="custom-container">
+
+          {# ── Welcome Banner ── #}
+          <div class="row g-6 mb-6">
+            <div class="col-12">
+              <div class="card card-lg bg-gradient-primary">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h4 class="text-white mb-1">{{ 'dashboard.welcome'|trans({'%name%': app.user.fullName}, 'dashboard') }}</h4>
+                      <p class="text-white-50 mb-0">{{ 'dashboard.welcome_subtitle'|trans({}, 'dashboard') }}</p>
+                    </div>
+                    <div class="text-white-50">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-building-church"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M10 21v-4a2 2 0 0 1 4 0v4" /><path d="M10 5l4 0" /><path d="M12 3l0 5" /><path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" /></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {# ── Stat Cards ── #}
+          <div class="row g-6 mb-6">
+            {# Próximos Cultos #}
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="card card-lg bg-gradient-info">
+                <div class="card-body d-flex flex-column gap-8">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <div class="fw-semibold">{{ 'dashboard.next_services'|trans({}, 'dashboard') }}</div>
+                    </div>
+                    <div class="text-info-emphasis">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-building-church"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M10 21v-4a2 2 0 0 1 4 0v4" /><path d="M10 5l4 0" /><path d="M12 3l0 5" /><path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" /></svg>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex flex-column gap-3">
+                    <div class="fs-1 fw-bold">3</div>
+                    <p class="mb-0">
+                      <span class="text-info-emphasis">{{ 'dashboard.this_week'|trans({}, 'dashboard') }}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {# As Minhas Escalas #}
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="card card-lg bg-gradient-success">
+                <div class="card-body d-flex flex-column gap-8">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <div class="fw-semibold">{{ 'dashboard.my_schedules'|trans({}, 'dashboard') }}</div>
+                    </div>
+                    <div class="text-success-emphasis">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M8 15h2v2h-2z" /></svg>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex flex-column gap-3">
+                    <div class="fs-1 fw-bold">5</div>
+                    <p class="mb-0">
+                      <span class="text-success-emphasis">2</span>
+                      <span class="text-secondary">{{ 'dashboard.pending'|trans({}, 'dashboard') }}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {# Transmissões Este Mês #}
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="card card-lg bg-gradient-warning">
+                <div class="card-body d-flex flex-column gap-8">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <div class="fw-semibold">{{ 'dashboard.broadcasts_month'|trans({}, 'dashboard') }}</div>
+                    </div>
+                    <div class="text-warning-emphasis">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-broadcast"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0" /><path d="M15.536 16.536a5 5 0 1 0 -7.072 0" /><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex flex-column gap-3">
+                    <div class="fs-1 fw-bold">4</div>
+                    <p class="mb-0">
+                      <span class="text-warning-emphasis">1</span>
+                      <span class="text-secondary">{{ 'dashboard.completed'|trans({}, 'dashboard') }}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {# Avisos Importantes #}
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="card card-lg bg-gradient-danger">
+                <div class="card-body d-flex flex-column gap-8">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <div class="fw-semibold">{{ 'dashboard.notices'|trans({}, 'dashboard') }}</div>
+                    </div>
+                    <div class="text-danger-emphasis">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-bell"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" /><path d="M9 17v1a3 3 0 0 0 6 0v-1" /></svg>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex flex-column gap-3">
+                    <div class="fs-1 fw-bold">2</div>
+                    <p class="mb-0">
+                      <span class="text-danger-emphasis">{{ 'dashboard.active'|trans({}, 'dashboard') }}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {# ── Upcoming Services Table ── #}
+          <div class="row g-6 mb-6">
+            <div class="col-xl-8 col-12">
+              <div class="card">
+                <div class="card-header border-bottom-0 d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">{{ 'dashboard.upcoming_services'|trans({}, 'dashboard') }}</h5>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table text-nowrap mb-0 table-centered table-hover">
+                      <thead>
+                        <tr>
+                          <th>{{ 'dashboard.table.date'|trans({}, 'dashboard') }}</th>
+                          <th>{{ 'dashboard.table.service_type'|trans({}, 'dashboard') }}</th>
+                          <th>{{ 'dashboard.table.theme'|trans({}, 'dashboard') }}</th>
+                          <th>{{ 'dashboard.table.preacher'|trans({}, 'dashboard') }}</th>
+                          <th>{{ 'dashboard.table.status'|trans({}, 'dashboard') }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div>
+                              <div class="fw-semibold">{{ 'dashboard.sample.saturday'|trans({}, 'dashboard') }}</div>
+                              <div class="small text-secondary">09:30</div>
+                            </div>
+                          </td>
+                          <td>{{ 'dashboard.service_types.sabbath_school'|trans({}, 'dashboard') }}</td>
+                          <td>{{ 'dashboard.sample.theme_1'|trans({}, 'dashboard') }}</td>
+                          <td>—</td>
+                          <td>
+                            <span class="badge text-info-emphasis bg-info-subtle rounded-2">{{ 'dashboard.status.scheduled'|trans({}, 'dashboard') }}</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div>
+                              <div class="fw-semibold">{{ 'dashboard.sample.saturday'|trans({}, 'dashboard') }}</div>
+                              <div class="small text-secondary">11:00</div>
+                            </div>
+                          </td>
+                          <td>{{ 'dashboard.service_types.divine_worship'|trans({}, 'dashboard') }}</td>
+                          <td>{{ 'dashboard.sample.theme_2'|trans({}, 'dashboard') }}</td>
+                          <td>Pastor João Silva</td>
+                          <td>
+                            <span class="badge text-primary-emphasis bg-primary-subtle rounded-2">{{ 'dashboard.status.confirmed'|trans({}, 'dashboard') }}</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div>
+                              <div class="fw-semibold">{{ 'dashboard.sample.wednesday'|trans({}, 'dashboard') }}</div>
+                              <div class="small text-secondary">20:00</div>
+                            </div>
+                          </td>
+                          <td>{{ 'dashboard.service_types.prayer_meeting'|trans({}, 'dashboard') }}</td>
+                          <td>{{ 'dashboard.sample.theme_3'|trans({}, 'dashboard') }}</td>
+                          <td>Ancião Carlos</td>
+                          <td>
+                            <span class="badge text-warning-emphasis bg-warning-subtle rounded-2">{{ 'dashboard.status.pending'|trans({}, 'dashboard') }}</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div>
+                              <div class="fw-semibold">{{ 'dashboard.sample.next_saturday'|trans({}, 'dashboard') }}</div>
+                              <div class="small text-secondary">11:00</div>
+                            </div>
+                          </td>
+                          <td>{{ 'dashboard.service_types.divine_worship'|trans({}, 'dashboard') }}</td>
+                          <td>{{ 'dashboard.sample.theme_4'|trans({}, 'dashboard') }}</td>
+                          <td>Pastor Ana Costa</td>
+                          <td>
+                            <span class="badge text-info-emphasis bg-info-subtle rounded-2">{{ 'dashboard.status.scheduled'|trans({}, 'dashboard') }}</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {# ── Side Panel: Quick Info ── #}
+            <div class="col-xl-4 col-12">
+              {# Saturday Checklist #}
+              <div class="card mb-6">
+                <div class="card-header border-bottom-0">
+                  <h5 class="card-title mb-0">{{ 'dashboard.saturday_checklist'|trans({}, 'dashboard') }}</h5>
+                </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex align-items-center px-0">
+                      <span class="me-3 text-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l2 2l4 -4" /></svg>
+                      </span>
+                      {{ 'dashboard.checklist.sound_team'|trans({}, 'dashboard') }}
+                    </li>
+                    <li class="list-group-item d-flex align-items-center px-0">
+                      <span class="me-3 text-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l2 2l4 -4" /></svg>
+                      </span>
+                      {{ 'dashboard.checklist.broadcast_team'|trans({}, 'dashboard') }}
+                    </li>
+                    <li class="list-group-item d-flex align-items-center px-0">
+                      <span class="me-3 text-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clock"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 7v5l3 3" /></svg>
+                      </span>
+                      {{ 'dashboard.checklist.reception_team'|trans({}, 'dashboard') }}
+                    </li>
+                    <li class="list-group-item d-flex align-items-center px-0">
+                      <span class="me-3 text-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M10 10l4 4m0 -4l-4 4" /></svg>
+                      </span>
+                      {{ 'dashboard.checklist.music_team'|trans({}, 'dashboard') }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {# Latest Notices #}
+              <div class="card">
+                <div class="card-header border-bottom-0">
+                  <h5 class="card-title mb-0">{{ 'dashboard.latest_notices'|trans({}, 'dashboard') }}</h5>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex align-items-start gap-3">
+                      <span class="text-primary mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-info-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 9h.01" /><path d="M11 12h1v4h1" /></svg>
+                      </span>
+                      <div>
+                        <div class="fw-semibold">{{ 'dashboard.notice.board_meeting'|trans({}, 'dashboard') }}</div>
+                        <div class="small text-secondary">{{ 'dashboard.notice.board_meeting_desc'|trans({}, 'dashboard') }}</div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-start gap-3">
+                      <span class="text-warning mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-alert-triangle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></svg>
+                      </span>
+                      <div>
+                        <div class="fw-semibold">{{ 'dashboard.notice.schedule_change'|trans({}, 'dashboard') }}</div>
+                        <div class="small text-secondary">{{ 'dashboard.notice.schedule_change_desc'|trans({}, 'dashboard') }}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -1,53 +1,202 @@
-# Dashboard
-dashboard:
-  title: 'Painel de Controle'
-  
-# Statistics Cards
-stats:
-  total_projects: 'Total de Projetos'
-  completed: 'Concluídos'
-  task: 'Tarefa'
-  tasks: 'Tarefas'
-  members: 'Membros'
-  productivity: 'Produtividade'
-  increased: 'Aumentou'
-
-# Projects
-projects:
-  active_projects: 'Projetos Ativos'
-  name: 'Nome'
-  progress: 'Progresso'
-  status: 'Estado'
-  assigned: 'Atribuído'
-  action: 'Ação'
-  view_all: 'Ver Todos os Projetos'
-  edit: 'Editar'
-  delete: 'Excluir'
-
-# Tasks
-tasks:
-  my_task: 'Minhas Tarefas'
-  task_progress: 'Progresso das Tarefas'
-  completed: 'Concluído'
-  in_progress: 'Em Andamento'
-  upcoming: 'Próximo'
-
-# Budget
-budget:
-  project_budget: 'Orçamento do Projeto'
-  budget_allocation: 'Visão Geral da Alocação do Orçamento:'
-  spent: 'Gasto:'
-  remaining: 'Restante:'
-  add_budget: 'Adicionar Orçamento'
-  view_details: 'Ver Detalhes'
-
-# Meetings
-meetings:
-  upcoming_meetings: 'Próximas Reuniões'
-
-# AI Assistant
-ai:
-  start: 'Iniciar IA'
-  welcome: 'Olá! Sou o seu assistente de IA. Como posso ajudar você hoje?'
+# ─────────────────────────────────────────────────
+# Portal IASDCanelas — Traduções PT (dashboard domain)
+# ─────────────────────────────────────────────────
 
 home: 'Início'
+
+# ── Sidebar ──
+sidebar:
+  dashboard: 'Dashboard'
+  schedules: 'Escalas Pessoais'
+  broadcast: 'Transmissão'
+  documents: 'Documentos'
+  help: 'Ajuda'
+
+# ── Dashboard ──
+dashboard:
+  title: 'Painel de Controlo'
+  welcome: 'Bem-vindo(a), %name%!'
+  welcome_subtitle: 'Aqui tens uma visão geral da atividade da igreja.'
+  next_services: 'Próximos Cultos'
+  this_week: 'esta semana'
+  my_schedules: 'As Minhas Escalas'
+  pending: 'pendentes'
+  broadcasts_month: 'Transmissões'
+  completed: 'concluída(s)'
+  notices: 'Avisos'
+  active: 'ativos'
+  upcoming_services: 'Próximos Cultos'
+  table:
+    date: 'Data'
+    service_type: 'Tipo de Culto'
+    theme: 'Tema'
+    preacher: 'Pregador'
+    status: 'Estado'
+  sample:
+    saturday: 'Sábado'
+    wednesday: 'Quarta-feira'
+    next_saturday: 'Próx. Sábado'
+    theme_1: 'Lição da Escola Sabatina'
+    theme_2: 'A Graça Redentora'
+    theme_3: 'Oração e Fé'
+    theme_4: 'Esperança para o Futuro'
+  service_types:
+    sabbath_school: 'Escola Sabatina'
+    divine_worship: 'Culto Divino'
+    prayer_meeting: 'Reunião de Oração'
+  status:
+    scheduled: 'Agendado'
+    confirmed: 'Confirmado'
+    pending: 'Pendente'
+  saturday_checklist: 'Checklist de Sábado'
+  checklist:
+    sound_team: 'Equipa de Som confirmada'
+    broadcast_team: 'Equipa de Transmissão confirmada'
+    reception_team: 'Equipa de Receção pendente'
+    music_team: 'Equipa de Música não confirmada'
+  latest_notices: 'Últimos Avisos'
+  notice:
+    board_meeting: 'Reunião de Comissão'
+    board_meeting_desc: 'Próxima reunião dia 20 às 19:30.'
+    schedule_change: 'Alteração de Escala'
+    schedule_change_desc: 'Troca aprovada para 22 Fev — Som.'
+
+# ── Escalas ──
+escalas:
+  title: 'Escalas Pessoais'
+  subtitle: 'Consulta as tuas escalas de serviço e gere trocas.'
+  total: 'Total de Escalas'
+  this_month: 'este mês'
+  confirmed: 'Confirmadas'
+  pending_status: 'Pendentes'
+  swap_requests: 'Pedidos de Troca'
+  my_schedules: 'As Minhas Escalas'
+  filter:
+    all_months: 'Todos os Meses'
+    january: 'Janeiro'
+    february: 'Fevereiro'
+    march: 'Março'
+    all_departments: 'Todos os Departamentos'
+    sound: 'Som'
+    broadcast: 'Transmissão'
+    reception: 'Receção'
+    music: 'Música'
+  table:
+    date: 'Data'
+    service: 'Culto'
+    department: 'Departamento'
+    role: 'Função'
+    status: 'Estado'
+    actions: 'Ações'
+  dept:
+    sound: 'Som'
+    broadcast: 'Transmissão'
+    reception: 'Receção'
+    music: 'Música'
+  role:
+    sound_operator: 'Operador de Som'
+    camera_operator: 'Operador de Câmara'
+    pianist: 'Pianista'
+    receptionist: 'Rececionista'
+  status:
+    confirmed: 'Confirmado'
+    pending: 'Pendente'
+    swap_requested: 'Troca Pedida'
+  action:
+    request_swap: 'Pedir Troca'
+    confirm: 'Confirmar'
+    decline: 'Recusar'
+    waiting_approval: 'Aguarda aprovação'
+
+# ── Transmissão ──
+transmissao:
+  title: 'Transmissão'
+  subtitle: 'Dashboard da equipa de transmissão e estado técnico.'
+  monthly_broadcasts: 'Transmissões do Mês'
+  done: 'realizadas'
+  saturday_team: 'Equipa de Sábado'
+  members_assigned: 'membros atribuídos'
+  tech_setup: 'Setup Técnico'
+  operational: 'Operacional'
+  stability: 'Estabilidade'
+  uptime: 'uptime'
+  upcoming: 'Próximas Transmissões'
+  table:
+    date: 'Data'
+    service: 'Culto'
+    platform: 'Plataforma'
+    team: 'Equipa'
+    status: 'Estado'
+  not_assigned: 'Não atribuída'
+  status:
+    ready: 'Pronto'
+    pending: 'Pendente'
+    no_team: 'Sem Equipa'
+  tech_checklist: 'Checklist Técnica'
+  check:
+    cameras: 'Câmaras'
+    encoder: 'Encoder/PC de Transmissão'
+    internet: 'Ligação à Internet'
+    audio_mixer: 'Mesa de Som'
+    overlays: 'Overlays e Gráficos'
+    update_needed: 'Atualizar'
+    streaming_keys: 'Chaves de Streaming'
+
+# ── Documentos ──
+documentos:
+  title: 'Documentos e Recursos'
+  subtitle: 'Documentos partilhados, manuais e ficheiros úteis.'
+  search: 'Pesquisar'
+  search_placeholder: 'Pesquisar documentos...'
+  filter_department: 'Departamento'
+  all_departments: 'Todos os Departamentos'
+  dept:
+    pastoral: 'Pastoral'
+    deacons: 'Diaconato'
+    music: 'Música'
+    broadcast: 'Transmissão'
+    sabbath_school: 'Escola Sabatina'
+  filter_type: 'Tipo de Ficheiro'
+  all_types: 'Todos os Tipos'
+  type:
+    image: 'Imagem'
+  available_documents: 'Documentos Disponíveis'
+  documents_count: 'documentos'
+  table:
+    name: 'Nome'
+    department: 'Departamento'
+    type: 'Tipo'
+    date: 'Data'
+    size: 'Tamanho'
+    action: 'Ação'
+  sample:
+    schedule_q1: 'Escala de Cultos — 1.º Trimestre 2025'
+    deacons_manual: 'Manual do Diaconato'
+    music_list: 'Lista de Hinos — Fevereiro 2025'
+    broadcast_guide: 'Guia de Transmissão (OBS Studio)'
+    sabbath_lesson: 'Lição da Escola Sabatina — Q1 2025'
+  download: 'Download'
+
+# ── Ajuda ──
+ajuda:
+  title: 'Ajuda e Contactos'
+  subtitle: 'Encontra informações de contacto e respostas rápidas.'
+  contact:
+    pastoral: 'Pastoral'
+    pastoral_desc: 'Questões sobre cultos, batismos ou aconselhamento.'
+    broadcast_team: 'Equipa de Transmissão'
+    broadcast_desc: 'Questões técnicas sobre transmissões online.'
+    tech_support: 'Suporte Técnico'
+    tech_support_desc: 'Problemas com o portal ou credenciais.'
+  faq:
+    title: 'Perguntas Frequentes'
+    q1: 'Como posso confirmar a minha escala?'
+    a1: 'Acede à página "Escalas Pessoais", encontra a escala pendente e clica no botão "Confirmar".'
+    q2: 'Posso trocar a minha escala com outro membro?'
+    a2: 'Sim. Na página "Escalas Pessoais", clica em "Pedir Troca" na escala pretendida. O pedido será analisado pelo responsável do departamento.'
+    q3: 'Onde encontro os documentos da escola sabatina?'
+    a3: 'Na página "Documentos e Recursos", filtra pelo departamento "Escola Sabatina" para encontrar as lições e materiais disponíveis.'
+    q4: 'Como sei quando tenho transmissão?'
+    a4: 'Consulta a página "Transmissão" para ver as próximas transmissões e a equipa atribuída a cada uma.'
+    q5: 'A quem devo reportar um problema no portal?'
+    a5: 'Envia um email para suporte@iasdcanelas.pt descrevendo o problema. Receberás resposta em 24–48 horas.'
