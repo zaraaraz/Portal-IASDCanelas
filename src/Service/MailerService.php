@@ -64,12 +64,12 @@ class MailerService
         $log->setSubject($subject);
         $log->setType($type);
         $log->setUser($user);
+        $log->setStatus(EmailLog::STATUS_FAILED);
 
         try {
             $this->mailer->send($email);
             $log->setStatus(EmailLog::STATUS_SENT);
-        } catch (TransportExceptionInterface $e) {
-            $log->setStatus(EmailLog::STATUS_FAILED);
+        } catch (\Throwable $e) {
             $log->setErrorMessage($e->getMessage());
 
             throw $e;
