@@ -9,19 +9,3 @@ common:
   close: 'Fechar'
   confirm: 'Confirmar'
   back: 'Voltar'
-
-# Changelog
-changelog:
-  title: 'Changelog'
-  subtitle: 'Histórico de todas as alterações, funcionalidades e correções do portal.'
-  latest_version: 'Última versão: v%version%'
-  version_label: 'Versão %version%'
-  changes_count: 'alterações'
-  empty: 'Ainda não existem entradas no changelog.'
-  table:
-    type: 'Tipo'
-    category: 'Categoria'
-    title: 'Título'
-    description: 'Descrição'
-    date: 'Data'
-    author: 'Autor'
