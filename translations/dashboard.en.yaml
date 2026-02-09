@@ -10,6 +10,7 @@ sidebar:
   schedules: 'My Schedules'
   broadcast: 'Broadcast'
   documents: 'Documents'
+  nas: 'NAS'
   help: 'Help'
 
 # ── Dashboard ──
@@ -200,3 +201,46 @@ ajuda:
     a4: 'Check the "Broadcast" page to see upcoming broadcasts and the team assigned to each one.'
     q5: 'Who should I contact about a portal issue?'
     a5: 'Send an email to suporte@iasdcanelas.pt describing the issue. You will get a response within 24–48 hours.'
+
+# ── NAS (Synology) ──
+nas:
+  title: 'NAS — Storage'
+  subtitle: 'Access files and monitor the status of the church NAS server.'
+  connected_as: 'Connected as %user%'
+  disconnect: 'Disconnect'
+  login:
+    title: 'Connect to NAS'
+    subtitle: 'Enter your Synology account credentials to access the NAS.'
+    username: 'NAS Username'
+    password: 'NAS Password'
+    otp: '2FA Code (OTP)'
+    otp_placeholder: '000000'
+    otp_help: 'If you have two-factor authentication enabled, enter the code from your app (e.g. Secure SignIn).'
+    connect: 'Connect'
+  error:
+    login_failed: 'Failed to connect to NAS. Check your credentials.'
+    session_expired: 'NAS session expired. Please log in again.'
+    upload_failed: 'Failed to upload file. Please try again.'
+    download_failed: 'Failed to download file.'
+    browse_failed: 'Could not list files.'
+    not_connected: 'Not connected to NAS. Please log in first.'
+  success:
+    login: 'Successfully connected to NAS!'
+    upload: 'File uploaded successfully!'
+    logout: 'NAS session ended.'
+    connected: 'Connected to NAS'
+  info:
+    model: 'Model'
+    storage: 'Storage'
+    cpu: 'CPU'
+    ram: 'RAM'
+  browser:
+    title: 'File Browser'
+    name: 'Name'
+    size: 'Size'
+    modified: 'Modified'
+    actions: 'Actions'
+    upload: 'Upload File'
+    uploading: 'Uploading…'
+    empty: 'This folder is empty.'
+    download: 'Download'

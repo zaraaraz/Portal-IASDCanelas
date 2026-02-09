@@ -1,0 +1,470 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'nas.title'|trans({}, 'dashboard') }} | Portal IASDCanelas{% endblock %}
+
+{% block body %}
+    <div>
+      {% include 'partials/sidebar-collapse.html.twig' %}
+      <div id="content" class="position-relative h-100">
+        {% include 'partials/topbar-second.html.twig' %}
+        <div class="custom-container">
+
+          {# ── Flash Messages ── #}
+          {% for type, messages in app.flashes %}
+            {% for message in messages %}
+              <div class="alert alert-{{ type }} alert-dismissible fade show mb-4" role="alert">
+                {{ message|trans({}, 'dashboard') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+          {% endfor %}
+
+          {# ── Page Header ── #}
+          <div class="row g-6 mb-6">
+            <div class="col-12">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h3 class="mb-1">{{ 'nas.title'|trans({}, 'dashboard') }}</h3>
+                  <p class="text-secondary mb-0">{{ 'nas.subtitle'|trans({}, 'dashboard') }}</p>
+                </div>
+                {% if connected %}
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="badge text-success-emphasis bg-success-subtle rounded-2 d-flex align-items-center gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M9 12l2 2l4 -4"/></svg>
+                      {{ 'nas.connected_as'|trans({'%user%': nas_user}, 'dashboard') }}
+                    </span>
+                    <a href="{{ path('nas_logout') }}" class="btn btn-outline-danger btn-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-logout"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"/><path d="M9 12h12l-3 -3"/><path d="M18 15l3 -3"/></svg>
+                      {{ 'nas.disconnect'|trans({}, 'dashboard') }}
+                    </a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+          {% if not connected %}
+            {# ══════════════════════════════════════ #}
+            {# ── NAS Login Form                   ── #}
+            {# ══════════════════════════════════════ #}
+            <div class="d-flex justify-content-center mb-6">
+              <div class="col-xl-5 col-md-8 col-12">
+                <div class="card card-lg">
+                  <div class="card-body d-flex flex-column gap-4">
+                    <div class="text-center">
+                      <div class="text-primary mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-server-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M7 8l0 .01"/><path d="M7 16l0 .01"/><path d="M11 8h6"/><path d="M11 16h6"/></svg>
+                      </div>
+                      <h4 class="mb-1">{{ 'nas.login.title'|trans({}, 'dashboard') }}</h4>
+                      <p class="text-secondary mb-0">{{ 'nas.login.subtitle'|trans({}, 'dashboard') }}</p>
+                    </div>
+                    <form method="post" action="{{ path('nas_login') }}">
+                      <div class="mb-3">
+                        <label for="nas_account" class="form-label">{{ 'nas.login.username'|trans({}, 'dashboard') }}</label>
+                        <input type="text" class="form-control" id="nas_account" name="nas_account" required autocomplete="username">
+                      </div>
+                      <div class="mb-3">
+                        <label for="nas_password" class="form-label">{{ 'nas.login.password'|trans({}, 'dashboard') }}</label>
+                        <input type="password" class="form-control" id="nas_password" name="nas_password" required autocomplete="current-password">
+                      </div>
+                      <div class="mb-3">
+                        <label for="nas_otp" class="form-label">{{ 'nas.login.otp'|trans({}, 'dashboard') }}</label>
+                        <input type="text" class="form-control" id="nas_otp" name="nas_otp" placeholder="{{ 'nas.login.otp_placeholder'|trans({}, 'dashboard') }}" autocomplete="one-time-code" inputmode="numeric" maxlength="6">
+                        <div class="form-text">{{ 'nas.login.otp_help'|trans({}, 'dashboard') }}</div>
+                      </div>
+                      <button type="submit" class="btn btn-primary w-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-login me-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"/><path d="M21 12h-13l3 -3"/><path d="M11 15l-3 -3"/></svg>
+                        {{ 'nas.login.connect'|trans({}, 'dashboard') }}
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          {% else %}
+            {# ══════════════════════════════════════ #}
+            {# ── System Info Cards (loaded via JS) ── #}
+            {# ══════════════════════════════════════ #}
+            <div class="row g-6 mb-6" id="nasSystemCards">
+              <div class="col-xl-3 col-md-6 col-12">
+                <div class="card card-lg bg-gradient-primary">
+                  <div class="card-body d-flex flex-column gap-8">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <div class="fw-semibold">{{ 'nas.info.model'|trans({}, 'dashboard') }}</div>
+                      </div>
+                      <div class="text-primary-emphasis">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-server-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M7 8l0 .01"/><path d="M7 16l0 .01"/><path d="M11 8h6"/><path d="M11 16h6"/></svg>
+                      </div>
+                    </div>
+                    <div class="lh-1 d-flex flex-column gap-3">
+                      <div class="fs-4 fw-bold" id="nasModel">—</div>
+                      <p class="mb-0">
+                        <span class="text-secondary" id="nasDsmVersion">DSM —</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-md-6 col-12">
+                <div class="card card-lg bg-gradient-success">
+                  <div class="card-body d-flex flex-column gap-8">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <div class="fw-semibold">{{ 'nas.info.storage'|trans({}, 'dashboard') }}</div>
+                      </div>
+                      <div class="text-success-emphasis">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-database"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0"/><path d="M4 6v6a8 3 0 0 0 16 0v-6"/><path d="M4 12v6a8 3 0 0 0 16 0v-6"/></svg>
+                      </div>
+                    </div>
+                    <div class="lh-1 d-flex flex-column gap-3">
+                      <div class="fs-4 fw-bold" id="nasStorageUsed">—</div>
+                      <p class="mb-0">
+                        <span class="text-secondary" id="nasStorageTotal">/ —</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-md-6 col-12">
+                <div class="card card-lg bg-gradient-info">
+                  <div class="card-body d-flex flex-column gap-8">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <div class="fw-semibold">CPU</div>
+                      </div>
+                      <div class="text-info-emphasis">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-cpu"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"/><path d="M9 9h6v6h-6z"/><path d="M3 10h2"/><path d="M3 14h2"/><path d="M10 3v2"/><path d="M14 3v2"/><path d="M21 10h-2"/><path d="M21 14h-2"/><path d="M14 21v-2"/><path d="M10 21v-2"/></svg>
+                      </div>
+                    </div>
+                    <div class="lh-1 d-flex flex-column gap-3">
+                      <div class="fs-1 fw-bold" id="nasCpu">—</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-md-6 col-12">
+                <div class="card card-lg bg-gradient-warning">
+                  <div class="card-body d-flex flex-column gap-8">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <div class="fw-semibold">RAM</div>
+                      </div>
+                      <div class="text-warning-emphasis">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-desktop-analytics"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"/><path d="M7 20h10"/><path d="M9 16v4"/><path d="M15 16v4"/><path d="M9 12v-4"/><path d="M12 12v-1"/><path d="M15 12v-2"/><path d="M12 12v-1"/></svg>
+                      </div>
+                    </div>
+                    <div class="lh-1 d-flex flex-column gap-3">
+                      <div class="fs-1 fw-bold" id="nasRam">—</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {# ══════════════════════════════════════ #}
+            {# ── File Browser                     ── #}
+            {# ══════════════════════════════════════ #}
+            <div class="row g-6 mb-6">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header border-bottom-0 d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                      <h5 class="card-title mb-0">{{ 'nas.browser.title'|trans({}, 'dashboard') }}</h5>
+                      {# Breadcrumb #}
+                      <nav aria-label="breadcrumb" id="nasBreadcrumb" class="mb-0">
+                        <ol class="breadcrumb mb-0">
+                          <li class="breadcrumb-item">
+                            <a href="#" onclick="nasBrowse(''); return false;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg>
+                              NAS
+                            </a>
+                          </li>
+                        </ol>
+                      </nav>
+                    </div>
+                    <div class="d-flex gap-2">
+                      {# Upload button #}
+                      <button class="btn btn-primary btn-sm" id="nasUploadBtn" onclick="document.getElementById('nasFileInput').click();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-upload"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/><path d="M7 9l5 -5l5 5"/><path d="M12 4l0 12"/></svg>
+                        {{ 'nas.browser.upload'|trans({}, 'dashboard') }}
+                      </button>
+                      <input type="file" id="nasFileInput" class="d-none" onchange="nasUploadFile(this);">
+                      {# Refresh #}
+                      <button class="btn btn-outline-secondary btn-sm" onclick="nasRefresh();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-refresh"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"/><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    {# Loading spinner #}
+                    <div id="nasLoading" class="text-center py-5 d-none">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                    {# File table #}
+                    <div class="table-responsive" id="nasFileTable">
+                      <table class="table text-nowrap mb-0 table-centered table-hover">
+                        <thead>
+                          <tr>
+                            <th style="width: 40px;"></th>
+                            <th>{{ 'nas.browser.name'|trans({}, 'dashboard') }}</th>
+                            <th>{{ 'nas.browser.size'|trans({}, 'dashboard') }}</th>
+                            <th>{{ 'nas.browser.modified'|trans({}, 'dashboard') }}</th>
+                            <th>{{ 'nas.browser.actions'|trans({}, 'dashboard') }}</th>
+                          </tr>
+                        </thead>
+                        <tbody id="nasFileList">
+                          {# Populated via JS #}
+                        </tbody>
+                      </table>
+                    </div>
+                    {# Empty state #}
+                    <div id="nasEmpty" class="text-center py-5 d-none">
+                      <div class="text-secondary mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-folder-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 3l18 18"/><path d="M19 19h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 1.172 -1.821m3.828 -.179h1l3 3h7a2 2 0 0 1 2 2v7"/></svg>
+                      </div>
+                      <p class="text-secondary mb-0">{{ 'nas.browser.empty'|trans({}, 'dashboard') }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+{% if connected %}
+<script>
+(function() {
+  let currentPath = '';
+
+  // ── Format helpers ──
+  function formatBytes(bytes) {
+    if (bytes === 0) return '—';
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+  }
+
+  function formatDate(timestamp) {
+    if (!timestamp) return '—';
+    const d = new Date(timestamp * 1000);
+    return d.toLocaleDateString('pt-PT', { day: '2-digit', month: 'short', year: 'numeric' })
+      + ' ' + d.toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  function getFileIcon(name, isDir) {
+    if (isDir) {
+      return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-warning icon icon-tabler icons-tabler-outline icon-tabler-folder-filled"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 3a1 1 0 0 1 .608 .206l.1 .087l2.706 2.707h6.586a3 3 0 0 1 2.995 2.824l.005 .176v8a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-11a3 3 0 0 1 2.824 -2.995l.176 -.005h4z" fill="currentColor" stroke-width="0"/></svg>';
+    }
+    const ext = name.split('.').pop().toLowerCase();
+    const colors = { pdf: 'text-danger', doc: 'text-primary', docx: 'text-primary', xls: 'text-success', xlsx: 'text-success', jpg: 'text-info', jpeg: 'text-info', png: 'text-info', mp4: 'text-warning', mp3: 'text-warning', zip: 'text-secondary' };
+    const color = colors[ext] || 'text-secondary';
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="' + color + ' icon icon-tabler icons-tabler-outline icon-tabler-file"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/></svg>';
+  }
+
+  // ── Browse ──
+  window.nasBrowse = function(path) {
+    currentPath = path;
+    const loading = document.getElementById('nasLoading');
+    const fileTable = document.getElementById('nasFileTable');
+    const empty = document.getElementById('nasEmpty');
+    const tbody = document.getElementById('nasFileList');
+
+    loading.classList.remove('d-none');
+    fileTable.classList.add('d-none');
+    empty.classList.add('d-none');
+
+    fetch('{{ path("nas_browse") }}?path=' + encodeURIComponent(path))
+      .then(r => r.json())
+      .then(data => {
+        loading.classList.add('d-none');
+
+        if (!data.success) {
+          empty.classList.remove('d-none');
+          return;
+        }
+
+        // Update breadcrumb
+        updateBreadcrumb(data.path);
+
+        // Build rows
+        const items = data.items || [];
+
+        // Sort: folders first, then files
+        items.sort((a, b) => {
+          if (a.isdir && !b.isdir) return -1;
+          if (!a.isdir && b.isdir) return 1;
+          return a.name.localeCompare(b.name);
+        });
+
+        if (items.length === 0) {
+          empty.classList.remove('d-none');
+          return;
+        }
+
+        let html = '';
+
+        // Parent folder link
+        if (data.parent !== null && data.path !== '') {
+          html += '<tr class="cursor-pointer" onclick="nasBrowse(\'' + escapeHtml(data.parent) + '\')">';
+          html += '<td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-secondary icon icon-tabler icons-tabler-outline icon-tabler-arrow-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14"/><path d="M18 11l-6 -6"/><path d="M6 11l6 -6"/></svg></td>';
+          html += '<td class="fw-semibold text-secondary">..</td><td></td><td></td><td></td></tr>';
+        }
+
+        items.forEach(function(item) {
+          html += '<tr' + (item.isdir ? ' class="cursor-pointer" onclick="nasBrowse(\'' + escapeHtml(item.path) + '\')"' : '') + '>';
+          html += '<td>' + getFileIcon(item.name, item.isdir) + '</td>';
+          html += '<td class="fw-semibold">' + escapeHtml(item.name) + '</td>';
+          html += '<td class="text-secondary">' + (item.isdir ? '—' : formatBytes(item.size)) + '</td>';
+          html += '<td class="text-secondary">' + formatDate(item.time) + '</td>';
+          html += '<td>';
+          if (!item.isdir) {
+            html += '<a href="{{ path("nas_download") }}?path=' + encodeURIComponent(item.path) + '" class="btn btn-primary btn-sm">';
+            html += '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/><path d="M7 11l5 5l5 -5"/><path d="M12 4l0 12"/></svg>';
+            html += '</a>';
+          }
+          html += '</td></tr>';
+        });
+
+        tbody.innerHTML = html;
+        fileTable.classList.remove('d-none');
+      })
+      .catch(err => {
+        loading.classList.add('d-none');
+        empty.classList.remove('d-none');
+        console.error('NAS browse error:', err);
+      });
+  };
+
+  // ── Breadcrumb ──
+  function updateBreadcrumb(path) {
+    const ol = document.querySelector('#nasBreadcrumb ol');
+    let html = '<li class="breadcrumb-item"><a href="#" onclick="nasBrowse(\'\'); return false;">NAS</a></li>';
+
+    if (path) {
+      const parts = path.replace(/^\//, '').split('/');
+      let accumulated = '';
+      parts.forEach(function(part, idx) {
+        accumulated += '/' + part;
+        const isLast = idx === parts.length - 1;
+        if (isLast) {
+          html += '<li class="breadcrumb-item active" aria-current="page">' + escapeHtml(part) + '</li>';
+        } else {
+          html += '<li class="breadcrumb-item"><a href="#" onclick="nasBrowse(\'' + escapeHtml(accumulated) + '\'); return false;">' + escapeHtml(part) + '</a></li>';
+        }
+      });
+    }
+
+    ol.innerHTML = html;
+  }
+
+  // ── Upload ──
+  window.nasUploadFile = function(input) {
+    if (!input.files || !input.files[0]) return;
+
+    const file = input.files[0];
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('dest_path', currentPath || '/');
+
+    const btn = document.getElementById('nasUploadBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span> {{ "nas.browser.uploading"|trans({}, "dashboard") }}';
+
+    fetch('{{ path("nas_upload") }}', { method: 'POST', body: formData })
+      .then(r => r.json())
+      .then(data => {
+        btn.disabled = false;
+        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/><path d="M7 9l5 -5l5 5"/><path d="M12 4l0 12"/></svg> {{ "nas.browser.upload"|trans({}, "dashboard") }}';
+        input.value = '';
+
+        if (data.success) {
+          nasBrowse(currentPath);
+        } else {
+          alert('{{ "nas.error.upload_failed"|trans({}, "dashboard") }}');
+        }
+      })
+      .catch(err => {
+        btn.disabled = false;
+        input.value = '';
+        console.error('Upload error:', err);
+      });
+  };
+
+  // ── Refresh ──
+  window.nasRefresh = function() {
+    nasBrowse(currentPath);
+  };
+
+  // ── System Info ──
+  function loadSystemInfo() {
+    fetch('{{ path("nas_system_info") }}')
+      .then(r => r.json())
+      .then(data => {
+        if (!data.success) return;
+
+        // System
+        if (data.system) {
+          document.getElementById('nasModel').textContent = data.system.model || '—';
+          document.getElementById('nasDsmVersion').textContent = 'DSM ' + (data.system.version_string || data.system.version || '—');
+        }
+
+        // Storage — volumes
+        if (data.storage && data.storage.volumes && data.storage.volumes.length > 0) {
+          const vol = data.storage.volumes[0];
+          const totalBytes = parseInt(vol.size?.total || 0);
+          const usedBytes = parseInt(vol.size?.used || 0);
+          document.getElementById('nasStorageUsed').textContent = formatBytes(usedBytes);
+          document.getElementById('nasStorageTotal').textContent = '/ ' + formatBytes(totalBytes);
+        }
+
+        // Utilization
+        if (data.utilization) {
+          if (data.utilization.cpu) {
+            const cpuLoad = data.utilization.cpu.user_load || 0;
+            document.getElementById('nasCpu').textContent = cpuLoad + '%';
+          }
+          if (data.utilization.memory) {
+            const memTotal = parseInt(data.utilization.memory.total_real || 0);
+            const memAvail = parseInt(data.utilization.memory.avail_real || 0);
+            const memUsedPct = memTotal > 0 ? Math.round(((memTotal - memAvail) / memTotal) * 100) : 0;
+            document.getElementById('nasRam').textContent = memUsedPct + '%';
+          }
+        }
+      })
+      .catch(err => console.error('System info error:', err));
+  }
+
+  // ── Escape HTML ──
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML.replace(/'/g, "\\'");
+  }
+
+  // ── Init ──
+  document.addEventListener('DOMContentLoaded', function() {
+    nasBrowse('');
+    loadSystemInfo();
+  });
+})();
+</script>
+<style>
+  .cursor-pointer { cursor: pointer; }
+  .cursor-pointer:hover td { background-color: var(--ds-gray-100); }
+</style>
+{% endif %}
+{% endblock %}

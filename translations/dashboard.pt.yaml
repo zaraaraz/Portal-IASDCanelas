@@ -10,6 +10,7 @@ sidebar:
   schedules: 'Escalas Pessoais'
   broadcast: 'Transmissão'
   documents: 'Documentos'
+  nas: 'NAS'
   help: 'Ajuda'
 
 # ── Dashboard ──
@@ -200,3 +201,46 @@ ajuda:
     a4: 'Consulta a página "Transmissão" para ver as próximas transmissões e a equipa atribuída a cada uma.'
     q5: 'A quem devo reportar um problema no portal?'
     a5: 'Envia um email para suporte@iasdcanelas.pt descrevendo o problema. Receberás resposta em 24–48 horas.'
+
+# ── NAS (Synology) ──
+nas:
+  title: 'NAS — Armazenamento'
+  subtitle: 'Acede aos ficheiros e monitoriza o estado do servidor NAS da igreja.'
+  connected_as: 'Ligado como %user%'
+  disconnect: 'Desligar'
+  login:
+    title: 'Ligar ao NAS'
+    subtitle: 'Introduz as tuas credenciais da conta Synology para aceder ao NAS.'
+    username: 'Utilizador NAS'
+    password: 'Palavra-passe NAS'
+    otp: 'Código 2FA (OTP)'
+    otp_placeholder: '000000'
+    otp_help: 'Se tiveres autenticação de dois fatores ativa, introduz o código da app (ex: Secure SignIn).'
+    connect: 'Ligar'
+  error:
+    login_failed: 'Falha ao ligar ao NAS. Verifica as tuas credenciais.'
+    session_expired: 'Sessão NAS expirada. Faz login novamente.'
+    upload_failed: 'Falha ao enviar o ficheiro. Tenta outra vez.'
+    download_failed: 'Falha ao descarregar o ficheiro.'
+    browse_failed: 'Não foi possível listar os ficheiros.'
+    not_connected: 'Não estás ligado ao NAS. Faz login primeiro.'
+  success:
+    login: 'Ligação ao NAS estabelecida com sucesso!'
+    upload: 'Ficheiro enviado com sucesso!'
+    logout: 'Sessão NAS terminada.'
+    connected: 'Conectado ao NAS'
+  info:
+    model: 'Modelo'
+    storage: 'Armazenamento'
+    cpu: 'CPU'
+    ram: 'RAM'
+  browser:
+    title: 'Explorador de Ficheiros'
+    name: 'Nome'
+    size: 'Tamanho'
+    modified: 'Modificado'
+    actions: 'Ações'
+    upload: 'Enviar Ficheiro'
+    uploading: 'A enviar…'
+    empty: 'Esta pasta está vazia.'
+    download: 'Descarregar'
