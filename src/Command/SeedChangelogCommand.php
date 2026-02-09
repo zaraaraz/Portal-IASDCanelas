@@ -182,6 +182,15 @@ class SeedChangelogCommand extends Command
                 'author' => 'Simão Soares',
                 'date' => '2026-02-09',
             ],
+            [
+                'version' => '0.2.0',
+                'title' => 'Envio de emails com Symfony Mailer + Mailtrap',
+                'description' => 'Implementação do serviço MailerService para envio de emails transacionais usando Symfony Mailer com transporte Mailtrap. Template HTML de email para recuperação de palavra-passe com branding do portal, botão de ação e link de fallback.',
+                'type' => Changelog::TYPE_FEATURE,
+                'category' => 'Email',
+                'author' => 'Simão Soares',
+                'date' => '2026-02-09',
+            ],
         ];
     }
 }

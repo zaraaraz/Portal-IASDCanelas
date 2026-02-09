@@ -7,6 +7,7 @@ use App\Form\ForgotPasswordFormType;
 use App\Form\RegistrationFormType;
 use App\Form\ResetPasswordFormType;
 use App\Repository\UserRepository;
+use App\Service\MailerService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -80,6 +81,7 @@ final class AuthController extends AbstractController
         Request $request,
         UserRepository $userRepository,
         EntityManagerInterface $entityManager,
+        MailerService $mailerService,
     ): Response {
         // If already logged in, redirect to dashboard
         if ($this->getUser()) {
@@ -101,13 +103,12 @@ final class AuthController extends AbstractController
 
                 $entityManager->flush();
 
-                // TODO: Send email with reset link
-                // For now, we'll flash the token for development purposes
-                $this->addFlash('info', 'auth.forgot_password.email_sent');
-            } else {
-                // Don't reveal whether a user account was found or not
-                $this->addFlash('info', 'auth.forgot_password.email_sent');
+                // Send reset password email via Mailtrap
+                $mailerService->sendResetPasswordEmail($user);
             }
+
+            // Always show same message to prevent email enumeration
+            $this->addFlash('info', 'auth.forgot_password.email_sent');
 
             return $this->redirectToRoute('auth_forgot_password');
         }
