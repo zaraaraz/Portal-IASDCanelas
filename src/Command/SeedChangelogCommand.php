@@ -191,6 +191,15 @@ class SeedChangelogCommand extends Command
                 'author' => 'Simão Soares',
                 'date' => '2026-02-09',
             ],
+            [
+                'version' => '0.2.0',
+                'title' => 'Sistema de Email Logs',
+                'description' => 'Criação da entidade EmailLog para rastrear todos os emails enviados pelo sistema. Regista destinatário, assunto, tipo, status (sent/failed), mensagem de erro e utilizador associado. O MailerService faz log automático de cada envio com suporte para falhas.',
+                'type' => Changelog::TYPE_FEATURE,
+                'category' => 'Email',
+                'author' => 'Simão Soares',
+                'date' => '2026-02-09',
+            ],
         ];
     }
 }
