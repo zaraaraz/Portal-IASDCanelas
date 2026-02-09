@@ -21,25 +21,21 @@
 
           {# ── Page Header ── #}
           <div class="row g-6 mb-6">
-            <div class="col-12">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h3 class="mb-1">{{ 'nas.title'|trans({}, 'dashboard') }}</h3>
-                  <p class="text-secondary mb-0">{{ 'nas.subtitle'|trans({}, 'dashboard') }}</p>
+            <div class="col-12 text-center">
+              <h3 class="mb-1">{{ 'nas.title'|trans({}, 'dashboard') }}</h3>
+              <p class="text-secondary mb-0">{{ 'nas.subtitle'|trans({}, 'dashboard') }}</p>
+              {% if connected %}
+                <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                  <span class="badge text-success-emphasis bg-success-subtle rounded-2 d-flex align-items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M9 12l2 2l4 -4"/></svg>
+                    {{ 'nas.connected_as'|trans({'%user%': nas_user}, 'dashboard') }}
+                  </span>
+                  <a href="{{ path('nas_logout') }}" class="btn btn-outline-danger btn-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-logout"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"/><path d="M9 12h12l-3 -3"/><path d="M18 15l3 -3"/></svg>
+                    {{ 'nas.disconnect'|trans({}, 'dashboard') }}
+                  </a>
                 </div>
-                {% if connected %}
-                  <div class="d-flex align-items-center gap-3">
-                    <span class="badge text-success-emphasis bg-success-subtle rounded-2 d-flex align-items-center gap-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M9 12l2 2l4 -4"/></svg>
-                      {{ 'nas.connected_as'|trans({'%user%': nas_user}, 'dashboard') }}
-                    </span>
-                    <a href="{{ path('nas_logout') }}" class="btn btn-outline-danger btn-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-logout"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"/><path d="M9 12h12l-3 -3"/><path d="M18 15l3 -3"/></svg>
-                      {{ 'nas.disconnect'|trans({}, 'dashboard') }}
-                    </a>
-                  </div>
-                {% endif %}
-              </div>
+              {% endif %}
             </div>
           </div>
 

@@ -3,6 +3,8 @@
 namespace App\Service;
 
 use Psr\Log\LoggerInterface;
+use Symfony\Contracts\Cache\CacheInterface;
+use Symfony\Contracts\Cache\ItemInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class SynologyApiService
@@ -13,6 +15,7 @@ class SynologyApiService
     public function __construct(
         private readonly HttpClientInterface $httpClient,
         private readonly LoggerInterface $logger,
+        private readonly CacheInterface $cache,
         string $synologyNasUrl,
     ) {
         $this->baseUrl = rtrim($synologyNasUrl, '/');
@@ -20,6 +23,7 @@ class SynologyApiService
 
     /**
      * Get the actual API base URL, resolving QuickConnect if needed.
+     * Result is cached for 30 minutes to avoid re-resolving on every request.
      */
     private function getApiBaseUrl(): string
     {
@@ -30,20 +34,41 @@ class SynologyApiService
         // Check if it's a QuickConnect URL
         if (preg_match('/^https?:\/\/([^.]+)\.quickconnect\.to/i', $this->baseUrl, $matches)) {
             $serverId = $matches[1];
-            $resolved = $this->resolveQuickConnect($serverId);
-            if ($resolved) {
-                $this->resolvedUrl = $resolved;
-                $this->logger->info('QuickConnect resolved', ['serverId' => $serverId, 'url' => $resolved]);
 
-                return $this->resolvedUrl;
-            }
+            $this->resolvedUrl = $this->cache->get('synology_resolved_url', function (ItemInterface $item) use ($serverId) {
+                $item->expiresAfter(1800); // Cache for 30 minutes
 
-            $this->logger->warning('QuickConnect resolution failed, falling back to raw URL');
+                $this->logger->info('Cache MISS — resolving QuickConnect', ['serverId' => $serverId]);
+                $resolved = $this->resolveQuickConnect($serverId);
+                if ($resolved) {
+                    $this->logger->info('QuickConnect resolved and cached for 30 min', ['serverId' => $serverId, 'url' => $resolved]);
+
+                    return $resolved;
+                }
+
+                $this->logger->warning('QuickConnect resolution failed, falling back to raw URL');
+                $item->expiresAfter(60); // Only cache failure for 1 minute
+
+                return $this->baseUrl;
+            });
+
+            $this->logger->debug('Using NAS URL (from cache or resolve)', ['url' => $this->resolvedUrl]);
+
+            return $this->resolvedUrl;
         }
 
         $this->resolvedUrl = $this->baseUrl;
 
         return $this->resolvedUrl;
+    }
+
+    /**
+     * Invalidate the cached resolved URL (e.g. when connection fails).
+     */
+    public function invalidateResolvedUrl(): void
+    {
+        $this->resolvedUrl = null;
+        $this->cache->delete('synology_resolved_url');
     }
 
     /**
@@ -80,12 +105,10 @@ class SynologyApiService
 
             // Helper: test both HTTPS and HTTP for a given host
             $tryHost = function (string $host) use ($httpsPort, $httpPort): ?string {
-                // Try HTTPS first (port 5001 by default)
                 $httpsUrl = 'https://' . $host . ':' . $httpsPort;
                 if ($this->testConnection($httpsUrl)) {
                     return $httpsUrl;
                 }
-                // Try HTTP (port 5000 by default)
                 $httpUrl = 'http://' . $host . ':' . $httpPort;
                 if ($this->testConnection($httpUrl)) {
                     return $httpUrl;
@@ -94,7 +117,16 @@ class SynologyApiService
                 return null;
             };
 
-            // Try 1: LAN IPs (if portal is on the same network as NAS)
+            // Try 1: Relay tunnel (most reliable for QuickConnect without port forwarding)
+            $controlHost = $data['env']['control_host'] ?? null;
+            if ($controlHost) {
+                $tunnelUrl = $this->requestRelayTunnel($controlHost, $serverId, $service);
+                if ($tunnelUrl) {
+                    return $tunnelUrl;
+                }
+            }
+
+            // Try 2: LAN IPs (only if relay failed — usually unreachable from external)
             $interfaces = $server['interface'] ?? [];
             foreach ($interfaces as $iface) {
                 if (!empty($iface['ip']) && $iface['ip'] !== '0.0.0.0') {
@@ -102,50 +134,6 @@ class SynologyApiService
                     if ($result) {
                         return $result;
                     }
-                }
-            }
-
-            // Try 2: DDNS hostname
-            $ddns = $server['ddns'] ?? '';
-            if (!empty($ddns) && $ddns !== 'NULL') {
-                $result = $tryHost($ddns);
-                if ($result) {
-                    return $result;
-                }
-            }
-
-            // Try 3: SmartDNS external (QuickConnect relay-like direct access)
-            if (!empty($smartdns['host']) && $smartdns['host'] !== 'NULL') {
-                $result = $tryHost($smartdns['host']);
-                if ($result) {
-                    return $result;
-                }
-            }
-
-            // Try 4: External IP
-            $extIp = $server['external']['ip'] ?? '';
-            if (!empty($extIp) && $extIp !== '::') {
-                $result = $tryHost($extIp);
-                if ($result) {
-                    return $result;
-                }
-            }
-
-            // Try 5: FQDN
-            $fqdn = $server['fqdn'] ?? '';
-            if (!empty($fqdn) && $fqdn !== 'NULL') {
-                $result = $tryHost($fqdn);
-                if ($result) {
-                    return $result;
-                }
-            }
-
-            // Try 6: Relay tunnel
-            $controlHost = $data['env']['control_host'] ?? null;
-            if ($controlHost) {
-                $tunnelUrl = $this->requestRelayTunnel($controlHost, $serverId, $service);
-                if ($tunnelUrl) {
-                    return $tunnelUrl;
                 }
             }
 
@@ -172,7 +160,7 @@ class SynologyApiService
                 ],
                 'verify_peer' => false,
                 'verify_host' => false,
-                'timeout' => 5,
+                'timeout' => 3,
             ]);
 
             $content = $response->getContent(false);
@@ -213,32 +201,24 @@ class SynologyApiService
             if (($data['errno'] ?? -1) === 0) {
                 $svc = $data['service'] ?? [];
 
-                // Try 1: HTTPS relay (https_ip + https_port) — most reliable
+                // Try 1: HTTP relay (relay_dn + relay_port) — fastest and most reliable
+                // Skip testConnection() as this method consistently works
+                $relayDn = $svc['relay_dn'] ?? '';
+                $relayPort = $svc['relay_port'] ?? 0;
+                if (!empty($relayDn) && $relayPort > 0) {
+                    $httpUrl = 'http://' . $relayDn . ':' . $relayPort;
+                    $this->logger->info('Relay tunnel resolved (HTTP)', ['url' => $httpUrl]);
+
+                    return $httpUrl;
+                }
+
+                // Try 2: HTTPS relay (https_ip + https_port) — fallback
                 $httpsIp = $svc['https_ip'] ?? '';
                 $httpsPort = $svc['https_port'] ?? 0;
                 if (!empty($httpsIp) && $httpsPort > 0) {
                     $httpsUrl = 'https://' . $httpsIp . ':' . $httpsPort;
                     if ($this->testConnection($httpsUrl)) {
                         return $httpsUrl;
-                    }
-                }
-
-                // Try 2: HTTP relay (relay_dn + relay_port)
-                $relayDn = $svc['relay_dn'] ?? '';
-                $relayPort = $svc['relay_port'] ?? 0;
-                if (!empty($relayDn) && $relayPort > 0) {
-                    $httpUrl = 'http://' . $relayDn . ':' . $relayPort;
-                    if ($this->testConnection($httpUrl)) {
-                        return $httpUrl;
-                    }
-                }
-
-                // Try 3: HTTPS relay with relay_dualstack hostname on port 443
-                $relayDualstack = $svc['relay_dualstack'] ?? '';
-                if (!empty($relayDualstack)) {
-                    $dsUrl = 'https://' . $relayDualstack . ':443';
-                    if ($this->testConnection($dsUrl)) {
-                        return $dsUrl;
                     }
                 }
             }
