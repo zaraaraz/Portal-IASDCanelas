@@ -77,3 +77,5 @@ auth:
     didnt_receive: "Didn't receive the email? Click"
     resend: 'send it again.'
     back_to_login: 'Back to Login'
+
+logout: 'Logout'

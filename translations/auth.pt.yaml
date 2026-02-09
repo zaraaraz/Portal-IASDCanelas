@@ -77,3 +77,5 @@ auth:
     didnt_receive: 'Não recebeu o email? Clique em'
     resend: 'reenviar.'
     back_to_login: 'Voltar ao Login'
+
+logout: 'Terminar Sessão'

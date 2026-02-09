@@ -49,3 +49,5 @@ meetings:
 ai:
   start: 'Start AI'
   welcome: "Hello! I'm your AI assistant. How can I help you today?"
+
+home: 'Home'
