@@ -1,0 +1,165 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'profile.title'|trans({}, 'dashboard') }} | Portal IASDCanelas{% endblock %}
+
+{% block body %}
+    <div>
+      {% include 'partials/sidebar-collapse.html.twig' %}
+      <div id="content" class="position-relative h-100">
+        {% include 'partials/topbar-second.html.twig' %}
+        <div class="custom-container">
+
+          {# ── Page Header ── #}
+          <div class="row g-6 mb-6">
+            <div class="col-12">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h3 class="mb-1">{{ 'profile.title'|trans({}, 'dashboard') }}</h3>
+                  <p class="text-secondary mb-0">{{ 'profile.subtitle'|trans({}, 'dashboard') }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {# ── Flash Messages ── #}
+          {% for type in ['success', 'danger', 'warning', 'info'] %}
+            {% for message in app.flashes(type) %}
+              <div class="alert alert-{{ type }} alert-dismissible fade show mb-6" role="alert">
+                {{ message|trans({}, 'dashboard') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+          {% endfor %}
+
+          <div class="row g-6">
+            {# ── Profile Card (left) ── #}
+            <div class="col-xl-4 col-lg-5 col-12">
+              <div class="card card-lg">
+                <div class="card-body d-flex flex-column align-items-center text-center gap-4">
+                  <div class="position-relative">
+                    <img src="{{ asset(app.user.avatarUrl) }}" alt="{{ app.user.fullName }}" class="avatar avatar-xxl rounded-circle" id="avatarPreview" />
+                    <form action="{{ path('profile_avatar') }}" method="post" enctype="multipart/form-data" id="avatarForm">
+                      <label for="avatarInput" class="position-absolute bottom-0 end-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; cursor: pointer;" title="{{ 'profile.form.change_avatar'|trans({}, 'dashboard') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-camera"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /><path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
+                      </label>
+                      <input type="file" id="avatarInput" name="avatar" accept="image/jpeg,image/png,image/webp,image/gif" class="d-none" onchange="document.getElementById('avatarForm').submit();" />
+                    </form>
+                  </div>
+                  <div>
+                    <h4 class="mb-1">{{ app.user.fullName }}</h4>
+                    <p class="text-secondary mb-0">{{ app.user.email }}</p>
+                  </div>
+                  <div class="d-flex flex-column gap-2 w-100">
+                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                      <span class="text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shield-check me-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /><path d="M15 19l2 2l4 -4" /></svg>
+                        {{ 'profile.info.role'|trans({}, 'dashboard') }}
+                      </span>
+                      <span>
+                        {% for role in app.user.roles %}
+                          {% if role != 'ROLE_USER' %}
+                            {% set roleEntity = roleMap[role] ?? null %}
+                            {% set color = roleEntity ? roleEntity.badgeColor : 'primary' %}
+                            {% set name = roleEntity ? roleEntity.displayName : role %}
+                            <span class="badge text-{{ color }}-emphasis bg-{{ color }}-subtle rounded-2">{{ name }}</span>
+                          {% endif %}
+                        {% endfor %}
+                        {# Always show ROLE_USER last #}
+                        {% set userRole = roleMap['ROLE_USER'] ?? null %}
+                        <span class="badge text-{{ userRole ? userRole.badgeColor : 'secondary' }}-emphasis bg-{{ userRole ? userRole.badgeColor : 'secondary' }}-subtle rounded-2">{{ userRole ? userRole.displayName : 'Membro' }}</span>
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                      <span class="text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clock-edit me-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 12a9 9 0 1 0 -9.972 8.948" /><path d="M12 7v5l2 2" /><path d="M18.42 15.61a2.1 2.1 0 0 1 2.97 2.97l-3.39 3.42h-3v-3l3.42 -3.39z" /></svg>
+                        {{ 'profile.info.last_updated'|trans({}, 'dashboard') }}
+                      </span>
+                      <span>{{ app.user.updatedAt|date('d/m/Y H:i') }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2">
+                      <span class="text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar me-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M11 15h1" /><path d="M12 15v3" /></svg>
+                        {{ 'profile.info.member_since'|trans({}, 'dashboard') }}
+                      </span>
+                      <span>{{ app.user.createdAt|date('d/m/Y') }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {# ── Edit Forms (right) ── #}
+            <div class="col-xl-8 col-lg-7 col-12">
+
+              {# ── Personal Info Form ── #}
+              <div class="card card-lg mb-6">
+                <div class="card-body">
+                  <h5 class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-edit me-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" /><path d="M18.42 15.61a2.1 2.1 0 0 1 2.97 2.97l-3.39 3.42h-3v-3l3.42 -3.39z" /></svg>
+                    {{ 'profile.section.personal_info'|trans({}, 'dashboard') }}
+                  </h5>
+                  {{ form_start(profileForm, {'attr': {'novalidate': 'novalidate'}}) }}
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <label class="form-label" for="{{ profileForm.fullName.vars.id }}">{{ 'profile.form.full_name'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(profileForm.fullName) }}
+                        {{ form_errors(profileForm.fullName) }}
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="{{ profileForm.email.vars.id }}">{{ 'profile.form.email'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(profileForm.email) }}
+                        {{ form_errors(profileForm.email) }}
+                      </div>
+                    </div>
+                    <div class="mt-4">
+                      <button type="submit" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-floppy me-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2" /><path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M14 4l0 4l-6 0l0 -4" /></svg>
+                        {{ 'profile.form.save'|trans({}, 'dashboard') }}
+                      </button>
+                    </div>
+                  {{ form_end(profileForm) }}
+                </div>
+              </div>
+
+              {# ── Change Password Form ── #}
+              <div class="card card-lg">
+                <div class="card-body">
+                  <h5 class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-lock me-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></svg>
+                    {{ 'profile.section.change_password'|trans({}, 'dashboard') }}
+                  </h5>
+                  {{ form_start(passwordForm, {'attr': {'novalidate': 'novalidate'}}) }}
+                    <div class="row g-4">
+                      <div class="col-12">
+                        <label class="form-label" for="{{ passwordForm.currentPassword.vars.id }}">{{ 'profile.form.current_password'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(passwordForm.currentPassword) }}
+                        {{ form_errors(passwordForm.currentPassword) }}
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="{{ passwordForm.newPassword.first.vars.id }}">{{ 'profile.form.new_password'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(passwordForm.newPassword.first) }}
+                        {{ form_errors(passwordForm.newPassword.first) }}
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="{{ passwordForm.newPassword.second.vars.id }}">{{ 'profile.form.confirm_password'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(passwordForm.newPassword.second) }}
+                        {{ form_errors(passwordForm.newPassword.second) }}
+                      </div>
+                    </div>
+                    <div class="mt-4">
+                      <button type="submit" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-lock-check me-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.5 21h-4.5a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v1" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /><path d="M15 19l2 2l4 -4" /></svg>
+                        {{ 'profile.form.change_password'|trans({}, 'dashboard') }}
+                      </button>
+                    </div>
+                  {{ form_end(passwordForm) }}
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+{% endblock %}

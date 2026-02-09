@@ -244,3 +244,44 @@ nas:
     uploading: 'Uploading…'
     empty: 'This folder is empty.'
     download: 'Download'
+
+# ── Profile ──
+profile:
+  title: 'Account Settings'
+  subtitle: 'Manage your personal information and password.'
+  section:
+    personal_info: 'Personal Information'
+    change_password: 'Change Password'
+  form:
+    full_name: 'Full Name'
+    full_name_placeholder: 'Enter your full name'
+    email: 'Email'
+    email_placeholder: 'Enter your email'
+    current_password: 'Current Password'
+    new_password: 'New Password'
+    confirm_password: 'Confirm New Password'
+    save: 'Save Changes'
+    change_password: 'Change Password'
+    change_avatar: 'Change photo'
+  info:
+    role: 'Role'
+    last_updated: 'Last updated'
+    member_since: 'Member since'
+  success:
+    updated: 'Information updated successfully.'
+    password_changed: 'Password changed successfully.'
+    avatar_updated: 'Photo updated successfully.'
+  error:
+    fullname_required: 'Name is required.'
+    email_required: 'Email is required.'
+    current_password_required: 'Current password is required.'
+    current_password_invalid: 'Current password is incorrect.'
+    password_required: 'New password is required.'
+    password_min_length: 'Password must be at least 8 characters.'
+    avatar_required: 'Please select an image.'
+    avatar_invalid_type: 'Invalid image format. Use JPG, PNG, WebP or GIF.'
+    avatar_too_large: 'Image is too large. Maximum 2MB.'
+
+# ── Topbar / User Dropdown ──
+topbar:
+  account_settings: 'Account Settings'
