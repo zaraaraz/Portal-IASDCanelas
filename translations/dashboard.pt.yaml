@@ -12,6 +12,8 @@ sidebar:
   documents: 'Documentos'
   nas: 'NAS'
   help: 'Ajuda'
+  admin_section: 'Administração'
+  admin_users: 'Utilizadores'
 
 # ── Dashboard ──
 dashboard:
@@ -281,6 +283,71 @@ profile:
     avatar_required: 'Seleciona uma imagem.'
     avatar_invalid_type: 'Formato de imagem inválido. Usa JPG, PNG, WebP ou GIF.'
     avatar_too_large: 'A imagem é demasiado grande. Máximo 2MB.'
+
+# ── Admin: Utilizadores ──
+admin:
+  users:
+    title: 'Gestão de Utilizadores'
+    subtitle: 'Gerir contas, papéis e estado de utilizadores.'
+    stats:
+      total: 'Total de utilizadores'
+      active: 'Ativos'
+      inactive: 'Inativos'
+      admins: 'Administradores'
+    table:
+      user: 'Utilizador'
+      email: 'Email'
+      roles: 'Papéis'
+      status: 'Estado'
+      active: 'Ativo'
+      inactive: 'Inativo'
+      created_at: 'Registo'
+      actions: 'Ações'
+      you: 'Tu'
+      yes: 'Sim'
+      no: 'Não'
+      empty: 'Nenhum utilizador encontrado.'
+    btn:
+      new_user: 'Novo Utilizador'
+      edit: 'Editar'
+      deactivate: 'Desativar conta'
+      activate: 'Ativar conta'
+      back_to_list: 'Voltar à lista'
+      save_changes: 'Guardar Alterações'
+      create_user: 'Criar Utilizador'
+      cancel: 'Cancelar'
+    form:
+      title_new: 'Novo Utilizador'
+      title_edit: 'Editar Utilizador'
+      subtitle_new: 'Preenche os dados para criar uma nova conta.'
+      subtitle_edit: 'Atualiza os dados deste utilizador.'
+      section_new: 'Dados do Utilizador'
+      section_edit: 'Editar Dados'
+      full_name: 'Nome Completo'
+      full_name_placeholder: 'Insere o nome completo'
+      email: 'Email'
+      email_placeholder: 'Insere o email'
+      password: 'Palavra-passe'
+      password_placeholder: 'Insere a palavra-passe'
+      new_password: 'Nova Palavra-passe'
+      new_password_placeholder: 'Deixa vazio para manter a atual'
+      password_hint: 'Deixa vazio para manter a palavra-passe atual.'
+      roles: 'Papéis'
+      is_active: 'Conta ativa'
+    confirm:
+      deactivate: 'Tens a certeza que queres desativar este utilizador?'
+    success:
+      created: 'Utilizador criado com sucesso.'
+      updated: 'Utilizador atualizado com sucesso.'
+      active_toggled: 'Estado da conta atualizado.'
+    error:
+      fullname_required: 'O nome é obrigatório.'
+      email_required: 'O email é obrigatório.'
+      email_invalid: 'O email não é válido.'
+      password_required: 'A palavra-passe é obrigatória.'
+      password_min_length: 'A palavra-passe deve ter pelo menos 8 caracteres.'
+      invalid_token: 'Token inválido. Tenta novamente.'
+      cannot_deactivate_self: 'Não podes desativar a tua própria conta.'
 
 # ── Topbar / User Dropdown ──
 topbar:

@@ -12,6 +12,8 @@ sidebar:
   documents: 'Documents'
   nas: 'NAS'
   help: 'Help'
+  admin_section: 'Administration'
+  admin_users: 'Users'
 
 # ── Dashboard ──
 dashboard:
@@ -281,6 +283,71 @@ profile:
     avatar_required: 'Please select an image.'
     avatar_invalid_type: 'Invalid image format. Use JPG, PNG, WebP or GIF.'
     avatar_too_large: 'Image is too large. Maximum 2MB.'
+
+# ── Admin: Users ──
+admin:
+  users:
+    title: 'User Management'
+    subtitle: 'Manage user accounts, roles and status.'
+    stats:
+      total: 'Total users'
+      active: 'Active'
+      inactive: 'Inactive'
+      admins: 'Administrators'
+    table:
+      user: 'User'
+      email: 'Email'
+      roles: 'Roles'
+      status: 'Status'
+      active: 'Active'
+      inactive: 'Inactive'
+      created_at: 'Registered'
+      actions: 'Actions'
+      you: 'You'
+      yes: 'Yes'
+      no: 'No'
+      empty: 'No users found.'
+    btn:
+      new_user: 'New User'
+      edit: 'Edit'
+      deactivate: 'Deactivate account'
+      activate: 'Activate account'
+      back_to_list: 'Back to list'
+      save_changes: 'Save Changes'
+      create_user: 'Create User'
+      cancel: 'Cancel'
+    form:
+      title_new: 'New User'
+      title_edit: 'Edit User'
+      subtitle_new: 'Fill in the details to create a new account.'
+      subtitle_edit: 'Update this user details.'
+      section_new: 'User Details'
+      section_edit: 'Edit Details'
+      full_name: 'Full Name'
+      full_name_placeholder: 'Enter full name'
+      email: 'Email'
+      email_placeholder: 'Enter email'
+      password: 'Password'
+      password_placeholder: 'Enter password'
+      new_password: 'New Password'
+      new_password_placeholder: 'Leave empty to keep current'
+      password_hint: 'Leave empty to keep current password.'
+      roles: 'Roles'
+      is_active: 'Active account'
+    confirm:
+      deactivate: 'Are you sure you want to deactivate this user?'
+    success:
+      created: 'User created successfully.'
+      updated: 'User updated successfully.'
+      active_toggled: 'Account status updated.'
+    error:
+      fullname_required: 'Name is required.'
+      email_required: 'Email is required.'
+      email_invalid: 'Email is not valid.'
+      password_required: 'Password is required.'
+      password_min_length: 'Password must be at least 8 characters.'
+      invalid_token: 'Invalid token. Please try again.'
+      cannot_deactivate_self: 'You cannot deactivate your own account.'
 
 # ── Topbar / User Dropdown ──
 topbar:
