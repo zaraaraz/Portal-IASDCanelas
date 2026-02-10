@@ -14,6 +14,7 @@ sidebar:
   help: 'Ajuda'
   admin_section: 'Administração'
   admin_users: 'Utilizadores'
+  admin_roles: 'Roles'
 
 # ── Dashboard ──
 dashboard:
@@ -348,6 +349,67 @@ admin:
       password_min_length: 'A palavra-passe deve ter pelo menos 8 caracteres.'
       invalid_token: 'Token inválido. Tenta novamente.'
       cannot_deactivate_self: 'Não podes desativar a tua própria conta.'
+
+  # ── Admin: Papéis ──
+  roles:
+    title: 'Gestão de Papéis'
+    subtitle: 'Gerir os papéis e funções disponíveis na igreja.'
+    stats:
+      total: 'Total de papéis'
+      colors_used: 'Cores em uso'
+    table:
+      order: '#'
+      badge: 'Badge'
+      code: 'Código'
+      name: 'Nome'
+      display_name: 'Nome de Exibição'
+      description: 'Descrição'
+      actions: 'Ações'
+      empty: 'Nenhum papel encontrado.'
+      in_use: 'em uso'
+    btn:
+      new_role: 'Novo Papel'
+      edit: 'Editar'
+      delete: 'Eliminar'
+      system_role: 'Papel de sistema'
+      back_to_list: 'Voltar à lista'
+      save_changes: 'Guardar Alterações'
+      create_role: 'Criar Papel'
+      cancel: 'Cancelar'
+    form:
+      title_new: 'Novo Papel'
+      title_edit: 'Editar Papel'
+      subtitle_new: 'Preenche os dados para criar um novo papel.'
+      subtitle_edit: 'Atualiza os dados deste papel.'
+      section_new: 'Dados do Papel'
+      section_edit: 'Editar Dados'
+      code: 'Código'
+      code_placeholder: 'Ex: ROLE_ANCIAO'
+      display_name: 'Nome de Exibição'
+      display_name_placeholder: 'Ex: Ancião'
+      description: 'Descrição'
+      description_placeholder: 'Descrição opcional do papel'
+      badge_color: 'Cor do Badge'
+      sort_order: 'Ordem'
+      sort_order_hint: 'Número mais baixo aparece primeiro na lista.'
+      code_hint: 'Deve começar com ROLE_ e conter apenas letras maiúsculas e underscores.'
+      preview: 'Pré-visualização'
+    confirm:
+      delete: 'Tens a certeza que queres eliminar este papel?'
+    success:
+      created: 'Papel criado com sucesso.'
+      updated: 'Papel atualizado com sucesso.'
+      deleted: 'Papel eliminado com sucesso.'
+    error:
+      invalid_token: 'Token inválido. Tenta novamente.'
+      cannot_delete_in_use: 'Não é possível eliminar este papel porque está atribuído a utilizadores.'
+    color:
+      danger: 'Vermelho'
+      primary: 'Azul'
+      info: 'Ciano'
+      warning: 'Amarelo'
+      success: 'Verde'
+      secondary: 'Cinzento'
 
 # ── Topbar / User Dropdown ──
 topbar:

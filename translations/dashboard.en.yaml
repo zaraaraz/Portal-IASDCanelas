@@ -14,6 +14,7 @@ sidebar:
   help: 'Help'
   admin_section: 'Administration'
   admin_users: 'Users'
+  admin_roles: 'Roles'
 
 # ── Dashboard ──
 dashboard:
@@ -348,6 +349,67 @@ admin:
       password_min_length: 'Password must be at least 8 characters.'
       invalid_token: 'Invalid token. Please try again.'
       cannot_deactivate_self: 'You cannot deactivate your own account.'
+
+  # ── Admin: Roles ──
+  roles:
+    title: 'Role Management'
+    subtitle: 'Manage available roles and functions in the church.'
+    stats:
+      total: 'Total roles'
+      colors_used: 'Colors in use'
+    table:
+      order: '#'
+      badge: 'Badge'
+      code: 'Code'
+      name: 'Name'
+      display_name: 'Display Name'
+      description: 'Description'
+      actions: 'Actions'
+      empty: 'No roles found.'
+      in_use: 'in use'
+    btn:
+      new_role: 'New Role'
+      edit: 'Edit'
+      delete: 'Delete'
+      system_role: 'System role'
+      back_to_list: 'Back to list'
+      save_changes: 'Save Changes'
+      create_role: 'Create Role'
+      cancel: 'Cancel'
+    form:
+      title_new: 'New Role'
+      title_edit: 'Edit Role'
+      subtitle_new: 'Fill in the details to create a new role.'
+      subtitle_edit: 'Update this role details.'
+      section_new: 'Role Details'
+      section_edit: 'Edit Details'
+      code: 'Code'
+      code_placeholder: 'E.g.: ROLE_ANCIAO'
+      display_name: 'Display Name'
+      display_name_placeholder: 'E.g.: Elder'
+      description: 'Description'
+      description_placeholder: 'Optional role description'
+      badge_color: 'Badge Color'
+      sort_order: 'Order'
+      sort_order_hint: 'Lower number appears first in the list.'
+      code_hint: 'Must start with ROLE_ and contain only uppercase letters and underscores.'
+      preview: 'Preview'
+    confirm:
+      delete: 'Are you sure you want to delete this role?'
+    success:
+      created: 'Role created successfully.'
+      updated: 'Role updated successfully.'
+      deleted: 'Role deleted successfully.'
+    error:
+      invalid_token: 'Invalid token. Please try again.'
+      cannot_delete_in_use: 'Cannot delete this role because it is assigned to users.'
+    color:
+      danger: 'Red'
+      primary: 'Blue'
+      info: 'Cyan'
+      warning: 'Yellow'
+      success: 'Green'
+      secondary: 'Grey'
 
 # ── Topbar / User Dropdown ──
 topbar:
