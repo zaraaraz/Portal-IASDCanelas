@@ -13,3 +13,69 @@ auth:
     error:
       email_required: 'Por favor, insira o email.'
       password_required: 'Por favor, insira a palavra-passe.'
+
+  register:
+    title: 'Criar Conta'
+    subtitle: 'Registe-se agora e obtenha uma conta gratuita.'
+    full_name: 'Nome Completo'
+    email: 'Email'
+    password: 'Palavra-passe'
+    confirm_password: 'Confirmar Palavra-passe'
+    terms_of_use: 'Termos de Uso'
+    privacy_policy: 'Política de Privacidade'
+    submit: 'Registar'
+    already_have_account: 'Já tem uma conta?'
+    sign_in_here: 'Entre aqui.'
+    success: 'Conta criada com sucesso! Pode agora iniciar sessão.'
+    error:
+      fullname_required: 'Por favor, insira o nome completo.'
+      email_required: 'Por favor, insira o email.'
+      email_exists: 'Este email já está registado.'
+      password_required: 'Por favor, insira a palavra-passe.'
+      password_min_length: 'A palavra-passe deve ter pelo menos 8 caracteres.'
+      passwords_mismatch: 'As palavras-passe não coincidem.'
+      agree_terms: 'Deve aceitar os termos de uso.'
+
+  forgot_password:
+    title: 'Esqueceu a Palavra-passe'
+    subtitle: 'Não se preocupe, enviaremos instruções de recuperação.'
+    email: 'Email'
+    email_placeholder: 'Insira o seu email'
+    submit: 'Recuperar Palavra-passe'
+    back_to_login: 'Voltar ao Login'
+    email_sent: 'Se o email existir no nosso sistema, receberá instruções de recuperação.'
+    email_subject: 'Recuperação de Palavra-passe'
+    email_heading: 'Recuperação de Palavra-passe'
+    email_greeting: 'Olá %name%,'
+    email_body: 'Recebemos um pedido para redefinir a sua palavra-passe. Clique no botão abaixo para criar uma nova palavra-passe.'
+    email_button: 'Redefinir Palavra-passe'
+    email_expiry: 'Este link expira em 1 hora.'
+    email_ignore: 'Se não solicitou esta alteração, pode ignorar este email com segurança.'
+    email_copy_link: 'Se o botão não funcionar, copie e cole o link abaixo no seu navegador:'
+    error:
+      email_required: 'Por favor, insira o email.'
+      email_invalid: 'Por favor, insira um email válido.'
+
+  reset_password:
+    title: 'Definir Nova Palavra-passe'
+    subtitle: 'Introduza a sua nova palavra-passe abaixo.'
+    password: 'Palavra-passe'
+    confirm_password: 'Confirmar Palavra-passe'
+    submit: 'Redefinir Palavra-passe'
+    back_to_login: 'Voltar ao Login'
+    success: 'Palavra-passe redefinida com sucesso! Pode agora iniciar sessão.'
+    error:
+      invalid_token: 'O link de recuperação é inválido ou expirou.'
+      password_required: 'Por favor, insira a palavra-passe.'
+      password_min_length: 'A palavra-passe deve ter pelo menos 8 caracteres.'
+      passwords_mismatch: 'As palavras-passe não coincidem.'
+
+  otp:
+    title: 'Verificação OTP'
+    subtitle: 'Enviámos um código para o seu email.'
+    submit: 'Continuar'
+    didnt_receive: 'Não recebeu o email? Clique em'
+    resend: 'reenviar.'
+    back_to_login: 'Voltar ao Login'
+
+logout: 'Terminar Sessão'

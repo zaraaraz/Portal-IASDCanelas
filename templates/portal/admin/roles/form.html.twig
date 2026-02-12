@@ -1,0 +1,143 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ (isEdit ? 'admin.roles.form.title_edit' : 'admin.roles.form.title_new')|trans({}, 'dashboard') }} | Portal IASDCanelas{% endblock %}
+
+{% block body %}
+    <div>
+      {% include 'partials/sidebar-collapse.html.twig' %}
+      <div id="content" class="position-relative h-100">
+        {% include 'partials/topbar-second.html.twig' %}
+        <div class="custom-container">
+
+          {# ── Page Header ── #}
+          <div class="row g-6 mb-6">
+            <div class="col-12">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h3 class="mb-1">{{ (isEdit ? 'admin.roles.form.title_edit' : 'admin.roles.form.title_new')|trans({}, 'dashboard') }}</h3>
+                  <p class="text-secondary mb-0">{{ (isEdit ? 'admin.roles.form.subtitle_edit' : 'admin.roles.form.subtitle_new')|trans({}, 'dashboard') }}</p>
+                </div>
+                <a href="{{ path('admin_roles_index') }}" class="btn btn-outline-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left me-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+                  {{ 'admin.roles.btn.back_to_list'|trans({}, 'dashboard') }}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {# ── Flash Messages ── #}
+          {% for type in ['success', 'danger', 'warning', 'info'] %}
+            {% for message in app.flashes(type) %}
+              <div class="alert alert-{{ type }} alert-dismissible fade show mb-6" role="alert">
+                {{ message|trans({}, 'dashboard') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+          {% endfor %}
+
+          <div class="row g-6">
+            {# ── Preview Card (left, edit only) ── #}
+            {% if isEdit %}
+              <div class="col-xl-4 col-lg-5 col-12">
+                <div class="card card-lg">
+                  <div class="card-body d-flex flex-column align-items-center text-center gap-4">
+                    <div class="bg-{{ role.badgeColor }}-subtle text-{{ role.badgeColor }} rounded-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shield"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" /></svg>
+                    </div>
+                    <div>
+                      <h4 class="mb-1">{{ role.displayName }}</h4>
+                      <code class="text-secondary">{{ role.code }}</code>
+                    </div>
+                    <div class="d-flex flex-column gap-2 w-100">
+                      <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span class="text-secondary">{{ 'admin.roles.table.badge'|trans({}, 'dashboard') }}</span>
+                        <span class="badge text-{{ role.badgeColor }}-emphasis bg-{{ role.badgeColor }}-subtle rounded-2">{{ role.displayName }}</span>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span class="text-secondary">{{ 'admin.roles.form.sort_order'|trans({}, 'dashboard') }}</span>
+                        <span>{{ role.sortOrder }}</span>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center py-2">
+                        <span class="text-secondary">{{ 'admin.roles.table.description'|trans({}, 'dashboard') }}</span>
+                        <span>{{ role.description ?? '—' }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+            {# ── Form ── #}
+            <div class="{{ isEdit ? 'col-xl-8 col-lg-7 col-12' : 'col-12' }}">
+              <div class="card card-lg">
+                <div class="card-body">
+                  <h5 class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shield-cog me-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -1.078 5.334" /><path d="M11.18 20.823a12.02 12.02 0 0 1 -.18 .177a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3a12 12 0 0 0 2.24 .928" /><path d="M19.001 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M19.001 15.5v1.5" /><path d="M19.001 21v1.5" /><path d="M22.032 17.25l-1.299 .75" /><path d="M17.27 20l-1.3 .75" /><path d="M15.97 17.25l1.3 .75" /><path d="M20.733 20l1.3 .75" /></svg>
+                    {{ (isEdit ? 'admin.roles.form.section_edit' : 'admin.roles.form.section_new')|trans({}, 'dashboard') }}
+                  </h5>
+
+                  {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <label class="form-label" for="{{ form.code.vars.id }}">{{ 'admin.roles.form.code'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(form.code) }}
+                        {{ form_errors(form.code) }}
+                        <small class="text-secondary">{{ 'admin.roles.form.code_hint'|trans({}, 'dashboard') }}</small>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="{{ form.displayName.vars.id }}">{{ 'admin.roles.form.display_name'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(form.displayName) }}
+                        {{ form_errors(form.displayName) }}
+                      </div>
+                    </div>
+
+                    <div class="row g-4 mt-2">
+                      <div class="col-12">
+                        <label class="form-label" for="{{ form.description.vars.id }}">{{ 'admin.roles.form.description'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(form.description) }}
+                        {{ form_errors(form.description) }}
+                      </div>
+                    </div>
+
+                    <div class="row g-4 mt-2">
+                      <div class="col-md-6">
+                        <label class="form-label" for="{{ form.badgeColor.vars.id }}">{{ 'admin.roles.form.badge_color'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(form.badgeColor) }}
+                        {{ form_errors(form.badgeColor) }}
+                        <div class="mt-2">
+                          <span class="text-secondary me-2">{{ 'admin.roles.form.preview'|trans({}, 'dashboard') }}:</span>
+                          <span class="badge text-danger-emphasis bg-danger-subtle rounded-2 me-1">danger</span>
+                          <span class="badge text-primary-emphasis bg-primary-subtle rounded-2 me-1">primary</span>
+                          <span class="badge text-info-emphasis bg-info-subtle rounded-2 me-1">info</span>
+                          <span class="badge text-warning-emphasis bg-warning-subtle rounded-2 me-1">warning</span>
+                          <span class="badge text-success-emphasis bg-success-subtle rounded-2 me-1">success</span>
+                          <span class="badge text-secondary-emphasis bg-secondary-subtle rounded-2">secondary</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="{{ form.sortOrder.vars.id }}">{{ 'admin.roles.form.sort_order'|trans({}, 'dashboard') }}</label>
+                        {{ form_widget(form.sortOrder) }}
+                        {{ form_errors(form.sortOrder) }}
+                        <small class="text-secondary">{{ 'admin.roles.form.sort_order_hint'|trans({}, 'dashboard') }}</small>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 d-flex gap-2">
+                      <button type="submit" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-floppy me-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2" /><path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M14 4l0 4l-6 0l0 -4" /></svg>
+                        {{ (isEdit ? 'admin.roles.btn.save_changes' : 'admin.roles.btn.create_role')|trans({}, 'dashboard') }}
+                      </button>
+                      <a href="{{ path('admin_roles_index') }}" class="btn btn-outline-secondary">
+                        {{ 'admin.roles.btn.cancel'|trans({}, 'dashboard') }}
+                      </a>
+                    </div>
+                  {{ form_end(form) }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+{% endblock %}

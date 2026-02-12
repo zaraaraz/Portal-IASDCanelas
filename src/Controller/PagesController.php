@@ -28,29 +28,29 @@ final class PagesController extends AbstractController
         return $this->render('pages/error/404-error.html.twig');
     }
 
-    // Authentication pages
+    // Authentication pages - redirect to real auth routes
     #[Route('/auth/sign-in', name: 'auth_sign_in')]
     public function signIn(): Response
     {
-        return $this->render('pages/authentication/sign-in.html.twig');
+        return $this->redirectToRoute('auth_login');
     }
 
     #[Route('/auth/sign-up', name: 'auth_sign_up')]
     public function signUp(): Response
     {
-        return $this->render('pages/authentication/sign-up.html.twig');
+        return $this->redirectToRoute('auth_register');
     }
 
     #[Route('/auth/forget-password', name: 'auth_forget_password')]
     public function forgetPassword(): Response
     {
-        return $this->render('pages/authentication/forget-password.html.twig');
+        return $this->redirectToRoute('auth_forgot_password');
     }
 
     #[Route('/auth/reset-password', name: 'auth_reset_password')]
     public function resetPassword(): Response
     {
-        return $this->render('pages/authentication/reset-password.html.twig');
+        return $this->redirectToRoute('auth_forgot_password');
     }
 
     #[Route('/auth/otp-verification', name: 'auth_otp_verification')]

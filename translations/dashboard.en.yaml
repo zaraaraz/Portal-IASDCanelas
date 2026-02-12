@@ -1,51 +1,422 @@
-# Dashboard
+# ─────────────────────────────────────────────────
+# Portal IASDCanelas — Translations EN (dashboard domain)
+# ─────────────────────────────────────────────────
+
+home: 'Home'
+
+# ── Sidebar ──
+sidebar:
+  dashboard: 'Dashboard'
+  schedules: 'My Schedules'
+  broadcast: 'Broadcast'
+  documents: 'Documents'
+  nas: 'NAS'
+  help: 'Help'
+  admin_section: 'Administration'
+  admin_users: 'Users'
+  admin_roles: 'Roles'
+
+# ── Dashboard ──
 dashboard:
   title: 'Dashboard'
-  
-# Statistics Cards
-stats:
-  total_projects: 'Total Projects'
-  completed: 'Completed'
-  task: 'Task'
-  tasks: 'Tasks'
-  members: 'Members'
-  productivity: 'Productivity'
-  increased: 'Increased'
+  welcome: 'Welcome, %name%!'
+  welcome_subtitle: 'Here is an overview of the church activity.'
+  next_services: 'Upcoming Services'
+  this_week: 'this week'
+  my_schedules: 'My Schedules'
+  pending: 'pending'
+  broadcasts_month: 'Broadcasts'
+  completed: 'completed'
+  notices: 'Notices'
+  active: 'active'
+  upcoming_services: 'Upcoming Services'
+  table:
+    date: 'Date'
+    service_type: 'Service Type'
+    theme: 'Theme'
+    preacher: 'Preacher'
+    status: 'Status'
+  sample:
+    saturday: 'Saturday'
+    wednesday: 'Wednesday'
+    next_saturday: 'Next Saturday'
+    theme_1: 'Sabbath School Lesson'
+    theme_2: 'Redeeming Grace'
+    theme_3: 'Prayer and Faith'
+    theme_4: 'Hope for the Future'
+  service_types:
+    sabbath_school: 'Sabbath School'
+    divine_worship: 'Divine Worship'
+    prayer_meeting: 'Prayer Meeting'
+  status:
+    scheduled: 'Scheduled'
+    confirmed: 'Confirmed'
+    pending: 'Pending'
+  saturday_checklist: 'Saturday Checklist'
+  checklist:
+    sound_team: 'Sound team confirmed'
+    broadcast_team: 'Broadcast team confirmed'
+    reception_team: 'Reception team pending'
+    music_team: 'Music team not confirmed'
+  latest_notices: 'Latest Notices'
+  notice:
+    board_meeting: 'Board Meeting'
+    board_meeting_desc: 'Next meeting on the 20th at 7:30 PM.'
+    schedule_change: 'Schedule Change'
+    schedule_change_desc: 'Swap approved for Feb 22 — Sound.'
 
-# Projects
-projects:
-  active_projects: 'Active Projects'
-  name: 'Name'
-  progress: 'Progress'
-  status: 'Status'
-  assigned: 'Assigned'
-  action: 'Action'
-  view_all: 'View All Projects'
-  edit: 'Edit'
-  delete: 'Delete'
+# ── Schedules (Escalas) ──
+escalas:
+  title: 'My Schedules'
+  subtitle: 'View your service schedules and manage swaps.'
+  total: 'Total Schedules'
+  this_month: 'this month'
+  confirmed: 'Confirmed'
+  pending_status: 'Pending'
+  swap_requests: 'Swap Requests'
+  my_schedules: 'My Schedules'
+  filter:
+    all_months: 'All Months'
+    january: 'January'
+    february: 'February'
+    march: 'March'
+    all_departments: 'All Departments'
+    sound: 'Sound'
+    broadcast: 'Broadcast'
+    reception: 'Reception'
+    music: 'Music'
+  table:
+    date: 'Date'
+    service: 'Service'
+    department: 'Department'
+    role: 'Role'
+    status: 'Status'
+    actions: 'Actions'
+  dept:
+    sound: 'Sound'
+    broadcast: 'Broadcast'
+    reception: 'Reception'
+    music: 'Music'
+  role:
+    sound_operator: 'Sound Operator'
+    camera_operator: 'Camera Operator'
+    pianist: 'Pianist'
+    receptionist: 'Receptionist'
+  status:
+    confirmed: 'Confirmed'
+    pending: 'Pending'
+    swap_requested: 'Swap Requested'
+  action:
+    request_swap: 'Request Swap'
+    confirm: 'Confirm'
+    decline: 'Decline'
+    waiting_approval: 'Waiting approval'
 
-# Tasks
-tasks:
-  my_task: 'My Task'
-  task_progress: 'Task Progress'
-  completed: 'Completed'
-  in_progress: 'In Progress'
-  upcoming: 'Up Coming'
+# ── Broadcast (Transmissão) ──
+transmissao:
+  title: 'Broadcast'
+  subtitle: 'Broadcast team dashboard and technical status.'
+  monthly_broadcasts: 'Monthly Broadcasts'
+  done: 'done'
+  saturday_team: 'Saturday Team'
+  members_assigned: 'members assigned'
+  tech_setup: 'Tech Setup'
+  operational: 'Operational'
+  stability: 'Stability'
+  uptime: 'uptime'
+  upcoming: 'Upcoming Broadcasts'
+  table:
+    date: 'Date'
+    service: 'Service'
+    platform: 'Platform'
+    team: 'Team'
+    status: 'Status'
+  not_assigned: 'Not assigned'
+  status:
+    ready: 'Ready'
+    pending: 'Pending'
+    no_team: 'No Team'
+  tech_checklist: 'Technical Checklist'
+  check:
+    cameras: 'Cameras'
+    encoder: 'Encoder/Broadcast PC'
+    internet: 'Internet Connection'
+    audio_mixer: 'Audio Mixer'
+    overlays: 'Overlays & Graphics'
+    update_needed: 'Update needed'
+    streaming_keys: 'Streaming Keys'
 
-# Budget
-budget:
-  project_budget: 'Project Budget'
-  budget_allocation: 'Budget Allocation Overview:'
-  spent: 'Spent:'
-  remaining: 'Remaining:'
-  add_budget: 'Add Budget'
-  view_details: 'View Details'
+# ── Documents ──
+documentos:
+  title: 'Documents & Resources'
+  subtitle: 'Shared documents, manuals and useful files.'
+  search: 'Search'
+  search_placeholder: 'Search documents...'
+  filter_department: 'Department'
+  all_departments: 'All Departments'
+  dept:
+    pastoral: 'Pastoral'
+    deacons: 'Deacons'
+    music: 'Music'
+    broadcast: 'Broadcast'
+    sabbath_school: 'Sabbath School'
+  filter_type: 'File Type'
+  all_types: 'All Types'
+  type:
+    image: 'Image'
+  available_documents: 'Available Documents'
+  documents_count: 'documents'
+  table:
+    name: 'Name'
+    department: 'Department'
+    type: 'Type'
+    date: 'Date'
+    size: 'Size'
+    action: 'Action'
+  sample:
+    schedule_q1: 'Service Schedule — Q1 2025'
+    deacons_manual: 'Deacons Manual'
+    music_list: 'Hymn List — February 2025'
+    broadcast_guide: 'Broadcast Guide (OBS Studio)'
+    sabbath_lesson: 'Sabbath School Lesson — Q1 2025'
+  download: 'Download'
 
-# Meetings
-meetings:
-  upcoming_meetings: 'Upcoming Meetings'
+# ── Help ──
+ajuda:
+  title: 'Help & Contacts'
+  subtitle: 'Find contact information and quick answers.'
+  contact:
+    pastoral: 'Pastoral'
+    pastoral_desc: 'Questions about services, baptisms or counselling.'
+    broadcast_team: 'Broadcast Team'
+    broadcast_desc: 'Technical questions about online broadcasts.'
+    tech_support: 'Technical Support'
+    tech_support_desc: 'Issues with the portal or credentials.'
+  faq:
+    title: 'Frequently Asked Questions'
+    q1: 'How do I confirm my schedule?'
+    a1: 'Go to "My Schedules", find the pending schedule and click "Confirm".'
+    q2: 'Can I swap my schedule with another member?'
+    a2: 'Yes. On "My Schedules", click "Request Swap" on the desired schedule. The request will be reviewed by the department leader.'
+    q3: 'Where can I find Sabbath School documents?'
+    a3: 'On "Documents & Resources", filter by "Sabbath School" department to find the available lessons and materials.'
+    q4: 'How do I know when I have a broadcast?'
+    a4: 'Check the "Broadcast" page to see upcoming broadcasts and the team assigned to each one.'
+    q5: 'Who should I contact about a portal issue?'
+    a5: 'Send an email to suporte@iasdcanelas.pt describing the issue. You will get a response within 24–48 hours.'
 
 # AI Assistant
 ai:
   start: 'Start AI'
   welcome: "Hello! I'm your AI assistant. How can I help you today?"
+
+  
+# ── NAS (Synology) ──
+nas:
+  title: 'NAS — Storage'
+  subtitle: 'Access files and monitor the status of the church NAS server.'
+  connected_as: 'Connected as %user%'
+  disconnect: 'Disconnect'
+  login:
+    title: 'Connect to NAS'
+    subtitle: 'Enter your Synology account credentials to access the NAS.'
+    username: 'NAS Username'
+    password: 'NAS Password'
+    otp: '2FA Code (OTP)'
+    otp_placeholder: '000000'
+    otp_help: 'If you have two-factor authentication enabled, enter the code from your app (e.g. Secure SignIn).'
+    connect: 'Connect'
+  error:
+    login_failed: 'Failed to connect to NAS. Check your credentials.'
+    session_expired: 'NAS session expired. Please log in again.'
+    upload_failed: 'Failed to upload file. Please try again.'
+    download_failed: 'Failed to download file.'
+    browse_failed: 'Could not list files.'
+    not_connected: 'Not connected to NAS. Please log in first.'
+  success:
+    login: 'Successfully connected to NAS!'
+    upload: 'File uploaded successfully!'
+    logout: 'NAS session ended.'
+    connected: 'Connected to NAS'
+  info:
+    model: 'Model'
+    storage: 'Storage'
+    cpu: 'CPU'
+    ram: 'RAM'
+  browser:
+    title: 'File Browser'
+    name: 'Name'
+    size: 'Size'
+    modified: 'Modified'
+    actions: 'Actions'
+    upload: 'Upload File'
+    uploading: 'Uploading…'
+    empty: 'This folder is empty.'
+    download: 'Download'
+
+# ── Profile ──
+profile:
+  title: 'Account Settings'
+  subtitle: 'Manage your personal information and password.'
+  section:
+    personal_info: 'Personal Information'
+    change_password: 'Change Password'
+  form:
+    full_name: 'Full Name'
+    full_name_placeholder: 'Enter your full name'
+    email: 'Email'
+    email_placeholder: 'Enter your email'
+    current_password: 'Current Password'
+    new_password: 'New Password'
+    confirm_password: 'Confirm New Password'
+    save: 'Save Changes'
+    change_password: 'Change Password'
+    change_avatar: 'Change photo'
+  info:
+    role: 'Role'
+    last_updated: 'Last updated'
+    member_since: 'Member since'
+  success:
+    updated: 'Information updated successfully.'
+    password_changed: 'Password changed successfully.'
+    avatar_updated: 'Photo updated successfully.'
+  error:
+    fullname_required: 'Name is required.'
+    email_required: 'Email is required.'
+    current_password_required: 'Current password is required.'
+    current_password_invalid: 'Current password is incorrect.'
+    password_required: 'New password is required.'
+    password_min_length: 'Password must be at least 8 characters.'
+    avatar_required: 'Please select an image.'
+    avatar_invalid_type: 'Invalid image format. Use JPG, PNG, WebP or GIF.'
+    avatar_too_large: 'Image is too large. Maximum 2MB.'
+
+# ── Admin: Users ──
+admin:
+  users:
+    title: 'User Management'
+    subtitle: 'Manage user accounts, roles and status.'
+    stats:
+      total: 'Total users'
+      active: 'Active'
+      inactive: 'Inactive'
+      admins: 'Administrators'
+    table:
+      user: 'User'
+      email: 'Email'
+      roles: 'Roles'
+      status: 'Status'
+      active: 'Active'
+      inactive: 'Inactive'
+      created_at: 'Registered'
+      actions: 'Actions'
+      you: 'You'
+      yes: 'Yes'
+      no: 'No'
+      empty: 'No users found.'
+    btn:
+      new_user: 'New User'
+      edit: 'Edit'
+      deactivate: 'Deactivate account'
+      activate: 'Activate account'
+      back_to_list: 'Back to list'
+      save_changes: 'Save Changes'
+      create_user: 'Create User'
+      cancel: 'Cancel'
+    form:
+      title_new: 'New User'
+      title_edit: 'Edit User'
+      subtitle_new: 'Fill in the details to create a new account.'
+      subtitle_edit: 'Update this user details.'
+      section_new: 'User Details'
+      section_edit: 'Edit Details'
+      full_name: 'Full Name'
+      full_name_placeholder: 'Enter full name'
+      email: 'Email'
+      email_placeholder: 'Enter email'
+      password: 'Password'
+      password_placeholder: 'Enter password'
+      new_password: 'New Password'
+      new_password_placeholder: 'Leave empty to keep current'
+      password_hint: 'Leave empty to keep current password.'
+      roles: 'Roles'
+      is_active: 'Active account'
+    confirm:
+      deactivate: 'Are you sure you want to deactivate this user?'
+    success:
+      created: 'User created successfully.'
+      updated: 'User updated successfully.'
+      active_toggled: 'Account status updated.'
+    error:
+      fullname_required: 'Name is required.'
+      email_required: 'Email is required.'
+      email_invalid: 'Email is not valid.'
+      password_required: 'Password is required.'
+      password_min_length: 'Password must be at least 8 characters.'
+      invalid_token: 'Invalid token. Please try again.'
+      cannot_deactivate_self: 'You cannot deactivate your own account.'
+
+  # ── Admin: Roles ──
+  roles:
+    title: 'Role Management'
+    subtitle: 'Manage available roles and functions in the church.'
+    stats:
+      total: 'Total roles'
+      colors_used: 'Colors in use'
+    table:
+      order: '#'
+      badge: 'Badge'
+      code: 'Code'
+      name: 'Name'
+      display_name: 'Display Name'
+      description: 'Description'
+      actions: 'Actions'
+      empty: 'No roles found.'
+      in_use: 'in use'
+    btn:
+      new_role: 'New Role'
+      edit: 'Edit'
+      delete: 'Delete'
+      system_role: 'System role'
+      back_to_list: 'Back to list'
+      save_changes: 'Save Changes'
+      create_role: 'Create Role'
+      cancel: 'Cancel'
+    form:
+      title_new: 'New Role'
+      title_edit: 'Edit Role'
+      subtitle_new: 'Fill in the details to create a new role.'
+      subtitle_edit: 'Update this role details.'
+      section_new: 'Role Details'
+      section_edit: 'Edit Details'
+      code: 'Code'
+      code_placeholder: 'E.g.: ROLE_ANCIAO'
+      display_name: 'Display Name'
+      display_name_placeholder: 'E.g.: Elder'
+      description: 'Description'
+      description_placeholder: 'Optional role description'
+      badge_color: 'Badge Color'
+      sort_order: 'Order'
+      sort_order_hint: 'Lower number appears first in the list.'
+      code_hint: 'Must start with ROLE_ and contain only uppercase letters and underscores.'
+      preview: 'Preview'
+    confirm:
+      delete: 'Are you sure you want to delete this role?'
+    success:
+      created: 'Role created successfully.'
+      updated: 'Role updated successfully.'
+      deleted: 'Role deleted successfully.'
+    error:
+      invalid_token: 'Invalid token. Please try again.'
+      cannot_delete_in_use: 'Cannot delete this role because it is assigned to users.'
+    color:
+      danger: 'Red'
+      primary: 'Blue'
+      info: 'Cyan'
+      warning: 'Yellow'
+      success: 'Green'
+      secondary: 'Grey'
+
+# ── Topbar / User Dropdown ──
+topbar:
+  account_settings: 'Account Settings'

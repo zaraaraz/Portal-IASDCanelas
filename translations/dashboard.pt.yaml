@@ -1,51 +1,416 @@
-# Dashboard
+# ─────────────────────────────────────────────────
+# Portal IASDCanelas — Traduções PT (dashboard domain)
+# ─────────────────────────────────────────────────
+
+home: 'Início'
+
+# ── Sidebar ──
+sidebar:
+  dashboard: 'Dashboard'
+  schedules: 'Escalas Pessoais'
+  broadcast: 'Transmissão'
+  documents: 'Documentos'
+  nas: 'NAS'
+  help: 'Ajuda'
+  admin_section: 'Administração'
+  admin_users: 'Utilizadores'
+  admin_roles: 'Roles'
+
+# ── Dashboard ──
 dashboard:
-  title: 'Painel de Controle'
-  
-# Statistics Cards
-stats:
-  total_projects: 'Total de Projetos'
-  completed: 'Concluídos'
-  task: 'Tarefa'
-  tasks: 'Tarefas'
-  members: 'Membros'
-  productivity: 'Produtividade'
-  increased: 'Aumentou'
+  title: 'Painel de Controlo'
+  welcome: 'Bem-vindo(a), %name%!'
+  welcome_subtitle: 'Aqui tens uma visão geral da atividade da igreja.'
+  next_services: 'Próximos Cultos'
+  this_week: 'esta semana'
+  my_schedules: 'As Minhas Escalas'
+  pending: 'pendentes'
+  broadcasts_month: 'Transmissões'
+  completed: 'concluída(s)'
+  notices: 'Avisos'
+  active: 'ativos'
+  upcoming_services: 'Próximos Cultos'
+  table:
+    date: 'Data'
+    service_type: 'Tipo de Culto'
+    theme: 'Tema'
+    preacher: 'Pregador'
+    status: 'Estado'
+  sample:
+    saturday: 'Sábado'
+    wednesday: 'Quarta-feira'
+    next_saturday: 'Próx. Sábado'
+    theme_1: 'Lição da Escola Sabatina'
+    theme_2: 'A Graça Redentora'
+    theme_3: 'Oração e Fé'
+    theme_4: 'Esperança para o Futuro'
+  service_types:
+    sabbath_school: 'Escola Sabatina'
+    divine_worship: 'Culto Divino'
+    prayer_meeting: 'Reunião de Oração'
+  status:
+    scheduled: 'Agendado'
+    confirmed: 'Confirmado'
+    pending: 'Pendente'
+  saturday_checklist: 'Checklist de Sábado'
+  checklist:
+    sound_team: 'Equipa de Som confirmada'
+    broadcast_team: 'Equipa de Transmissão confirmada'
+    reception_team: 'Equipa de Receção pendente'
+    music_team: 'Equipa de Música não confirmada'
+  latest_notices: 'Últimos Avisos'
+  notice:
+    board_meeting: 'Reunião de Comissão'
+    board_meeting_desc: 'Próxima reunião dia 20 às 19:30.'
+    schedule_change: 'Alteração de Escala'
+    schedule_change_desc: 'Troca aprovada para 22 Fev — Som.'
 
-# Projects
-projects:
-  active_projects: 'Projetos Ativos'
-  name: 'Nome'
-  progress: 'Progresso'
-  status: 'Estado'
-  assigned: 'Atribuído'
-  action: 'Ação'
-  view_all: 'Ver Todos os Projetos'
-  edit: 'Editar'
-  delete: 'Excluir'
+# ── Escalas ──
+escalas:
+  title: 'Escalas Pessoais'
+  subtitle: 'Consulta as tuas escalas de serviço e gere trocas.'
+  total: 'Total de Escalas'
+  this_month: 'este mês'
+  confirmed: 'Confirmadas'
+  pending_status: 'Pendentes'
+  swap_requests: 'Pedidos de Troca'
+  my_schedules: 'As Minhas Escalas'
+  filter:
+    all_months: 'Todos os Meses'
+    january: 'Janeiro'
+    february: 'Fevereiro'
+    march: 'Março'
+    all_departments: 'Todos os Departamentos'
+    sound: 'Som'
+    broadcast: 'Transmissão'
+    reception: 'Receção'
+    music: 'Música'
+  table:
+    date: 'Data'
+    service: 'Culto'
+    department: 'Departamento'
+    role: 'Função'
+    status: 'Estado'
+    actions: 'Ações'
+  dept:
+    sound: 'Som'
+    broadcast: 'Transmissão'
+    reception: 'Receção'
+    music: 'Música'
+  role:
+    sound_operator: 'Operador de Som'
+    camera_operator: 'Operador de Câmara'
+    pianist: 'Pianista'
+    receptionist: 'Rececionista'
+  status:
+    confirmed: 'Confirmado'
+    pending: 'Pendente'
+    swap_requested: 'Troca Pedida'
+  action:
+    request_swap: 'Pedir Troca'
+    confirm: 'Confirmar'
+    decline: 'Recusar'
+    waiting_approval: 'Aguarda aprovação'
 
-# Tasks
-tasks:
-  my_task: 'Minhas Tarefas'
-  task_progress: 'Progresso das Tarefas'
-  completed: 'Concluído'
-  in_progress: 'Em Andamento'
-  upcoming: 'Próximo'
+# ── Transmissão ──
+transmissao:
+  title: 'Transmissão'
+  subtitle: 'Dashboard da equipa de transmissão e estado técnico.'
+  monthly_broadcasts: 'Transmissões do Mês'
+  done: 'realizadas'
+  saturday_team: 'Equipa de Sábado'
+  members_assigned: 'membros atribuídos'
+  tech_setup: 'Setup Técnico'
+  operational: 'Operacional'
+  stability: 'Estabilidade'
+  uptime: 'uptime'
+  upcoming: 'Próximas Transmissões'
+  table:
+    date: 'Data'
+    service: 'Culto'
+    platform: 'Plataforma'
+    team: 'Equipa'
+    status: 'Estado'
+  not_assigned: 'Não atribuída'
+  status:
+    ready: 'Pronto'
+    pending: 'Pendente'
+    no_team: 'Sem Equipa'
+  tech_checklist: 'Checklist Técnica'
+  check:
+    cameras: 'Câmaras'
+    encoder: 'Encoder/PC de Transmissão'
+    internet: 'Ligação à Internet'
+    audio_mixer: 'Mesa de Som'
+    overlays: 'Overlays e Gráficos'
+    update_needed: 'Atualizar'
+    streaming_keys: 'Chaves de Streaming'
 
-# Budget
-budget:
-  project_budget: 'Orçamento do Projeto'
-  budget_allocation: 'Visão Geral da Alocação do Orçamento:'
-  spent: 'Gasto:'
-  remaining: 'Restante:'
-  add_budget: 'Adicionar Orçamento'
-  view_details: 'Ver Detalhes'
+# ── Documentos ──
+documentos:
+  title: 'Documentos e Recursos'
+  subtitle: 'Documentos partilhados, manuais e ficheiros úteis.'
+  search: 'Pesquisar'
+  search_placeholder: 'Pesquisar documentos...'
+  filter_department: 'Departamento'
+  all_departments: 'Todos os Departamentos'
+  dept:
+    pastoral: 'Pastoral'
+    deacons: 'Diaconato'
+    music: 'Música'
+    broadcast: 'Transmissão'
+    sabbath_school: 'Escola Sabatina'
+  filter_type: 'Tipo de Ficheiro'
+  all_types: 'Todos os Tipos'
+  type:
+    image: 'Imagem'
+  available_documents: 'Documentos Disponíveis'
+  documents_count: 'documentos'
+  table:
+    name: 'Nome'
+    department: 'Departamento'
+    type: 'Tipo'
+    date: 'Data'
+    size: 'Tamanho'
+    action: 'Ação'
+  sample:
+    schedule_q1: 'Escala de Cultos — 1.º Trimestre 2025'
+    deacons_manual: 'Manual do Diaconato'
+    music_list: 'Lista de Hinos — Fevereiro 2025'
+    broadcast_guide: 'Guia de Transmissão (OBS Studio)'
+    sabbath_lesson: 'Lição da Escola Sabatina — Q1 2025'
+  download: 'Download'
 
-# Meetings
-meetings:
-  upcoming_meetings: 'Próximas Reuniões'
+# ── Ajuda ──
+ajuda:
+  title: 'Ajuda e Contactos'
+  subtitle: 'Encontra informações de contacto e respostas rápidas.'
+  contact:
+    pastoral: 'Pastoral'
+    pastoral_desc: 'Questões sobre cultos, batismos ou aconselhamento.'
+    broadcast_team: 'Equipa de Transmissão'
+    broadcast_desc: 'Questões técnicas sobre transmissões online.'
+    tech_support: 'Suporte Técnico'
+    tech_support_desc: 'Problemas com o portal ou credenciais.'
+  faq:
+    title: 'Perguntas Frequentes'
+    q1: 'Como posso confirmar a minha escala?'
+    a1: 'Acede à página "Escalas Pessoais", encontra a escala pendente e clica no botão "Confirmar".'
+    q2: 'Posso trocar a minha escala com outro membro?'
+    a2: 'Sim. Na página "Escalas Pessoais", clica em "Pedir Troca" na escala pretendida. O pedido será analisado pelo responsável do departamento.'
+    q3: 'Onde encontro os documentos da escola sabatina?'
+    a3: 'Na página "Documentos e Recursos", filtra pelo departamento "Escola Sabatina" para encontrar as lições e materiais disponíveis.'
+    q4: 'Como sei quando tenho transmissão?'
+    a4: 'Consulta a página "Transmissão" para ver as próximas transmissões e a equipa atribuída a cada uma.'
+    q5: 'A quem devo reportar um problema no portal?'
+    a5: 'Envia um email para suporte@iasdcanelas.pt descrevendo o problema. Receberás resposta em 24–48 horas.'
 
-# AI Assistant
-ai:
-  start: 'Iniciar IA'
-  welcome: 'Olá! Sou o seu assistente de IA. Como posso ajudar você hoje?'
+# ── NAS (Synology) ──
+nas:
+  title: 'NAS — Armazenamento'
+  subtitle: 'Acede aos ficheiros e monitoriza o estado do servidor NAS da igreja.'
+  connected_as: 'Ligado como %user%'
+  disconnect: 'Desligar'
+  login:
+    title: 'Ligar ao NAS'
+    subtitle: 'Introduz as tuas credenciais da conta Synology para aceder ao NAS.'
+    username: 'Utilizador NAS'
+    password: 'Palavra-passe NAS'
+    otp: 'Código 2FA (OTP)'
+    otp_placeholder: '000000'
+    otp_help: 'Se tiveres autenticação de dois fatores ativa, introduz o código da app (ex: Secure SignIn).'
+    connect: 'Ligar'
+  error:
+    login_failed: 'Falha ao ligar ao NAS. Verifica as tuas credenciais.'
+    session_expired: 'Sessão NAS expirada. Faz login novamente.'
+    upload_failed: 'Falha ao enviar o ficheiro. Tenta outra vez.'
+    download_failed: 'Falha ao descarregar o ficheiro.'
+    browse_failed: 'Não foi possível listar os ficheiros.'
+    not_connected: 'Não estás ligado ao NAS. Faz login primeiro.'
+  success:
+    login: 'Ligação ao NAS estabelecida com sucesso!'
+    upload: 'Ficheiro enviado com sucesso!'
+    logout: 'Sessão NAS terminada.'
+    connected: 'Conectado ao NAS'
+  info:
+    model: 'Modelo'
+    storage: 'Armazenamento'
+    cpu: 'CPU'
+    ram: 'RAM'
+  browser:
+    title: 'Explorador de Ficheiros'
+    name: 'Nome'
+    size: 'Tamanho'
+    modified: 'Modificado'
+    actions: 'Ações'
+    upload: 'Enviar Ficheiro'
+    uploading: 'A enviar…'
+    empty: 'Esta pasta está vazia.'
+    download: 'Descarregar'
+
+# ── Perfil ──
+profile:
+  title: 'Definições da Conta'
+  subtitle: 'Gerir as tuas informações pessoais e palavra-passe.'
+  section:
+    personal_info: 'Informações Pessoais'
+    change_password: 'Alterar Palavra-passe'
+  form:
+    full_name: 'Nome Completo'
+    full_name_placeholder: 'Insere o teu nome completo'
+    email: 'Email'
+    email_placeholder: 'Insere o teu email'
+    current_password: 'Palavra-passe Atual'
+    new_password: 'Nova Palavra-passe'
+    confirm_password: 'Confirmar Nova Palavra-passe'
+    save: 'Guardar Alterações'
+    change_password: 'Alterar Palavra-passe'
+    change_avatar: 'Alterar fotografia'
+  info:
+    role: 'Papel'
+    last_updated: 'Última atualização'
+    member_since: 'Membro desde'
+  success:
+    updated: 'Informações atualizadas com sucesso.'
+    password_changed: 'Palavra-passe alterada com sucesso.'
+    avatar_updated: 'Fotografia atualizada com sucesso.'
+  error:
+    fullname_required: 'O nome é obrigatório.'
+    email_required: 'O email é obrigatório.'
+    current_password_required: 'A palavra-passe atual é obrigatória.'
+    current_password_invalid: 'A palavra-passe atual está incorreta.'
+    password_required: 'A nova palavra-passe é obrigatória.'
+    password_min_length: 'A palavra-passe deve ter pelo menos 8 caracteres.'
+    avatar_required: 'Seleciona uma imagem.'
+    avatar_invalid_type: 'Formato de imagem inválido. Usa JPG, PNG, WebP ou GIF.'
+    avatar_too_large: 'A imagem é demasiado grande. Máximo 2MB.'
+
+# ── Admin: Utilizadores ──
+admin:
+  users:
+    title: 'Gestão de Utilizadores'
+    subtitle: 'Gerir contas, papéis e estado de utilizadores.'
+    stats:
+      total: 'Total de utilizadores'
+      active: 'Ativos'
+      inactive: 'Inativos'
+      admins: 'Administradores'
+    table:
+      user: 'Utilizador'
+      email: 'Email'
+      roles: 'Papéis'
+      status: 'Estado'
+      active: 'Ativo'
+      inactive: 'Inativo'
+      created_at: 'Registo'
+      actions: 'Ações'
+      you: 'Tu'
+      yes: 'Sim'
+      no: 'Não'
+      empty: 'Nenhum utilizador encontrado.'
+    btn:
+      new_user: 'Novo Utilizador'
+      edit: 'Editar'
+      deactivate: 'Desativar conta'
+      activate: 'Ativar conta'
+      back_to_list: 'Voltar à lista'
+      save_changes: 'Guardar Alterações'
+      create_user: 'Criar Utilizador'
+      cancel: 'Cancelar'
+    form:
+      title_new: 'Novo Utilizador'
+      title_edit: 'Editar Utilizador'
+      subtitle_new: 'Preenche os dados para criar uma nova conta.'
+      subtitle_edit: 'Atualiza os dados deste utilizador.'
+      section_new: 'Dados do Utilizador'
+      section_edit: 'Editar Dados'
+      full_name: 'Nome Completo'
+      full_name_placeholder: 'Insere o nome completo'
+      email: 'Email'
+      email_placeholder: 'Insere o email'
+      password: 'Palavra-passe'
+      password_placeholder: 'Insere a palavra-passe'
+      new_password: 'Nova Palavra-passe'
+      new_password_placeholder: 'Deixa vazio para manter a atual'
+      password_hint: 'Deixa vazio para manter a palavra-passe atual.'
+      roles: 'Papéis'
+      is_active: 'Conta ativa'
+    confirm:
+      deactivate: 'Tens a certeza que queres desativar este utilizador?'
+    success:
+      created: 'Utilizador criado com sucesso.'
+      updated: 'Utilizador atualizado com sucesso.'
+      active_toggled: 'Estado da conta atualizado.'
+    error:
+      fullname_required: 'O nome é obrigatório.'
+      email_required: 'O email é obrigatório.'
+      email_invalid: 'O email não é válido.'
+      password_required: 'A palavra-passe é obrigatória.'
+      password_min_length: 'A palavra-passe deve ter pelo menos 8 caracteres.'
+      invalid_token: 'Token inválido. Tenta novamente.'
+      cannot_deactivate_self: 'Não podes desativar a tua própria conta.'
+
+  # ── Admin: Papéis ──
+  roles:
+    title: 'Gestão de Papéis'
+    subtitle: 'Gerir os papéis e funções disponíveis na igreja.'
+    stats:
+      total: 'Total de papéis'
+      colors_used: 'Cores em uso'
+    table:
+      order: '#'
+      badge: 'Badge'
+      code: 'Código'
+      name: 'Nome'
+      display_name: 'Nome de Exibição'
+      description: 'Descrição'
+      actions: 'Ações'
+      empty: 'Nenhum papel encontrado.'
+      in_use: 'em uso'
+    btn:
+      new_role: 'Novo Papel'
+      edit: 'Editar'
+      delete: 'Eliminar'
+      system_role: 'Papel de sistema'
+      back_to_list: 'Voltar à lista'
+      save_changes: 'Guardar Alterações'
+      create_role: 'Criar Papel'
+      cancel: 'Cancelar'
+    form:
+      title_new: 'Novo Papel'
+      title_edit: 'Editar Papel'
+      subtitle_new: 'Preenche os dados para criar um novo papel.'
+      subtitle_edit: 'Atualiza os dados deste papel.'
+      section_new: 'Dados do Papel'
+      section_edit: 'Editar Dados'
+      code: 'Código'
+      code_placeholder: 'Ex: ROLE_ANCIAO'
+      display_name: 'Nome de Exibição'
+      display_name_placeholder: 'Ex: Ancião'
+      description: 'Descrição'
+      description_placeholder: 'Descrição opcional do papel'
+      badge_color: 'Cor do Badge'
+      sort_order: 'Ordem'
+      sort_order_hint: 'Número mais baixo aparece primeiro na lista.'
+      code_hint: 'Deve começar com ROLE_ e conter apenas letras maiúsculas e underscores.'
+      preview: 'Pré-visualização'
+    confirm:
+      delete: 'Tens a certeza que queres eliminar este papel?'
+    success:
+      created: 'Papel criado com sucesso.'
+      updated: 'Papel atualizado com sucesso.'
+      deleted: 'Papel eliminado com sucesso.'
+    error:
+      invalid_token: 'Token inválido. Tenta novamente.'
+      cannot_delete_in_use: 'Não é possível eliminar este papel porque está atribuído a utilizadores.'
+    color:
+      danger: 'Vermelho'
+      primary: 'Azul'
+      info: 'Ciano'
+      warning: 'Amarelo'
+      success: 'Verde'
+      secondary: 'Cinzento'
+
+# ── Topbar / User Dropdown ──
+topbar:
+  account_settings: 'Definições da Conta'

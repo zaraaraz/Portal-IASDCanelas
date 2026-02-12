@@ -1,0 +1,19 @@
+# Validator messages - Registration
+auth.register.error.fullname_required: 'Por favor, insira o nome completo.'
+auth.register.error.email_required: 'Por favor, insira o email.'
+auth.register.error.password_required: 'Por favor, insira a palavra-passe.'
+auth.register.error.password_min_length: 'A palavra-passe deve ter pelo menos 8 caracteres.'
+auth.register.error.passwords_mismatch: 'As palavras-passe não coincidem.'
+auth.register.error.agree_terms: 'Deve aceitar os termos de uso.'
+
+# Validator messages - Reset Password
+auth.reset_password.error.password_required: 'Por favor, insira a palavra-passe.'
+auth.reset_password.error.password_min_length: 'A palavra-passe deve ter pelo menos 8 caracteres.'
+auth.reset_password.error.passwords_mismatch: 'As palavras-passe não coincidem.'
+
+# Validator messages - Forgot Password
+auth.forgot_password.error.email_required: 'Por favor, insira o email.'
+auth.forgot_password.error.email_invalid: 'Por favor, insira um email válido.'
+
+# Entity validation
+auth.register.error.email_exists: 'Este email já está registado.'

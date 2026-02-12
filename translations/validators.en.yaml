@@ -1,0 +1,19 @@
+# Validator messages - Registration
+auth.register.error.fullname_required: 'Please enter full name.'
+auth.register.error.email_required: 'Please enter email.'
+auth.register.error.password_required: 'Please enter password.'
+auth.register.error.password_min_length: 'Password must be at least 8 characters.'
+auth.register.error.passwords_mismatch: 'Passwords do not match.'
+auth.register.error.agree_terms: 'You must agree to the terms of use.'
+
+# Validator messages - Reset Password
+auth.reset_password.error.password_required: 'Please enter password.'
+auth.reset_password.error.password_min_length: 'Password must be at least 8 characters.'
+auth.reset_password.error.passwords_mismatch: 'Passwords do not match.'
+
+# Validator messages - Forgot Password
+auth.forgot_password.error.email_required: 'Please enter email.'
+auth.forgot_password.error.email_invalid: 'Please enter a valid email.'
+
+# Entity validation
+auth.register.error.email_exists: 'This email is already registered.'
