@@ -48,4 +48,4 @@ meetings:
 # AI Assistant
 ai:
   start: 'Start AI'
-  welcome: 'Hello! I\'m your AI assistant. How can I help you today?'
+  welcome: "Hello! I'm your AI assistant. How can I help you today?"
